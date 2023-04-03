@@ -8,7 +8,7 @@ set(CMAKE_DEPENDS_LANGUAGES
 
 # The set of dependency files which are needed:
 set(CMAKE_DEPENDS_DEPENDENCY_FILES
-  "/Users/M1/Documents/GitHub/Initial/1.cpp" "CMakeFiles/1.dir/1.cpp.o" "gcc" "CMakeFiles/1.dir/1.cpp.o.d"
+  "/Users/lucas/Documents/GitHub/Initial/1.cpp" "CMakeFiles/1.dir/1.cpp.o" "gcc" "CMakeFiles/1.dir/1.cpp.o.d"
   )
 
 # Targets to which this target links.

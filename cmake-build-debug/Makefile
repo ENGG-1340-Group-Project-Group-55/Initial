@@ -57,10 +57,10 @@ RM = /Applications/CLion.app/Contents/bin/cmake/mac/bin/cmake -E rm -f
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = /Users/M1/Documents/GitHub/Initial
+CMAKE_SOURCE_DIR = /Users/lucas/Documents/GitHub/Initial
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = /Users/M1/Documents/GitHub/Initial/cmake-build-debug
+CMAKE_BINARY_DIR = /Users/lucas/Documents/GitHub/Initial/cmake-build-debug
 
 #=============================================================================
 # Targets provided globally by CMake.
@@ -87,9 +87,9 @@ rebuild_cache/fast: rebuild_cache
 
 # The main all target
 all: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /Users/M1/Documents/GitHub/Initial/cmake-build-debug/CMakeFiles /Users/M1/Documents/GitHub/Initial/cmake-build-debug//CMakeFiles/progress.marks
+	$(CMAKE_COMMAND) -E cmake_progress_start /Users/lucas/Documents/GitHub/Initial/cmake-build-debug/CMakeFiles /Users/lucas/Documents/GitHub/Initial/cmake-build-debug//CMakeFiles/progress.marks
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 all
-	$(CMAKE_COMMAND) -E cmake_progress_start /Users/M1/Documents/GitHub/Initial/cmake-build-debug/CMakeFiles 0
+	$(CMAKE_COMMAND) -E cmake_progress_start /Users/lucas/Documents/GitHub/Initial/cmake-build-debug/CMakeFiles 0
 .PHONY : all
 
 # The main clean target
@@ -115,6 +115,19 @@ preinstall/fast:
 depend:
 	$(CMAKE_COMMAND) -S$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR) --check-build-system CMakeFiles/Makefile.cmake 1
 .PHONY : depend
+
+#=============================================================================
+# Target rules for targets named Map_loader
+
+# Build rule for target.
+Map_loader: cmake_check_build_system
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 Map_loader
+.PHONY : Map_loader
+
+# fast build rule for target.
+Map_loader/fast:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Map_loader.dir/build.make CMakeFiles/Map_loader.dir/build
+.PHONY : Map_loader/fast
 
 #=============================================================================
 # Target rules for targets named 1
@@ -264,6 +277,30 @@ Enginev2.cpp.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/Enginev2.dir/build.make CMakeFiles/Enginev2.dir/Enginev2.cpp.s
 .PHONY : Enginev2.cpp.s
 
+Map_loader.o: Map_loader.cpp.o
+.PHONY : Map_loader.o
+
+# target to build an object file
+Map_loader.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Map_loader.dir/build.make CMakeFiles/Map_loader.dir/Map_loader.cpp.o
+.PHONY : Map_loader.cpp.o
+
+Map_loader.i: Map_loader.cpp.i
+.PHONY : Map_loader.i
+
+# target to preprocess a source file
+Map_loader.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Map_loader.dir/build.make CMakeFiles/Map_loader.dir/Map_loader.cpp.i
+.PHONY : Map_loader.cpp.i
+
+Map_loader.s: Map_loader.cpp.s
+.PHONY : Map_loader.s
+
+# target to generate assembly for a file
+Map_loader.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Map_loader.dir/build.make CMakeFiles/Map_loader.dir/Map_loader.cpp.s
+.PHONY : Map_loader.cpp.s
+
 # Help Target
 help:
 	@echo "The following are some of the valid targets for this Makefile:"
@@ -276,6 +313,7 @@ help:
 	@echo "... 2"
 	@echo "... Enginev1"
 	@echo "... Enginev2"
+	@echo "... Map_loader"
 	@echo "... 1.o"
 	@echo "... 1.i"
 	@echo "... 1.s"
@@ -288,6 +326,9 @@ help:
 	@echo "... Enginev2.o"
 	@echo "... Enginev2.i"
 	@echo "... Enginev2.s"
+	@echo "... Map_loader.o"
+	@echo "... Map_loader.i"
+	@echo "... Map_loader.s"
 .PHONY : help
 
 

@@ -54,15 +54,16 @@ RM = /Applications/CLion.app/Contents/bin/cmake/mac/bin/cmake -E rm -f
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = /Users/M1/Documents/GitHub/Initial
+CMAKE_SOURCE_DIR = /Users/lucas/Documents/GitHub/Initial
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = /Users/M1/Documents/GitHub/Initial/cmake-build-debug
+CMAKE_BINARY_DIR = /Users/lucas/Documents/GitHub/Initial/cmake-build-debug
 
 #=============================================================================
 # Directory level rules for the build root directory
 
 # The main recursive "all" target.
+all: CMakeFiles/Map_loader.dir/all
 all: CMakeFiles/1.dir/all
 all: CMakeFiles/2.dir/all
 all: CMakeFiles/Enginev1.dir/all
@@ -74,11 +75,38 @@ preinstall:
 .PHONY : preinstall
 
 # The main recursive "clean" target.
+clean: CMakeFiles/Map_loader.dir/clean
 clean: CMakeFiles/1.dir/clean
 clean: CMakeFiles/2.dir/clean
 clean: CMakeFiles/Enginev1.dir/clean
 clean: CMakeFiles/Enginev2.dir/clean
 .PHONY : clean
+
+#=============================================================================
+# Target rules for target CMakeFiles/Map_loader.dir
+
+# All Build rule for target.
+CMakeFiles/Map_loader.dir/all:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Map_loader.dir/build.make CMakeFiles/Map_loader.dir/depend
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Map_loader.dir/build.make CMakeFiles/Map_loader.dir/build
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/Users/lucas/Documents/GitHub/Initial/cmake-build-debug/CMakeFiles --progress-num=9,10 "Built target Map_loader"
+.PHONY : CMakeFiles/Map_loader.dir/all
+
+# Build rule for subdir invocation for target.
+CMakeFiles/Map_loader.dir/rule: cmake_check_build_system
+	$(CMAKE_COMMAND) -E cmake_progress_start /Users/lucas/Documents/GitHub/Initial/cmake-build-debug/CMakeFiles 2
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 CMakeFiles/Map_loader.dir/all
+	$(CMAKE_COMMAND) -E cmake_progress_start /Users/lucas/Documents/GitHub/Initial/cmake-build-debug/CMakeFiles 0
+.PHONY : CMakeFiles/Map_loader.dir/rule
+
+# Convenience name for target.
+Map_loader: CMakeFiles/Map_loader.dir/rule
+.PHONY : Map_loader
+
+# clean rule for target.
+CMakeFiles/Map_loader.dir/clean:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Map_loader.dir/build.make CMakeFiles/Map_loader.dir/clean
+.PHONY : CMakeFiles/Map_loader.dir/clean
 
 #=============================================================================
 # Target rules for target CMakeFiles/1.dir
@@ -87,14 +115,14 @@ clean: CMakeFiles/Enginev2.dir/clean
 CMakeFiles/1.dir/all:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/1.dir/build.make CMakeFiles/1.dir/depend
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/1.dir/build.make CMakeFiles/1.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/Users/M1/Documents/GitHub/Initial/cmake-build-debug/CMakeFiles --progress-num=1,2 "Built target 1"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/Users/lucas/Documents/GitHub/Initial/cmake-build-debug/CMakeFiles --progress-num=1,2 "Built target 1"
 .PHONY : CMakeFiles/1.dir/all
 
 # Build rule for subdir invocation for target.
 CMakeFiles/1.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /Users/M1/Documents/GitHub/Initial/cmake-build-debug/CMakeFiles 2
+	$(CMAKE_COMMAND) -E cmake_progress_start /Users/lucas/Documents/GitHub/Initial/cmake-build-debug/CMakeFiles 2
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 CMakeFiles/1.dir/all
-	$(CMAKE_COMMAND) -E cmake_progress_start /Users/M1/Documents/GitHub/Initial/cmake-build-debug/CMakeFiles 0
+	$(CMAKE_COMMAND) -E cmake_progress_start /Users/lucas/Documents/GitHub/Initial/cmake-build-debug/CMakeFiles 0
 .PHONY : CMakeFiles/1.dir/rule
 
 # Convenience name for target.
@@ -113,14 +141,14 @@ CMakeFiles/1.dir/clean:
 CMakeFiles/2.dir/all:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/2.dir/build.make CMakeFiles/2.dir/depend
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/2.dir/build.make CMakeFiles/2.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/Users/M1/Documents/GitHub/Initial/cmake-build-debug/CMakeFiles --progress-num=3,4 "Built target 2"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/Users/lucas/Documents/GitHub/Initial/cmake-build-debug/CMakeFiles --progress-num=3,4 "Built target 2"
 .PHONY : CMakeFiles/2.dir/all
 
 # Build rule for subdir invocation for target.
 CMakeFiles/2.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /Users/M1/Documents/GitHub/Initial/cmake-build-debug/CMakeFiles 2
+	$(CMAKE_COMMAND) -E cmake_progress_start /Users/lucas/Documents/GitHub/Initial/cmake-build-debug/CMakeFiles 2
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 CMakeFiles/2.dir/all
-	$(CMAKE_COMMAND) -E cmake_progress_start /Users/M1/Documents/GitHub/Initial/cmake-build-debug/CMakeFiles 0
+	$(CMAKE_COMMAND) -E cmake_progress_start /Users/lucas/Documents/GitHub/Initial/cmake-build-debug/CMakeFiles 0
 .PHONY : CMakeFiles/2.dir/rule
 
 # Convenience name for target.
@@ -139,14 +167,14 @@ CMakeFiles/2.dir/clean:
 CMakeFiles/Enginev1.dir/all:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/Enginev1.dir/build.make CMakeFiles/Enginev1.dir/depend
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/Enginev1.dir/build.make CMakeFiles/Enginev1.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/Users/M1/Documents/GitHub/Initial/cmake-build-debug/CMakeFiles --progress-num=5,6 "Built target Enginev1"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/Users/lucas/Documents/GitHub/Initial/cmake-build-debug/CMakeFiles --progress-num=5,6 "Built target Enginev1"
 .PHONY : CMakeFiles/Enginev1.dir/all
 
 # Build rule for subdir invocation for target.
 CMakeFiles/Enginev1.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /Users/M1/Documents/GitHub/Initial/cmake-build-debug/CMakeFiles 2
+	$(CMAKE_COMMAND) -E cmake_progress_start /Users/lucas/Documents/GitHub/Initial/cmake-build-debug/CMakeFiles 2
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 CMakeFiles/Enginev1.dir/all
-	$(CMAKE_COMMAND) -E cmake_progress_start /Users/M1/Documents/GitHub/Initial/cmake-build-debug/CMakeFiles 0
+	$(CMAKE_COMMAND) -E cmake_progress_start /Users/lucas/Documents/GitHub/Initial/cmake-build-debug/CMakeFiles 0
 .PHONY : CMakeFiles/Enginev1.dir/rule
 
 # Convenience name for target.
@@ -165,14 +193,14 @@ CMakeFiles/Enginev1.dir/clean:
 CMakeFiles/Enginev2.dir/all:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/Enginev2.dir/build.make CMakeFiles/Enginev2.dir/depend
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/Enginev2.dir/build.make CMakeFiles/Enginev2.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/Users/M1/Documents/GitHub/Initial/cmake-build-debug/CMakeFiles --progress-num=7,8 "Built target Enginev2"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/Users/lucas/Documents/GitHub/Initial/cmake-build-debug/CMakeFiles --progress-num=7,8 "Built target Enginev2"
 .PHONY : CMakeFiles/Enginev2.dir/all
 
 # Build rule for subdir invocation for target.
 CMakeFiles/Enginev2.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /Users/M1/Documents/GitHub/Initial/cmake-build-debug/CMakeFiles 2
+	$(CMAKE_COMMAND) -E cmake_progress_start /Users/lucas/Documents/GitHub/Initial/cmake-build-debug/CMakeFiles 2
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 CMakeFiles/Enginev2.dir/all
-	$(CMAKE_COMMAND) -E cmake_progress_start /Users/M1/Documents/GitHub/Initial/cmake-build-debug/CMakeFiles 0
+	$(CMAKE_COMMAND) -E cmake_progress_start /Users/lucas/Documents/GitHub/Initial/cmake-build-debug/CMakeFiles 0
 .PHONY : CMakeFiles/Enginev2.dir/rule
 
 # Convenience name for target.
