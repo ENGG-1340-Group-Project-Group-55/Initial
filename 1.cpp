@@ -18,7 +18,7 @@ void mainMenu() {
 
 void gameID() {
     string ID;
-    cout << "What is your name?" << endl;
+    cout << "What is your name?" << endl; //might take this out for later plot twist
     cin >> ID;
     cout << "Hello " << ID << ", Good luck on your journey" << endl;
     cin >> support;
