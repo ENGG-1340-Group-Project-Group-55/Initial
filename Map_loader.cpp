@@ -15,7 +15,7 @@ class Maps
             int map_height;
             int map_width;
             void Map_Loader();
-            void MapToArray(ifstream);
+            void MapToArray(ifstream&,string);
             void Location_accessor();
         };
 
@@ -39,21 +39,23 @@ void Maps::Map_Loader() {
         cout<<"파일이 없다잖아 병신아!!!"<<endl;
         exit(1);
     }
-    MapToArray(inputline);
+    MapToArray(inputline,nextline);
+
+}
+
+void Maps::MapToArray(ifstream& inputline, string nextline) {
+    //char td_map [map_height][map_width];
+        //for (int i=0;i<map_height;i++){
+            //for (int j=0;j<map_width;j++){
+
+
+            //}
+        //}
+
     while (getline(inputline,nextline)){
         cout<<nextline<<endl;
     }
     inputline.close();
-}
-
-void Maps::MapToArray(ifstream inputline) {
-    char td_map [map_height][map_width];
-        for (int i=0;i<map_height;i++){
-            for (int j=0;j<map_width;j++){
-
-
-            }
-        }
 
 
 }
