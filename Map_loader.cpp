@@ -34,7 +34,7 @@ Maps::Maps(int a,int b){
 void Maps::Map_Loader() {
     ifstream inputline;
     string nextline;
-    inputline.open("/Users/minchankim/Documents/GitHub/Initial/ghost2.txt");
+    inputline.open("/Users/lucas/Documents/GitHub/Initial/ghost2.txt");
     if (inputline.fail()){
         cout<<"파일이 없다잖아 병신아!!!"<<endl;
         exit(1);
