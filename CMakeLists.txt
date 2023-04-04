@@ -9,3 +9,5 @@ add_executable(inventory2 UI/inventory2.cpp)
 add_executable(base UI/base.cpp)
 add_executable(Enginev1 Characters_Design&Mechanism/Enginev1.cpp)
 add_executable(Enginev2 Characters_Design&Mechanism/Enginev2.cpp)
+
+target_link_libraries(Enginev2 ncurses)
