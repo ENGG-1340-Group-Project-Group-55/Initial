@@ -20,7 +20,7 @@ class Maps
         };
 
 int main(){
-    Maps Mp(15,15);
+    Maps Mp(15,30);
     Mp.Map_Loader();
 }
 
@@ -34,7 +34,7 @@ Maps::Maps(int a,int b){
 void Maps::Map_Loader() {
     ifstream inputline;
     string nextline;
-    inputline.open("/Users/lucas/Documents/GitHub/Initial/ghost1.txt");
+    inputline.open("/Users/lucas/Documents/GitHub/Initial/Map&Objects/Map_resources/15-15_map.txt");
     if (inputline.fail()){
         cout<<"파일이 없다잖아 병신아!!!"<<endl;
         exit(1);
@@ -48,16 +48,25 @@ void Maps::MapToArray(ifstream& inputline) {
     int height_tracker = 0;
     int width_tracker = 0;
     char td_map [map_height][map_width];
-                while (inputline >> noskipws >> ch){
-                    cout<<ch;
+                while (inputline >> noskipws >> ch) {
+                    cout<<"height_tracker: "<<height_tracker<<endl;
+                    cout<<"width_tracker: "<<width_tracker<<endl<<endl;
                     td_map[height_tracker][width_tracker] = ch;
-                    width_tracker++;
-                    if (width_tracker == map_width-1){
-                        width_tracker =0;
+                    if (width_tracker==map_width-1){
+                        width_tracker=-1;
                         height_tracker++;
+                        if (height_tracker==map_height){
+                            break;
+                        }
                     }
-                inputline.close();
+                    width_tracker++;
+                }
 
+                for (int i=0;i<map_height;i++){
+                    for (int j=0;j<map_width;j++){
+                        cout<<td_map[i][j];
+                    }
+                }
 
-            }
+    inputline.close();
         }
