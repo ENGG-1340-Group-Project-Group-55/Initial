@@ -46,20 +46,6 @@
 			[
 				{
 					"directoryIndex" : 0,
-					"id" : "1::@6890427a1f51a3e7e1df",
-					"jsonFile" : "target-1-Debug-c75a71afb44f761a91e1.json",
-					"name" : "1",
-					"projectIndex" : 0
-				},
-				{
-					"directoryIndex" : 0,
-					"id" : "2::@6890427a1f51a3e7e1df",
-					"jsonFile" : "target-2-Debug-63651d8c88509b5abb26.json",
-					"name" : "2",
-					"projectIndex" : 0
-				},
-				{
-					"directoryIndex" : 0,
 					"id" : "Enginev1::@6890427a1f51a3e7e1df",
 					"jsonFile" : "target-Enginev1-Debug-192076a1736966067b88.json",
 					"name" : "Enginev1",
@@ -77,6 +63,20 @@
 					"id" : "Map_loader::@6890427a1f51a3e7e1df",
 					"jsonFile" : "target-Map_loader-Debug-c6167c513cb245a8cb29.json",
 					"name" : "Map_loader",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 0,
+					"id" : "base::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-base-Debug-1c0cccc247201e8be807.json",
+					"name" : "base",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 0,
+					"id" : "inventory::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-inventory-Debug-e361b072cdded314fb6f.json",
+					"name" : "inventory",
 					"projectIndex" : 0
 				}
 			]
