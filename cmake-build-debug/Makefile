@@ -117,43 +117,56 @@ depend:
 .PHONY : depend
 
 #=============================================================================
-# Target rules for targets named Map_loader
+# Target rules for targets named Map_loading
 
 # Build rule for target.
-Map_loader: cmake_check_build_system
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 Map_loader
-.PHONY : Map_loader
+Map_loading: cmake_check_build_system
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 Map_loading
+.PHONY : Map_loading
 
 # fast build rule for target.
-Map_loader/fast:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/Map_loader.dir/build.make CMakeFiles/Map_loader.dir/build
-.PHONY : Map_loader/fast
+Map_loading/fast:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Map_loading.dir/build.make CMakeFiles/Map_loading.dir/build
+.PHONY : Map_loading/fast
 
 #=============================================================================
-# Target rules for targets named 1
+# Target rules for targets named inventory
 
 # Build rule for target.
-1 : cmake_check_build_system
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 1
-.PHONY : 1
+inventory: cmake_check_build_system
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 inventory
+.PHONY : inventory
 
 # fast build rule for target.
-1/fast:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/1.dir/build.make CMakeFiles/1.dir/build
-.PHONY : 1/fast
+inventory/fast:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/inventory.dir/build.make CMakeFiles/inventory.dir/build
+.PHONY : inventory/fast
 
 #=============================================================================
-# Target rules for targets named 2
+# Target rules for targets named inventory2
 
 # Build rule for target.
-2 : cmake_check_build_system
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 2
-.PHONY : 2
+inventory2: cmake_check_build_system
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 inventory2
+.PHONY : inventory2
 
 # fast build rule for target.
-2/fast:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/2.dir/build.make CMakeFiles/2.dir/build
-.PHONY : 2/fast
+inventory2/fast:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/inventory2.dir/build.make CMakeFiles/inventory2.dir/build
+.PHONY : inventory2/fast
+
+#=============================================================================
+# Target rules for targets named base
+
+# Build rule for target.
+base: cmake_check_build_system
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 base
+.PHONY : base
+
+# fast build rule for target.
+base/fast:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/base.dir/build.make CMakeFiles/base.dir/build
+.PHONY : base/fast
 
 #=============================================================================
 # Target rules for targets named Enginev1
@@ -181,125 +194,149 @@ Enginev2/fast:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/Enginev2.dir/build.make CMakeFiles/Enginev2.dir/build
 .PHONY : Enginev2/fast
 
-1.o: 1.cpp.o
-.PHONY : 1.o
+Characters_Design&Mechanism/Enginev1.o: Characters_Design&Mechanism/Enginev1.cpp.o
+.PHONY : Characters_Design&Mechanism/Enginev1.o
 
 # target to build an object file
-1.cpp.o:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/1.dir/build.make CMakeFiles/1.dir/1.cpp.o
-.PHONY : 1.cpp.o
+Characters_Design&Mechanism/Enginev1.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Enginev1.dir/build.make "CMakeFiles/Enginev1.dir/Characters_Design&Mechanism/Enginev1.cpp.o"
+.PHONY : Characters_Design&Mechanism/Enginev1.cpp.o
 
-1.i: 1.cpp.i
-.PHONY : 1.i
+Characters_Design&Mechanism/Enginev1.i: Characters_Design&Mechanism/Enginev1.cpp.i
+.PHONY : Characters_Design&Mechanism/Enginev1.i
 
 # target to preprocess a source file
-1.cpp.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/1.dir/build.make CMakeFiles/1.dir/1.cpp.i
-.PHONY : 1.cpp.i
+Characters_Design&Mechanism/Enginev1.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Enginev1.dir/build.make "CMakeFiles/Enginev1.dir/Characters_Design&Mechanism/Enginev1.cpp.i"
+.PHONY : Characters_Design&Mechanism/Enginev1.cpp.i
 
-1.s: 1.cpp.s
-.PHONY : 1.s
+Characters_Design&Mechanism/Enginev1.s: Characters_Design&Mechanism/Enginev1.cpp.s
+.PHONY : Characters_Design&Mechanism/Enginev1.s
 
 # target to generate assembly for a file
-1.cpp.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/1.dir/build.make CMakeFiles/1.dir/1.cpp.s
-.PHONY : 1.cpp.s
+Characters_Design&Mechanism/Enginev1.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Enginev1.dir/build.make "CMakeFiles/Enginev1.dir/Characters_Design&Mechanism/Enginev1.cpp.s"
+.PHONY : Characters_Design&Mechanism/Enginev1.cpp.s
 
-2.o: 2.cpp.o
-.PHONY : 2.o
+Characters_Design&Mechanism/Enginev2.o: Characters_Design&Mechanism/Enginev2.cpp.o
+.PHONY : Characters_Design&Mechanism/Enginev2.o
 
 # target to build an object file
-2.cpp.o:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/2.dir/build.make CMakeFiles/2.dir/2.cpp.o
-.PHONY : 2.cpp.o
+Characters_Design&Mechanism/Enginev2.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Enginev2.dir/build.make "CMakeFiles/Enginev2.dir/Characters_Design&Mechanism/Enginev2.cpp.o"
+.PHONY : Characters_Design&Mechanism/Enginev2.cpp.o
 
-2.i: 2.cpp.i
-.PHONY : 2.i
+Characters_Design&Mechanism/Enginev2.i: Characters_Design&Mechanism/Enginev2.cpp.i
+.PHONY : Characters_Design&Mechanism/Enginev2.i
 
 # target to preprocess a source file
-2.cpp.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/2.dir/build.make CMakeFiles/2.dir/2.cpp.i
-.PHONY : 2.cpp.i
+Characters_Design&Mechanism/Enginev2.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Enginev2.dir/build.make "CMakeFiles/Enginev2.dir/Characters_Design&Mechanism/Enginev2.cpp.i"
+.PHONY : Characters_Design&Mechanism/Enginev2.cpp.i
 
-2.s: 2.cpp.s
-.PHONY : 2.s
+Characters_Design&Mechanism/Enginev2.s: Characters_Design&Mechanism/Enginev2.cpp.s
+.PHONY : Characters_Design&Mechanism/Enginev2.s
 
 # target to generate assembly for a file
-2.cpp.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/2.dir/build.make CMakeFiles/2.dir/2.cpp.s
-.PHONY : 2.cpp.s
+Characters_Design&Mechanism/Enginev2.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Enginev2.dir/build.make "CMakeFiles/Enginev2.dir/Characters_Design&Mechanism/Enginev2.cpp.s"
+.PHONY : Characters_Design&Mechanism/Enginev2.cpp.s
 
-Enginev1.o: Enginev1.cpp.o
-.PHONY : Enginev1.o
+Map&Objects/Map_loading.o: Map&Objects/Map_loading.cpp.o
+.PHONY : Map&Objects/Map_loading.o
 
 # target to build an object file
-Enginev1.cpp.o:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/Enginev1.dir/build.make CMakeFiles/Enginev1.dir/Enginev1.cpp.o
-.PHONY : Enginev1.cpp.o
+Map&Objects/Map_loading.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Map_loading.dir/build.make "CMakeFiles/Map_loading.dir/Map&Objects/Map_loading.cpp.o"
+.PHONY : Map&Objects/Map_loading.cpp.o
 
-Enginev1.i: Enginev1.cpp.i
-.PHONY : Enginev1.i
+Map&Objects/Map_loading.i: Map&Objects/Map_loading.cpp.i
+.PHONY : Map&Objects/Map_loading.i
 
 # target to preprocess a source file
-Enginev1.cpp.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/Enginev1.dir/build.make CMakeFiles/Enginev1.dir/Enginev1.cpp.i
-.PHONY : Enginev1.cpp.i
+Map&Objects/Map_loading.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Map_loading.dir/build.make "CMakeFiles/Map_loading.dir/Map&Objects/Map_loading.cpp.i"
+.PHONY : Map&Objects/Map_loading.cpp.i
 
-Enginev1.s: Enginev1.cpp.s
-.PHONY : Enginev1.s
+Map&Objects/Map_loading.s: Map&Objects/Map_loading.cpp.s
+.PHONY : Map&Objects/Map_loading.s
 
 # target to generate assembly for a file
-Enginev1.cpp.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/Enginev1.dir/build.make CMakeFiles/Enginev1.dir/Enginev1.cpp.s
-.PHONY : Enginev1.cpp.s
+Map&Objects/Map_loading.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Map_loading.dir/build.make "CMakeFiles/Map_loading.dir/Map&Objects/Map_loading.cpp.s"
+.PHONY : Map&Objects/Map_loading.cpp.s
 
-Enginev2.o: Enginev2.cpp.o
-.PHONY : Enginev2.o
+UI/base.o: UI/base.cpp.o
+.PHONY : UI/base.o
 
 # target to build an object file
-Enginev2.cpp.o:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/Enginev2.dir/build.make CMakeFiles/Enginev2.dir/Enginev2.cpp.o
-.PHONY : Enginev2.cpp.o
+UI/base.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/base.dir/build.make CMakeFiles/base.dir/UI/base.cpp.o
+.PHONY : UI/base.cpp.o
 
-Enginev2.i: Enginev2.cpp.i
-.PHONY : Enginev2.i
+UI/base.i: UI/base.cpp.i
+.PHONY : UI/base.i
 
 # target to preprocess a source file
-Enginev2.cpp.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/Enginev2.dir/build.make CMakeFiles/Enginev2.dir/Enginev2.cpp.i
-.PHONY : Enginev2.cpp.i
+UI/base.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/base.dir/build.make CMakeFiles/base.dir/UI/base.cpp.i
+.PHONY : UI/base.cpp.i
 
-Enginev2.s: Enginev2.cpp.s
-.PHONY : Enginev2.s
+UI/base.s: UI/base.cpp.s
+.PHONY : UI/base.s
 
 # target to generate assembly for a file
-Enginev2.cpp.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/Enginev2.dir/build.make CMakeFiles/Enginev2.dir/Enginev2.cpp.s
-.PHONY : Enginev2.cpp.s
+UI/base.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/base.dir/build.make CMakeFiles/base.dir/UI/base.cpp.s
+.PHONY : UI/base.cpp.s
 
-Map_loader.o: Map_loader.cpp.o
-.PHONY : Map_loader.o
+UI/inventory.o: UI/inventory.cpp.o
+.PHONY : UI/inventory.o
 
 # target to build an object file
-Map_loader.cpp.o:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/Map_loader.dir/build.make CMakeFiles/Map_loader.dir/Map_loader.cpp.o
-.PHONY : Map_loader.cpp.o
+UI/inventory.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/inventory.dir/build.make CMakeFiles/inventory.dir/UI/inventory.cpp.o
+.PHONY : UI/inventory.cpp.o
 
-Map_loader.i: Map_loader.cpp.i
-.PHONY : Map_loader.i
+UI/inventory.i: UI/inventory.cpp.i
+.PHONY : UI/inventory.i
 
 # target to preprocess a source file
-Map_loader.cpp.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/Map_loader.dir/build.make CMakeFiles/Map_loader.dir/Map_loader.cpp.i
-.PHONY : Map_loader.cpp.i
+UI/inventory.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/inventory.dir/build.make CMakeFiles/inventory.dir/UI/inventory.cpp.i
+.PHONY : UI/inventory.cpp.i
 
-Map_loader.s: Map_loader.cpp.s
-.PHONY : Map_loader.s
+UI/inventory.s: UI/inventory.cpp.s
+.PHONY : UI/inventory.s
 
 # target to generate assembly for a file
-Map_loader.cpp.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/Map_loader.dir/build.make CMakeFiles/Map_loader.dir/Map_loader.cpp.s
-.PHONY : Map_loader.cpp.s
+UI/inventory.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/inventory.dir/build.make CMakeFiles/inventory.dir/UI/inventory.cpp.s
+.PHONY : UI/inventory.cpp.s
+
+UI/inventory2.o: UI/inventory2.cpp.o
+.PHONY : UI/inventory2.o
+
+# target to build an object file
+UI/inventory2.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/inventory2.dir/build.make CMakeFiles/inventory2.dir/UI/inventory2.cpp.o
+.PHONY : UI/inventory2.cpp.o
+
+UI/inventory2.i: UI/inventory2.cpp.i
+.PHONY : UI/inventory2.i
+
+# target to preprocess a source file
+UI/inventory2.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/inventory2.dir/build.make CMakeFiles/inventory2.dir/UI/inventory2.cpp.i
+.PHONY : UI/inventory2.cpp.i
+
+UI/inventory2.s: UI/inventory2.cpp.s
+.PHONY : UI/inventory2.s
+
+# target to generate assembly for a file
+UI/inventory2.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/inventory2.dir/build.make CMakeFiles/inventory2.dir/UI/inventory2.cpp.s
+.PHONY : UI/inventory2.cpp.s
 
 # Help Target
 help:
@@ -309,26 +346,30 @@ help:
 	@echo "... depend"
 	@echo "... edit_cache"
 	@echo "... rebuild_cache"
-	@echo "... 1"
-	@echo "... 2"
 	@echo "... Enginev1"
 	@echo "... Enginev2"
-	@echo "... Map_loader"
-	@echo "... 1.o"
-	@echo "... 1.i"
-	@echo "... 1.s"
-	@echo "... 2.o"
-	@echo "... 2.i"
-	@echo "... 2.s"
-	@echo "... Enginev1.o"
-	@echo "... Enginev1.i"
-	@echo "... Enginev1.s"
-	@echo "... Enginev2.o"
-	@echo "... Enginev2.i"
-	@echo "... Enginev2.s"
-	@echo "... Map_loader.o"
-	@echo "... Map_loader.i"
-	@echo "... Map_loader.s"
+	@echo "... Map_loading"
+	@echo "... base"
+	@echo "... inventory"
+	@echo "... inventory2"
+	@echo "... Characters_Design&Mechanism/Enginev1.o"
+	@echo "... Characters_Design&Mechanism/Enginev1.i"
+	@echo "... Characters_Design&Mechanism/Enginev1.s"
+	@echo "... Characters_Design&Mechanism/Enginev2.o"
+	@echo "... Characters_Design&Mechanism/Enginev2.i"
+	@echo "... Characters_Design&Mechanism/Enginev2.s"
+	@echo "... Map&Objects/Map_loading.o"
+	@echo "... Map&Objects/Map_loading.i"
+	@echo "... Map&Objects/Map_loading.s"
+	@echo "... UI/base.o"
+	@echo "... UI/base.i"
+	@echo "... UI/base.s"
+	@echo "... UI/inventory.o"
+	@echo "... UI/inventory.i"
+	@echo "... UI/inventory.s"
+	@echo "... UI/inventory2.o"
+	@echo "... UI/inventory2.i"
+	@echo "... UI/inventory2.s"
 .PHONY : help
 
 

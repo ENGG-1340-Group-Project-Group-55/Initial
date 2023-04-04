@@ -49,8 +49,8 @@ void Maps::MapToArray(ifstream& inputline) {
     int width_tracker = 0;
     char td_map [map_height][map_width];
                 while (inputline >> noskipws >> ch){
-                    td_map[map_height][map_height] = ch;
                     cout<<ch;
+                    td_map[height_tracker][width_tracker] = ch;
                     width_tracker++;
                     if (width_tracker == map_width-1){
                         width_tracker =0;
