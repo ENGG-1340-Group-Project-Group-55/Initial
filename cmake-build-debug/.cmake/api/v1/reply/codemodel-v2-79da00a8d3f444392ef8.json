@@ -1,0 +1,105 @@
+{
+	"configurations" : 
+	[
+		{
+			"directories" : 
+			[
+				{
+					"build" : ".",
+					"jsonFile" : "directory-.-Debug-f5ebdc15457944623624.json",
+					"minimumCMakeVersion" : 
+					{
+						"string" : "3.24"
+					},
+					"projectIndex" : 0,
+					"source" : ".",
+					"targetIndexes" : 
+					[
+						0,
+						1,
+						2,
+						3,
+						4,
+						5
+					]
+				}
+			],
+			"name" : "Debug",
+			"projects" : 
+			[
+				{
+					"directoryIndexes" : 
+					[
+						0
+					],
+					"name" : "Initial",
+					"targetIndexes" : 
+					[
+						0,
+						1,
+						2,
+						3,
+						4,
+						5
+					]
+				}
+			],
+			"targets" : 
+			[
+				{
+					"directoryIndex" : 0,
+					"id" : "Enginev1::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-Enginev1-Debug-ffeccecb5e287f4555e9.json",
+					"name" : "Enginev1",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 0,
+					"id" : "Enginev2::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-Enginev2-Debug-d6364b825fb0c452045a.json",
+					"name" : "Enginev2",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 0,
+					"id" : "Map_loader::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-Map_loader-Debug-c6167c513cb245a8cb29.json",
+					"name" : "Map_loader",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 0,
+					"id" : "base::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-base-Debug-d7352a26f8f66cc88745.json",
+					"name" : "base",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 0,
+					"id" : "inventory::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-inventory-Debug-e361b072cdded314fb6f.json",
+					"name" : "inventory",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 0,
+					"id" : "inventory2::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-inventory2-Debug-c45bc1ab7709228e1508.json",
+					"name" : "inventory2",
+					"projectIndex" : 0
+				}
+			]
+		}
+	],
+	"kind" : "codemodel",
+	"paths" : 
+	{
+		"build" : "/Users/minchankim/Documents/GitHub/Initial/cmake-build-debug",
+		"source" : "/Users/minchankim/Documents/GitHub/Initial"
+	},
+	"version" : 
+	{
+		"major" : 2,
+		"minor" : 4
+	}
+}
