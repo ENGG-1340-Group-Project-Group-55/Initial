@@ -103,6 +103,37 @@ build inventory: CXX_EXECUTABLE_LINKER__inventory_Debug CMakeFiles/inventory.dir
   TARGET_PDB = inventory.dbg
 
 # =============================================================================
+# Object build statements for EXECUTABLE target inventory2
+
+
+#############################################
+# Order-only phony target for inventory2
+
+build cmake_object_order_depends_target_inventory2: phony || CMakeFiles/inventory2.dir
+
+build CMakeFiles/inventory2.dir/inventory2.cpp.o: CXX_COMPILER__inventory2_Debug /Users/minchankim/Documents/GitHub/Initial/inventory2.cpp || cmake_object_order_depends_target_inventory2
+  DEP_FILE = CMakeFiles/inventory2.dir/inventory2.cpp.o.d
+  FLAGS = -g -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX13.3.sdk -fcolor-diagnostics -std=gnu++17
+  OBJECT_DIR = CMakeFiles/inventory2.dir
+  OBJECT_FILE_DIR = CMakeFiles/inventory2.dir
+
+
+# =============================================================================
+# Link build statements for EXECUTABLE target inventory2
+
+
+#############################################
+# Link the executable inventory2
+
+build inventory2: CXX_EXECUTABLE_LINKER__inventory2_Debug CMakeFiles/inventory2.dir/inventory2.cpp.o
+  FLAGS = -g -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX13.3.sdk
+  OBJECT_DIR = CMakeFiles/inventory2.dir
+  POST_BUILD = :
+  PRE_LINK = :
+  TARGET_FILE = inventory2
+  TARGET_PDB = inventory2.dbg
+
+# =============================================================================
 # Object build statements for EXECUTABLE target base
 
 
@@ -229,7 +260,7 @@ build rebuild_cache: phony CMakeFiles/rebuild_cache.util
 #############################################
 # Folder: /Users/minchankim/Documents/GitHub/Initial/cmake-build-debug
 
-build all: phony Map_loader inventory base Enginev1 Enginev2
+build all: phony Map_loader inventory inventory2 base Enginev1 Enginev2
 
 # =============================================================================
 # Built-in targets
