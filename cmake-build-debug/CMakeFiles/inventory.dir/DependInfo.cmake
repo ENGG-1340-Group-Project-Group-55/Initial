@@ -8,7 +8,7 @@ set(CMAKE_DEPENDS_LANGUAGES
 
 # The set of dependency files which are needed:
 set(CMAKE_DEPENDS_DEPENDENCY_FILES
-  "/Users/lucas/Documents/GitHub/Initial/UI/inventory.cpp" "CMakeFiles/inventory.dir/UI/inventory.cpp.o" "gcc" "CMakeFiles/inventory.dir/UI/inventory.cpp.o.d"
+  "/Users/M1/Documents/GitHub/Initial/UI/inventory.cpp" "CMakeFiles/inventory.dir/UI/inventory.cpp.o" "gcc" "CMakeFiles/inventory.dir/UI/inventory.cpp.o.d"
   )
 
 # Targets to which this target links.
