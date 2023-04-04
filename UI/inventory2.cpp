@@ -1,66 +1,52 @@
 #include <iostream>
 #include <vector>
+#include <cstdlib> // for exit()
+
 using namespace std;
 
-int main() {
-    // Define items and their corresponding ASCII graphics
-    vector<string> items = {"key", "book", "letter", "bundle of hair"};
-    vector<string> graphics = {
-            "/o \\_____",
-            "\\__/-=\"=\"`",
-            " /@@@@@\n&@@@@\n@@@@@",
-            " *       \n    *///&%@,%(/     \n     &##/,(,(&@**   \n  ..&/*#%&%%##*(*  \n , /# &#(&(&%&&%, * \n    /(&###%*(%@* .  \n    ,,,*(%/,#((     \n        *."
-    };
+void printInventory(vector<string> inventory) {
+    cout << "Inventory:" << endl;
+    for (int i = 0; i < inventory.size(); i++) {
+        cout << i + 1 << ". " << inventory[i] << endl;
+    }
 
-    // Print the inventory
-    cout << " _____   _____   _____   _____\n";
-    cout << "|     | |     | |     | |     |\n";
-    cout << "|  ";
-    if (items.size() > 0) {
-        cout << items[0] << "  ";
-    } else {
-        cout << "     ";
+    // Prompt the user to quit the program
+    cout << "Enter 'q' to quit or any other key to continue: ";
+    string input;
+    getline(cin, input);
+    if (input == "q") {
+        exit(0); // Terminate the program
     }
-    cout << "| |  ";
-    if (items.size() > 1) {
-        cout << items[1] << "  ";
-    } else {
-        cout << "     ";
-    }
-    cout << "| |  ";
-    if (items.size() > 2) {
-        cout << items[2] << "  ";
-    } else {
-        cout << "     ";
-    }
-    cout << "| |  ";
-    if (items.size() > 3) {
-        cout << items[3] << "  ";
-    } else {
-        cout << "     ";
-    }
-    cout << "|\n";
-    cout << "|_____| |_____| |_____| |_____|\n";
-    for (int i = 0; i < 5; i++) {
-        cout << "|     | |     | |     | |     |\n";
-        for (int j = 0; j < items.size(); j++) {
-            cout << "|  ";
-            if (i < graphics[j].size()) {
-                cout << graphics[j][i];
-            } else {
-                cout << " ";
-            }
-            cout << "  ";
+}
+
+void addItem(vector<string>& inventory, string item) {
+    inventory.push_back(item);
+    cout << "Added " << item << " to the inventory." << endl;
+}
+
+int main() {
+    vector<string> inventory;
+    string item;
+
+    while (true) {
+        // Prompt the user to enter a command or an item
+        cout << "Enter a command or an item: ";
+        getline(cin, item);
+
+        // Check if the user wants to quit
+        if (item == "q") {
+            break;
         }
-        cout << "|\n";
+
+        // Check if the user wants to display the inventory
+        if (item == "e") {
+            printInventory(inventory);
+            continue;
+        }
+
+        // Add the item to the inventory
+        addItem(inventory, item);
     }
-    cout << "|_____| |_____| |_____| |_____|\n";
 
     return 0;
 }
-
-
-  &&&&   &&&&
-&& ... &  ...&&
-&& ... &  ...&&/
-  *&&& & @###&
