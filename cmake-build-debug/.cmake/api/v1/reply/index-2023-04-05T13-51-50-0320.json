@@ -8,10 +8,10 @@
 		},
 		"paths" : 
 		{
-			"cmake" : "/Users/lucas/Desktop/programming/C++/CLion.app/Contents/bin/cmake/mac/bin/cmake",
-			"cpack" : "/Users/lucas/Desktop/programming/C++/CLion.app/Contents/bin/cmake/mac/bin/cpack",
-			"ctest" : "/Users/lucas/Desktop/programming/C++/CLion.app/Contents/bin/cmake/mac/bin/ctest",
-			"root" : "/Users/lucas/Desktop/programming/C++/CLion.app/Contents/bin/cmake/mac/share/cmake-3.24"
+			"cmake" : "/Applications/CLion.app/Contents/bin/cmake/mac/bin/cmake",
+			"cpack" : "/Applications/CLion.app/Contents/bin/cmake/mac/bin/cpack",
+			"ctest" : "/Applications/CLion.app/Contents/bin/cmake/mac/bin/ctest",
+			"root" : "/Applications/CLion.app/Contents/bin/cmake/mac/share/cmake-3.24"
 		},
 		"version" : 
 		{
