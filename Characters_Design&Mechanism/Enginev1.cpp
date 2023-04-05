@@ -12,6 +12,8 @@
 #include <unistd.h>
 #endif
 
+using namespace std;
+
 class Game {
 private:
     const int ROWS = 12;
@@ -70,23 +72,23 @@ public:
 #ifdef _WIN32
             system("cls");
 #else
-            std::cout << "\033[2J\033[1;1H";
+            cout << "\033[2J\033[1;1H";
 #endif
             for (int i = 0; i < ROWS; i++) {
                 for (int j = 0; j < COLS; j++) {
                     if (i == y && j == x) {
-                        std::cout << "X";
+                        cout << "X";
                     } else {
-                        std::cout << grid[i][j];
+                        cout << grid[i][j];
                     }
                 }
-                std::cout << std::endl;
+                cout << endl;
             }
 
 #ifdef _WIN32
             int ch = _getch();
 #else
-            char ch = std::getchar();
+            char ch = getchar();
 #endif
 
             if (ch == 'w' && y > 1) {
