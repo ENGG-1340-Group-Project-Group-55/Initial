@@ -1,0 +1,114 @@
+{
+	"configurations" : 
+	[
+		{
+			"directories" : 
+			[
+				{
+					"build" : ".",
+					"jsonFile" : "directory-.-Debug-f5ebdc15457944623624.json",
+					"minimumCMakeVersion" : 
+					{
+						"string" : "3.24"
+					},
+					"projectIndex" : 0,
+					"source" : ".",
+					"targetIndexes" : 
+					[
+						0,
+						1,
+						2,
+						3,
+						4,
+						5,
+						6
+					]
+				}
+			],
+			"name" : "Debug",
+			"projects" : 
+			[
+				{
+					"directoryIndexes" : 
+					[
+						0
+					],
+					"name" : "Initial",
+					"targetIndexes" : 
+					[
+						0,
+						1,
+						2,
+						3,
+						4,
+						5,
+						6
+					]
+				}
+			],
+			"targets" : 
+			[
+				{
+					"directoryIndex" : 0,
+					"id" : "Enginev1::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-Enginev1-Debug-5a3c43962b5bea45af63.json",
+					"name" : "Enginev1",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 0,
+					"id" : "Enginev2::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-Enginev2-Debug-51fb703888e56a107f70.json",
+					"name" : "Enginev2",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 0,
+					"id" : "Map_loading::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-Map_loading-Debug-70d98451fb42d88646cb.json",
+					"name" : "Map_loading",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 0,
+					"id" : "base::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-base-Debug-c57fc02ab1544ad674b4.json",
+					"name" : "base",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 0,
+					"id" : "base2::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-base2-Debug-9942acfba6488da4ef42.json",
+					"name" : "base2",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 0,
+					"id" : "inventory::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-inventory-Debug-8bef0848354e5f8e0159.json",
+					"name" : "inventory",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 0,
+					"id" : "inventory2::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-inventory2-Debug-85053cf42aab309685db.json",
+					"name" : "inventory2",
+					"projectIndex" : 0
+				}
+			]
+		}
+	],
+	"kind" : "codemodel",
+	"paths" : 
+	{
+		"build" : "/Users/minchankim/Documents/GitHub/Second/cmake-build-debug",
+		"source" : "/Users/minchankim/Documents/GitHub/Second"
+	},
+	"version" : 
+	{
+		"major" : 2,
+		"minor" : 4
+	}
+}

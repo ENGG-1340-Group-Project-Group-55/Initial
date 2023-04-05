@@ -1,7 +1,0 @@
-# ninja log v5
-1	1574	1680723286665248061	CMakeFiles/base2.dir/UI/base2.cpp.o	9ed9cfd679812799
-1579	1769	1680723286863046867	base2	6fae990c01ab1499
-0	1686	1680723305952408708	CMakeFiles/Map_loading.dir/Map&Objects/Map_loading.cpp.o	6b22c49bebf14aa6
-1686	1842	1680723306109866162	Map_loading	3cf979aea1bb25fa
-0	1547	1680723581193425278	CMakeFiles/Enginev1.dir/Characters_Design&Mechanism/Enginev1.cpp.o	77ce11223134fae8
-1547	1766	1680723581413377382	Enginev1	f2d05d14e668f617
