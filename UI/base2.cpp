@@ -4,43 +4,51 @@
 #include <vector>
 using namespace std;
 
+void mainMenu();
 
 void printInventory(vector<string> inventory) {
-    cout << "Inventory:" << endl;
+    cout << endl << "Inventory:" << endl;
+    if (inventory.size() == 0) {
+        cout << "The inventory is EMPTY!" << endl << endl << endl;
+        mainMenu();
+    }
+
     for (int i = 0; i < inventory.size(); i++) {
         cout << i + 1 << ". " << inventory[i] << endl;
     }
+
+    // Prompt the user to quit the program
+    cout << "Enter 'q' to quit or any other key to continue: " << endl;
+    string input;
+    getline(cin, input);
+    if (input == "q") {
+        exit(0); // Terminate the program
+    }
 }
 
-void inventory(string item) {
+void addItem(vector<string>& inventory, string item) {
+    inventory.push_back(item);
+    cout << "Added " << item << " to the inventory." << endl;
+}
+
+void Inventory(string item) {
     vector<string> inventory;
-    bool quit = false;
 
-    do {
-        // Prompt the user to enter a command or an item
-        cout << "Enter a command or an item: ";
-        cin >> item;
+    // Check if the user wants to quit
+    if (item == "q") {
+    }
 
-        // Check if the user wants to quit
-        if (item == "q") {
-            quit = true;
-        }
+    // Check if the user wants to display the inventory
+    if (item == "e") {
+        printInventory(inventory);
+    }
 
-            // Check if the user wants to display the inventory
-        else if (item == "e") {
-            printInventory(inventory);
-        }
-
-            // Add the item to the inventory
-        else {
-            inventory.push_back(item);
-            cout << "Added " << item << " to the inventory." << endl;
-        }
-
-    } while (!quit);
+    // Add the item to the inventory
+    if (item != "q" && item != "e") {
+        addItem(inventory, item);
+    }
 
 }
-
 
 string support;
 string tpe;
@@ -66,7 +74,7 @@ void mainMenu() {
     }
     if(tpe == "e") {
         input = 'e';
-        inventory(input);
+        Inventory(input);
     }
 }
 
@@ -105,5 +113,4 @@ int main() {
 
     starting();
     mainMenu();
-    puzzle3();
 }
