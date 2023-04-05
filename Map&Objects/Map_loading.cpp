@@ -19,6 +19,8 @@ class Maps
             void Location_accessor();
         };
 
+
+
 int main(){
     Maps Mp(15,30);
     Mp.Map_Loader();
@@ -30,6 +32,7 @@ Maps::Maps(int a,int b){
     map_height = Map_height;
     map_width = Map_width;
 }
+
 
 void Maps::Map_Loader() {
     ifstream inputline;
@@ -51,7 +54,6 @@ void Maps::MapToArray(ifstream& inputline)
     int height_tracker = 0;
     int width_tracker = 0;
     char td_map [map_height][map_width];
-
     while (inputline >> noskipws >> ch)
     {
         if (ch != '\n')
@@ -72,6 +74,7 @@ void Maps::MapToArray(ifstream& inputline)
             width_tracker++;
         }
     }
+
 
     /*for (int i=0;i<map_height;i++)
     {
