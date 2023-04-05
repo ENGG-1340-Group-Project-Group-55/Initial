@@ -2,7 +2,7 @@
 	"artifacts" : 
 	[
 		{
-			"path" : "Map_loading"
+			"path" : "Enginev1"
 		}
 	],
 	"backtrace" : 1,
@@ -24,7 +24,7 @@
 			{
 				"command" : 0,
 				"file" : 0,
-				"line" : 6,
+				"line" : 11,
 				"parent" : 0
 			}
 		]
@@ -35,11 +35,7 @@
 			"compileCommandFragments" : 
 			[
 				{
-<<<<<<<< HEAD:cmake-build-debug/.cmake/api/v1/reply/target-Map_loading-Debug-70d98451fb42d88646cb.json
 					"fragment" : "-g -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX13.3.sdk -fcolor-diagnostics"
-========
-					"fragment" : " -arch arm64 -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX13.3.sdk -mmacosx-version-min=13.2"
->>>>>>>> 9ac4613d6e21dd9263aae7006b5fd24d5fe3978f:cmake-build-debug/.cmake/api/v1/reply/target-Map_loading-3cf817e396fc7191469c.json
 				},
 				{
 					"fragment" : "-std=gnu++17"
@@ -60,11 +56,15 @@
 			]
 		}
 	],
-	"id" : "Map_loading::@6890427a1f51a3e7e1df",
+	"id" : "Enginev1::@6890427a1f51a3e7e1df",
 	"link" : 
 	{
 		"commandFragments" : 
 		[
+			{
+				"fragment" : "-g",
+				"role" : "flags"
+			},
 			{
 				"fragment" : "",
 				"role" : "flags"
@@ -72,8 +72,8 @@
 		],
 		"language" : "CXX"
 	},
-	"name" : "Map_loading",
-	"nameOnDisk" : "Map_loading",
+	"name" : "Enginev1",
+	"nameOnDisk" : "Enginev1",
 	"paths" : 
 	{
 		"build" : ".",
@@ -94,7 +94,7 @@
 		{
 			"backtrace" : 1,
 			"compileGroupIndex" : 0,
-			"path" : "Map&Objects/Map_loading.cpp",
+			"path" : "Characters_Design&Mechanism/Enginev1.cpp",
 			"sourceGroupIndex" : 0
 		}
 	],

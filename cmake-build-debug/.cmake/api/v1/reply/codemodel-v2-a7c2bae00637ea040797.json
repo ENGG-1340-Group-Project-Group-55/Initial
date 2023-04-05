@@ -6,7 +6,7 @@
 			[
 				{
 					"build" : ".",
-					"jsonFile" : "directory-.-f5ebdc15457944623624.json",
+					"jsonFile" : "directory-.-Debug-f5ebdc15457944623624.json",
 					"minimumCMakeVersion" : 
 					{
 						"string" : "3.24"
@@ -25,7 +25,7 @@
 					]
 				}
 			],
-			"name" : "",
+			"name" : "Debug",
 			"projects" : 
 			[
 				{
@@ -51,44 +51,28 @@
 				{
 					"directoryIndex" : 0,
 					"id" : "Enginev1::@6890427a1f51a3e7e1df",
-<<<<<<<< HEAD:cmake-build-debug/.cmake/api/v1/reply/codemodel-v2-901b2c00befe000cda91.json
 					"jsonFile" : "target-Enginev1-Debug-5a3c43962b5bea45af63.json",
-========
-					"jsonFile" : "target-Enginev1-2275b825b8b6bd1b502d.json",
->>>>>>>> 9ac4613d6e21dd9263aae7006b5fd24d5fe3978f:cmake-build-debug/.cmake/api/v1/reply/codemodel-v2-98aee8793d8ff50ecb86.json
 					"name" : "Enginev1",
 					"projectIndex" : 0
 				},
 				{
 					"directoryIndex" : 0,
 					"id" : "Enginev2::@6890427a1f51a3e7e1df",
-<<<<<<<< HEAD:cmake-build-debug/.cmake/api/v1/reply/codemodel-v2-901b2c00befe000cda91.json
 					"jsonFile" : "target-Enginev2-Debug-51fb703888e56a107f70.json",
-========
-					"jsonFile" : "target-Enginev2-a0483e505ae09fafc0cc.json",
->>>>>>>> 9ac4613d6e21dd9263aae7006b5fd24d5fe3978f:cmake-build-debug/.cmake/api/v1/reply/codemodel-v2-98aee8793d8ff50ecb86.json
 					"name" : "Enginev2",
 					"projectIndex" : 0
 				},
 				{
 					"directoryIndex" : 0,
 					"id" : "Map_loading::@6890427a1f51a3e7e1df",
-<<<<<<<< HEAD:cmake-build-debug/.cmake/api/v1/reply/codemodel-v2-901b2c00befe000cda91.json
 					"jsonFile" : "target-Map_loading-Debug-70d98451fb42d88646cb.json",
-========
-					"jsonFile" : "target-Map_loading-3cf817e396fc7191469c.json",
->>>>>>>> 9ac4613d6e21dd9263aae7006b5fd24d5fe3978f:cmake-build-debug/.cmake/api/v1/reply/codemodel-v2-98aee8793d8ff50ecb86.json
 					"name" : "Map_loading",
 					"projectIndex" : 0
 				},
 				{
 					"directoryIndex" : 0,
 					"id" : "base::@6890427a1f51a3e7e1df",
-<<<<<<<< HEAD:cmake-build-debug/.cmake/api/v1/reply/codemodel-v2-901b2c00befe000cda91.json
 					"jsonFile" : "target-base-Debug-c57fc02ab1544ad674b4.json",
-========
-					"jsonFile" : "target-base-699f0c3c10380100f6ac.json",
->>>>>>>> 9ac4613d6e21dd9263aae7006b5fd24d5fe3978f:cmake-build-debug/.cmake/api/v1/reply/codemodel-v2-98aee8793d8ff50ecb86.json
 					"name" : "base",
 					"projectIndex" : 0
 				},
@@ -102,22 +86,14 @@
 				{
 					"directoryIndex" : 0,
 					"id" : "inventory::@6890427a1f51a3e7e1df",
-<<<<<<<< HEAD:cmake-build-debug/.cmake/api/v1/reply/codemodel-v2-901b2c00befe000cda91.json
 					"jsonFile" : "target-inventory-Debug-8bef0848354e5f8e0159.json",
-========
-					"jsonFile" : "target-inventory-10580beb46fb2d1a4e8e.json",
->>>>>>>> 9ac4613d6e21dd9263aae7006b5fd24d5fe3978f:cmake-build-debug/.cmake/api/v1/reply/codemodel-v2-98aee8793d8ff50ecb86.json
 					"name" : "inventory",
 					"projectIndex" : 0
 				},
 				{
 					"directoryIndex" : 0,
 					"id" : "inventory2::@6890427a1f51a3e7e1df",
-<<<<<<<< HEAD:cmake-build-debug/.cmake/api/v1/reply/codemodel-v2-901b2c00befe000cda91.json
 					"jsonFile" : "target-inventory2-Debug-85053cf42aab309685db.json",
-========
-					"jsonFile" : "target-inventory2-a73a77d3f8756fb76eed.json",
->>>>>>>> 9ac4613d6e21dd9263aae7006b5fd24d5fe3978f:cmake-build-debug/.cmake/api/v1/reply/codemodel-v2-98aee8793d8ff50ecb86.json
 					"name" : "inventory2",
 					"projectIndex" : 0
 				}
@@ -127,8 +103,8 @@
 	"kind" : "codemodel",
 	"paths" : 
 	{
-		"build" : "/Users/minchankim/Documents/GitHub/Initial/cmake-build-debug",
-		"source" : "/Users/minchankim/Documents/GitHub/Initial"
+		"build" : "/Users/minchankim/Documents/GitHub/Second/cmake-build-debug",
+		"source" : "/Users/minchankim/Documents/GitHub/Second"
 	},
 	"version" : 
 	{

@@ -2,7 +2,7 @@
 	"artifacts" : 
 	[
 		{
-			"path" : "inventory2"
+			"path" : "inventory"
 		}
 	],
 	"backtrace" : 1,
@@ -24,7 +24,7 @@
 			{
 				"command" : 0,
 				"file" : 0,
-				"line" : 8,
+				"line" : 7,
 				"parent" : 0
 			}
 		]
@@ -35,11 +35,7 @@
 			"compileCommandFragments" : 
 			[
 				{
-<<<<<<<< HEAD:cmake-build-debug/.cmake/api/v1/reply/target-inventory2-Debug-85053cf42aab309685db.json
 					"fragment" : "-g -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX13.3.sdk -fcolor-diagnostics"
-========
-					"fragment" : " -arch arm64 -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX13.3.sdk -mmacosx-version-min=13.2"
->>>>>>>> 9ac4613d6e21dd9263aae7006b5fd24d5fe3978f:cmake-build-debug/.cmake/api/v1/reply/target-inventory2-a73a77d3f8756fb76eed.json
 				},
 				{
 					"fragment" : "-std=gnu++17"
@@ -60,11 +56,15 @@
 			]
 		}
 	],
-	"id" : "inventory2::@6890427a1f51a3e7e1df",
+	"id" : "inventory::@6890427a1f51a3e7e1df",
 	"link" : 
 	{
 		"commandFragments" : 
 		[
+			{
+				"fragment" : "-g",
+				"role" : "flags"
+			},
 			{
 				"fragment" : "",
 				"role" : "flags"
@@ -72,8 +72,8 @@
 		],
 		"language" : "CXX"
 	},
-	"name" : "inventory2",
-	"nameOnDisk" : "inventory2",
+	"name" : "inventory",
+	"nameOnDisk" : "inventory",
 	"paths" : 
 	{
 		"build" : ".",
@@ -94,7 +94,7 @@
 		{
 			"backtrace" : 1,
 			"compileGroupIndex" : 0,
-			"path" : "UI/inventory2.cpp",
+			"path" : "UI/inventory.cpp",
 			"sourceGroupIndex" : 0
 		}
 	],
