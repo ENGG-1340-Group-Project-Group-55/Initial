@@ -5,6 +5,11 @@
 
 using namespace std;
 
+struct ArrayWrapper{
+    vector<vector<char>> TDVEC;
+};
+
+
 class Maps
         {
     private:
@@ -15,11 +20,8 @@ class Maps
             int map_height;
             int map_width;
             void Map_Loader();
-            void Map_Printer();
-            char* MapToArray(ifstream&);
-            void Location_accessor();
+            ArrayWrapper MapToArray(ifstream&);
         };
-
 
 
 int main(){
@@ -43,25 +45,23 @@ void Maps::Map_Loader() {
         cout<<"파일이 없다잖아 병신아!!!"<<endl;
         exit(1);
     }
-    char hekko = *MapToArray(inputline);
-    cout<<hekko<<endl;
+   ArrayWrapper Converter = MapToArray(inputline);
+    cout<<Converter.TDVEC[0][1]<<endl;
 
 }
 
-char* Maps::MapToArray(ifstream& inputline)
+ArrayWrapper Maps::MapToArray(ifstream& inputline)
 {
+    ArrayWrapper Converter;
     char ch;
-    char temp;
-    int counter=0;
     int height_tracker = 0;
     int width_tracker = 0;
-    char td_map [map_height][map_width];
+    Converter.TDVEC.resize(map_height);
     while (inputline >> noskipws >> ch)
     {
         if (ch != '\n')
         {
-            if (height_tracker==map_height-1){counter++;}
-            td_map[height_tracker][width_tracker] = ch;
+            Converter.TDVEC[height_tracker].push_back(ch);
                 if (width_tracker==map_width-1)
                 {
                     height_tracker++;
@@ -77,22 +77,7 @@ char* Maps::MapToArray(ifstream& inputline)
         }
     }
 
-    return *td_map;
-
-    for (int i=0;i<map_height;i++)
-    {
-        for (int j=0;j<map_width;j++)
-        {
-            temp = td_map[i][j];
-            if (j==map_width-1)
-            {
-                cout<<temp;
-                cout<<'\n';
-            }
-            else{
-                cout<<temp;
-            }
-        }
-    }
+    return Converter;
 }
+
 
