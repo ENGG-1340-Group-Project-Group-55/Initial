@@ -2,7 +2,7 @@
 	"artifacts" : 
 	[
 		{
-			"path" : "Map_loading"
+			"path" : "inventory"
 		}
 	],
 	"backtrace" : 1,
@@ -24,7 +24,7 @@
 			{
 				"command" : 0,
 				"file" : 0,
-				"line" : 6,
+				"line" : 7,
 				"parent" : 0
 			}
 		]
@@ -35,7 +35,11 @@
 			"compileCommandFragments" : 
 			[
 				{
+<<<<<<<< HEAD:cmake-build-debug/.cmake/api/v1/reply/target-inventory-Debug-8bef0848354e5f8e0159.json
 					"fragment" : "-g -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX13.3.sdk -fcolor-diagnostics"
+========
+					"fragment" : " -arch arm64 -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX13.3.sdk -mmacosx-version-min=13.2"
+>>>>>>>> 9ac4613d6e21dd9263aae7006b5fd24d5fe3978f:cmake-build-debug/.cmake/api/v1/reply/target-inventory-10580beb46fb2d1a4e8e.json
 				},
 				{
 					"fragment" : "-std=gnu++17"
@@ -56,15 +60,11 @@
 			]
 		}
 	],
-	"id" : "Map_loading::@6890427a1f51a3e7e1df",
+	"id" : "inventory::@6890427a1f51a3e7e1df",
 	"link" : 
 	{
 		"commandFragments" : 
 		[
-			{
-				"fragment" : "-g",
-				"role" : "flags"
-			},
 			{
 				"fragment" : "",
 				"role" : "flags"
@@ -72,8 +72,8 @@
 		],
 		"language" : "CXX"
 	},
-	"name" : "Map_loading",
-	"nameOnDisk" : "Map_loading",
+	"name" : "inventory",
+	"nameOnDisk" : "inventory",
 	"paths" : 
 	{
 		"build" : ".",
@@ -94,7 +94,7 @@
 		{
 			"backtrace" : 1,
 			"compileGroupIndex" : 0,
-			"path" : "Map&Objects/Map_loading.cpp",
+			"path" : "UI/inventory.cpp",
 			"sourceGroupIndex" : 0
 		}
 	],
