@@ -15,9 +15,12 @@ class Maps
             int map_height;
             int map_width;
             void Map_Loader();
-            void MapToArray(ifstream&);
+            void Map_Printer();
+            char* MapToArray(ifstream&);
             void Location_accessor();
         };
+
+
 
 int main(){
     Maps Mp(15,30);
@@ -31,6 +34,7 @@ Maps::Maps(int a,int b){
     map_width = Map_width;
 }
 
+
 void Maps::Map_Loader() {
     ifstream inputline;
     string nextline;
@@ -39,34 +43,56 @@ void Maps::Map_Loader() {
         cout<<"파일이 없다잖아 병신아!!!"<<endl;
         exit(1);
     }
-    MapToArray(inputline);
+    char hekko = *MapToArray(inputline);
+    cout<<hekko<<endl;
 
 }
 
-void Maps::MapToArray(ifstream& inputline) {
+char* Maps::MapToArray(ifstream& inputline)
+{
     char ch;
+    char temp;
+    int counter=0;
     int height_tracker = 0;
     int width_tracker = 0;
     char td_map [map_height][map_width];
-                while (inputline >> noskipws >> ch) {
-                    cout<<"height_tracker: "<<height_tracker<<endl;
-                    cout<<"width_tracker: "<<width_tracker<<endl<<endl;
-                    td_map[height_tracker][width_tracker] = ch;
-                    if (width_tracker==map_width-1){
-                        width_tracker=-1;
-                        height_tracker++;
-                        if (height_tracker==map_height){
-                            break;
-                        }
+    while (inputline >> noskipws >> ch)
+    {
+        if (ch != '\n')
+        {
+            if (height_tracker==map_height-1){counter++;}
+            td_map[height_tracker][width_tracker] = ch;
+                if (width_tracker==map_width-1)
+                {
+                    height_tracker++;
+                    if (height_tracker==map_height)
+                    {
+                        inputline.close();
+                        break;
                     }
-                    width_tracker++;
+                    width_tracker = -1;
                 }
 
-                for (int i=0;i<map_height;i++){
-                    for (int j=0;j<map_width;j++){
-                        cout<<td_map[i][j];
-                    }
-                }
-
-    inputline.close();
+            width_tracker++;
         }
+    }
+
+    return *td_map;
+
+    for (int i=0;i<map_height;i++)
+    {
+        for (int j=0;j<map_width;j++)
+        {
+            temp = td_map[i][j];
+            if (j==map_width-1)
+            {
+                cout<<temp;
+                cout<<'\n';
+            }
+            else{
+                cout<<temp;
+            }
+        }
+    }
+}
+
