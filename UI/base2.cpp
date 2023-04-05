@@ -12,6 +12,7 @@ void printInventory(vector<string> inventory) {
         cout << "The inventory is EMPTY!" << endl << endl << endl;
         mainMenu();
     }
+
     for (int i = 0; i < inventory.size(); i++) {
         cout << i + 1 << ". " << inventory[i] << endl;
     }
