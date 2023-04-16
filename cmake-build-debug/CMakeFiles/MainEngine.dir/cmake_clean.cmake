@@ -1,6 +1,8 @@
 file(REMOVE_RECURSE
   "CMakeFiles/MainEngine.dir/Characters_Design&Mechanism/MainEngine.cpp.o"
   "CMakeFiles/MainEngine.dir/Characters_Design&Mechanism/MainEngine.cpp.o.d"
+  "CMakeFiles/MainEngine.dir/Map&Objects/Map_loading.cpp.o"
+  "CMakeFiles/MainEngine.dir/Map&Objects/Map_loading.cpp.o.d"
   "MainEngine"
   "MainEngine.pdb"
 )
