@@ -233,149 +233,149 @@ MainEngine/fast:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/MainEngine.dir/build.make CMakeFiles/MainEngine.dir/build
 .PHONY : MainEngine/fast
 
-Characters_Design&Mechanism/Character_Design.o: Characters_Design&Mechanism/Character_Design.cpp.o
-.PHONY : Characters_Design&Mechanism/Character_Design.o
+CharactersDesign_Mechanism/Character_Design.o: CharactersDesign_Mechanism/Character_Design.cpp.o
+.PHONY : CharactersDesign_Mechanism/Character_Design.o
 
 # target to build an object file
-Characters_Design&Mechanism/Character_Design.cpp.o:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/Character_Design.dir/build.make "CMakeFiles/Character_Design.dir/Characters_Design&Mechanism/Character_Design.cpp.o"
-.PHONY : Characters_Design&Mechanism/Character_Design.cpp.o
+CharactersDesign_Mechanism/Character_Design.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Character_Design.dir/build.make CMakeFiles/Character_Design.dir/CharactersDesign_Mechanism/Character_Design.cpp.o
+.PHONY : CharactersDesign_Mechanism/Character_Design.cpp.o
 
-Characters_Design&Mechanism/Character_Design.i: Characters_Design&Mechanism/Character_Design.cpp.i
-.PHONY : Characters_Design&Mechanism/Character_Design.i
+CharactersDesign_Mechanism/Character_Design.i: CharactersDesign_Mechanism/Character_Design.cpp.i
+.PHONY : CharactersDesign_Mechanism/Character_Design.i
 
 # target to preprocess a source file
-Characters_Design&Mechanism/Character_Design.cpp.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/Character_Design.dir/build.make "CMakeFiles/Character_Design.dir/Characters_Design&Mechanism/Character_Design.cpp.i"
-.PHONY : Characters_Design&Mechanism/Character_Design.cpp.i
+CharactersDesign_Mechanism/Character_Design.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Character_Design.dir/build.make CMakeFiles/Character_Design.dir/CharactersDesign_Mechanism/Character_Design.cpp.i
+.PHONY : CharactersDesign_Mechanism/Character_Design.cpp.i
 
-Characters_Design&Mechanism/Character_Design.s: Characters_Design&Mechanism/Character_Design.cpp.s
-.PHONY : Characters_Design&Mechanism/Character_Design.s
+CharactersDesign_Mechanism/Character_Design.s: CharactersDesign_Mechanism/Character_Design.cpp.s
+.PHONY : CharactersDesign_Mechanism/Character_Design.s
 
 # target to generate assembly for a file
-Characters_Design&Mechanism/Character_Design.cpp.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/Character_Design.dir/build.make "CMakeFiles/Character_Design.dir/Characters_Design&Mechanism/Character_Design.cpp.s"
-.PHONY : Characters_Design&Mechanism/Character_Design.cpp.s
+CharactersDesign_Mechanism/Character_Design.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Character_Design.dir/build.make CMakeFiles/Character_Design.dir/CharactersDesign_Mechanism/Character_Design.cpp.s
+.PHONY : CharactersDesign_Mechanism/Character_Design.cpp.s
 
-Characters_Design&Mechanism/Enginev1.o: Characters_Design&Mechanism/Enginev1.cpp.o
-.PHONY : Characters_Design&Mechanism/Enginev1.o
+CharactersDesign_Mechanism/Enginev1.o: CharactersDesign_Mechanism/Enginev1.cpp.o
+.PHONY : CharactersDesign_Mechanism/Enginev1.o
 
 # target to build an object file
-Characters_Design&Mechanism/Enginev1.cpp.o:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/Enginev1.dir/build.make "CMakeFiles/Enginev1.dir/Characters_Design&Mechanism/Enginev1.cpp.o"
-.PHONY : Characters_Design&Mechanism/Enginev1.cpp.o
+CharactersDesign_Mechanism/Enginev1.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Enginev1.dir/build.make CMakeFiles/Enginev1.dir/CharactersDesign_Mechanism/Enginev1.cpp.o
+.PHONY : CharactersDesign_Mechanism/Enginev1.cpp.o
 
-Characters_Design&Mechanism/Enginev1.i: Characters_Design&Mechanism/Enginev1.cpp.i
-.PHONY : Characters_Design&Mechanism/Enginev1.i
+CharactersDesign_Mechanism/Enginev1.i: CharactersDesign_Mechanism/Enginev1.cpp.i
+.PHONY : CharactersDesign_Mechanism/Enginev1.i
 
 # target to preprocess a source file
-Characters_Design&Mechanism/Enginev1.cpp.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/Enginev1.dir/build.make "CMakeFiles/Enginev1.dir/Characters_Design&Mechanism/Enginev1.cpp.i"
-.PHONY : Characters_Design&Mechanism/Enginev1.cpp.i
+CharactersDesign_Mechanism/Enginev1.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Enginev1.dir/build.make CMakeFiles/Enginev1.dir/CharactersDesign_Mechanism/Enginev1.cpp.i
+.PHONY : CharactersDesign_Mechanism/Enginev1.cpp.i
 
-Characters_Design&Mechanism/Enginev1.s: Characters_Design&Mechanism/Enginev1.cpp.s
-.PHONY : Characters_Design&Mechanism/Enginev1.s
+CharactersDesign_Mechanism/Enginev1.s: CharactersDesign_Mechanism/Enginev1.cpp.s
+.PHONY : CharactersDesign_Mechanism/Enginev1.s
 
 # target to generate assembly for a file
-Characters_Design&Mechanism/Enginev1.cpp.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/Enginev1.dir/build.make "CMakeFiles/Enginev1.dir/Characters_Design&Mechanism/Enginev1.cpp.s"
-.PHONY : Characters_Design&Mechanism/Enginev1.cpp.s
+CharactersDesign_Mechanism/Enginev1.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Enginev1.dir/build.make CMakeFiles/Enginev1.dir/CharactersDesign_Mechanism/Enginev1.cpp.s
+.PHONY : CharactersDesign_Mechanism/Enginev1.cpp.s
 
-Characters_Design&Mechanism/Enginev2.o: Characters_Design&Mechanism/Enginev2.cpp.o
-.PHONY : Characters_Design&Mechanism/Enginev2.o
+CharactersDesign_Mechanism/Enginev2.o: CharactersDesign_Mechanism/Enginev2.cpp.o
+.PHONY : CharactersDesign_Mechanism/Enginev2.o
 
 # target to build an object file
-Characters_Design&Mechanism/Enginev2.cpp.o:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/Enginev2.dir/build.make "CMakeFiles/Enginev2.dir/Characters_Design&Mechanism/Enginev2.cpp.o"
-.PHONY : Characters_Design&Mechanism/Enginev2.cpp.o
+CharactersDesign_Mechanism/Enginev2.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Enginev2.dir/build.make CMakeFiles/Enginev2.dir/CharactersDesign_Mechanism/Enginev2.cpp.o
+.PHONY : CharactersDesign_Mechanism/Enginev2.cpp.o
 
-Characters_Design&Mechanism/Enginev2.i: Characters_Design&Mechanism/Enginev2.cpp.i
-.PHONY : Characters_Design&Mechanism/Enginev2.i
+CharactersDesign_Mechanism/Enginev2.i: CharactersDesign_Mechanism/Enginev2.cpp.i
+.PHONY : CharactersDesign_Mechanism/Enginev2.i
 
 # target to preprocess a source file
-Characters_Design&Mechanism/Enginev2.cpp.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/Enginev2.dir/build.make "CMakeFiles/Enginev2.dir/Characters_Design&Mechanism/Enginev2.cpp.i"
-.PHONY : Characters_Design&Mechanism/Enginev2.cpp.i
+CharactersDesign_Mechanism/Enginev2.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Enginev2.dir/build.make CMakeFiles/Enginev2.dir/CharactersDesign_Mechanism/Enginev2.cpp.i
+.PHONY : CharactersDesign_Mechanism/Enginev2.cpp.i
 
-Characters_Design&Mechanism/Enginev2.s: Characters_Design&Mechanism/Enginev2.cpp.s
-.PHONY : Characters_Design&Mechanism/Enginev2.s
+CharactersDesign_Mechanism/Enginev2.s: CharactersDesign_Mechanism/Enginev2.cpp.s
+.PHONY : CharactersDesign_Mechanism/Enginev2.s
 
 # target to generate assembly for a file
-Characters_Design&Mechanism/Enginev2.cpp.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/Enginev2.dir/build.make "CMakeFiles/Enginev2.dir/Characters_Design&Mechanism/Enginev2.cpp.s"
-.PHONY : Characters_Design&Mechanism/Enginev2.cpp.s
+CharactersDesign_Mechanism/Enginev2.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Enginev2.dir/build.make CMakeFiles/Enginev2.dir/CharactersDesign_Mechanism/Enginev2.cpp.s
+.PHONY : CharactersDesign_Mechanism/Enginev2.cpp.s
 
-Characters_Design&Mechanism/MainEngine.o: Characters_Design&Mechanism/MainEngine.cpp.o
-.PHONY : Characters_Design&Mechanism/MainEngine.o
+CharactersDesign_Mechanism/MainEngine.o: CharactersDesign_Mechanism/MainEngine.cpp.o
+.PHONY : CharactersDesign_Mechanism/MainEngine.o
 
 # target to build an object file
-Characters_Design&Mechanism/MainEngine.cpp.o:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/MainEngine.dir/build.make "CMakeFiles/MainEngine.dir/Characters_Design&Mechanism/MainEngine.cpp.o"
-.PHONY : Characters_Design&Mechanism/MainEngine.cpp.o
+CharactersDesign_Mechanism/MainEngine.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/MainEngine.dir/build.make CMakeFiles/MainEngine.dir/CharactersDesign_Mechanism/MainEngine.cpp.o
+.PHONY : CharactersDesign_Mechanism/MainEngine.cpp.o
 
-Characters_Design&Mechanism/MainEngine.i: Characters_Design&Mechanism/MainEngine.cpp.i
-.PHONY : Characters_Design&Mechanism/MainEngine.i
+CharactersDesign_Mechanism/MainEngine.i: CharactersDesign_Mechanism/MainEngine.cpp.i
+.PHONY : CharactersDesign_Mechanism/MainEngine.i
 
 # target to preprocess a source file
-Characters_Design&Mechanism/MainEngine.cpp.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/MainEngine.dir/build.make "CMakeFiles/MainEngine.dir/Characters_Design&Mechanism/MainEngine.cpp.i"
-.PHONY : Characters_Design&Mechanism/MainEngine.cpp.i
+CharactersDesign_Mechanism/MainEngine.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/MainEngine.dir/build.make CMakeFiles/MainEngine.dir/CharactersDesign_Mechanism/MainEngine.cpp.i
+.PHONY : CharactersDesign_Mechanism/MainEngine.cpp.i
 
-Characters_Design&Mechanism/MainEngine.s: Characters_Design&Mechanism/MainEngine.cpp.s
-.PHONY : Characters_Design&Mechanism/MainEngine.s
+CharactersDesign_Mechanism/MainEngine.s: CharactersDesign_Mechanism/MainEngine.cpp.s
+.PHONY : CharactersDesign_Mechanism/MainEngine.s
 
 # target to generate assembly for a file
-Characters_Design&Mechanism/MainEngine.cpp.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/MainEngine.dir/build.make "CMakeFiles/MainEngine.dir/Characters_Design&Mechanism/MainEngine.cpp.s"
-.PHONY : Characters_Design&Mechanism/MainEngine.cpp.s
+CharactersDesign_Mechanism/MainEngine.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/MainEngine.dir/build.make CMakeFiles/MainEngine.dir/CharactersDesign_Mechanism/MainEngine.cpp.s
+.PHONY : CharactersDesign_Mechanism/MainEngine.cpp.s
 
-Map&Objects/Map_loading.o: Map&Objects/Map_loading.cpp.o
-.PHONY : Map&Objects/Map_loading.o
+Map_Objects/Map_loading.o: Map_Objects/Map_loading.cpp.o
+.PHONY : Map_Objects/Map_loading.o
 
 # target to build an object file
-Map&Objects/Map_loading.cpp.o:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/MainEngine.dir/build.make "CMakeFiles/MainEngine.dir/Map&Objects/Map_loading.cpp.o"
-.PHONY : Map&Objects/Map_loading.cpp.o
+Map_Objects/Map_loading.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/MainEngine.dir/build.make CMakeFiles/MainEngine.dir/Map_Objects/Map_loading.cpp.o
+.PHONY : Map_Objects/Map_loading.cpp.o
 
-Map&Objects/Map_loading.i: Map&Objects/Map_loading.cpp.i
-.PHONY : Map&Objects/Map_loading.i
+Map_Objects/Map_loading.i: Map_Objects/Map_loading.cpp.i
+.PHONY : Map_Objects/Map_loading.i
 
 # target to preprocess a source file
-Map&Objects/Map_loading.cpp.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/MainEngine.dir/build.make "CMakeFiles/MainEngine.dir/Map&Objects/Map_loading.cpp.i"
-.PHONY : Map&Objects/Map_loading.cpp.i
+Map_Objects/Map_loading.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/MainEngine.dir/build.make CMakeFiles/MainEngine.dir/Map_Objects/Map_loading.cpp.i
+.PHONY : Map_Objects/Map_loading.cpp.i
 
-Map&Objects/Map_loading.s: Map&Objects/Map_loading.cpp.s
-.PHONY : Map&Objects/Map_loading.s
+Map_Objects/Map_loading.s: Map_Objects/Map_loading.cpp.s
+.PHONY : Map_Objects/Map_loading.s
 
 # target to generate assembly for a file
-Map&Objects/Map_loading.cpp.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/MainEngine.dir/build.make "CMakeFiles/MainEngine.dir/Map&Objects/Map_loading.cpp.s"
-.PHONY : Map&Objects/Map_loading.cpp.s
+Map_Objects/Map_loading.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/MainEngine.dir/build.make CMakeFiles/MainEngine.dir/Map_Objects/Map_loading.cpp.s
+.PHONY : Map_Objects/Map_loading.cpp.s
 
-Map&Objects/Map_loading_save.o: Map&Objects/Map_loading_save.cpp.o
-.PHONY : Map&Objects/Map_loading_save.o
+Map_Objects/Map_loading_save.o: Map_Objects/Map_loading_save.cpp.o
+.PHONY : Map_Objects/Map_loading_save.o
 
 # target to build an object file
-Map&Objects/Map_loading_save.cpp.o:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/Map_loading_save.dir/build.make "CMakeFiles/Map_loading_save.dir/Map&Objects/Map_loading_save.cpp.o"
-.PHONY : Map&Objects/Map_loading_save.cpp.o
+Map_Objects/Map_loading_save.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Map_loading_save.dir/build.make CMakeFiles/Map_loading_save.dir/Map_Objects/Map_loading_save.cpp.o
+.PHONY : Map_Objects/Map_loading_save.cpp.o
 
-Map&Objects/Map_loading_save.i: Map&Objects/Map_loading_save.cpp.i
-.PHONY : Map&Objects/Map_loading_save.i
+Map_Objects/Map_loading_save.i: Map_Objects/Map_loading_save.cpp.i
+.PHONY : Map_Objects/Map_loading_save.i
 
 # target to preprocess a source file
-Map&Objects/Map_loading_save.cpp.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/Map_loading_save.dir/build.make "CMakeFiles/Map_loading_save.dir/Map&Objects/Map_loading_save.cpp.i"
-.PHONY : Map&Objects/Map_loading_save.cpp.i
+Map_Objects/Map_loading_save.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Map_loading_save.dir/build.make CMakeFiles/Map_loading_save.dir/Map_Objects/Map_loading_save.cpp.i
+.PHONY : Map_Objects/Map_loading_save.cpp.i
 
-Map&Objects/Map_loading_save.s: Map&Objects/Map_loading_save.cpp.s
-.PHONY : Map&Objects/Map_loading_save.s
+Map_Objects/Map_loading_save.s: Map_Objects/Map_loading_save.cpp.s
+.PHONY : Map_Objects/Map_loading_save.s
 
 # target to generate assembly for a file
-Map&Objects/Map_loading_save.cpp.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/Map_loading_save.dir/build.make "CMakeFiles/Map_loading_save.dir/Map&Objects/Map_loading_save.cpp.s"
-.PHONY : Map&Objects/Map_loading_save.cpp.s
+Map_Objects/Map_loading_save.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Map_loading_save.dir/build.make CMakeFiles/Map_loading_save.dir/Map_Objects/Map_loading_save.cpp.s
+.PHONY : Map_Objects/Map_loading_save.cpp.s
 
 UI/base.o: UI/base.cpp.o
 .PHONY : UI/base.o
@@ -490,24 +490,24 @@ help:
 	@echo "... base2"
 	@echo "... inventory"
 	@echo "... inventory2"
-	@echo "... Characters_Design&Mechanism/Character_Design.o"
-	@echo "... Characters_Design&Mechanism/Character_Design.i"
-	@echo "... Characters_Design&Mechanism/Character_Design.s"
-	@echo "... Characters_Design&Mechanism/Enginev1.o"
-	@echo "... Characters_Design&Mechanism/Enginev1.i"
-	@echo "... Characters_Design&Mechanism/Enginev1.s"
-	@echo "... Characters_Design&Mechanism/Enginev2.o"
-	@echo "... Characters_Design&Mechanism/Enginev2.i"
-	@echo "... Characters_Design&Mechanism/Enginev2.s"
-	@echo "... Characters_Design&Mechanism/MainEngine.o"
-	@echo "... Characters_Design&Mechanism/MainEngine.i"
-	@echo "... Characters_Design&Mechanism/MainEngine.s"
-	@echo "... Map&Objects/Map_loading.o"
-	@echo "... Map&Objects/Map_loading.i"
-	@echo "... Map&Objects/Map_loading.s"
-	@echo "... Map&Objects/Map_loading_save.o"
-	@echo "... Map&Objects/Map_loading_save.i"
-	@echo "... Map&Objects/Map_loading_save.s"
+	@echo "... CharactersDesign_Mechanism/Character_Design.o"
+	@echo "... CharactersDesign_Mechanism/Character_Design.i"
+	@echo "... CharactersDesign_Mechanism/Character_Design.s"
+	@echo "... CharactersDesign_Mechanism/Enginev1.o"
+	@echo "... CharactersDesign_Mechanism/Enginev1.i"
+	@echo "... CharactersDesign_Mechanism/Enginev1.s"
+	@echo "... CharactersDesign_Mechanism/Enginev2.o"
+	@echo "... CharactersDesign_Mechanism/Enginev2.i"
+	@echo "... CharactersDesign_Mechanism/Enginev2.s"
+	@echo "... CharactersDesign_Mechanism/MainEngine.o"
+	@echo "... CharactersDesign_Mechanism/MainEngine.i"
+	@echo "... CharactersDesign_Mechanism/MainEngine.s"
+	@echo "... Map_Objects/Map_loading.o"
+	@echo "... Map_Objects/Map_loading.i"
+	@echo "... Map_Objects/Map_loading.s"
+	@echo "... Map_Objects/Map_loading_save.o"
+	@echo "... Map_Objects/Map_loading_save.i"
+	@echo "... Map_Objects/Map_loading_save.s"
 	@echo "... UI/base.o"
 	@echo "... UI/base.i"
 	@echo "... UI/base.s"

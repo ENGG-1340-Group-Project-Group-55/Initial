@@ -103,18 +103,18 @@
 		{
 			"backtrace" : 1,
 			"compileGroupIndex" : 0,
-			"path" : "Characters_Design&Mechanism/MainEngine.cpp",
+			"path" : "CharactersDesign_Mechanism/MainEngine.cpp",
 			"sourceGroupIndex" : 0
 		},
 		{
 			"backtrace" : 1,
 			"compileGroupIndex" : 0,
-			"path" : "Map&Objects/Map_loading.cpp",
+			"path" : "Map_Objects/Map_loading.cpp",
 			"sourceGroupIndex" : 0
 		},
 		{
 			"backtrace" : 1,
-			"path" : "Characters_Design&Mechanism/MapLoader.h",
+			"path" : "CharactersDesign_Mechanism/MapLoader.h",
 			"sourceGroupIndex" : 1
 		}
 	],

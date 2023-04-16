@@ -8,7 +8,7 @@ set(CMAKE_DEPENDS_LANGUAGES
 
 # The set of dependency files which are needed:
 set(CMAKE_DEPENDS_DEPENDENCY_FILES
-  "/Users/M1/Documents/GitHub/Initial/Characters_Design&Mechanism/Character_Design.cpp" "CMakeFiles/Character_Design.dir/Characters_Design&Mechanism/Character_Design.cpp.o" "gcc" "CMakeFiles/Character_Design.dir/Characters_Design&Mechanism/Character_Design.cpp.o.d"
+  "/Users/M1/Documents/GitHub/Initial/CharactersDesign_Mechanism/Character_Design.cpp" "CMakeFiles/Character_Design.dir/CharactersDesign_Mechanism/Character_Design.cpp.o" "gcc" "CMakeFiles/Character_Design.dir/CharactersDesign_Mechanism/Character_Design.cpp.o.d"
   )
 
 # Targets to which this target links.

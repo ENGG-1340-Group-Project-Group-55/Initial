@@ -69,28 +69,28 @@ include CMakeFiles/Map_loading_save.dir/progress.make
 # Include the compile flags for this target's objects.
 include CMakeFiles/Map_loading_save.dir/flags.make
 
-CMakeFiles/Map_loading_save.dir/Map&Objects/Map_loading_save.cpp.o: CMakeFiles/Map_loading_save.dir/flags.make
-CMakeFiles/Map_loading_save.dir/Map&Objects/Map_loading_save.cpp.o: /Users/M1/Documents/GitHub/Initial/Map&Objects/Map_loading_save.cpp
-CMakeFiles/Map_loading_save.dir/Map&Objects/Map_loading_save.cpp.o: CMakeFiles/Map_loading_save.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/M1/Documents/GitHub/Initial/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Building CXX object CMakeFiles/Map_loading_save.dir/Map&Objects/Map_loading_save.cpp.o"
-	/Library/Developer/CommandLineTools/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT "CMakeFiles/Map_loading_save.dir/Map&Objects/Map_loading_save.cpp.o" -MF "CMakeFiles/Map_loading_save.dir/Map&Objects/Map_loading_save.cpp.o.d" -o "CMakeFiles/Map_loading_save.dir/Map&Objects/Map_loading_save.cpp.o" -c "/Users/M1/Documents/GitHub/Initial/Map&Objects/Map_loading_save.cpp"
+CMakeFiles/Map_loading_save.dir/Map_Objects/Map_loading_save.cpp.o: CMakeFiles/Map_loading_save.dir/flags.make
+CMakeFiles/Map_loading_save.dir/Map_Objects/Map_loading_save.cpp.o: /Users/M1/Documents/GitHub/Initial/Map_Objects/Map_loading_save.cpp
+CMakeFiles/Map_loading_save.dir/Map_Objects/Map_loading_save.cpp.o: CMakeFiles/Map_loading_save.dir/compiler_depend.ts
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/M1/Documents/GitHub/Initial/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Building CXX object CMakeFiles/Map_loading_save.dir/Map_Objects/Map_loading_save.cpp.o"
+	/Library/Developer/CommandLineTools/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/Map_loading_save.dir/Map_Objects/Map_loading_save.cpp.o -MF CMakeFiles/Map_loading_save.dir/Map_Objects/Map_loading_save.cpp.o.d -o CMakeFiles/Map_loading_save.dir/Map_Objects/Map_loading_save.cpp.o -c /Users/M1/Documents/GitHub/Initial/Map_Objects/Map_loading_save.cpp
 
-CMakeFiles/Map_loading_save.dir/Map&Objects/Map_loading_save.cpp.i: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/Map_loading_save.dir/Map&Objects/Map_loading_save.cpp.i"
-	/Library/Developer/CommandLineTools/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E "/Users/M1/Documents/GitHub/Initial/Map&Objects/Map_loading_save.cpp" > "CMakeFiles/Map_loading_save.dir/Map&Objects/Map_loading_save.cpp.i"
+CMakeFiles/Map_loading_save.dir/Map_Objects/Map_loading_save.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/Map_loading_save.dir/Map_Objects/Map_loading_save.cpp.i"
+	/Library/Developer/CommandLineTools/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /Users/M1/Documents/GitHub/Initial/Map_Objects/Map_loading_save.cpp > CMakeFiles/Map_loading_save.dir/Map_Objects/Map_loading_save.cpp.i
 
-CMakeFiles/Map_loading_save.dir/Map&Objects/Map_loading_save.cpp.s: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/Map_loading_save.dir/Map&Objects/Map_loading_save.cpp.s"
-	/Library/Developer/CommandLineTools/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S "/Users/M1/Documents/GitHub/Initial/Map&Objects/Map_loading_save.cpp" -o "CMakeFiles/Map_loading_save.dir/Map&Objects/Map_loading_save.cpp.s"
+CMakeFiles/Map_loading_save.dir/Map_Objects/Map_loading_save.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/Map_loading_save.dir/Map_Objects/Map_loading_save.cpp.s"
+	/Library/Developer/CommandLineTools/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /Users/M1/Documents/GitHub/Initial/Map_Objects/Map_loading_save.cpp -o CMakeFiles/Map_loading_save.dir/Map_Objects/Map_loading_save.cpp.s
 
 # Object files for target Map_loading_save
 Map_loading_save_OBJECTS = \
-"CMakeFiles/Map_loading_save.dir/Map&Objects/Map_loading_save.cpp.o"
+"CMakeFiles/Map_loading_save.dir/Map_Objects/Map_loading_save.cpp.o"
 
 # External object files for target Map_loading_save
 Map_loading_save_EXTERNAL_OBJECTS =
 
-Map_loading_save: CMakeFiles/Map_loading_save.dir/Map&Objects/Map_loading_save.cpp.o
+Map_loading_save: CMakeFiles/Map_loading_save.dir/Map_Objects/Map_loading_save.cpp.o
 Map_loading_save: CMakeFiles/Map_loading_save.dir/build.make
 Map_loading_save: CMakeFiles/Map_loading_save.dir/link.txt
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=/Users/M1/Documents/GitHub/Initial/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Linking CXX executable Map_loading_save"

@@ -1,7 +1,7 @@
 #include <ncurses.h>
 #include "MapLoader.h"
 
-//use command g++ MainEngine.cpp Map_loading.cpp -o Game -lncurses
+//use command g++ CharactersDesign_Mechanism/MainEngine.cpp Map.Objects/Map_loading.cpp -o Game -lncurses
 
 int main() {
     // Initialize ncurses

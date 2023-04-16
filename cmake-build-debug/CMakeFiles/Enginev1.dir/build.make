@@ -69,28 +69,28 @@ include CMakeFiles/Enginev1.dir/progress.make
 # Include the compile flags for this target's objects.
 include CMakeFiles/Enginev1.dir/flags.make
 
-CMakeFiles/Enginev1.dir/Characters_Design&Mechanism/Enginev1.cpp.o: CMakeFiles/Enginev1.dir/flags.make
-CMakeFiles/Enginev1.dir/Characters_Design&Mechanism/Enginev1.cpp.o: /Users/M1/Documents/GitHub/Initial/Characters_Design&Mechanism/Enginev1.cpp
-CMakeFiles/Enginev1.dir/Characters_Design&Mechanism/Enginev1.cpp.o: CMakeFiles/Enginev1.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/M1/Documents/GitHub/Initial/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Building CXX object CMakeFiles/Enginev1.dir/Characters_Design&Mechanism/Enginev1.cpp.o"
-	/Library/Developer/CommandLineTools/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT "CMakeFiles/Enginev1.dir/Characters_Design&Mechanism/Enginev1.cpp.o" -MF "CMakeFiles/Enginev1.dir/Characters_Design&Mechanism/Enginev1.cpp.o.d" -o "CMakeFiles/Enginev1.dir/Characters_Design&Mechanism/Enginev1.cpp.o" -c "/Users/M1/Documents/GitHub/Initial/Characters_Design&Mechanism/Enginev1.cpp"
+CMakeFiles/Enginev1.dir/CharactersDesign_Mechanism/Enginev1.cpp.o: CMakeFiles/Enginev1.dir/flags.make
+CMakeFiles/Enginev1.dir/CharactersDesign_Mechanism/Enginev1.cpp.o: /Users/M1/Documents/GitHub/Initial/CharactersDesign_Mechanism/Enginev1.cpp
+CMakeFiles/Enginev1.dir/CharactersDesign_Mechanism/Enginev1.cpp.o: CMakeFiles/Enginev1.dir/compiler_depend.ts
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/M1/Documents/GitHub/Initial/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Building CXX object CMakeFiles/Enginev1.dir/CharactersDesign_Mechanism/Enginev1.cpp.o"
+	/Library/Developer/CommandLineTools/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/Enginev1.dir/CharactersDesign_Mechanism/Enginev1.cpp.o -MF CMakeFiles/Enginev1.dir/CharactersDesign_Mechanism/Enginev1.cpp.o.d -o CMakeFiles/Enginev1.dir/CharactersDesign_Mechanism/Enginev1.cpp.o -c /Users/M1/Documents/GitHub/Initial/CharactersDesign_Mechanism/Enginev1.cpp
 
-CMakeFiles/Enginev1.dir/Characters_Design&Mechanism/Enginev1.cpp.i: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/Enginev1.dir/Characters_Design&Mechanism/Enginev1.cpp.i"
-	/Library/Developer/CommandLineTools/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E "/Users/M1/Documents/GitHub/Initial/Characters_Design&Mechanism/Enginev1.cpp" > "CMakeFiles/Enginev1.dir/Characters_Design&Mechanism/Enginev1.cpp.i"
+CMakeFiles/Enginev1.dir/CharactersDesign_Mechanism/Enginev1.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/Enginev1.dir/CharactersDesign_Mechanism/Enginev1.cpp.i"
+	/Library/Developer/CommandLineTools/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /Users/M1/Documents/GitHub/Initial/CharactersDesign_Mechanism/Enginev1.cpp > CMakeFiles/Enginev1.dir/CharactersDesign_Mechanism/Enginev1.cpp.i
 
-CMakeFiles/Enginev1.dir/Characters_Design&Mechanism/Enginev1.cpp.s: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/Enginev1.dir/Characters_Design&Mechanism/Enginev1.cpp.s"
-	/Library/Developer/CommandLineTools/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S "/Users/M1/Documents/GitHub/Initial/Characters_Design&Mechanism/Enginev1.cpp" -o "CMakeFiles/Enginev1.dir/Characters_Design&Mechanism/Enginev1.cpp.s"
+CMakeFiles/Enginev1.dir/CharactersDesign_Mechanism/Enginev1.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/Enginev1.dir/CharactersDesign_Mechanism/Enginev1.cpp.s"
+	/Library/Developer/CommandLineTools/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /Users/M1/Documents/GitHub/Initial/CharactersDesign_Mechanism/Enginev1.cpp -o CMakeFiles/Enginev1.dir/CharactersDesign_Mechanism/Enginev1.cpp.s
 
 # Object files for target Enginev1
 Enginev1_OBJECTS = \
-"CMakeFiles/Enginev1.dir/Characters_Design&Mechanism/Enginev1.cpp.o"
+"CMakeFiles/Enginev1.dir/CharactersDesign_Mechanism/Enginev1.cpp.o"
 
 # External object files for target Enginev1
 Enginev1_EXTERNAL_OBJECTS =
 
-Enginev1: CMakeFiles/Enginev1.dir/Characters_Design&Mechanism/Enginev1.cpp.o
+Enginev1: CMakeFiles/Enginev1.dir/CharactersDesign_Mechanism/Enginev1.cpp.o
 Enginev1: CMakeFiles/Enginev1.dir/build.make
 Enginev1: CMakeFiles/Enginev1.dir/link.txt
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=/Users/M1/Documents/GitHub/Initial/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Linking CXX executable Enginev1"

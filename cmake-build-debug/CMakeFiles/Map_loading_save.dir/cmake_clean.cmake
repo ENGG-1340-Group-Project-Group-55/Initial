@@ -1,6 +1,6 @@
 file(REMOVE_RECURSE
-  "CMakeFiles/Map_loading_save.dir/Map&Objects/Map_loading_save.cpp.o"
-  "CMakeFiles/Map_loading_save.dir/Map&Objects/Map_loading_save.cpp.o.d"
+  "CMakeFiles/Map_loading_save.dir/Map_Objects/Map_loading_save.cpp.o"
+  "CMakeFiles/Map_loading_save.dir/Map_Objects/Map_loading_save.cpp.o.d"
   "Map_loading_save"
   "Map_loading_save.pdb"
 )

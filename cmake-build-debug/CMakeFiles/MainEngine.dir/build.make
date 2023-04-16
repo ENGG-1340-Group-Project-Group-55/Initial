@@ -69,44 +69,44 @@ include CMakeFiles/MainEngine.dir/progress.make
 # Include the compile flags for this target's objects.
 include CMakeFiles/MainEngine.dir/flags.make
 
-CMakeFiles/MainEngine.dir/Characters_Design&Mechanism/MainEngine.cpp.o: CMakeFiles/MainEngine.dir/flags.make
-CMakeFiles/MainEngine.dir/Characters_Design&Mechanism/MainEngine.cpp.o: /Users/M1/Documents/GitHub/Initial/Characters_Design&Mechanism/MainEngine.cpp
-CMakeFiles/MainEngine.dir/Characters_Design&Mechanism/MainEngine.cpp.o: CMakeFiles/MainEngine.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/M1/Documents/GitHub/Initial/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Building CXX object CMakeFiles/MainEngine.dir/Characters_Design&Mechanism/MainEngine.cpp.o"
-	/Library/Developer/CommandLineTools/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT "CMakeFiles/MainEngine.dir/Characters_Design&Mechanism/MainEngine.cpp.o" -MF "CMakeFiles/MainEngine.dir/Characters_Design&Mechanism/MainEngine.cpp.o.d" -o "CMakeFiles/MainEngine.dir/Characters_Design&Mechanism/MainEngine.cpp.o" -c "/Users/M1/Documents/GitHub/Initial/Characters_Design&Mechanism/MainEngine.cpp"
+CMakeFiles/MainEngine.dir/CharactersDesign_Mechanism/MainEngine.cpp.o: CMakeFiles/MainEngine.dir/flags.make
+CMakeFiles/MainEngine.dir/CharactersDesign_Mechanism/MainEngine.cpp.o: /Users/M1/Documents/GitHub/Initial/CharactersDesign_Mechanism/MainEngine.cpp
+CMakeFiles/MainEngine.dir/CharactersDesign_Mechanism/MainEngine.cpp.o: CMakeFiles/MainEngine.dir/compiler_depend.ts
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/M1/Documents/GitHub/Initial/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Building CXX object CMakeFiles/MainEngine.dir/CharactersDesign_Mechanism/MainEngine.cpp.o"
+	/Library/Developer/CommandLineTools/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/MainEngine.dir/CharactersDesign_Mechanism/MainEngine.cpp.o -MF CMakeFiles/MainEngine.dir/CharactersDesign_Mechanism/MainEngine.cpp.o.d -o CMakeFiles/MainEngine.dir/CharactersDesign_Mechanism/MainEngine.cpp.o -c /Users/M1/Documents/GitHub/Initial/CharactersDesign_Mechanism/MainEngine.cpp
 
-CMakeFiles/MainEngine.dir/Characters_Design&Mechanism/MainEngine.cpp.i: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/MainEngine.dir/Characters_Design&Mechanism/MainEngine.cpp.i"
-	/Library/Developer/CommandLineTools/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E "/Users/M1/Documents/GitHub/Initial/Characters_Design&Mechanism/MainEngine.cpp" > "CMakeFiles/MainEngine.dir/Characters_Design&Mechanism/MainEngine.cpp.i"
+CMakeFiles/MainEngine.dir/CharactersDesign_Mechanism/MainEngine.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/MainEngine.dir/CharactersDesign_Mechanism/MainEngine.cpp.i"
+	/Library/Developer/CommandLineTools/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /Users/M1/Documents/GitHub/Initial/CharactersDesign_Mechanism/MainEngine.cpp > CMakeFiles/MainEngine.dir/CharactersDesign_Mechanism/MainEngine.cpp.i
 
-CMakeFiles/MainEngine.dir/Characters_Design&Mechanism/MainEngine.cpp.s: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/MainEngine.dir/Characters_Design&Mechanism/MainEngine.cpp.s"
-	/Library/Developer/CommandLineTools/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S "/Users/M1/Documents/GitHub/Initial/Characters_Design&Mechanism/MainEngine.cpp" -o "CMakeFiles/MainEngine.dir/Characters_Design&Mechanism/MainEngine.cpp.s"
+CMakeFiles/MainEngine.dir/CharactersDesign_Mechanism/MainEngine.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/MainEngine.dir/CharactersDesign_Mechanism/MainEngine.cpp.s"
+	/Library/Developer/CommandLineTools/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /Users/M1/Documents/GitHub/Initial/CharactersDesign_Mechanism/MainEngine.cpp -o CMakeFiles/MainEngine.dir/CharactersDesign_Mechanism/MainEngine.cpp.s
 
-CMakeFiles/MainEngine.dir/Map&Objects/Map_loading.cpp.o: CMakeFiles/MainEngine.dir/flags.make
-CMakeFiles/MainEngine.dir/Map&Objects/Map_loading.cpp.o: /Users/M1/Documents/GitHub/Initial/Map&Objects/Map_loading.cpp
-CMakeFiles/MainEngine.dir/Map&Objects/Map_loading.cpp.o: CMakeFiles/MainEngine.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/M1/Documents/GitHub/Initial/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Building CXX object CMakeFiles/MainEngine.dir/Map&Objects/Map_loading.cpp.o"
-	/Library/Developer/CommandLineTools/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT "CMakeFiles/MainEngine.dir/Map&Objects/Map_loading.cpp.o" -MF "CMakeFiles/MainEngine.dir/Map&Objects/Map_loading.cpp.o.d" -o "CMakeFiles/MainEngine.dir/Map&Objects/Map_loading.cpp.o" -c "/Users/M1/Documents/GitHub/Initial/Map&Objects/Map_loading.cpp"
+CMakeFiles/MainEngine.dir/Map_Objects/Map_loading.cpp.o: CMakeFiles/MainEngine.dir/flags.make
+CMakeFiles/MainEngine.dir/Map_Objects/Map_loading.cpp.o: /Users/M1/Documents/GitHub/Initial/Map_Objects/Map_loading.cpp
+CMakeFiles/MainEngine.dir/Map_Objects/Map_loading.cpp.o: CMakeFiles/MainEngine.dir/compiler_depend.ts
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/M1/Documents/GitHub/Initial/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Building CXX object CMakeFiles/MainEngine.dir/Map_Objects/Map_loading.cpp.o"
+	/Library/Developer/CommandLineTools/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/MainEngine.dir/Map_Objects/Map_loading.cpp.o -MF CMakeFiles/MainEngine.dir/Map_Objects/Map_loading.cpp.o.d -o CMakeFiles/MainEngine.dir/Map_Objects/Map_loading.cpp.o -c /Users/M1/Documents/GitHub/Initial/Map_Objects/Map_loading.cpp
 
-CMakeFiles/MainEngine.dir/Map&Objects/Map_loading.cpp.i: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/MainEngine.dir/Map&Objects/Map_loading.cpp.i"
-	/Library/Developer/CommandLineTools/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E "/Users/M1/Documents/GitHub/Initial/Map&Objects/Map_loading.cpp" > "CMakeFiles/MainEngine.dir/Map&Objects/Map_loading.cpp.i"
+CMakeFiles/MainEngine.dir/Map_Objects/Map_loading.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/MainEngine.dir/Map_Objects/Map_loading.cpp.i"
+	/Library/Developer/CommandLineTools/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /Users/M1/Documents/GitHub/Initial/Map_Objects/Map_loading.cpp > CMakeFiles/MainEngine.dir/Map_Objects/Map_loading.cpp.i
 
-CMakeFiles/MainEngine.dir/Map&Objects/Map_loading.cpp.s: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/MainEngine.dir/Map&Objects/Map_loading.cpp.s"
-	/Library/Developer/CommandLineTools/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S "/Users/M1/Documents/GitHub/Initial/Map&Objects/Map_loading.cpp" -o "CMakeFiles/MainEngine.dir/Map&Objects/Map_loading.cpp.s"
+CMakeFiles/MainEngine.dir/Map_Objects/Map_loading.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/MainEngine.dir/Map_Objects/Map_loading.cpp.s"
+	/Library/Developer/CommandLineTools/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /Users/M1/Documents/GitHub/Initial/Map_Objects/Map_loading.cpp -o CMakeFiles/MainEngine.dir/Map_Objects/Map_loading.cpp.s
 
 # Object files for target MainEngine
 MainEngine_OBJECTS = \
-"CMakeFiles/MainEngine.dir/Characters_Design&Mechanism/MainEngine.cpp.o" \
-"CMakeFiles/MainEngine.dir/Map&Objects/Map_loading.cpp.o"
+"CMakeFiles/MainEngine.dir/CharactersDesign_Mechanism/MainEngine.cpp.o" \
+"CMakeFiles/MainEngine.dir/Map_Objects/Map_loading.cpp.o"
 
 # External object files for target MainEngine
 MainEngine_EXTERNAL_OBJECTS =
 
-MainEngine: CMakeFiles/MainEngine.dir/Characters_Design&Mechanism/MainEngine.cpp.o
-MainEngine: CMakeFiles/MainEngine.dir/Map&Objects/Map_loading.cpp.o
+MainEngine: CMakeFiles/MainEngine.dir/CharactersDesign_Mechanism/MainEngine.cpp.o
+MainEngine: CMakeFiles/MainEngine.dir/Map_Objects/Map_loading.cpp.o
 MainEngine: CMakeFiles/MainEngine.dir/build.make
 MainEngine: CMakeFiles/MainEngine.dir/link.txt
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=/Users/M1/Documents/GitHub/Initial/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_3) "Linking CXX executable MainEngine"

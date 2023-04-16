@@ -1,6 +1,6 @@
 file(REMOVE_RECURSE
-  "CMakeFiles/Enginev1.dir/Characters_Design&Mechanism/Enginev1.cpp.o"
-  "CMakeFiles/Enginev1.dir/Characters_Design&Mechanism/Enginev1.cpp.o.d"
+  "CMakeFiles/Enginev1.dir/CharactersDesign_Mechanism/Enginev1.cpp.o"
+  "CMakeFiles/Enginev1.dir/CharactersDesign_Mechanism/Enginev1.cpp.o.d"
   "Enginev1"
   "Enginev1.pdb"
 )

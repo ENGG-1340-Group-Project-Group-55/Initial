@@ -69,28 +69,28 @@ include CMakeFiles/Character_Design.dir/progress.make
 # Include the compile flags for this target's objects.
 include CMakeFiles/Character_Design.dir/flags.make
 
-CMakeFiles/Character_Design.dir/Characters_Design&Mechanism/Character_Design.cpp.o: CMakeFiles/Character_Design.dir/flags.make
-CMakeFiles/Character_Design.dir/Characters_Design&Mechanism/Character_Design.cpp.o: /Users/M1/Documents/GitHub/Initial/Characters_Design&Mechanism/Character_Design.cpp
-CMakeFiles/Character_Design.dir/Characters_Design&Mechanism/Character_Design.cpp.o: CMakeFiles/Character_Design.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/M1/Documents/GitHub/Initial/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Building CXX object CMakeFiles/Character_Design.dir/Characters_Design&Mechanism/Character_Design.cpp.o"
-	/Library/Developer/CommandLineTools/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT "CMakeFiles/Character_Design.dir/Characters_Design&Mechanism/Character_Design.cpp.o" -MF "CMakeFiles/Character_Design.dir/Characters_Design&Mechanism/Character_Design.cpp.o.d" -o "CMakeFiles/Character_Design.dir/Characters_Design&Mechanism/Character_Design.cpp.o" -c "/Users/M1/Documents/GitHub/Initial/Characters_Design&Mechanism/Character_Design.cpp"
+CMakeFiles/Character_Design.dir/CharactersDesign_Mechanism/Character_Design.cpp.o: CMakeFiles/Character_Design.dir/flags.make
+CMakeFiles/Character_Design.dir/CharactersDesign_Mechanism/Character_Design.cpp.o: /Users/M1/Documents/GitHub/Initial/CharactersDesign_Mechanism/Character_Design.cpp
+CMakeFiles/Character_Design.dir/CharactersDesign_Mechanism/Character_Design.cpp.o: CMakeFiles/Character_Design.dir/compiler_depend.ts
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/M1/Documents/GitHub/Initial/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Building CXX object CMakeFiles/Character_Design.dir/CharactersDesign_Mechanism/Character_Design.cpp.o"
+	/Library/Developer/CommandLineTools/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/Character_Design.dir/CharactersDesign_Mechanism/Character_Design.cpp.o -MF CMakeFiles/Character_Design.dir/CharactersDesign_Mechanism/Character_Design.cpp.o.d -o CMakeFiles/Character_Design.dir/CharactersDesign_Mechanism/Character_Design.cpp.o -c /Users/M1/Documents/GitHub/Initial/CharactersDesign_Mechanism/Character_Design.cpp
 
-CMakeFiles/Character_Design.dir/Characters_Design&Mechanism/Character_Design.cpp.i: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/Character_Design.dir/Characters_Design&Mechanism/Character_Design.cpp.i"
-	/Library/Developer/CommandLineTools/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E "/Users/M1/Documents/GitHub/Initial/Characters_Design&Mechanism/Character_Design.cpp" > "CMakeFiles/Character_Design.dir/Characters_Design&Mechanism/Character_Design.cpp.i"
+CMakeFiles/Character_Design.dir/CharactersDesign_Mechanism/Character_Design.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/Character_Design.dir/CharactersDesign_Mechanism/Character_Design.cpp.i"
+	/Library/Developer/CommandLineTools/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /Users/M1/Documents/GitHub/Initial/CharactersDesign_Mechanism/Character_Design.cpp > CMakeFiles/Character_Design.dir/CharactersDesign_Mechanism/Character_Design.cpp.i
 
-CMakeFiles/Character_Design.dir/Characters_Design&Mechanism/Character_Design.cpp.s: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/Character_Design.dir/Characters_Design&Mechanism/Character_Design.cpp.s"
-	/Library/Developer/CommandLineTools/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S "/Users/M1/Documents/GitHub/Initial/Characters_Design&Mechanism/Character_Design.cpp" -o "CMakeFiles/Character_Design.dir/Characters_Design&Mechanism/Character_Design.cpp.s"
+CMakeFiles/Character_Design.dir/CharactersDesign_Mechanism/Character_Design.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/Character_Design.dir/CharactersDesign_Mechanism/Character_Design.cpp.s"
+	/Library/Developer/CommandLineTools/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /Users/M1/Documents/GitHub/Initial/CharactersDesign_Mechanism/Character_Design.cpp -o CMakeFiles/Character_Design.dir/CharactersDesign_Mechanism/Character_Design.cpp.s
 
 # Object files for target Character_Design
 Character_Design_OBJECTS = \
-"CMakeFiles/Character_Design.dir/Characters_Design&Mechanism/Character_Design.cpp.o"
+"CMakeFiles/Character_Design.dir/CharactersDesign_Mechanism/Character_Design.cpp.o"
 
 # External object files for target Character_Design
 Character_Design_EXTERNAL_OBJECTS =
 
-Character_Design: CMakeFiles/Character_Design.dir/Characters_Design&Mechanism/Character_Design.cpp.o
+Character_Design: CMakeFiles/Character_Design.dir/CharactersDesign_Mechanism/Character_Design.cpp.o
 Character_Design: CMakeFiles/Character_Design.dir/build.make
 Character_Design: CMakeFiles/Character_Design.dir/link.txt
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=/Users/M1/Documents/GitHub/Initial/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Linking CXX executable Character_Design"

@@ -1,6 +1,6 @@
 file(REMOVE_RECURSE
-  "CMakeFiles/Character_Design.dir/Characters_Design&Mechanism/Character_Design.cpp.o"
-  "CMakeFiles/Character_Design.dir/Characters_Design&Mechanism/Character_Design.cpp.o.d"
+  "CMakeFiles/Character_Design.dir/CharactersDesign_Mechanism/Character_Design.cpp.o"
+  "CMakeFiles/Character_Design.dir/CharactersDesign_Mechanism/Character_Design.cpp.o.d"
   "Character_Design"
   "Character_Design.pdb"
 )

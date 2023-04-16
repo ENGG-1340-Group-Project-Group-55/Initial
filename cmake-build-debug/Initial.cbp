@@ -398,25 +398,25 @@
 				</MakeCommands>
 			</Target>
 		</Build>
-		<Unit filename="/Users/M1/Documents/GitHub/Initial/Characters_Design&amp;Mechanism/Character_Design.cpp">
+		<Unit filename="/Users/M1/Documents/GitHub/Initial/CharactersDesign_Mechanism/Character_Design.cpp">
 			<Option target="Character_Design"/>
 		</Unit>
-		<Unit filename="/Users/M1/Documents/GitHub/Initial/Characters_Design&amp;Mechanism/Enginev1.cpp">
+		<Unit filename="/Users/M1/Documents/GitHub/Initial/CharactersDesign_Mechanism/Enginev1.cpp">
 			<Option target="Enginev1"/>
 		</Unit>
-		<Unit filename="/Users/M1/Documents/GitHub/Initial/Characters_Design&amp;Mechanism/Enginev2.cpp">
+		<Unit filename="/Users/M1/Documents/GitHub/Initial/CharactersDesign_Mechanism/Enginev2.cpp">
 			<Option target="Enginev2"/>
 		</Unit>
-		<Unit filename="/Users/M1/Documents/GitHub/Initial/Characters_Design&amp;Mechanism/MainEngine.cpp">
+		<Unit filename="/Users/M1/Documents/GitHub/Initial/CharactersDesign_Mechanism/MainEngine.cpp">
 			<Option target="MainEngine"/>
 		</Unit>
-		<Unit filename="/Users/M1/Documents/GitHub/Initial/Characters_Design&amp;Mechanism/MapLoader.h">
+		<Unit filename="/Users/M1/Documents/GitHub/Initial/CharactersDesign_Mechanism/MapLoader.h">
 			<Option target="MainEngine"/>
 		</Unit>
-		<Unit filename="/Users/M1/Documents/GitHub/Initial/Map&amp;Objects/Map_loading.cpp">
+		<Unit filename="/Users/M1/Documents/GitHub/Initial/Map_Objects/Map_loading.cpp">
 			<Option target="MainEngine"/>
 		</Unit>
-		<Unit filename="/Users/M1/Documents/GitHub/Initial/Map&amp;Objects/Map_loading_save.cpp">
+		<Unit filename="/Users/M1/Documents/GitHub/Initial/Map_Objects/Map_loading_save.cpp">
 			<Option target="Map_loading_save"/>
 		</Unit>
 		<Unit filename="/Users/M1/Documents/GitHub/Initial/UI/base.cpp">
