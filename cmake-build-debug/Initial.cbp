@@ -344,7 +344,6 @@
 				<Option type="1"/>
 				<Option compiler="gcc"/>
 				<Compiler>
-					<Add directory="/Users/M1/Documents/GitHub/Initial/Characters_Design&amp;Mechanism"/>
 					<Add directory="/Library/Developer/CommandLineTools/usr/bin/../include/c++/v1"/>
 					<Add directory="/Library/Developer/CommandLineTools/usr/lib/clang/14.0.3/include"/>
 					<Add directory="/Library/Developer/CommandLineTools/usr/include"/>
@@ -365,7 +364,6 @@
 				<Option type="1"/>
 				<Option compiler="gcc"/>
 				<Compiler>
-					<Add directory="/Users/M1/Documents/GitHub/Initial/Characters_Design&amp;Mechanism"/>
 					<Add directory="/Library/Developer/CommandLineTools/usr/bin/../include/c++/v1"/>
 					<Add directory="/Library/Developer/CommandLineTools/usr/lib/clang/14.0.3/include"/>
 					<Add directory="/Library/Developer/CommandLineTools/usr/include"/>
@@ -412,7 +410,7 @@
 		<Unit filename="/Users/M1/Documents/GitHub/Initial/Characters_Design&amp;Mechanism/MainEngine.cpp">
 			<Option target="MainEngine"/>
 		</Unit>
-		<Unit filename="/Users/M1/Documents/GitHub/Initial/Characters_Design&amp;Mechanism/MainEngine.h">
+		<Unit filename="/Users/M1/Documents/GitHub/Initial/Characters_Design&amp;Mechanism/MapLoader.h">
 			<Option target="MainEngine"/>
 		</Unit>
 		<Unit filename="/Users/M1/Documents/GitHub/Initial/Map&amp;Objects/Map_loading.cpp">

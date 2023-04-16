@@ -1,5 +1,7 @@
 #include <ncurses.h>
-#include "MainEngine.h" // Include the new header file
+#include "MapLoader.h"
+
+//use command g++ MainEngine.cpp Map_loading.cpp -o Game -lncurses
 
 int main() {
     // Initialize ncurses
@@ -14,20 +16,23 @@ int main() {
     int ch;
 
     // Set up screen size
-    int screen_height = 22; // Add 2 for border
-    int screen_width = 44;  // Add 2 for border
+    int screen_height = 17; // Add 2 for border
+    int screen_width = 32;  // Add 2 for border
 
     // Load the map
-    Maps gameMap(20, 42);
-    VectorWrapper mapData = gameMap.Map_Loader();
+//    Maps gameMap(15, 30);
+//    VectorWrapper mapData = gameMap.Map_Loader();
 
     // Main loop
     while ((ch = getch()) != 27) { // Exit on ESC key press
         // Clear screen
         clear();
+        Maps gameMap(15, 30);
+        VectorWrapper mapData = gameMap.Map_Loader();
 
         // Draw the map
         gameMap.Map_printer(mapData, 0, 0, screen_height, screen_width);
+//        gameMap.Map_printer(mapData);
 
         // Move character based on w, a, s, d key press
         switch(ch) {
@@ -46,10 +51,10 @@ int main() {
         }
 
         // Keep character within screen boundaries
-        if (x < 1) x = 1;
-        if (y < 1) y = 1;
-        if (x >= screen_width-1) x = screen_width - 2;
-        if (y >= screen_height-1) y = screen_height - 2;
+        if (x < 3) x = 3;
+        if (y < 3) y = 2;
+        if (x >= screen_width*2 - 3) x = screen_width*2 - 5;
+        if (y >= screen_height - 2) y = screen_height - 3;
 
         // Draw character at current position
         mvaddch(y, x, 'X');
