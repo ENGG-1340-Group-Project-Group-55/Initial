@@ -1,6 +1,6 @@
 #include <ncurses.h>
 #include "MainENgine.h"
-#include "Map_loading.hpp"
+#include "/Users/M1/Documents/GitHub/Initial/Map&Objects/Map_loading.cpp"
 
 int main() {
     // Initialize ncurses
@@ -30,14 +30,14 @@ int main() {
         // Draw border
         for (int i = 0; i < screen_height; i++) {
             for (int j = 0; j < screen_width; j++) {
-                if (i == 0 || i == screen_height-1 || j == 0 || j == screen_width-1) {
+                if (i == 0 || i == screen_height - 1 || j == 0 || j == screen_width - 1) {
                     mvaddch(i, j, '#');
                 }
             }
         }
 
         // Move character based on w, a, s, d key press
-        switch(ch) {
+        switch (ch) {
             case 'w':
                 y--;
                 break;
@@ -45,23 +45,23 @@ int main() {
                 y++;
                 break;
             case 'a':
-                x-=2;
+                x -= 2;
                 break;
             case 'd':
-                x+=2;
+                x += 2;
                 break;
         }
 
         // Keep character within screen boundaries
         if (x < 1) x = 1;
         if (y < 1) y = 1;
-        if (x >= screen_width-1) x = screen_width - 2;
-        if (y >= screen_height-1) y = screen_height - 2;
+        if (x >= screen_width - 1) x = screen_width - 2;
+        if (y >= screen_height - 1) y = screen_height - 2;
 
         // Check if character hits obstacle
-        if (Converter.get(y)[x] == '#') {
+        if (Converter.TDVEC[y][x] == '#') {
             // Move character back to previous position
-            switch(ch) {
+            switch (ch) {
                 case 'w':
                     y++;
                     break;
@@ -69,10 +69,10 @@ int main() {
                     y--;
                     break;
                 case 'a':
-                    x+=2;
+                    x += 2;
                     break;
                 case 'd':
-                    x-=2;
+                    x -= 2;
                     break;
             }
         }
@@ -81,7 +81,7 @@ int main() {
         mvaddch(y, x, 'X');
 
         // Print map
-        Mp.Print_Map(Converter, y, x, screen_height, screen_width);
+        Mp.Map_printer(Converter, y, x, screen_height);
 
         // Refresh screen
         refresh();
@@ -90,3 +90,4 @@ int main() {
 // Clean up ncurses
     endwin();
     return 0;
+}

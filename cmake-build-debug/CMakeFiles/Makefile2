@@ -64,6 +64,7 @@ CMAKE_BINARY_DIR = /Users/M1/Documents/GitHub/Initial/cmake-build-debug
 
 # The main recursive "all" target.
 all: CMakeFiles/Map_loading.dir/all
+all: CMakeFiles/Map_loading_save.dir/all
 all: CMakeFiles/inventory.dir/all
 all: CMakeFiles/inventory2.dir/all
 all: CMakeFiles/base.dir/all
@@ -80,6 +81,7 @@ preinstall:
 
 # The main recursive "clean" target.
 clean: CMakeFiles/Map_loading.dir/clean
+clean: CMakeFiles/Map_loading_save.dir/clean
 clean: CMakeFiles/inventory.dir/clean
 clean: CMakeFiles/inventory2.dir/clean
 clean: CMakeFiles/base.dir/clean
@@ -117,13 +119,39 @@ CMakeFiles/Map_loading.dir/clean:
 .PHONY : CMakeFiles/Map_loading.dir/clean
 
 #=============================================================================
+# Target rules for target CMakeFiles/Map_loading_save.dir
+
+# All Build rule for target.
+CMakeFiles/Map_loading_save.dir/all:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Map_loading_save.dir/build.make CMakeFiles/Map_loading_save.dir/depend
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Map_loading_save.dir/build.make CMakeFiles/Map_loading_save.dir/build
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/Users/M1/Documents/GitHub/Initial/cmake-build-debug/CMakeFiles --progress-num=11,12 "Built target Map_loading_save"
+.PHONY : CMakeFiles/Map_loading_save.dir/all
+
+# Build rule for subdir invocation for target.
+CMakeFiles/Map_loading_save.dir/rule: cmake_check_build_system
+	$(CMAKE_COMMAND) -E cmake_progress_start /Users/M1/Documents/GitHub/Initial/cmake-build-debug/CMakeFiles 2
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 CMakeFiles/Map_loading_save.dir/all
+	$(CMAKE_COMMAND) -E cmake_progress_start /Users/M1/Documents/GitHub/Initial/cmake-build-debug/CMakeFiles 0
+.PHONY : CMakeFiles/Map_loading_save.dir/rule
+
+# Convenience name for target.
+Map_loading_save: CMakeFiles/Map_loading_save.dir/rule
+.PHONY : Map_loading_save
+
+# clean rule for target.
+CMakeFiles/Map_loading_save.dir/clean:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Map_loading_save.dir/build.make CMakeFiles/Map_loading_save.dir/clean
+.PHONY : CMakeFiles/Map_loading_save.dir/clean
+
+#=============================================================================
 # Target rules for target CMakeFiles/inventory.dir
 
 # All Build rule for target.
 CMakeFiles/inventory.dir/all:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/inventory.dir/build.make CMakeFiles/inventory.dir/depend
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/inventory.dir/build.make CMakeFiles/inventory.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/Users/M1/Documents/GitHub/Initial/cmake-build-debug/CMakeFiles --progress-num=15,16 "Built target inventory"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/Users/M1/Documents/GitHub/Initial/cmake-build-debug/CMakeFiles --progress-num=17,18 "Built target inventory"
 .PHONY : CMakeFiles/inventory.dir/all
 
 # Build rule for subdir invocation for target.
@@ -149,7 +177,7 @@ CMakeFiles/inventory.dir/clean:
 CMakeFiles/inventory2.dir/all:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/inventory2.dir/build.make CMakeFiles/inventory2.dir/depend
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/inventory2.dir/build.make CMakeFiles/inventory2.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/Users/M1/Documents/GitHub/Initial/cmake-build-debug/CMakeFiles --progress-num=17,18 "Built target inventory2"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/Users/M1/Documents/GitHub/Initial/cmake-build-debug/CMakeFiles --progress-num=19,20 "Built target inventory2"
 .PHONY : CMakeFiles/inventory2.dir/all
 
 # Build rule for subdir invocation for target.
@@ -175,7 +203,7 @@ CMakeFiles/inventory2.dir/clean:
 CMakeFiles/base.dir/all:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/base.dir/build.make CMakeFiles/base.dir/depend
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/base.dir/build.make CMakeFiles/base.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/Users/M1/Documents/GitHub/Initial/cmake-build-debug/CMakeFiles --progress-num=11,12 "Built target base"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/Users/M1/Documents/GitHub/Initial/cmake-build-debug/CMakeFiles --progress-num=13,14 "Built target base"
 .PHONY : CMakeFiles/base.dir/all
 
 # Build rule for subdir invocation for target.
@@ -201,7 +229,7 @@ CMakeFiles/base.dir/clean:
 CMakeFiles/base2.dir/all:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/base2.dir/build.make CMakeFiles/base2.dir/depend
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/base2.dir/build.make CMakeFiles/base2.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/Users/M1/Documents/GitHub/Initial/cmake-build-debug/CMakeFiles --progress-num=13,14 "Built target base2"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/Users/M1/Documents/GitHub/Initial/cmake-build-debug/CMakeFiles --progress-num=15,16 "Built target base2"
 .PHONY : CMakeFiles/base2.dir/all
 
 # Build rule for subdir invocation for target.

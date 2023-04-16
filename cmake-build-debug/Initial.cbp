@@ -57,6 +57,46 @@
 					<DistClean command="/usr/bin/make -j8 -f &quot;/Users/M1/Documents/GitHub/Initial/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
 				</MakeCommands>
 			</Target>
+			<Target title="Map_loading_save">
+				<Option output="/Users/M1/Documents/GitHub/Initial/cmake-build-debug/Map_loading_save" prefix_auto="0" extension_auto="0"/>
+				<Option working_dir="/Users/M1/Documents/GitHub/Initial/cmake-build-debug"/>
+				<Option object_output="./"/>
+				<Option type="1"/>
+				<Option compiler="gcc"/>
+				<Compiler>
+					<Add directory="/Library/Developer/CommandLineTools/usr/bin/../include/c++/v1"/>
+					<Add directory="/Library/Developer/CommandLineTools/usr/lib/clang/14.0.3/include"/>
+					<Add directory="/Library/Developer/CommandLineTools/usr/include"/>
+					<Add directory="/System/Library/Frameworks"/>
+					<Add directory="/Library/Frameworks"/>
+				</Compiler>
+				<MakeCommands>
+					<Build command="/usr/bin/make -j8 -f &quot;/Users/M1/Documents/GitHub/Initial/cmake-build-debug/Makefile&quot;  VERBOSE=1 Map_loading_save"/>
+					<CompileFile command="/usr/bin/make -j8 -f &quot;/Users/M1/Documents/GitHub/Initial/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j8 -f &quot;/Users/M1/Documents/GitHub/Initial/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j8 -f &quot;/Users/M1/Documents/GitHub/Initial/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="Map_loading_save/fast">
+				<Option output="/Users/M1/Documents/GitHub/Initial/cmake-build-debug/Map_loading_save" prefix_auto="0" extension_auto="0"/>
+				<Option working_dir="/Users/M1/Documents/GitHub/Initial/cmake-build-debug"/>
+				<Option object_output="./"/>
+				<Option type="1"/>
+				<Option compiler="gcc"/>
+				<Compiler>
+					<Add directory="/Library/Developer/CommandLineTools/usr/bin/../include/c++/v1"/>
+					<Add directory="/Library/Developer/CommandLineTools/usr/lib/clang/14.0.3/include"/>
+					<Add directory="/Library/Developer/CommandLineTools/usr/include"/>
+					<Add directory="/System/Library/Frameworks"/>
+					<Add directory="/Library/Frameworks"/>
+				</Compiler>
+				<MakeCommands>
+					<Build command="/usr/bin/make -j8 -f &quot;/Users/M1/Documents/GitHub/Initial/cmake-build-debug/Makefile&quot;  VERBOSE=1 Map_loading_save/fast"/>
+					<CompileFile command="/usr/bin/make -j8 -f &quot;/Users/M1/Documents/GitHub/Initial/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j8 -f &quot;/Users/M1/Documents/GitHub/Initial/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j8 -f &quot;/Users/M1/Documents/GitHub/Initial/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
 			<Target title="inventory">
 				<Option output="/Users/M1/Documents/GitHub/Initial/cmake-build-debug/inventory" prefix_auto="0" extension_auto="0"/>
 				<Option working_dir="/Users/M1/Documents/GitHub/Initial/cmake-build-debug"/>
@@ -416,6 +456,9 @@
 		</Unit>
 		<Unit filename="/Users/M1/Documents/GitHub/Initial/Map&amp;Objects/Map_loading.cpp">
 			<Option target="Map_loading"/>
+		</Unit>
+		<Unit filename="/Users/M1/Documents/GitHub/Initial/Map&amp;Objects/Map_loading_save.cpp">
+			<Option target="Map_loading_save"/>
 		</Unit>
 		<Unit filename="/Users/M1/Documents/GitHub/Initial/UI/base.cpp">
 			<Option target="base"/>

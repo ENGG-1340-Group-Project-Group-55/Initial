@@ -26,7 +26,7 @@ public:
     int map_width;
     VectorWrapper Map_Loader();
     VectorWrapper MapToArray(ifstream&);
-    void Map_printer(VectorWrapper);
+    void Map_printer(VectorWrapper Converter);
 };
 
 // Define the move character function

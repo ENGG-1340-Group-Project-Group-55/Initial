@@ -9,6 +9,7 @@ struct VectorWrapper{
     vector<vector<char>> TDVEC;
 };
 
+
 class Maps
 {
 private:
@@ -23,12 +24,20 @@ public:
     void Map_printer(VectorWrapper);
 };
 
+
+int main(){
+    Maps Mp(15,30);
+    VectorWrapper Converter = Mp.Map_Loader();
+    Mp.Map_printer(Converter);
+}
+
 Maps::Maps(int a,int b){
     Map_height = a;
     Map_width = b;
     map_height = Map_height;
     map_width = Map_width;
 }
+
 
 VectorWrapper Maps::Map_Loader() {
     ifstream inputline;
@@ -40,6 +49,7 @@ VectorWrapper Maps::Map_Loader() {
     }
     VectorWrapper Converter = MapToArray(inputline);
     return Converter;
+
 }
 
 VectorWrapper Maps::MapToArray(ifstream& inputline)
@@ -64,23 +74,27 @@ VectorWrapper Maps::MapToArray(ifstream& inputline)
                 }
                 width_tracker = -1;
             }
+
             width_tracker++;
         }
     }
+
     return Converter;
 }
 
-void Maps::Map_printer(VectorWrapper Converter, int y, int x, int screen_height, int screen_width)
+void Maps::Map_printer(VectorWrapper Converter)
 {
-    for (int i=y;i<y+screen_height;i++){
-        for(int j=x;j<x+screen_width;j++){
-            if (j==x+screen_width-1){
+
+    for (int i=0;i<map_height;i++){
+        for(int j=0;j<map_width;j++){
+            if (j==map_width-1){
                 cout<<Converter.TDVEC[i][j]<<endl;
             }
             else{
                 cout<<Converter.TDVEC[i][j];
             }
+
         }
     }
-}
 
+}

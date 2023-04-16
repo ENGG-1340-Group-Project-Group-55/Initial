@@ -130,6 +130,19 @@ Map_loading/fast:
 .PHONY : Map_loading/fast
 
 #=============================================================================
+# Target rules for targets named Map_loading_save
+
+# Build rule for target.
+Map_loading_save: cmake_check_build_system
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 Map_loading_save
+.PHONY : Map_loading_save
+
+# fast build rule for target.
+Map_loading_save/fast:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Map_loading_save.dir/build.make CMakeFiles/Map_loading_save.dir/build
+.PHONY : Map_loading_save/fast
+
+#=============================================================================
 # Target rules for targets named inventory
 
 # Build rule for target.
@@ -353,6 +366,30 @@ Map&Objects/Map_loading.cpp.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/Map_loading.dir/build.make "CMakeFiles/Map_loading.dir/Map&Objects/Map_loading.cpp.s"
 .PHONY : Map&Objects/Map_loading.cpp.s
 
+Map&Objects/Map_loading_save.o: Map&Objects/Map_loading_save.cpp.o
+.PHONY : Map&Objects/Map_loading_save.o
+
+# target to build an object file
+Map&Objects/Map_loading_save.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Map_loading_save.dir/build.make "CMakeFiles/Map_loading_save.dir/Map&Objects/Map_loading_save.cpp.o"
+.PHONY : Map&Objects/Map_loading_save.cpp.o
+
+Map&Objects/Map_loading_save.i: Map&Objects/Map_loading_save.cpp.i
+.PHONY : Map&Objects/Map_loading_save.i
+
+# target to preprocess a source file
+Map&Objects/Map_loading_save.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Map_loading_save.dir/build.make "CMakeFiles/Map_loading_save.dir/Map&Objects/Map_loading_save.cpp.i"
+.PHONY : Map&Objects/Map_loading_save.cpp.i
+
+Map&Objects/Map_loading_save.s: Map&Objects/Map_loading_save.cpp.s
+.PHONY : Map&Objects/Map_loading_save.s
+
+# target to generate assembly for a file
+Map&Objects/Map_loading_save.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Map_loading_save.dir/build.make "CMakeFiles/Map_loading_save.dir/Map&Objects/Map_loading_save.cpp.s"
+.PHONY : Map&Objects/Map_loading_save.cpp.s
+
 UI/base.o: UI/base.cpp.o
 .PHONY : UI/base.o
 
@@ -462,6 +499,7 @@ help:
 	@echo "... Enginev2"
 	@echo "... MainEngine"
 	@echo "... Map_loading"
+	@echo "... Map_loading_save"
 	@echo "... base"
 	@echo "... base2"
 	@echo "... inventory"
@@ -481,6 +519,9 @@ help:
 	@echo "... Map&Objects/Map_loading.o"
 	@echo "... Map&Objects/Map_loading.i"
 	@echo "... Map&Objects/Map_loading.s"
+	@echo "... Map&Objects/Map_loading_save.o"
+	@echo "... Map&Objects/Map_loading_save.i"
+	@echo "... Map&Objects/Map_loading_save.s"
 	@echo "... UI/base.o"
 	@echo "... UI/base.i"
 	@echo "... UI/base.s"

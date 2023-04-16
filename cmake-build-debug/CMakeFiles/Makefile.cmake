@@ -51,6 +51,7 @@ set(CMAKE_MAKEFILE_PRODUCTS
 # Dependency information for all targets:
 set(CMAKE_DEPEND_INFO_FILES
   "CMakeFiles/Map_loading.dir/DependInfo.cmake"
+  "CMakeFiles/Map_loading_save.dir/DependInfo.cmake"
   "CMakeFiles/inventory.dir/DependInfo.cmake"
   "CMakeFiles/inventory2.dir/DependInfo.cmake"
   "CMakeFiles/base.dir/DependInfo.cmake"

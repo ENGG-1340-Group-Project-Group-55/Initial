@@ -4,6 +4,7 @@ project(Initial)
 set(CMAKE_CXX_STANDARD 17)
 
 add_executable(Map_loading Map&Objects/Map_loading.cpp)
+add_executable(Map_loading_save Map&Objects/Map_loading_save.cpp)
 add_executable(inventory UI/inventory.cpp)
 add_executable(inventory2 UI/inventory2.cpp)
 add_executable(base UI/base.cpp Characters_Design&Mechanism/MainEngine.h)
