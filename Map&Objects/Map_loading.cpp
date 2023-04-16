@@ -3,6 +3,7 @@
 #include <string>
 #include <vector>
 #include "MainEngine.h" // Include the new header file
+#include <ncurses.h>
 
 using namespace std;
 
