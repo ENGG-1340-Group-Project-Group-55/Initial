@@ -29,7 +29,6 @@ int main(){
     Maps Mp(15,30);
     VectorWrapper Converter = Mp.Map_Loader();
     Mp.Map_printer(Converter);
-
 }
 
 Maps::Maps(int a,int b){
@@ -43,7 +42,7 @@ Maps::Maps(int a,int b){
 VectorWrapper Maps::Map_Loader() {
     ifstream inputline;
     string nextline;
-    inputline.open("/Users/lucas/Documents/GitHub/Initial/Map&Objects/Map_resources/15-15_map.txt");
+    inputline.open("/Users/M1/Documents/GitHub/Initial/Map&Objects/Map_resources/15-15_map.txt");
     if (inputline.fail()){
         cout<<"파일이 없다잖아 병신아!!!"<<endl;
         exit(1);
