@@ -17,7 +17,7 @@ Maps::Maps(int a,int b){
 VectorWrapper Maps::Map_Loader() {
     ifstream inputline;
     string nextline;
-    inputline.open("/Users/M1/Documents/GitHub/Initial/Map_Objects/Map_resources/15-15_map.txt");
+    inputline.open("/Users/M1/Documents/GitHub/Initial/Map_Objects/Map_resources/15-15_Testing.txt");
     if (inputline.fail()){
         cout<<"파일이 없다잖아 병신아!!!"<<endl;
         exit(1);
@@ -58,14 +58,14 @@ VectorWrapper Maps::MapToArray(ifstream& inputline)
 
 void Maps::Map_printer(VectorWrapper Converter, int y, int x, int screen_height, int screen_width)
 {
-    for (int i=y;i<y+screen_height-2;i++){
-        for(int j=x;j<x+screen_width-2;j++){
-            if (j==x+screen_width-3){
-                mvaddch(i + 1, (j * 2) + 2, Converter.TDVEC[i][j]);
-            }
-            else{
-                mvaddch(i + 1, (j * 2) + 2, Converter.TDVEC[i][j]);
-            }
+    for (int i=y;i<y+screen_height;i++){
+        for(int j=x;j<x+screen_width;j++){
+//            if (j==x+screen_width-3){
+            mvaddch(i + 1, j, Converter.TDVEC[i][j]);
+//            }
+//            else{
+//                mvaddch(i + 1, (j * 2) + 2, Converter.TDVEC[i][j]);
         }
     }
 }
+

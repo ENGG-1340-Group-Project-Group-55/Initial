@@ -1,7 +1,8 @@
 #include <ncurses.h>
+#include <string>
 #include "MapLoader.h"
 
-//use command g++ CharactersDesign_Mechanism/MainEngine.cpp Map.Objects/Map_loading.cpp -o Game -lncurses
+//compile using: g++ CharactersDesign_Mechanism/MainEngine.cpp Map_Objects/Map_loading.cpp -o Game -lncurses
 
 int main() {
     // Initialize ncurses
@@ -13,29 +14,22 @@ int main() {
 
     // Set up initial variables
     int x = 0, y = 0;
-    int ch;
+    int key_input;
 
     // Set up screen size
-    int screen_height = 17; // Add 2 for border
-    int screen_width = 32;  // Add 2 for border
-
-    // Load the map
-//    Maps gameMap(15, 30);
-//    VectorWrapper mapData = gameMap.Map_Loader();
+    const int screen_height = 15;
+    const int screen_width = 30;
 
     // Main loop
-    while ((ch = getch()) != 27) { // Exit on ESC key press
-        // Clear screen
-        clear();
-        Maps gameMap(15, 30);
+    while ((key_input = getch()) != 27) { // Exit on ESC key press
+        clear(); //clear screen
+        Maps gameMap(screen_height, screen_width);
         VectorWrapper mapData = gameMap.Map_Loader();
 
         // Draw the map
         gameMap.Map_printer(mapData, 0, 0, screen_height, screen_width);
-//        gameMap.Map_printer(mapData);
 
-        // Move character based on w, a, s, d key press
-        switch(ch) {
+        switch(key_input) {
             case 'w':
                 y--;
                 break;
@@ -51,18 +45,58 @@ int main() {
         }
 
         // Keep character within screen boundaries
-        if (x < 3) x = 3;
-        if (y < 3) y = 2;
-        if (x >= screen_width*2 - 3) x = screen_width*2 - 5;
-        if (y >= screen_height - 2) y = screen_height - 3;
+        if (x < 1) {
+            x = 1;
+        } if (y < 3) {
+            y = 2;
+        } if (x >= screen_width - 1) {
+            x = screen_width - 2;
+        } if (y >= screen_height - 1) {
+            y = screen_height - 2;
+        }
 
-        // Draw character at current position
-        mvaddch(y, x, 'X');
+        // Print character at current position
+        string character_right[8] = {
+//                "_",
+//                "/ }",
+//                "/.\\",
+//                "_/ (`-",
+//                "( ,)",
+//                "|/",
+//                "/|",
+//                "`"
+
+//                " _   ",
+//                "/ }  ",
+//                "/.\\ ",
+//                "_/ (`-",
+//                "( ,)  ",
+//                "|/   ",
+//                "/|   ",
+//                "`    "
+                "._...",
+                "/ }..",
+                "/,\\..",
+                "_/`-.",
+                "( ,).",
+                "|/...",
+                "/|...",
+                "`...."
+
+        };
+
+        for (int i = 0; i < 8; i++) {
+            for (int j = 0; j < character_right[i].length(); j++) {
+                if (character_right[i][j] != '.') {
+                    mvaddch(y+i, x+j, character_right[i][j]);
+                }
+            }
+        }
+        //mvaddch(y, x, 'O');
 
         // Refresh screen
         refresh();
     }
-
     // Clean up ncurses
     endwin();
     return 0;
