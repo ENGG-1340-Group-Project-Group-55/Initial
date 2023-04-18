@@ -19,7 +19,7 @@ public:
     Maps(int,int);
     int map_height;
     int map_width;
-    VectorWrapper Map_Loader();
+    VectorWrapper Map_Loader(string &file_path);
     VectorWrapper MapToArray(ifstream&);
     void Map_printer(VectorWrapper, int, int, int, int);
 };

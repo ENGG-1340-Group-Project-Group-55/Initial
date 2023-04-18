@@ -14,7 +14,7 @@ Maps::Maps(int a,int b){
     map_width = Map_width;
 }
 
-VectorWrapper Maps::Map_Loader() {
+VectorWrapper Maps::Map_Loader(string &file_path) {
     ifstream inputline;
     string nextline;
     inputline.open("/Users/M1/Documents/GitHub/Initial/Map_Objects/Map_resources/15-15_Testing.txt");
@@ -23,6 +23,7 @@ VectorWrapper Maps::Map_Loader() {
         exit(1);
     }
     VectorWrapper Converter = MapToArray(inputline);
+    inputline.close();
     return Converter;
 }
 

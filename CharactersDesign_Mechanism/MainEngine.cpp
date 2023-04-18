@@ -67,7 +67,8 @@ int main() {
     while ((key_input = getch()) != 27) { // Exit on ESC key press
         clear(); //clear screen
         Maps gameMap(screen_height, screen_width);
-        VectorWrapper mapData = gameMap.Map_Loader();
+        string file_path = "/Users/M1/Documents/GitHub/Initial/Map_Objects/Map_resources/15-15_Testing.txt";
+        VectorWrapper mapData = gameMap.Map_Loader(file_path);
 
         // Draw the map
         gameMap.Map_printer(mapData, 0, 0, screen_height, screen_width);
@@ -114,6 +115,7 @@ int main() {
 
         // Refresh screen
         refresh();
+
     }
     // Clean up ncurses
     endwin();
