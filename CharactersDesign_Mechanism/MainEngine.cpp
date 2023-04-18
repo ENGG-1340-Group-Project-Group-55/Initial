@@ -20,6 +20,49 @@ int main() {
     const int screen_height = 15;
     const int screen_width = 30;
 
+    string character_right[8] = {
+            "._...",
+            "/ }..",
+            "/,\\..",
+            "_/`-.",
+            "( ,).",
+            "|/...",
+            "/|...",
+            "`...."
+    };
+    string character_left[8] = {
+            "..._.",
+            "..{ \\",
+            "..,/\\",
+            "-`\\_.",
+            ".(, )",
+            "...\\|",
+            "...|\\",
+            "....`"
+    };
+    string character_up[8] = {
+            "   UP  ",
+            " U   P ",
+            " U   P ",
+            "  U  P  ",
+            "  U P ",
+            "  UP  .......",
+            "  UP   ",
+            "   UP  "
+    };
+    string character_down[8] = {
+            ".  DOW N   ",
+            ".  DO WN  ",
+            "   DOW N  ",
+            "  DOWN/  ",
+            ".  DOWN  ",
+            "  DO WN   ",
+            "  D O W N  ................",
+            "   DOWN   "
+    };
+
+    string *current_character = character_right;
+
     // Main loop
     while ((key_input = getch()) != 27) { // Exit on ESC key press
         clear(); //clear screen
@@ -32,15 +75,19 @@ int main() {
         switch(key_input) {
             case 'w':
                 y--;
+                current_character = character_up;
                 break;
             case 's':
                 y++;
+                current_character = character_down;
                 break;
             case 'a':
                 x-=2;
+                current_character = character_left;
                 break;
             case 'd':
                 x+=2;
+                current_character = character_right;
                 break;
         }
 
@@ -55,40 +102,10 @@ int main() {
             y = screen_height - 2;
         }
 
-        // Print character at current position
-        string character_right[8] = {
-//                "_",
-//                "/ }",
-//                "/.\\",
-//                "_/ (`-",
-//                "( ,)",
-//                "|/",
-//                "/|",
-//                "`"
-
-//                " _   ",
-//                "/ }  ",
-//                "/.\\ ",
-//                "_/ (`-",
-//                "( ,)  ",
-//                "|/   ",
-//                "/|   ",
-//                "`    "
-                "._...",
-                "/ }..",
-                "/,\\..",
-                "_/`-.",
-                "( ,).",
-                "|/...",
-                "/|...",
-                "`...."
-
-        };
-
         for (int i = 0; i < 8; i++) {
-            for (int j = 0; j < character_right[i].length(); j++) {
-                if (character_right[i][j] != '.') {
-                    mvaddch(y+i, x+j, character_right[i][j]);
+            for (int j = 0; j < current_character[i].length(); j++) {
+                if (current_character[i][j] != '.') {
+                    mvaddch(y+i, x+j, current_character[i][j]);
                 }
             }
         }
