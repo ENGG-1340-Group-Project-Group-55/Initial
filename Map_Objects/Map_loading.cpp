@@ -18,7 +18,7 @@ VectorWrapper Maps::Map_Loader() {
     ifstream inputline;
     string nextline;
     inputline.open("/Users/M1/Documents/GitHub/Initial/Map_Objects/Map_resources/15-15_Testing.txt");
-    if (inputline.fail()){
+    if (inputline.fail()) {
         cout<<"파일이 없다잖아 병신아!!!"<<endl;
         exit(1);
     }
@@ -26,8 +26,7 @@ VectorWrapper Maps::Map_Loader() {
     return Converter;
 }
 
-VectorWrapper Maps::MapToArray(ifstream& inputline)
-{
+VectorWrapper Maps::MapToArray(ifstream& inputline) {
     VectorWrapper Converter;
     char ch;
     int height_tracker = 0;
@@ -48,23 +47,16 @@ VectorWrapper Maps::MapToArray(ifstream& inputline)
                 }
                 width_tracker = -1;
             }
-
             width_tracker++;
         }
     }
-
     return Converter;
 }
 
-void Maps::Map_printer(VectorWrapper Converter, int y, int x, int screen_height, int screen_width)
-{
+void Maps::Map_printer(VectorWrapper Converter, int y, int x, int screen_height, int screen_width) {
     for (int i=y;i<y+screen_height;i++){
         for(int j=x;j<x+screen_width;j++){
-//            if (j==x+screen_width-3){
             mvaddch(i + 1, j, Converter.TDVEC[i][j]);
-//            }
-//            else{
-//                mvaddch(i + 1, (j * 2) + 2, Converter.TDVEC[i][j]);
         }
     }
 }

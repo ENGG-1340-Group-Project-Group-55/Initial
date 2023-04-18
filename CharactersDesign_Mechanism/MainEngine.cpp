@@ -21,9 +21,9 @@ int main() {
     const int screen_width = 30;
 
     string character_right[8] = {
-            "._...",
-            "/ }..",
-            "/,\\..",
+            ".._...",
+            "// }..",
+            "//,\\..",
             "_/`-.",
             "( ,).",
             "|/...",
@@ -101,10 +101,11 @@ int main() {
         } if (y >= screen_height - 1) {
             y = screen_height - 2;
         }
+        //for later: add coordinates of objects for each map, so that character can't pass
 
         for (int i = 0; i < 8; i++) {
             for (int j = 0; j < current_character[i].length(); j++) {
-                if (current_character[i][j] != '.') {
+                if (current_character[i][j] != '.') {   //change . to smth used less
                     mvaddch(y+i, x+j, current_character[i][j]);
                 }
             }
