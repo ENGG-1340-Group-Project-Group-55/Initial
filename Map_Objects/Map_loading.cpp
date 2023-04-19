@@ -17,7 +17,7 @@ Maps::Maps(int a,int b){
 VectorWrapper Maps::Map_Loader(string &file_path) {
     ifstream inputline;
     string nextline;
-    inputline.open("/Users/M1/Documents/GitHub/Initial/Map_Objects/Map_resources/15-15_Testing.txt");
+    inputline.open("/Users/M1/Documents/GitHub/Initial/Map_Objects/Map_resources/maptest.txt");
     if (inputline.fail()) {
         cout<<"파일이 없다잖아 병신아!!!"<<endl;
         exit(1);
