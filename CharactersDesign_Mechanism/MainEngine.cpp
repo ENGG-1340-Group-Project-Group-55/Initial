@@ -17,8 +17,8 @@ int main() {
     int key_input;
 
     // Set up screen size
-    const int screen_height = 15;
-    const int screen_width = 30;
+    const int screen_height = 20;
+    const int screen_width = 70;
 
     string character_right[8] = {
             ".._...",
@@ -67,7 +67,7 @@ int main() {
     while ((key_input = getch()) != 27) { // Exit on ESC key press
         clear(); //clear screen
         Maps gameMap(screen_height, screen_width);
-        string file_path = "/Users/M1/Documents/GitHub/Initial/Map_Objects/Map_resources/15-15_Testing.txt";
+        string file_path = "/Users/M1/Documents/GitHub/Initial/Map_Objects/Map_resources/wholemap.txt";
         VectorWrapper mapData = gameMap.Map_Loader(file_path);
 
         // Draw the map
