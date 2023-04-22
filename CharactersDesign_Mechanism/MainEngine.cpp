@@ -1,5 +1,7 @@
 #include <ncurses.h>
+#include <iostream>
 #include <string>
+#include <fstream>
 #include "MapLoader.h"
 
 //compile using: g++ CharactersDesign_Mechanism/MainEngine.cpp Map_Objects/Map_loading.cpp -o Game -lncurses
@@ -15,10 +17,33 @@ int main() {
     // Set up initial variables
     int x = 0, y = 0;
     int key_input;
-
+    string file_path = "/Users/M1/Documents/GitHub/Initial/Map_Objects/Map_resources/wholemap.txt";
     // Set up screen size
-    const int screen_height = 20;
-    const int screen_width = 70;
+    int screen_height;
+    int screen_width;
+    char ch;
+
+    ifstream inputline;
+    string nextline;
+    inputline.open(file_path);
+    if (inputline.fail()) {
+        cout<<"파일이 없다잖아 병신아!!!"<<endl;
+        exit(1);
+    }
+
+    while (inputline >> noskipws >> ch)
+    {
+        if (ch != '\n')
+        {
+            screen_width++;
+        }
+        else
+        {
+            screen_height++;
+        }
+    }
+
+    inputline.close();
 
     string character_right[8] = {
             ".._...",
@@ -67,7 +92,6 @@ int main() {
     while ((key_input = getch()) != 27) { // Exit on ESC key press
         clear(); //clear screen
         Maps gameMap(screen_height, screen_width);
-        string file_path = "/Users/M1/Documents/GitHub/Initial/Map_Objects/Map_resources/wholemap.txt";
         VectorWrapper mapData = gameMap.Map_Loader(file_path);
 
         // Draw the map

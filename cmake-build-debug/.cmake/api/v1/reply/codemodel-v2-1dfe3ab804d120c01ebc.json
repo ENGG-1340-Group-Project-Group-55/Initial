@@ -1,0 +1,182 @@
+{
+	"configurations" : 
+	[
+		{
+			"directories" : 
+			[
+				{
+					"build" : ".",
+					"jsonFile" : "directory-.-Debug-f5ebdc15457944623624.json",
+					"minimumCMakeVersion" : 
+					{
+						"string" : "3.24"
+					},
+					"projectIndex" : 0,
+					"source" : ".",
+					"targetIndexes" : 
+					[
+						0,
+						1,
+						2,
+						3,
+						4,
+						5,
+						6,
+						7,
+						8,
+						9
+					]
+				}
+			],
+			"name" : "Debug",
+			"projects" : 
+			[
+				{
+					"directoryIndexes" : 
+					[
+						0
+					],
+					"name" : "Initial",
+					"targetIndexes" : 
+					[
+						0,
+						1,
+						2,
+						3,
+						4,
+						5,
+						6,
+						7,
+						8,
+						9
+					]
+				}
+			],
+			"targets" : 
+			[
+				{
+					"directoryIndex" : 0,
+					"id" : "Character_Design::@6890427a1f51a3e7e1df",
+<<<<<<<< HEAD:cmake-build-debug/.cmake/api/v1/reply/codemodel-v2-4bf2d9b68beacbf81dd4.json
+					"jsonFile" : "target-Character_Design-Debug-1c6f241e0deea778986c.json",
+========
+					"jsonFile" : "target-Character_Design-Debug-5a99787873c3b5a4ef02.json",
+>>>>>>>> 79d1ffeb0c388e118e8fb87b98d66b39089d466b:cmake-build-debug/.cmake/api/v1/reply/codemodel-v2-1dfe3ab804d120c01ebc.json
+					"name" : "Character_Design",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 0,
+					"id" : "Enginev1::@6890427a1f51a3e7e1df",
+<<<<<<<< HEAD:cmake-build-debug/.cmake/api/v1/reply/codemodel-v2-4bf2d9b68beacbf81dd4.json
+					"jsonFile" : "target-Enginev1-Debug-0d7da4451257d3221150.json",
+========
+					"jsonFile" : "target-Enginev1-Debug-30c9f0e85ed501368bc8.json",
+>>>>>>>> 79d1ffeb0c388e118e8fb87b98d66b39089d466b:cmake-build-debug/.cmake/api/v1/reply/codemodel-v2-1dfe3ab804d120c01ebc.json
+					"name" : "Enginev1",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 0,
+					"id" : "Enginev2::@6890427a1f51a3e7e1df",
+<<<<<<<< HEAD:cmake-build-debug/.cmake/api/v1/reply/codemodel-v2-4bf2d9b68beacbf81dd4.json
+					"jsonFile" : "target-Enginev2-Debug-5775a9811b9c062cee73.json",
+========
+					"jsonFile" : "target-Enginev2-Debug-57f0ed4a5a43696f777e.json",
+>>>>>>>> 79d1ffeb0c388e118e8fb87b98d66b39089d466b:cmake-build-debug/.cmake/api/v1/reply/codemodel-v2-1dfe3ab804d120c01ebc.json
+					"name" : "Enginev2",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 0,
+					"id" : "MainEngine::@6890427a1f51a3e7e1df",
+<<<<<<<< HEAD:cmake-build-debug/.cmake/api/v1/reply/codemodel-v2-4bf2d9b68beacbf81dd4.json
+					"jsonFile" : "target-MainEngine-Debug-fd1d3a50d9df9f063cf3.json",
+========
+					"jsonFile" : "target-MainEngine-Debug-209a8ff2ca76717fc397.json",
+>>>>>>>> 79d1ffeb0c388e118e8fb87b98d66b39089d466b:cmake-build-debug/.cmake/api/v1/reply/codemodel-v2-1dfe3ab804d120c01ebc.json
+					"name" : "MainEngine",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 0,
+					"id" : "Map_loading_save::@6890427a1f51a3e7e1df",
+<<<<<<<< HEAD:cmake-build-debug/.cmake/api/v1/reply/codemodel-v2-4bf2d9b68beacbf81dd4.json
+					"jsonFile" : "target-Map_loading_save-Debug-a11af8654a29d6afe422.json",
+========
+					"jsonFile" : "target-Map_loading_save-Debug-80da23d515be17cdbeb7.json",
+>>>>>>>> 79d1ffeb0c388e118e8fb87b98d66b39089d466b:cmake-build-debug/.cmake/api/v1/reply/codemodel-v2-1dfe3ab804d120c01ebc.json
+					"name" : "Map_loading_save",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 0,
+					"id" : "base::@6890427a1f51a3e7e1df",
+<<<<<<<< HEAD:cmake-build-debug/.cmake/api/v1/reply/codemodel-v2-4bf2d9b68beacbf81dd4.json
+					"jsonFile" : "target-base-Debug-4c2151a0d1d65866e155.json",
+========
+					"jsonFile" : "target-base-Debug-b39a07b3d6c76420f689.json",
+>>>>>>>> 79d1ffeb0c388e118e8fb87b98d66b39089d466b:cmake-build-debug/.cmake/api/v1/reply/codemodel-v2-1dfe3ab804d120c01ebc.json
+					"name" : "base",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 0,
+					"id" : "base2::@6890427a1f51a3e7e1df",
+<<<<<<<< HEAD:cmake-build-debug/.cmake/api/v1/reply/codemodel-v2-4bf2d9b68beacbf81dd4.json
+					"jsonFile" : "target-base2-Debug-ef09e46f208e081077fc.json",
+========
+					"jsonFile" : "target-base2-Debug-b25bf8eb4e3b309669dc.json",
+>>>>>>>> 79d1ffeb0c388e118e8fb87b98d66b39089d466b:cmake-build-debug/.cmake/api/v1/reply/codemodel-v2-1dfe3ab804d120c01ebc.json
+					"name" : "base2",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 0,
+					"id" : "inventory::@6890427a1f51a3e7e1df",
+<<<<<<<< HEAD:cmake-build-debug/.cmake/api/v1/reply/codemodel-v2-4bf2d9b68beacbf81dd4.json
+					"jsonFile" : "target-inventory-Debug-c57076ba96c1e8fea702.json",
+========
+					"jsonFile" : "target-inventory-Debug-6424968773dec68eda63.json",
+>>>>>>>> 79d1ffeb0c388e118e8fb87b98d66b39089d466b:cmake-build-debug/.cmake/api/v1/reply/codemodel-v2-1dfe3ab804d120c01ebc.json
+					"name" : "inventory",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 0,
+					"id" : "inventory2::@6890427a1f51a3e7e1df",
+<<<<<<<< HEAD:cmake-build-debug/.cmake/api/v1/reply/codemodel-v2-4bf2d9b68beacbf81dd4.json
+					"jsonFile" : "target-inventory2-Debug-04da4358a33740cf85b0.json",
+========
+					"jsonFile" : "target-inventory2-Debug-23e9375af39352af19e8.json",
+>>>>>>>> 79d1ffeb0c388e118e8fb87b98d66b39089d466b:cmake-build-debug/.cmake/api/v1/reply/codemodel-v2-1dfe3ab804d120c01ebc.json
+					"name" : "inventory2",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 0,
+					"id" : "startpage::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-startpage-Debug-5ed456cf092c2a373936.json",
+					"name" : "startpage",
+					"projectIndex" : 0
+				}
+			]
+		}
+	],
+	"kind" : "codemodel",
+	"paths" : 
+	{
+<<<<<<<< HEAD:cmake-build-debug/.cmake/api/v1/reply/codemodel-v2-4bf2d9b68beacbf81dd4.json
+		"build" : "/Users/minchankim/Documents/GitHub/Initial/cmake-build-debug",
+		"source" : "/Users/minchankim/Documents/GitHub/Initial"
+========
+		"build" : "/Users/lucas/Documents/GitHub/Initial/cmake-build-debug",
+		"source" : "/Users/lucas/Documents/GitHub/Initial"
+>>>>>>>> 79d1ffeb0c388e118e8fb87b98d66b39089d466b:cmake-build-debug/.cmake/api/v1/reply/codemodel-v2-1dfe3ab804d120c01ebc.json
+	},
+	"version" : 
+	{
+		"major" : 2,
+		"minor" : 4
+	}
+}
