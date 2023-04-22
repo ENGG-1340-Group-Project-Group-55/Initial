@@ -1,6 +1,7 @@
 #include <ncurses.h>
 #include <iostream>
 #include <string>
+#include <fstream>
 #include "MapLoader.h"
 
 //compile using: g++ CharactersDesign_Mechanism/MainEngine.cpp Map_Objects/Map_loading.cpp -o Game -lncurses
