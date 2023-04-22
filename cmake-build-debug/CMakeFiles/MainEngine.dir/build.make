@@ -44,19 +44,19 @@ cmake_force:
 SHELL = /bin/sh
 
 # The CMake executable.
-CMAKE_COMMAND = /Applications/CLion.app/Contents/bin/cmake/mac/bin/cmake
+CMAKE_COMMAND = /Users/lucas/Desktop/programming/C++/CLion.app/Contents/bin/cmake/mac/bin/cmake
 
 # The command to remove a file.
-RM = /Applications/CLion.app/Contents/bin/cmake/mac/bin/cmake -E rm -f
+RM = /Users/lucas/Desktop/programming/C++/CLion.app/Contents/bin/cmake/mac/bin/cmake -E rm -f
 
 # Escaping for special characters.
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = /Users/M1/Documents/GitHub/Initial
+CMAKE_SOURCE_DIR = /Users/lucas/Documents/GitHub/Initial
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = /Users/M1/Documents/GitHub/Initial/cmake-build-debug
+CMAKE_BINARY_DIR = /Users/lucas/Documents/GitHub/Initial/cmake-build-debug
 
 # Include any dependencies generated for this target.
 include CMakeFiles/MainEngine.dir/depend.make
@@ -70,32 +70,32 @@ include CMakeFiles/MainEngine.dir/progress.make
 include CMakeFiles/MainEngine.dir/flags.make
 
 CMakeFiles/MainEngine.dir/CharactersDesign_Mechanism/MainEngine.cpp.o: CMakeFiles/MainEngine.dir/flags.make
-CMakeFiles/MainEngine.dir/CharactersDesign_Mechanism/MainEngine.cpp.o: /Users/M1/Documents/GitHub/Initial/CharactersDesign_Mechanism/MainEngine.cpp
+CMakeFiles/MainEngine.dir/CharactersDesign_Mechanism/MainEngine.cpp.o: /Users/lucas/Documents/GitHub/Initial/CharactersDesign_Mechanism/MainEngine.cpp
 CMakeFiles/MainEngine.dir/CharactersDesign_Mechanism/MainEngine.cpp.o: CMakeFiles/MainEngine.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/M1/Documents/GitHub/Initial/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Building CXX object CMakeFiles/MainEngine.dir/CharactersDesign_Mechanism/MainEngine.cpp.o"
-	/Library/Developer/CommandLineTools/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/MainEngine.dir/CharactersDesign_Mechanism/MainEngine.cpp.o -MF CMakeFiles/MainEngine.dir/CharactersDesign_Mechanism/MainEngine.cpp.o.d -o CMakeFiles/MainEngine.dir/CharactersDesign_Mechanism/MainEngine.cpp.o -c /Users/M1/Documents/GitHub/Initial/CharactersDesign_Mechanism/MainEngine.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/lucas/Documents/GitHub/Initial/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Building CXX object CMakeFiles/MainEngine.dir/CharactersDesign_Mechanism/MainEngine.cpp.o"
+	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/MainEngine.dir/CharactersDesign_Mechanism/MainEngine.cpp.o -MF CMakeFiles/MainEngine.dir/CharactersDesign_Mechanism/MainEngine.cpp.o.d -o CMakeFiles/MainEngine.dir/CharactersDesign_Mechanism/MainEngine.cpp.o -c /Users/lucas/Documents/GitHub/Initial/CharactersDesign_Mechanism/MainEngine.cpp
 
 CMakeFiles/MainEngine.dir/CharactersDesign_Mechanism/MainEngine.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/MainEngine.dir/CharactersDesign_Mechanism/MainEngine.cpp.i"
-	/Library/Developer/CommandLineTools/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /Users/M1/Documents/GitHub/Initial/CharactersDesign_Mechanism/MainEngine.cpp > CMakeFiles/MainEngine.dir/CharactersDesign_Mechanism/MainEngine.cpp.i
+	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /Users/lucas/Documents/GitHub/Initial/CharactersDesign_Mechanism/MainEngine.cpp > CMakeFiles/MainEngine.dir/CharactersDesign_Mechanism/MainEngine.cpp.i
 
 CMakeFiles/MainEngine.dir/CharactersDesign_Mechanism/MainEngine.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/MainEngine.dir/CharactersDesign_Mechanism/MainEngine.cpp.s"
-	/Library/Developer/CommandLineTools/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /Users/M1/Documents/GitHub/Initial/CharactersDesign_Mechanism/MainEngine.cpp -o CMakeFiles/MainEngine.dir/CharactersDesign_Mechanism/MainEngine.cpp.s
+	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /Users/lucas/Documents/GitHub/Initial/CharactersDesign_Mechanism/MainEngine.cpp -o CMakeFiles/MainEngine.dir/CharactersDesign_Mechanism/MainEngine.cpp.s
 
 CMakeFiles/MainEngine.dir/Map_Objects/Map_loading.cpp.o: CMakeFiles/MainEngine.dir/flags.make
-CMakeFiles/MainEngine.dir/Map_Objects/Map_loading.cpp.o: /Users/M1/Documents/GitHub/Initial/Map_Objects/Map_loading.cpp
+CMakeFiles/MainEngine.dir/Map_Objects/Map_loading.cpp.o: /Users/lucas/Documents/GitHub/Initial/Map_Objects/Map_loading.cpp
 CMakeFiles/MainEngine.dir/Map_Objects/Map_loading.cpp.o: CMakeFiles/MainEngine.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/M1/Documents/GitHub/Initial/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Building CXX object CMakeFiles/MainEngine.dir/Map_Objects/Map_loading.cpp.o"
-	/Library/Developer/CommandLineTools/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/MainEngine.dir/Map_Objects/Map_loading.cpp.o -MF CMakeFiles/MainEngine.dir/Map_Objects/Map_loading.cpp.o.d -o CMakeFiles/MainEngine.dir/Map_Objects/Map_loading.cpp.o -c /Users/M1/Documents/GitHub/Initial/Map_Objects/Map_loading.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/lucas/Documents/GitHub/Initial/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Building CXX object CMakeFiles/MainEngine.dir/Map_Objects/Map_loading.cpp.o"
+	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/MainEngine.dir/Map_Objects/Map_loading.cpp.o -MF CMakeFiles/MainEngine.dir/Map_Objects/Map_loading.cpp.o.d -o CMakeFiles/MainEngine.dir/Map_Objects/Map_loading.cpp.o -c /Users/lucas/Documents/GitHub/Initial/Map_Objects/Map_loading.cpp
 
 CMakeFiles/MainEngine.dir/Map_Objects/Map_loading.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/MainEngine.dir/Map_Objects/Map_loading.cpp.i"
-	/Library/Developer/CommandLineTools/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /Users/M1/Documents/GitHub/Initial/Map_Objects/Map_loading.cpp > CMakeFiles/MainEngine.dir/Map_Objects/Map_loading.cpp.i
+	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /Users/lucas/Documents/GitHub/Initial/Map_Objects/Map_loading.cpp > CMakeFiles/MainEngine.dir/Map_Objects/Map_loading.cpp.i
 
 CMakeFiles/MainEngine.dir/Map_Objects/Map_loading.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/MainEngine.dir/Map_Objects/Map_loading.cpp.s"
-	/Library/Developer/CommandLineTools/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /Users/M1/Documents/GitHub/Initial/Map_Objects/Map_loading.cpp -o CMakeFiles/MainEngine.dir/Map_Objects/Map_loading.cpp.s
+	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /Users/lucas/Documents/GitHub/Initial/Map_Objects/Map_loading.cpp -o CMakeFiles/MainEngine.dir/Map_Objects/Map_loading.cpp.s
 
 # Object files for target MainEngine
 MainEngine_OBJECTS = \
@@ -109,7 +109,7 @@ MainEngine: CMakeFiles/MainEngine.dir/CharactersDesign_Mechanism/MainEngine.cpp.
 MainEngine: CMakeFiles/MainEngine.dir/Map_Objects/Map_loading.cpp.o
 MainEngine: CMakeFiles/MainEngine.dir/build.make
 MainEngine: CMakeFiles/MainEngine.dir/link.txt
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=/Users/M1/Documents/GitHub/Initial/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_3) "Linking CXX executable MainEngine"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=/Users/lucas/Documents/GitHub/Initial/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_3) "Linking CXX executable MainEngine"
 	$(CMAKE_COMMAND) -E cmake_link_script CMakeFiles/MainEngine.dir/link.txt --verbose=$(VERBOSE)
 
 # Rule to build all files generated by this target.
@@ -121,6 +121,6 @@ CMakeFiles/MainEngine.dir/clean:
 .PHONY : CMakeFiles/MainEngine.dir/clean
 
 CMakeFiles/MainEngine.dir/depend:
-	cd /Users/M1/Documents/GitHub/Initial/cmake-build-debug && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /Users/M1/Documents/GitHub/Initial /Users/M1/Documents/GitHub/Initial /Users/M1/Documents/GitHub/Initial/cmake-build-debug /Users/M1/Documents/GitHub/Initial/cmake-build-debug /Users/M1/Documents/GitHub/Initial/cmake-build-debug/CMakeFiles/MainEngine.dir/DependInfo.cmake --color=$(COLOR)
+	cd /Users/lucas/Documents/GitHub/Initial/cmake-build-debug && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /Users/lucas/Documents/GitHub/Initial /Users/lucas/Documents/GitHub/Initial /Users/lucas/Documents/GitHub/Initial/cmake-build-debug /Users/lucas/Documents/GitHub/Initial/cmake-build-debug /Users/lucas/Documents/GitHub/Initial/cmake-build-debug/CMakeFiles/MainEngine.dir/DependInfo.cmake --color=$(COLOR)
 .PHONY : CMakeFiles/MainEngine.dir/depend
 

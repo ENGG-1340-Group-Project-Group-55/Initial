@@ -8,8 +8,8 @@ set(CMAKE_DEPENDS_LANGUAGES
 
 # The set of dependency files which are needed:
 set(CMAKE_DEPENDS_DEPENDENCY_FILES
-  "/Users/M1/Documents/GitHub/Initial/CharactersDesign_Mechanism/MainEngine.cpp" "CMakeFiles/MainEngine.dir/CharactersDesign_Mechanism/MainEngine.cpp.o" "gcc" "CMakeFiles/MainEngine.dir/CharactersDesign_Mechanism/MainEngine.cpp.o.d"
-  "/Users/M1/Documents/GitHub/Initial/Map_Objects/Map_loading.cpp" "CMakeFiles/MainEngine.dir/Map_Objects/Map_loading.cpp.o" "gcc" "CMakeFiles/MainEngine.dir/Map_Objects/Map_loading.cpp.o.d"
+  "/Users/lucas/Documents/GitHub/Initial/CharactersDesign_Mechanism/MainEngine.cpp" "CMakeFiles/MainEngine.dir/CharactersDesign_Mechanism/MainEngine.cpp.o" "gcc" "CMakeFiles/MainEngine.dir/CharactersDesign_Mechanism/MainEngine.cpp.o.d"
+  "/Users/lucas/Documents/GitHub/Initial/Map_Objects/Map_loading.cpp" "CMakeFiles/MainEngine.dir/Map_Objects/Map_loading.cpp.o" "gcc" "CMakeFiles/MainEngine.dir/Map_Objects/Map_loading.cpp.o.d"
   )
 
 # Targets to which this target links.

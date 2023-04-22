@@ -2,7 +2,7 @@
 	"artifacts" : 
 	[
 		{
-			"path" : "base"
+			"path" : "inventory"
 		}
 	],
 	"backtrace" : 1,
@@ -24,7 +24,7 @@
 			{
 				"command" : 0,
 				"file" : 0,
-				"line" : 10,
+				"line" : 8,
 				"parent" : 0
 			}
 		]
@@ -35,7 +35,7 @@
 			"compileCommandFragments" : 
 			[
 				{
-					"fragment" : "-g -arch arm64 -isysroot /Library/Developer/CommandLineTools/SDKs/MacOSX13.3.sdk -fcolor-diagnostics"
+					"fragment" : "-g -arch arm64 -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX13.3.sdk -fcolor-diagnostics"
 				},
 				{
 					"fragment" : "-std=gnu++17"
@@ -56,7 +56,7 @@
 			]
 		}
 	],
-	"id" : "base::@6890427a1f51a3e7e1df",
+	"id" : "inventory::@6890427a1f51a3e7e1df",
 	"link" : 
 	{
 		"commandFragments" : 
@@ -72,8 +72,8 @@
 		],
 		"language" : "CXX"
 	},
-	"name" : "base",
-	"nameOnDisk" : "base",
+	"name" : "inventory",
+	"nameOnDisk" : "inventory",
 	"paths" : 
 	{
 		"build" : ".",
@@ -94,7 +94,7 @@
 		{
 			"backtrace" : 1,
 			"compileGroupIndex" : 0,
-			"path" : "UI/base.cpp",
+			"path" : "UI/inventory.cpp",
 			"sourceGroupIndex" : 0
 		}
 	],
