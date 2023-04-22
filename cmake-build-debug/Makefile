@@ -48,19 +48,19 @@ cmake_force:
 SHELL = /bin/sh
 
 # The CMake executable.
-CMAKE_COMMAND = /Users/lucas/Desktop/programming/C++/CLion.app/Contents/bin/cmake/mac/bin/cmake
+CMAKE_COMMAND = /Applications/CLion.app/Contents/bin/cmake/mac/bin/cmake
 
 # The command to remove a file.
-RM = /Users/lucas/Desktop/programming/C++/CLion.app/Contents/bin/cmake/mac/bin/cmake -E rm -f
+RM = /Applications/CLion.app/Contents/bin/cmake/mac/bin/cmake -E rm -f
 
 # Escaping for special characters.
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = /Users/lucas/Documents/GitHub/Initial
+CMAKE_SOURCE_DIR = /Users/M1/Documents/GitHub/Initial
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = /Users/lucas/Documents/GitHub/Initial/cmake-build-debug
+CMAKE_BINARY_DIR = /Users/M1/Documents/GitHub/Initial/cmake-build-debug
 
 #=============================================================================
 # Targets provided globally by CMake.
@@ -68,7 +68,7 @@ CMAKE_BINARY_DIR = /Users/lucas/Documents/GitHub/Initial/cmake-build-debug
 # Special rule for the target edit_cache
 edit_cache:
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "No interactive CMake dialog available..."
-	/Users/lucas/Desktop/programming/C++/CLion.app/Contents/bin/cmake/mac/bin/cmake -E echo No\ interactive\ CMake\ dialog\ available.
+	/Applications/CLion.app/Contents/bin/cmake/mac/bin/cmake -E echo No\ interactive\ CMake\ dialog\ available.
 .PHONY : edit_cache
 
 # Special rule for the target edit_cache
@@ -78,7 +78,7 @@ edit_cache/fast: edit_cache
 # Special rule for the target rebuild_cache
 rebuild_cache:
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "Running CMake to regenerate build system..."
-	/Users/lucas/Desktop/programming/C++/CLion.app/Contents/bin/cmake/mac/bin/cmake --regenerate-during-build -S$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR)
+	/Applications/CLion.app/Contents/bin/cmake/mac/bin/cmake --regenerate-during-build -S$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR)
 .PHONY : rebuild_cache
 
 # Special rule for the target rebuild_cache
@@ -87,9 +87,9 @@ rebuild_cache/fast: rebuild_cache
 
 # The main all target
 all: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /Users/lucas/Documents/GitHub/Initial/cmake-build-debug/CMakeFiles /Users/lucas/Documents/GitHub/Initial/cmake-build-debug//CMakeFiles/progress.marks
+	$(CMAKE_COMMAND) -E cmake_progress_start /Users/M1/Documents/GitHub/Initial/cmake-build-debug/CMakeFiles /Users/M1/Documents/GitHub/Initial/cmake-build-debug//CMakeFiles/progress.marks
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 all
-	$(CMAKE_COMMAND) -E cmake_progress_start /Users/lucas/Documents/GitHub/Initial/cmake-build-debug/CMakeFiles 0
+	$(CMAKE_COMMAND) -E cmake_progress_start /Users/M1/Documents/GitHub/Initial/cmake-build-debug/CMakeFiles 0
 .PHONY : all
 
 # The main clean target
@@ -167,6 +167,19 @@ base: cmake_check_build_system
 base/fast:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/base.dir/build.make CMakeFiles/base.dir/build
 .PHONY : base/fast
+
+#=============================================================================
+# Target rules for targets named startpage
+
+# Build rule for target.
+startpage: cmake_check_build_system
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 startpage
+.PHONY : startpage
+
+# fast build rule for target.
+startpage/fast:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/startpage.dir/build.make CMakeFiles/startpage.dir/build
+.PHONY : startpage/fast
 
 #=============================================================================
 # Target rules for targets named base2
@@ -473,6 +486,33 @@ UI/inventory2.cpp.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/inventory2.dir/build.make CMakeFiles/inventory2.dir/UI/inventory2.cpp.s
 .PHONY : UI/inventory2.cpp.s
 
+UI/startpage.o: UI/startpage.cpp.o
+.PHONY : UI/startpage.o
+
+# target to build an object file
+UI/startpage.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/base.dir/build.make CMakeFiles/base.dir/UI/startpage.cpp.o
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/startpage.dir/build.make CMakeFiles/startpage.dir/UI/startpage.cpp.o
+.PHONY : UI/startpage.cpp.o
+
+UI/startpage.i: UI/startpage.cpp.i
+.PHONY : UI/startpage.i
+
+# target to preprocess a source file
+UI/startpage.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/base.dir/build.make CMakeFiles/base.dir/UI/startpage.cpp.i
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/startpage.dir/build.make CMakeFiles/startpage.dir/UI/startpage.cpp.i
+.PHONY : UI/startpage.cpp.i
+
+UI/startpage.s: UI/startpage.cpp.s
+.PHONY : UI/startpage.s
+
+# target to generate assembly for a file
+UI/startpage.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/base.dir/build.make CMakeFiles/base.dir/UI/startpage.cpp.s
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/startpage.dir/build.make CMakeFiles/startpage.dir/UI/startpage.cpp.s
+.PHONY : UI/startpage.cpp.s
+
 # Help Target
 help:
 	@echo "The following are some of the valid targets for this Makefile:"
@@ -490,6 +530,7 @@ help:
 	@echo "... base2"
 	@echo "... inventory"
 	@echo "... inventory2"
+	@echo "... startpage"
 	@echo "... CharactersDesign_Mechanism/Character_Design.o"
 	@echo "... CharactersDesign_Mechanism/Character_Design.i"
 	@echo "... CharactersDesign_Mechanism/Character_Design.s"
@@ -520,6 +561,9 @@ help:
 	@echo "... UI/inventory2.o"
 	@echo "... UI/inventory2.i"
 	@echo "... UI/inventory2.s"
+	@echo "... UI/startpage.o"
+	@echo "... UI/startpage.i"
+	@echo "... UI/startpage.s"
 .PHONY : help
 
 

@@ -1,8 +1,4 @@
-<<<<<<< HEAD
-# Install script for directory: /Users/minchankim/Documents/GitHub/Initial
-=======
-# Install script for directory: /Users/lucas/Documents/GitHub/Initial
->>>>>>> 79d1ffeb0c388e118e8fb87b98d66b39089d466b
+# Install script for directory: /Users/M1/Documents/GitHub/Initial
 
 # Set the install prefix
 if(NOT DEFINED CMAKE_INSTALL_PREFIX)
@@ -38,7 +34,7 @@ endif()
 
 # Set default install directory permissions.
 if(NOT DEFINED CMAKE_OBJDUMP)
-  set(CMAKE_OBJDUMP "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/objdump")
+  set(CMAKE_OBJDUMP "/Library/Developer/CommandLineTools/usr/bin/objdump")
 endif()
 
 if(CMAKE_INSTALL_COMPONENT)
@@ -49,9 +45,5 @@ endif()
 
 string(REPLACE ";" "\n" CMAKE_INSTALL_MANIFEST_CONTENT
        "${CMAKE_INSTALL_MANIFEST_FILES}")
-<<<<<<< HEAD
-file(WRITE "/Users/minchankim/Documents/GitHub/Initial/cmake-build-debug/${CMAKE_INSTALL_MANIFEST}"
-=======
-file(WRITE "/Users/lucas/Documents/GitHub/Initial/cmake-build-debug/${CMAKE_INSTALL_MANIFEST}"
->>>>>>> 79d1ffeb0c388e118e8fb87b98d66b39089d466b
+file(WRITE "/Users/M1/Documents/GitHub/Initial/cmake-build-debug/${CMAKE_INSTALL_MANIFEST}"
      "${CMAKE_INSTALL_MANIFEST_CONTENT}")

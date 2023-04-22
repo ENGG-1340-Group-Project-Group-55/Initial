@@ -8,7 +8,8 @@ set(CMAKE_DEPENDS_LANGUAGES
 
 # The set of dependency files which are needed:
 set(CMAKE_DEPENDS_DEPENDENCY_FILES
-  "/Users/lucas/Documents/GitHub/Initial/UI/base.cpp" "CMakeFiles/base.dir/UI/base.cpp.o" "gcc" "CMakeFiles/base.dir/UI/base.cpp.o.d"
+  "/Users/M1/Documents/GitHub/Initial/UI/base.cpp" "CMakeFiles/base.dir/UI/base.cpp.o" "gcc" "CMakeFiles/base.dir/UI/base.cpp.o.d"
+  "/Users/M1/Documents/GitHub/Initial/UI/startpage.cpp" "CMakeFiles/base.dir/UI/startpage.cpp.o" "gcc" "CMakeFiles/base.dir/UI/startpage.cpp.o.d"
   )
 
 # Targets to which this target links.

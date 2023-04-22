@@ -44,19 +44,19 @@ cmake_force:
 SHELL = /bin/sh
 
 # The CMake executable.
-CMAKE_COMMAND = /Users/lucas/Desktop/programming/C++/CLion.app/Contents/bin/cmake/mac/bin/cmake
+CMAKE_COMMAND = /Applications/CLion.app/Contents/bin/cmake/mac/bin/cmake
 
 # The command to remove a file.
-RM = /Users/lucas/Desktop/programming/C++/CLion.app/Contents/bin/cmake/mac/bin/cmake -E rm -f
+RM = /Applications/CLion.app/Contents/bin/cmake/mac/bin/cmake -E rm -f
 
 # Escaping for special characters.
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = /Users/lucas/Documents/GitHub/Initial
+CMAKE_SOURCE_DIR = /Users/M1/Documents/GitHub/Initial
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = /Users/lucas/Documents/GitHub/Initial/cmake-build-debug
+CMAKE_BINARY_DIR = /Users/M1/Documents/GitHub/Initial/cmake-build-debug
 
 # Include any dependencies generated for this target.
 include CMakeFiles/base.dir/depend.make
@@ -70,30 +70,46 @@ include CMakeFiles/base.dir/progress.make
 include CMakeFiles/base.dir/flags.make
 
 CMakeFiles/base.dir/UI/base.cpp.o: CMakeFiles/base.dir/flags.make
-CMakeFiles/base.dir/UI/base.cpp.o: /Users/lucas/Documents/GitHub/Initial/UI/base.cpp
+CMakeFiles/base.dir/UI/base.cpp.o: /Users/M1/Documents/GitHub/Initial/UI/base.cpp
 CMakeFiles/base.dir/UI/base.cpp.o: CMakeFiles/base.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/lucas/Documents/GitHub/Initial/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Building CXX object CMakeFiles/base.dir/UI/base.cpp.o"
-	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/base.dir/UI/base.cpp.o -MF CMakeFiles/base.dir/UI/base.cpp.o.d -o CMakeFiles/base.dir/UI/base.cpp.o -c /Users/lucas/Documents/GitHub/Initial/UI/base.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/M1/Documents/GitHub/Initial/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Building CXX object CMakeFiles/base.dir/UI/base.cpp.o"
+	/Library/Developer/CommandLineTools/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/base.dir/UI/base.cpp.o -MF CMakeFiles/base.dir/UI/base.cpp.o.d -o CMakeFiles/base.dir/UI/base.cpp.o -c /Users/M1/Documents/GitHub/Initial/UI/base.cpp
 
 CMakeFiles/base.dir/UI/base.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/base.dir/UI/base.cpp.i"
-	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /Users/lucas/Documents/GitHub/Initial/UI/base.cpp > CMakeFiles/base.dir/UI/base.cpp.i
+	/Library/Developer/CommandLineTools/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /Users/M1/Documents/GitHub/Initial/UI/base.cpp > CMakeFiles/base.dir/UI/base.cpp.i
 
 CMakeFiles/base.dir/UI/base.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/base.dir/UI/base.cpp.s"
-	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /Users/lucas/Documents/GitHub/Initial/UI/base.cpp -o CMakeFiles/base.dir/UI/base.cpp.s
+	/Library/Developer/CommandLineTools/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /Users/M1/Documents/GitHub/Initial/UI/base.cpp -o CMakeFiles/base.dir/UI/base.cpp.s
+
+CMakeFiles/base.dir/UI/startpage.cpp.o: CMakeFiles/base.dir/flags.make
+CMakeFiles/base.dir/UI/startpage.cpp.o: /Users/M1/Documents/GitHub/Initial/UI/startpage.cpp
+CMakeFiles/base.dir/UI/startpage.cpp.o: CMakeFiles/base.dir/compiler_depend.ts
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/M1/Documents/GitHub/Initial/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Building CXX object CMakeFiles/base.dir/UI/startpage.cpp.o"
+	/Library/Developer/CommandLineTools/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/base.dir/UI/startpage.cpp.o -MF CMakeFiles/base.dir/UI/startpage.cpp.o.d -o CMakeFiles/base.dir/UI/startpage.cpp.o -c /Users/M1/Documents/GitHub/Initial/UI/startpage.cpp
+
+CMakeFiles/base.dir/UI/startpage.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/base.dir/UI/startpage.cpp.i"
+	/Library/Developer/CommandLineTools/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /Users/M1/Documents/GitHub/Initial/UI/startpage.cpp > CMakeFiles/base.dir/UI/startpage.cpp.i
+
+CMakeFiles/base.dir/UI/startpage.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/base.dir/UI/startpage.cpp.s"
+	/Library/Developer/CommandLineTools/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /Users/M1/Documents/GitHub/Initial/UI/startpage.cpp -o CMakeFiles/base.dir/UI/startpage.cpp.s
 
 # Object files for target base
 base_OBJECTS = \
-"CMakeFiles/base.dir/UI/base.cpp.o"
+"CMakeFiles/base.dir/UI/base.cpp.o" \
+"CMakeFiles/base.dir/UI/startpage.cpp.o"
 
 # External object files for target base
 base_EXTERNAL_OBJECTS =
 
 base: CMakeFiles/base.dir/UI/base.cpp.o
+base: CMakeFiles/base.dir/UI/startpage.cpp.o
 base: CMakeFiles/base.dir/build.make
 base: CMakeFiles/base.dir/link.txt
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=/Users/lucas/Documents/GitHub/Initial/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Linking CXX executable base"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=/Users/M1/Documents/GitHub/Initial/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_3) "Linking CXX executable base"
 	$(CMAKE_COMMAND) -E cmake_link_script CMakeFiles/base.dir/link.txt --verbose=$(VERBOSE)
 
 # Rule to build all files generated by this target.
@@ -105,6 +121,6 @@ CMakeFiles/base.dir/clean:
 .PHONY : CMakeFiles/base.dir/clean
 
 CMakeFiles/base.dir/depend:
-	cd /Users/lucas/Documents/GitHub/Initial/cmake-build-debug && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /Users/lucas/Documents/GitHub/Initial /Users/lucas/Documents/GitHub/Initial /Users/lucas/Documents/GitHub/Initial/cmake-build-debug /Users/lucas/Documents/GitHub/Initial/cmake-build-debug /Users/lucas/Documents/GitHub/Initial/cmake-build-debug/CMakeFiles/base.dir/DependInfo.cmake --color=$(COLOR)
+	cd /Users/M1/Documents/GitHub/Initial/cmake-build-debug && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /Users/M1/Documents/GitHub/Initial /Users/M1/Documents/GitHub/Initial /Users/M1/Documents/GitHub/Initial/cmake-build-debug /Users/M1/Documents/GitHub/Initial/cmake-build-debug /Users/M1/Documents/GitHub/Initial/cmake-build-debug/CMakeFiles/base.dir/DependInfo.cmake --color=$(COLOR)
 .PHONY : CMakeFiles/base.dir/depend
 
