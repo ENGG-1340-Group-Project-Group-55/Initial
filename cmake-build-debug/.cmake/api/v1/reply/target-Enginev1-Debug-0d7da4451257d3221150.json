@@ -36,10 +36,14 @@
 			[
 				{
 <<<<<<<< HEAD:cmake-build-debug/.cmake/api/v1/reply/target-Enginev1-Debug-0d7da4451257d3221150.json
+<<<<<<<< HEAD:cmake-build-debug/.cmake/api/v1/reply/target-Enginev1-Debug-0d7da4451257d3221150.json
 					"fragment" : "-g -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX13.3.sdk -fcolor-diagnostics"
 ========
 					"fragment" : "-g -arch arm64 -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX13.3.sdk -fcolor-diagnostics"
 >>>>>>>> 79d1ffeb0c388e118e8fb87b98d66b39089d466b:cmake-build-debug/.cmake/api/v1/reply/target-Enginev1-Debug-30c9f0e85ed501368bc8.json
+========
+					"fragment" : "-g -arch arm64 -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX13.3.sdk -fcolor-diagnostics"
+>>>>>>>> 3192118767a12803cf615bf8da8ccf2d2412ec5f:cmake-build-debug/.cmake/api/v1/reply/target-Enginev1-Debug-30c9f0e85ed501368bc8.json
 				},
 				{
 					"fragment" : "-std=gnu++17"

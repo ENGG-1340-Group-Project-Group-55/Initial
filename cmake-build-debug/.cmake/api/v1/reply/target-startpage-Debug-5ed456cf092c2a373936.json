@@ -35,7 +35,11 @@
 			"compileCommandFragments" : 
 			[
 				{
+<<<<<<<< HEAD:cmake-build-debug/.cmake/api/v1/reply/target-startpage-Debug-5ed456cf092c2a373936.json
 					"fragment" : "-g -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX13.3.sdk -fcolor-diagnostics"
+========
+					"fragment" : "-g -arch arm64 -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX13.3.sdk -fcolor-diagnostics"
+>>>>>>>> 3192118767a12803cf615bf8da8ccf2d2412ec5f:cmake-build-debug/.cmake/api/v1/reply/target-base2-Debug-b25bf8eb4e3b309669dc.json
 				},
 				{
 					"fragment" : "-std=gnu++17"
