@@ -4,6 +4,8 @@
 #include <cstdlib>
 #include <ctime>
 
+using namespace std;
+
 // Function declarations
 void show_start_page();
 void display_instructions();
@@ -19,44 +21,56 @@ int main() {
 }
 
 void show_start_page() {
-    std::string input;
+    string input;
 
-    std::cout << R"(
+    cout << R"(
+---------------------------------------------------------------------------------------------------------|
+ ██░ ██  ▄▄▄      █    ██  ███▄    █ ▄▄▄█████▓▓█████ ▓█████▄                                             |
+▓██░ ██▒▒████▄    ██  ▓██▒ ██ ▀█   █ ▓  ██▒ ▓▒▓█   ▀ ▒██▀ ██▌                                            |
+▒██▀▀██░▒██  ▀█▄ ▓██  ▒██░▓██  ▀█ ██▒▒ ▓██░ ▒░▒███   ░██   █▌                                            |
+░▓█ ░██ ░██▄▄▄▄██▓▓█  ░██░▓██▒  ▐▌██▒░ ▓██▓ ░ ▒▓█  ▄ ░▓█▄   ▌                                            |
+░▓█▒░██▓ ▓█   ▓██▒▒█████▓ ▒██░   ▓██░  ▒██▒ ░ ░▒████▒░▒████▓                                             |
+ ▒ ░░▒░▒ ▒▒   ▓▒█░▒▓▒ ▒ ▒ ░ ▒░   ▒ ▒   ▒ ░░   ░░ ▒░ ░ ▒▒▓  ▒                                             |
+ ▒ ░▒░ ░  ▒   ▒▒ ░░▒░ ░ ░ ░ ░░   ░ ▒░    ░     ░ ░  ░ ░ ▒  ▒                                             |
+ ░  ░░ ░  ░   ▒   ░░░ ░ ░    ░   ░ ░   ░         ░    ░ ░  ░                                             |
+ ░  ░  ░      ░  ░  ░              ░             ░  ░   ░                                                |
+                                                      ░                                                  |
+                                                                                                         |
+                                     ███▄ ▄███▓▓█████ ███▄ ▄███▓ ▒█████   ██▀███   ██▓▓█████   ██████    |
+                                    ▓██▒▀█▀ ██▒▓█   ▀▓██▒▀█▀ ██▒▒██▒  ██▒▓██ ▒ ██▒▓██▒▓█   ▀ ▒██    ▒    |
+                                    ▓██    ▓██░▒███  ▓██    ▓██░▒██░  ██▒▓██ ░▄█ ▒▒██▒▒███   ░ ▓██▄      |
+                                    ▒██    ▒██ ▒▓█  ▄▒██    ▒██ ▒██   ██░▒██▀▀█▄  ░██░▒▓█  ▄   ▒   ██▒   |
+                                    ▒██▒   ░██▒░▒████▒██▒   ░██▒░ ████▓▒░░██▓ ▒██▒░██░░▒████▒▒██████▒▒   |
+                                    ░ ▒░   ░  ░░░ ▒░ ░ ▒░   ░  ░░ ▒░▒░▒░ ░ ▒▓ ░▒▓░░▓  ░░ ▒░ ░▒ ▒▓▒ ▒ ░   |
+                                    ░  ░      ░ ░ ░  ░  ░      ░  ░ ▒ ▒░   ░▒ ░ ▒░ ▒ ░ ░ ░  ░░ ░▒  ░ ░   |
+                                    ░      ░      ░  ░      ░   ░ ░ ░ ▒    ░░   ░  ▒ ░   ░   ░  ░  ░     |
+                                           ░      ░  ░      ░       ░ ░     ░      ░     ░  ░      ░     |
+                                                                                                         |
+                                                                                                         |
+                           Please enter the corresponding number to your choice:                         |
+                                                                                                         |
+                                      ___    ______           __                                         |
+                                     <  /   / __/ /____ _____/ /_                                        |
+                                     / /   _\ \/ __/ _ `/ __/ __/                                        |
+                                    /_(_) /___/\__/\_,_/_/  \__/                                         |
+                                                                                                         |
+                                                                                                         |
+                           ___      ____        __               __  _                                   |
+                          |_  |    /  _/__  ___/ /_______ ______/ /_(_)__  ___                           |
+                         / __/_   _/ // _ \(_-< __/ __/ // / __/ __/ / _ \/ _ \                          |
+                        /____(_) /___/_//_/___|__/_/  \_,_/\__/\__/_/\___/_//_/                          |
+                                                                                                         |
+                                                                                                         |
+----------------------------------------------------------------------------------------------------------
 
-▄▄▄█████▓ ██░ ██  ▄▄▄       ██▀███   ██░ ██  ▄▄▄█████▓
-▓  ██▒ ▓▒▓██░ ██▒▒████▄    ▓██ ▒ ██▒▓██░ ██▒▓  ██▒ ▓▒
-▒ ▓██░ ▒░▒██▀▀██░▒██  ▀█▄  ▓██ ░▄█ ▒▒██▀▀██░▒ ▓██░ ▒░
-░ ▓██▓ ░ ░▓█ ░██ ░██▄▄▄▄██ ▒██▀▀█▄  ░▓█ ░██ ░ ▓██▓ ░
-  ▒██▒ ░ ░▓█▒░██▓ ▓█   ▓██▒░██▓ ▒██▒░▓█▒░██▓  ▒██▒ ░
-  ▒ ░░    ▒ ░░▒░▒ ▒▒   ▓▒█░░ ▒▓ ░▒▓░ ▒ ░░▒░▒  ▒ ░░
-    ░     ▒ ░▒░ ░  ▒   ▒▒ ░  ░▒ ░ ▒░ ▒ ░▒░ ░    ░
-  ░       ░  ░░ ░  ░   ▒     ░░   ░  ░  ░░ ░  ░
-          ░  ░  ░      ░  ░   ░      ░  ░  ░
-
-
-
-@@@  @@@   @@@@@@   @@@  @@@  @@@  @@@  @@@@@@@  @@@@@@@@  @@@@@@@     @@@@@@@@@@   @@@@@@@@  @@@@@@@@@@    @@@@@@   @@@@@@@   @@@  @@@@@@@@   @@@@@@
-@@@  @@@  @@@@@@@@  @@@  @@@  @@@@ @@@  @@@@@@@  @@@@@@@@  @@@@@@@@    @@@@@@@@@@@  @@@@@@@@  @@@@@@@@@@@  @@@@@@@@  @@@@@@@@  @@@  @@@@@@@@  @@@@@@@
-@@!  @@@  @@!  @@@  @@!  @@@  @@!@!@@@    @@!    @@!       @@!  @@@    @@! @@! @@!  @@!       @@! @@! @@!  @@!  @@@  @@!  @@@  @@!  @@!       !@@
-!@!  @!@  !@!  @!@  !@!  @!@  !@!!@!@!    !@!    !@!       !@!  @!@    !@! !@! !@!  !@!       !@! !@! !@!  !@!  @!@  !@!  @!@  !@!  !@!       !@!
-@!@!@!@!  @!@!@!@!  @!@  !@!  @!@ !!@!    @!!    @!!!:!    @!@  !@!    @!! !!@ @!@  @!!!:!    @!! !!@ @!@  @!@  !@!  @!@!!@!   !!@  @!!!:!    !!@@!!
-!!!@!!!!  !!!@!!!!  !@!  !!!  !@!  !!!    !!!    !!!!!:    !@!  !!!    !@!   ! !@!  !!!!!:    !@!   ! !@!  !@!  !!!  !!@!@!    !!!  !!!!!:     !!@!!!
-!!:  !!!  !!:  !!!  !!:  !!!  !!:  !!!    !!:    !!:       !!:  !!!    !!:     !!:  !!:       !!:     !!:  !!:  !!!  !!: :!!   !!:  !!:            !:!
-:!:  !:!  :!:  !:!  :!:  !:!  :!:  !:!    :!:    :!:       :!:  !:!    :!:     :!:  :!:       :!:     :!:  :!:  !:!  :!:  !:!  :!:  :!:           !:!
-::   :::  ::   :::  ::::: ::   ::   ::     ::     :: ::::   :::: ::    :::     ::    :: ::::  :::     ::   ::::: ::  ::   :::   ::   :: ::::  :::: ::
- :   : :   :   : :   : :  :   ::    :      :     : :: ::   :: :  :      :      :    : :: ::    :      :     : :  :    :   : :  :    : :: ::   :: : : 
-
-1. Start Game
-2. Instructions
-
-Enter the corresponding number to choose an option: )";
+)";
     std::cin >> input;
 
     while (input != "1" && input != "2") {
-        std::cout << "Invalid input. Please enter 1 or 2: ";
-        std::cin.clear();
-        std::cin.ignore(std::numeric_limits<std::streamsize>::max(), '\n');
-        std::cin >> input;
+        cout << "Invalid input. Please enter 1 or 2: ";
+        cin.clear();
+        cin.ignore(numeric_limits<streamsize>::max(), '\n');
+        cin >> input;
     }
 
     if (input == "1") {
@@ -67,13 +81,13 @@ Enter the corresponding number to choose an option: )";
 }
 
 void display_instructions() {
-    std::cout << "\nINSTRUCTIONS:\n";
-    std::cout << "1. The game is a text-based adventure set in a haunted school.\n";
-    std::cout << "2. You will be prompted with choices throughout the game.\n";
-    std::cout << "3. Choose wisely, as your decisions will impact the story.\n";
-    std::cout << "4. To make a choice, enter the corresponding number and press Enter.\n";
-    std::cout << "\nPress Enter to return to the start page.";
-    std::cin.ignore(std::numeric_limits<std::streamsize>::max(), '\n');
-    std::cin.get();
+    cout << "\nINSTRUCTIONS:\n";
+    cout << "1. The game is a text-based horror school escape game.\n";
+    cout << "2. You will be prompted with choices throughout the game.\n";
+    cout << "3. Choose wisely, as your decisions will impact the story.\n";
+    cout << "4. To make a choice, enter the corresponding number and press Enter.\n";
+    cout << "\nPress Enter to return to the start page.";
+    cin.ignore(numeric_limits<streamsize>::max(), '\n');
+    cin.get();
     show_start_page();
 }
