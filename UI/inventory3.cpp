@@ -2,6 +2,9 @@
 #include <vector>
 #include <cstdlib>
 #include <ncurses.h>
+#include <fstream>
+#include <ostream>
+#include <istream>
 
 using namespace std;
 
@@ -47,8 +50,32 @@ void printInventory(vector<string> inventory) {
 }
 
 void addItem(vector<string>& inventory, string item) {
-    inventory.push_back(item);
-    cout << "Added " << item << " to the inventory." << endl;
+    ofstream outputFile("inventory.txt", ios::app); // Open the file in append mode
+    if (outputFile.is_open()) {
+        inventory.push_back(item);
+        outputFile << item << endl; // Write the item to the file
+        outputFile.close(); // Close the file
+        cout << "Added " << item << " to the inventory." << endl;
+    } else {
+        cout << "Unable to open file for writing." << endl;
+    }
+}
+
+vector<string> loadInventoryFromFile() {
+    vector<string> inventory;
+    ifstream inputFile("inventory.txt"); // Open the file for reading
+    string line;
+
+    if (inputFile.is_open()) {
+        while (getline(inputFile, line)) {
+            inventory.push_back(line); // Read and store the items from the file
+        }
+        inputFile.close(); // Close the file
+    } else {
+        cout << "Unable to open file for reading." << endl;
+    }
+
+    return inventory;
 }
 
 int main() {

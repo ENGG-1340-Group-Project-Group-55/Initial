@@ -180,7 +180,7 @@ void show_start_page() {
     printw("|                                                                                                         |\n");
     printw("|---------------------------------------------------------------------------------------------------------|\n");
     printw("\n");
-    
+
     // Refresh the screen to show the changes
     refresh();
 
