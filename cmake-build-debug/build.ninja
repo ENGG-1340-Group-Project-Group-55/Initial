@@ -134,41 +134,35 @@ build inventory2: CXX_EXECUTABLE_LINKER__inventory2_Debug CMakeFiles/inventory2.
   TARGET_PDB = inventory2.dbg
 
 # =============================================================================
-# Object build statements for EXECUTABLE target base
+# Object build statements for EXECUTABLE target MAIN
 
 
 #############################################
-# Order-only phony target for base
+# Order-only phony target for MAIN
 
-build cmake_object_order_depends_target_base: phony || CMakeFiles/base.dir
+build cmake_object_order_depends_target_MAIN: phony || CMakeFiles/MAIN.dir
 
-build CMakeFiles/base.dir/UI/base.cpp.o: CXX_COMPILER__base_Debug /Users/minchankim/Documents/GitHub/Initial/UI/base.cpp || cmake_object_order_depends_target_base
-  DEP_FILE = CMakeFiles/base.dir/UI/base.cpp.o.d
+build CMakeFiles/MAIN.dir/Main_directory/MAIN.cpp.o: CXX_COMPILER__MAIN_Debug /Users/minchankim/Documents/GitHub/Initial/Main_directory/MAIN.cpp || cmake_object_order_depends_target_MAIN
+  DEP_FILE = CMakeFiles/MAIN.dir/Main_directory/MAIN.cpp.o.d
   FLAGS = -g -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX13.3.sdk -fcolor-diagnostics -std=gnu++17
-  OBJECT_DIR = CMakeFiles/base.dir
-  OBJECT_FILE_DIR = CMakeFiles/base.dir/UI
-
-build CMakeFiles/base.dir/UI/startpage.cpp.o: CXX_COMPILER__base_Debug /Users/minchankim/Documents/GitHub/Initial/UI/startpage.cpp || cmake_object_order_depends_target_base
-  DEP_FILE = CMakeFiles/base.dir/UI/startpage.cpp.o.d
-  FLAGS = -g -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX13.3.sdk -fcolor-diagnostics -std=gnu++17
-  OBJECT_DIR = CMakeFiles/base.dir
-  OBJECT_FILE_DIR = CMakeFiles/base.dir/UI
+  OBJECT_DIR = CMakeFiles/MAIN.dir
+  OBJECT_FILE_DIR = CMakeFiles/MAIN.dir/Main_directory
 
 
 # =============================================================================
-# Link build statements for EXECUTABLE target base
+# Link build statements for EXECUTABLE target MAIN
 
 
 #############################################
-# Link the executable base
+# Link the executable MAIN
 
-build base: CXX_EXECUTABLE_LINKER__base_Debug CMakeFiles/base.dir/UI/base.cpp.o CMakeFiles/base.dir/UI/startpage.cpp.o
+build MAIN: CXX_EXECUTABLE_LINKER__MAIN_Debug CMakeFiles/MAIN.dir/Main_directory/MAIN.cpp.o
   FLAGS = -g -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX13.3.sdk
-  OBJECT_DIR = CMakeFiles/base.dir
+  OBJECT_DIR = CMakeFiles/MAIN.dir
   POST_BUILD = :
   PRE_LINK = :
-  TARGET_FILE = base
-  TARGET_PDB = base.dbg
+  TARGET_FILE = MAIN
+  TARGET_PDB = MAIN.dbg
 
 # =============================================================================
 # Object build statements for EXECUTABLE target inventory3
@@ -278,6 +272,12 @@ build CMakeFiles/base2.dir/UI/base2.cpp.o: CXX_COMPILER__base2_Debug /Users/minc
   OBJECT_DIR = CMakeFiles/base2.dir
   OBJECT_FILE_DIR = CMakeFiles/base2.dir/UI
 
+build CMakeFiles/base2.dir/Main_directory/MAIN.cpp.o: CXX_COMPILER__base2_Debug /Users/minchankim/Documents/GitHub/Initial/Main_directory/MAIN.cpp || cmake_object_order_depends_target_base2
+  DEP_FILE = CMakeFiles/base2.dir/Main_directory/MAIN.cpp.o.d
+  FLAGS = -g -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX13.3.sdk -fcolor-diagnostics -std=gnu++17
+  OBJECT_DIR = CMakeFiles/base2.dir
+  OBJECT_FILE_DIR = CMakeFiles/base2.dir/Main_directory
+
 
 # =============================================================================
 # Link build statements for EXECUTABLE target base2
@@ -286,7 +286,7 @@ build CMakeFiles/base2.dir/UI/base2.cpp.o: CXX_COMPILER__base2_Debug /Users/minc
 #############################################
 # Link the executable base2
 
-build base2: CXX_EXECUTABLE_LINKER__base2_Debug CMakeFiles/base2.dir/UI/base2.cpp.o
+build base2: CXX_EXECUTABLE_LINKER__base2_Debug CMakeFiles/base2.dir/UI/base2.cpp.o CMakeFiles/base2.dir/Main_directory/MAIN.cpp.o
   FLAGS = -g -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX13.3.sdk
   OBJECT_DIR = CMakeFiles/base2.dir
   POST_BUILD = :
@@ -458,7 +458,7 @@ build rebuild_cache: phony CMakeFiles/rebuild_cache.util
 #############################################
 # Folder: /Users/minchankim/Documents/GitHub/Initial/cmake-build-debug
 
-build all: phony Map_loading_save inventory inventory2 base inventory3 startpage startpage2 base2 Enginev1 Enginev2 Character_Design MainEngine
+build all: phony Map_loading_save inventory inventory2 MAIN inventory3 startpage startpage2 base2 Enginev1 Enginev2 Character_Design MainEngine
 
 # =============================================================================
 # Built-in targets
