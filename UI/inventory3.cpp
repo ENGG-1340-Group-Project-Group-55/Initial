@@ -1,4 +1,4 @@
-//g++ -o inventory3 inventory3.cpp -lncurses
+//g++ -pedantic-errors -std=c++11 -o inventory3 UI/inventory3.cpp -lncurses
 
 #include <iostream>
 #include <vector>
@@ -52,7 +52,7 @@ void printInventory(vector<string> inventory) {
 }
 
 void addItem(vector<string>& inventory, string item) {
-    ofstream outputFile("inventory.txt", ios::app); // Open the file in append mode
+    ofstream outputFile("/Users/M1/Documents/GitHub/Initial/UI/inventory.txt", ios::app); // Open the file in append mode
     if (outputFile.is_open()) {
         inventory.push_back(item);
         outputFile << item << endl; // Write the item to the file
@@ -65,7 +65,7 @@ void addItem(vector<string>& inventory, string item) {
 
 vector<string> loadInventoryFromFile() {
     vector<string> inventory;
-    ifstream inputFile("inventory.txt"); // Open the file for reading
+    ifstream inputFile("/Users/M1/Documents/GitHub/Initial/UI/inventory.txt"); // Open the file for reading
     string line;
 
     if (inputFile.is_open()) {
