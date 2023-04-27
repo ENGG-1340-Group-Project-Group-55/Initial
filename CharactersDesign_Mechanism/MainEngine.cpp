@@ -17,7 +17,7 @@ int main() {
     // Set up initial variables
     int x = 0, y = 0;
     int key_input;
-    string file_path = "/Users/M1/Documents/GitHub/Initial/Map_Objects/Map_resources/activityroom.txt";
+    string file_path = "/Users/M1/Documents/GitHub/Initial/Map_Objects/Map_resources/15-15_map.txt";
     // Set up screen size
     int screen_height=0;
     int screen_width=0;
