@@ -1,5 +1,3 @@
-//g++ -pedantic-errors -std=c++11 -o inventory3 UI/inventory3.cpp -lncurses
-
 #include <iostream>
 #include <vector>
 #include <cstdlib>
@@ -9,6 +7,9 @@
 #include <istream>
 
 using namespace std;
+
+//g++ -pedantic-errors -std=c++11 -o inventory3 UI/inventory3.cpp -lncurses
+
 
 WINDOW* createInventoryWindow(int height, int width) {
     int startY = (LINES - height) / 2;
