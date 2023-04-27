@@ -1,0 +1,150 @@
+{
+	"configurations" : 
+	[
+		{
+			"directories" : 
+			[
+				{
+					"build" : ".",
+					"jsonFile" : "directory-.-Debug-f5ebdc15457944623624.json",
+					"minimumCMakeVersion" : 
+					{
+						"string" : "3.24"
+					},
+					"projectIndex" : 0,
+					"source" : ".",
+					"targetIndexes" : 
+					[
+						0,
+						1,
+						2,
+						3,
+						4,
+						5,
+						6,
+						7,
+						8,
+						9,
+						10
+					]
+				}
+			],
+			"name" : "Debug",
+			"projects" : 
+			[
+				{
+					"directoryIndexes" : 
+					[
+						0
+					],
+					"name" : "Initial",
+					"targetIndexes" : 
+					[
+						0,
+						1,
+						2,
+						3,
+						4,
+						5,
+						6,
+						7,
+						8,
+						9,
+						10
+					]
+				}
+			],
+			"targets" : 
+			[
+				{
+					"directoryIndex" : 0,
+					"id" : "Enginev1::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-Enginev1-Debug-03f2a35e91bbc2dab636.json",
+					"name" : "Enginev1",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 0,
+					"id" : "Enginev2::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-Enginev2-Debug-cdb10cad5d762e0189c1.json",
+					"name" : "Enginev2",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 0,
+					"id" : "MainEngine::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-MainEngine-Debug-e4abfc07223dea0f266f.json",
+					"name" : "MainEngine",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 0,
+					"id" : "Map_loading_save::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-Map_loading_save-Debug-632d43e8c5f7c90716ab.json",
+					"name" : "Map_loading_save",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 0,
+					"id" : "base::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-base-Debug-dec1342a98ed553cb31b.json",
+					"name" : "base",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 0,
+					"id" : "base2::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-base2-Debug-e0ae97fd5f8984d53697.json",
+					"name" : "base2",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 0,
+					"id" : "inventory::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-inventory-Debug-92deec8df58f8a0ac81f.json",
+					"name" : "inventory",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 0,
+					"id" : "inventory2::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-inventory2-Debug-f6895bc345584a76249b.json",
+					"name" : "inventory2",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 0,
+					"id" : "inventory3::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-inventory3-Debug-54579cb93dc327e14174.json",
+					"name" : "inventory3",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 0,
+					"id" : "startpage::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-startpage-Debug-5298382d7de98537392c.json",
+					"name" : "startpage",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 0,
+					"id" : "startpage2::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-startpage2-Debug-32ac54e6c2dae4cbf2e3.json",
+					"name" : "startpage2",
+					"projectIndex" : 0
+				}
+			]
+		}
+	],
+	"kind" : "codemodel",
+	"paths" : 
+	{
+		"build" : "/Users/M1/Documents/GitHub/Initial/cmake-build-debug",
+		"source" : "/Users/M1/Documents/GitHub/Initial"
+	},
+	"version" : 
+	{
+		"major" : 2,
+		"minor" : 4
+	}
+}

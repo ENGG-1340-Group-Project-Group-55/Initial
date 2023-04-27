@@ -169,6 +169,19 @@ base/fast:
 .PHONY : base/fast
 
 #=============================================================================
+# Target rules for targets named inventory3
+
+# Build rule for target.
+inventory3: cmake_check_build_system
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 inventory3
+.PHONY : inventory3
+
+# fast build rule for target.
+inventory3/fast:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/inventory3.dir/build.make CMakeFiles/inventory3.dir/build
+.PHONY : inventory3/fast
+
+#=============================================================================
 # Target rules for targets named startpage
 
 # Build rule for target.
@@ -180,6 +193,19 @@ startpage: cmake_check_build_system
 startpage/fast:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/startpage.dir/build.make CMakeFiles/startpage.dir/build
 .PHONY : startpage/fast
+
+#=============================================================================
+# Target rules for targets named startpage2
+
+# Build rule for target.
+startpage2: cmake_check_build_system
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 startpage2
+.PHONY : startpage2
+
+# fast build rule for target.
+startpage2/fast:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/startpage2.dir/build.make CMakeFiles/startpage2.dir/build
+.PHONY : startpage2/fast
 
 #=============================================================================
 # Target rules for targets named base2
@@ -221,19 +247,6 @@ Enginev2/fast:
 .PHONY : Enginev2/fast
 
 #=============================================================================
-# Target rules for targets named Character_Design
-
-# Build rule for target.
-Character_Design: cmake_check_build_system
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 Character_Design
-.PHONY : Character_Design
-
-# fast build rule for target.
-Character_Design/fast:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/Character_Design.dir/build.make CMakeFiles/Character_Design.dir/build
-.PHONY : Character_Design/fast
-
-#=============================================================================
 # Target rules for targets named MainEngine
 
 # Build rule for target.
@@ -245,30 +258,6 @@ MainEngine: cmake_check_build_system
 MainEngine/fast:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/MainEngine.dir/build.make CMakeFiles/MainEngine.dir/build
 .PHONY : MainEngine/fast
-
-CharactersDesign_Mechanism/Character_Design.o: CharactersDesign_Mechanism/Character_Design.cpp.o
-.PHONY : CharactersDesign_Mechanism/Character_Design.o
-
-# target to build an object file
-CharactersDesign_Mechanism/Character_Design.cpp.o:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/Character_Design.dir/build.make CMakeFiles/Character_Design.dir/CharactersDesign_Mechanism/Character_Design.cpp.o
-.PHONY : CharactersDesign_Mechanism/Character_Design.cpp.o
-
-CharactersDesign_Mechanism/Character_Design.i: CharactersDesign_Mechanism/Character_Design.cpp.i
-.PHONY : CharactersDesign_Mechanism/Character_Design.i
-
-# target to preprocess a source file
-CharactersDesign_Mechanism/Character_Design.cpp.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/Character_Design.dir/build.make CMakeFiles/Character_Design.dir/CharactersDesign_Mechanism/Character_Design.cpp.i
-.PHONY : CharactersDesign_Mechanism/Character_Design.cpp.i
-
-CharactersDesign_Mechanism/Character_Design.s: CharactersDesign_Mechanism/Character_Design.cpp.s
-.PHONY : CharactersDesign_Mechanism/Character_Design.s
-
-# target to generate assembly for a file
-CharactersDesign_Mechanism/Character_Design.cpp.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/Character_Design.dir/build.make CMakeFiles/Character_Design.dir/CharactersDesign_Mechanism/Character_Design.cpp.s
-.PHONY : CharactersDesign_Mechanism/Character_Design.cpp.s
 
 CharactersDesign_Mechanism/Enginev1.o: CharactersDesign_Mechanism/Enginev1.cpp.o
 .PHONY : CharactersDesign_Mechanism/Enginev1.o
@@ -486,6 +475,30 @@ UI/inventory2.cpp.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/inventory2.dir/build.make CMakeFiles/inventory2.dir/UI/inventory2.cpp.s
 .PHONY : UI/inventory2.cpp.s
 
+UI/inventory3.o: UI/inventory3.cpp.o
+.PHONY : UI/inventory3.o
+
+# target to build an object file
+UI/inventory3.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/inventory3.dir/build.make CMakeFiles/inventory3.dir/UI/inventory3.cpp.o
+.PHONY : UI/inventory3.cpp.o
+
+UI/inventory3.i: UI/inventory3.cpp.i
+.PHONY : UI/inventory3.i
+
+# target to preprocess a source file
+UI/inventory3.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/inventory3.dir/build.make CMakeFiles/inventory3.dir/UI/inventory3.cpp.i
+.PHONY : UI/inventory3.cpp.i
+
+UI/inventory3.s: UI/inventory3.cpp.s
+.PHONY : UI/inventory3.s
+
+# target to generate assembly for a file
+UI/inventory3.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/inventory3.dir/build.make CMakeFiles/inventory3.dir/UI/inventory3.cpp.s
+.PHONY : UI/inventory3.cpp.s
+
 UI/startpage.o: UI/startpage.cpp.o
 .PHONY : UI/startpage.o
 
@@ -513,6 +526,30 @@ UI/startpage.cpp.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/startpage.dir/build.make CMakeFiles/startpage.dir/UI/startpage.cpp.s
 .PHONY : UI/startpage.cpp.s
 
+UI/startpage2.o: UI/startpage2.cpp.o
+.PHONY : UI/startpage2.o
+
+# target to build an object file
+UI/startpage2.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/startpage2.dir/build.make CMakeFiles/startpage2.dir/UI/startpage2.cpp.o
+.PHONY : UI/startpage2.cpp.o
+
+UI/startpage2.i: UI/startpage2.cpp.i
+.PHONY : UI/startpage2.i
+
+# target to preprocess a source file
+UI/startpage2.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/startpage2.dir/build.make CMakeFiles/startpage2.dir/UI/startpage2.cpp.i
+.PHONY : UI/startpage2.cpp.i
+
+UI/startpage2.s: UI/startpage2.cpp.s
+.PHONY : UI/startpage2.s
+
+# target to generate assembly for a file
+UI/startpage2.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/startpage2.dir/build.make CMakeFiles/startpage2.dir/UI/startpage2.cpp.s
+.PHONY : UI/startpage2.cpp.s
+
 # Help Target
 help:
 	@echo "The following are some of the valid targets for this Makefile:"
@@ -521,7 +558,6 @@ help:
 	@echo "... depend"
 	@echo "... edit_cache"
 	@echo "... rebuild_cache"
-	@echo "... Character_Design"
 	@echo "... Enginev1"
 	@echo "... Enginev2"
 	@echo "... MainEngine"
@@ -530,10 +566,9 @@ help:
 	@echo "... base2"
 	@echo "... inventory"
 	@echo "... inventory2"
+	@echo "... inventory3"
 	@echo "... startpage"
-	@echo "... CharactersDesign_Mechanism/Character_Design.o"
-	@echo "... CharactersDesign_Mechanism/Character_Design.i"
-	@echo "... CharactersDesign_Mechanism/Character_Design.s"
+	@echo "... startpage2"
 	@echo "... CharactersDesign_Mechanism/Enginev1.o"
 	@echo "... CharactersDesign_Mechanism/Enginev1.i"
 	@echo "... CharactersDesign_Mechanism/Enginev1.s"
@@ -561,9 +596,15 @@ help:
 	@echo "... UI/inventory2.o"
 	@echo "... UI/inventory2.i"
 	@echo "... UI/inventory2.s"
+	@echo "... UI/inventory3.o"
+	@echo "... UI/inventory3.i"
+	@echo "... UI/inventory3.s"
 	@echo "... UI/startpage.o"
 	@echo "... UI/startpage.i"
 	@echo "... UI/startpage.s"
+	@echo "... UI/startpage2.o"
+	@echo "... UI/startpage2.i"
+	@echo "... UI/startpage2.s"
 .PHONY : help
 
 
