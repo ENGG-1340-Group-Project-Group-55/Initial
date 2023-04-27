@@ -171,6 +171,37 @@ build base: CXX_EXECUTABLE_LINKER__base_Debug CMakeFiles/base.dir/UI/base.cpp.o 
   TARGET_PDB = base.dbg
 
 # =============================================================================
+# Object build statements for EXECUTABLE target inventory3
+
+
+#############################################
+# Order-only phony target for inventory3
+
+build cmake_object_order_depends_target_inventory3: phony || CMakeFiles/inventory3.dir
+
+build CMakeFiles/inventory3.dir/UI/inventory3.cpp.o: CXX_COMPILER__inventory3_Debug /Users/minchankim/Documents/GitHub/Initial/UI/inventory3.cpp || cmake_object_order_depends_target_inventory3
+  DEP_FILE = CMakeFiles/inventory3.dir/UI/inventory3.cpp.o.d
+  FLAGS = -g -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX13.3.sdk -fcolor-diagnostics -std=gnu++17
+  OBJECT_DIR = CMakeFiles/inventory3.dir
+  OBJECT_FILE_DIR = CMakeFiles/inventory3.dir/UI
+
+
+# =============================================================================
+# Link build statements for EXECUTABLE target inventory3
+
+
+#############################################
+# Link the executable inventory3
+
+build inventory3: CXX_EXECUTABLE_LINKER__inventory3_Debug CMakeFiles/inventory3.dir/UI/inventory3.cpp.o
+  FLAGS = -g -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX13.3.sdk
+  OBJECT_DIR = CMakeFiles/inventory3.dir
+  POST_BUILD = :
+  PRE_LINK = :
+  TARGET_FILE = inventory3
+  TARGET_PDB = inventory3.dbg
+
+# =============================================================================
 # Object build statements for EXECUTABLE target startpage
 
 
@@ -427,7 +458,7 @@ build rebuild_cache: phony CMakeFiles/rebuild_cache.util
 #############################################
 # Folder: /Users/minchankim/Documents/GitHub/Initial/cmake-build-debug
 
-build all: phony Map_loading_save inventory inventory2 base startpage startpage2 base2 Enginev1 Enginev2 Character_Design MainEngine
+build all: phony Map_loading_save inventory inventory2 base inventory3 startpage startpage2 base2 Enginev1 Enginev2 Character_Design MainEngine
 
 # =============================================================================
 # Built-in targets

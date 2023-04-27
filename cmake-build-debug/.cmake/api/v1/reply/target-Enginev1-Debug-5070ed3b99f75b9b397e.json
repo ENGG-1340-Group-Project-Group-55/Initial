@@ -2,7 +2,7 @@
 	"artifacts" : 
 	[
 		{
-			"path" : "MainEngine"
+			"path" : "Enginev1"
 		}
 	],
 	"backtrace" : 1,
@@ -24,7 +24,7 @@
 			{
 				"command" : 0,
 				"file" : 0,
-				"line" : 17,
+				"line" : 15,
 				"parent" : 0
 			}
 		]
@@ -52,12 +52,11 @@
 			},
 			"sourceIndexes" : 
 			[
-				0,
-				1
+				0
 			]
 		}
 	],
-	"id" : "MainEngine::@6890427a1f51a3e7e1df",
+	"id" : "Enginev1::@6890427a1f51a3e7e1df",
 	"link" : 
 	{
 		"commandFragments" : 
@@ -73,8 +72,8 @@
 		],
 		"language" : "CXX"
 	},
-	"name" : "MainEngine",
-	"nameOnDisk" : "MainEngine",
+	"name" : "Enginev1",
+	"nameOnDisk" : "Enginev1",
 	"paths" : 
 	{
 		"build" : ".",
@@ -86,15 +85,7 @@
 			"name" : "Source Files",
 			"sourceIndexes" : 
 			[
-				0,
-				1
-			]
-		},
-		{
-			"name" : "Header Files",
-			"sourceIndexes" : 
-			[
-				2
+				0
 			]
 		}
 	],
@@ -103,19 +94,8 @@
 		{
 			"backtrace" : 1,
 			"compileGroupIndex" : 0,
-			"path" : "CharactersDesign_Mechanism/MainEngine.cpp",
+			"path" : "CharactersDesign_Mechanism/Enginev1.cpp",
 			"sourceGroupIndex" : 0
-		},
-		{
-			"backtrace" : 1,
-			"compileGroupIndex" : 0,
-			"path" : "Map_Objects/Map_loading.cpp",
-			"sourceGroupIndex" : 0
-		},
-		{
-			"backtrace" : 1,
-			"path" : "CharactersDesign_Mechanism/MapLoader.h",
-			"sourceGroupIndex" : 1
 		}
 	],
 	"type" : "EXECUTABLE"

@@ -2,7 +2,7 @@
 	"artifacts" : 
 	[
 		{
-			"path" : "startpage"
+			"path" : "MainEngine"
 		}
 	],
 	"backtrace" : 1,
@@ -24,7 +24,7 @@
 			{
 				"command" : 0,
 				"file" : 0,
-				"line" : 11,
+				"line" : 18,
 				"parent" : 0
 			}
 		]
@@ -52,11 +52,12 @@
 			},
 			"sourceIndexes" : 
 			[
-				0
+				0,
+				1
 			]
 		}
 	],
-	"id" : "startpage::@6890427a1f51a3e7e1df",
+	"id" : "MainEngine::@6890427a1f51a3e7e1df",
 	"link" : 
 	{
 		"commandFragments" : 
@@ -72,8 +73,8 @@
 		],
 		"language" : "CXX"
 	},
-	"name" : "startpage",
-	"nameOnDisk" : "startpage",
+	"name" : "MainEngine",
+	"nameOnDisk" : "MainEngine",
 	"paths" : 
 	{
 		"build" : ".",
@@ -85,7 +86,15 @@
 			"name" : "Source Files",
 			"sourceIndexes" : 
 			[
-				0
+				0,
+				1
+			]
+		},
+		{
+			"name" : "Header Files",
+			"sourceIndexes" : 
+			[
+				2
 			]
 		}
 	],
@@ -94,8 +103,19 @@
 		{
 			"backtrace" : 1,
 			"compileGroupIndex" : 0,
-			"path" : "UI/startpage.cpp",
+			"path" : "CharactersDesign_Mechanism/MainEngine.cpp",
 			"sourceGroupIndex" : 0
+		},
+		{
+			"backtrace" : 1,
+			"compileGroupIndex" : 0,
+			"path" : "Map_Objects/Map_loading.cpp",
+			"sourceGroupIndex" : 0
+		},
+		{
+			"backtrace" : 1,
+			"path" : "CharactersDesign_Mechanism/MapLoader.h",
+			"sourceGroupIndex" : 1
 		}
 	],
 	"type" : "EXECUTABLE"
