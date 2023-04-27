@@ -180,14 +180,7 @@ void show_start_page() {
     printw("|                                                                                                         |\n");
     printw("|---------------------------------------------------------------------------------------------------------|\n");
     printw("\n");
-    attroff(COLOR_PAIR(1)); // Turn off the color pair
-    attroff(COLOR_PAIR(2));
-    attroff(COLOR_PAIR(3));
-    attroff(COLOR_PAIR(4));
-    printw("1. Start the game\n");
-    printw("2. Instructions\n");
-    printw("\n");
-
+    
     // Refresh the screen to show the changes
     refresh();
 
@@ -208,12 +201,29 @@ void show_start_page() {
 
 void display_instructions() {
     clear();
-    printw("\nINSTRUCTIONS:\n");
-    printw("1. The game is a text-based horror school escape game.\n");
-    printw("2. You will be prompted with choices throughout the game.\n");
-    printw("3. Choose wisely, as your decisions will impact the story.\n");
-    printw("4. To make a choice, enter the corresponding number and press Enter.\n");
+    attron(COLOR_PAIR(1));
+    printw("\n");
+    printw("  ___ _  _ ___ _____ ___ _   _  ___ _____ ___ ___  _  _ \n");
+    printw(" |_ _| \\| / __|_   _| _ \\ | | |/ __|_   _|_ _/ _ \\| \\| |\n");
+    printw("  | || .` \\__ \\ | | |   / |_| | (__  | |  | | (_) | .` |\n");
+    printw(" |___|_|\\_|___/ |_| |_|_\\\\___/ \\___| |_| |___\\___/|_|\\_|\n");
+    printw("                                                        ");
+    printw("\n");
+    attroff(COLOR_PAIR(1));
+    attron(COLOR_PAIR(4));
+    printw("1. Welcome to horror school escape game!\n");
+    printw("\n");
+    printw("2. While playing the game, you will be guided to choose an action from several options while playing the game. To make a choice, enter the corresponding number and press Enter.\n");
+    printw("\n");
+    printw("3. Please choose wisely, as you cannot change your choice and the storyline changes by your decisions.\n");
+    printw("\n");
+    printw("4. You can move your character by using ‘W’, ‘A’, ’S’, and ‘D’ in your keyboard to move to another place. (‘W’ = up, ’S’ = down, ‘A’ = left, ‘D’ = right)\n");
+    printw("\n");
+    printw("5. You can press ‘E’ to open your inventory and press ‘F’ to grab items while playing the game.\n");
+    printw("\n");
     printw("\nPress Enter to return to the start page.");
+    attroff(COLOR_PAIR(4));
+
     refresh();
 
     // Wait for the user to press Enter
