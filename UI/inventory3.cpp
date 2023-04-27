@@ -1,3 +1,5 @@
+//g++ -o inventory3 inventory3.cpp -lncurses
+
 #include <iostream>
 #include <vector>
 #include <cstdlib>

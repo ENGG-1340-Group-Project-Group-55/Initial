@@ -1,3 +1,5 @@
+//g++ -o startpage2 startpage2.cpp -lncurses
+
 #include <ncurses.h>
 #include <string>
 #include <limits>
