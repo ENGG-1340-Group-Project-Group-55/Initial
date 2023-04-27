@@ -1,77 +1,75 @@
 #include <iostream>
 #include <vector>
-#include <cstdlib> // for exit()
-#include <ncurses.h> // for ncurses
-#include <string>
+#include <cstdlib>
+#include <ncurses.h>
 
 using namespace std;
 
+WINDOW* createInventoryWindow(int height, int width) {
+    int startY = (LINES - height) / 2;
+    int startX = (COLS - width) / 2;
+
+    WINDOW* win = newwin(height, width, startY, startX);
+    box(win, 0, 0);
+    refresh();
+    wrefresh(win);
+
+    return win;
+}
+
 void printInventory(vector<string> inventory) {
-    clear(); // Clear the screen
-    printw("Inventory:\n");
+    int height = 20;
+    int width = 40;
+
+    initscr();
+    raw();
+    noecho();
+    curs_set(0);
+    keypad(stdscr, TRUE);
+
+    WINDOW* inventoryWin = createInventoryWindow(height, width);
+
+    mvwprintw(inventoryWin, 1, 1, "Inventory:");
     for (int i = 0; i < inventory.size(); i++) {
-        printw("%d. %s\n", i + 1, inventory[i].c_str());
+        mvwprintw(inventoryWin, i + 2, 1, "%d. %s", i + 1, inventory[i].c_str());
+    }
+    wrefresh(inventoryWin);
+
+    while (true) {
+        int ch = getch();
+        if (ch == 'q') {
+            break;
+        }
     }
 
-    // Prompt the user to quit the program
-    printw("Enter 'q' to quit or any other key to continue: ");
-    refresh(); // Refresh the screen
-    int input = getch();
-    if (input == 'q') {
-        endwin(); // End ncurses mode
-        exit(0); // Terminate the program
-    }
+    delwin(inventoryWin);
+    endwin();
 }
 
 void addItem(vector<string>& inventory, string item) {
     inventory.push_back(item);
-    printw("Added %s to the inventory.\n", item.c_str());
-    refresh(); // Refresh the screen
+    cout << "Added " << item << " to the inventory." << endl;
 }
 
 int main() {
-    initscr(); // Initialize ncurses mode
-    raw(); // Disable line buffering
-    keypad(stdscr, TRUE); // Enable special keys
-    noecho(); // Don't echo user input
-
     vector<string> inventory;
     string item;
 
     while (true) {
-        // Prompt the user to enter a command or an item
-        printw("Enter a command or an item: ");
-        refresh(); // Refresh the screen
+        cout << "Enter a command or an item: ";
+        getline(cin, item);
 
-        char buf[256];
-        getnstr(buf, 255);
-        item = string(buf);
-
-        // Trim leading and trailing whitespace
-        item.erase(0, item.find_first_not_of(" \t\n\v\f\r"));
-        item.erase(item.find_last_not_of(" \t\n\v\f\r") + 1);
-
-        // Check if the user entered an empty string
-        if (item.empty()) {
-            continue;
-        }
-
-        // Check if the user wants to quit
         if (item == "q") {
             break;
         }
 
-        // Check if the user wants to display the inventory
         if (item == "e") {
             printInventory(inventory);
             continue;
         }
 
-        // Add the item to the inventory
         addItem(inventory, item);
     }
 
-    endwin(); // End ncurses mode
     return 0;
 }
-
