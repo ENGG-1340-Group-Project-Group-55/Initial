@@ -16,7 +16,6 @@ Maps::Maps(int a,int b){
 
 VectorWrapper Maps::Map_Loader(string &file_path) {
     ifstream inputline;
-    string nextline;
     inputline.open(file_path);
     if (inputline.fail()) {
         cout<<"파일이 없다잖아 병신아!!!"<<endl;
