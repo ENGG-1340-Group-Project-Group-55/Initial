@@ -17,7 +17,7 @@ int main() {
     // Set up initial variables
     int x = 0, y = 0;
     int key_input;
-    string file_path = "/Users/M1/Documents/GitHub/Initial/Map_Objects/Map_resources/15-15_map.txt";
+    string file_path = "/Users/M1/Documents/GitHub/Initial/Map_Objects/Map_resources/grid.txt";
     // Set up screen size
     int screen_height=0;
     int screen_width=0;
@@ -25,7 +25,6 @@ int main() {
     bool flag = TRUE;
 
     ifstream inputline;
-    string nextline;
     inputline.open(file_path);
     if (inputline.fail()) {
         cout<<"파일이 없다잖아 병신아!!!"<<endl;
@@ -65,6 +64,20 @@ int main() {
         ii++;
     }
     charline.close();
+
+    vector<pair<int,int> > walls;
+
+    ifstream wallsfile("/Users/M1/Documents/GitHub/Initial/CharactersDesign_Mechanism/walls.txt");
+    if (wallsfile.fail()) {
+        cout << "Failed to open walls file" << endl;
+        exit(1);
+    }
+    int wallx, wally;
+    while (wallsfile >> wallx >> wally) {
+        walls.push_back(make_pair(wallx,wally));
+    }
+    wallsfile.close();
+
     string *current_character = char_right;
 
     // Main loop
@@ -80,18 +93,45 @@ int main() {
             case 'w':
                 y--;
                 current_character = char_up;
+                for (const std::pair<int, int> wall : walls) {
+                    if (wall.first == x && wall.second == y) {
+                        y++;
+                        break;
+                    }
+                }
                 break;
+
             case 's':
                 y++;
                 current_character = char_down;
+                for (const std::pair<int, int>& wall : walls) {
+                    if (wall.first == x && wall.second == y) {
+                        y--;
+                        break;
+                    }
+                }
                 break;
+
             case 'a':
                 x-=2;
                 current_character = char_left;
+                for (const std::pair<int, int>& wall : walls) {
+                    if (wall.first == x && wall.second == y) {
+                        x+=2;
+                        break;
+                    }
+                }
                 break;
+
             case 'd':
                 x+=2;
                 current_character = char_right;
+                for (const std::pair<int, int>& wall : walls) {
+                    if (wall.first == x && wall.second == y) {
+                        x-=2;
+                        break;
+                    }
+                }
                 break;
         }
 
@@ -107,14 +147,14 @@ int main() {
         }
         //for later: add coordinates of objects for each map, so that character can't pass
 
-        for (int i = 0; i < charsize; i++) {
-            for (int j = 0; j < current_character[i].length(); j++) {
-                if (current_character[i][j] != '~') {
-                    mvaddch(y+i, x+j, current_character[i][j]);
-                }
-            }
-        }
-        //mvaddch(y, x, 'O');
+//        for (int i = 0; i < charsize; i++) {
+//            for (int j = 0; j < current_character[i].length(); j++) {
+//                if (current_character[i][j] != '~') {
+//                    mvaddch(y+i, x+j, current_character[i][j]);
+//                }
+//            }
+//        }
+        mvaddch(y, x, 'O');
 
         // Refresh screen
         refresh();
