@@ -4,7 +4,7 @@
 #include <fstream>
 #include "MapLoader.h"
 
-//compile using: g++ CharactersDesign_Mechanism/MainEngine.cpp Map_Objects/Map_loading.cpp -o Game -lncurses
+//compile using: g++ -pedantic-errors -std=c++11 CharactersDesign_Mechanism/MainEngine.cpp Map_Objects/Map_loading.cpp -o Game -lncurses
 
 int main() {
     // Initialize ncurses
@@ -17,7 +17,7 @@ int main() {
     // Set up initial variables
     int x = 0, y = 0;
     int key_input;
-    string file_path = "/Users/M1/Documents/GitHub/Initial/Map_Objects/Map_resources/activity_room.txt";
+    string file_path = "/Users/M1/Documents/GitHub/Initial/Map_Objects/Map_resources/15-15_map.txt";
     // Set up screen size
     int screen_height=0;
     int screen_width=0;
@@ -48,22 +48,21 @@ int main() {
         cout<<"no file!"<<endl;
         exit(1);
     }
-    int charsize = 5;
-    int *cptr = &charsize;
-    string char_left[*cptr], char_right[*cptr], char_down[*cptr], char_up[*cptr];
+    int const charsize = 5;
+    string char_left[charsize], char_right[charsize], char_down[charsize], char_up[charsize];
     string line;
-    int i = 0;
+    int ii = 0;
     while (getline(charline, line)) {
-        if (i < *cptr) {
-            char_left[i] = line;
-        } else if (i < *cptr*2) {
-            char_right[i%*cptr] = line;
-        } else if (i < *cptr*3) {
-            char_down[i%*cptr] = line;
+        if (ii < charsize) {
+            char_left[ii] = line;
+        } else if (ii < charsize*2) {
+            char_right[ii%charsize] = line;
+        } else if (ii < charsize*3) {
+            char_down[ii%charsize] = line;
         } else {
-            char_up[i%*cptr] = line;
+            char_up[ii%charsize] = line;
         }
-        i++;
+        ii++;
     }
     charline.close();
     string *current_character = char_right;
@@ -108,7 +107,7 @@ int main() {
         }
         //for later: add coordinates of objects for each map, so that character can't pass
 
-        for (int i = 0; i < *cptr; i++) {
+        for (int i = 0; i < charsize; i++) {
             for (int j = 0; j < current_character[i].length(); j++) {
                 if (current_character[i][j] != '~') {
                     mvaddch(y+i, x+j, current_character[i][j]);
