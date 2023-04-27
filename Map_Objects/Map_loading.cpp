@@ -56,7 +56,7 @@ VectorWrapper Maps::MapToArray(ifstream& inputline) {
 void Maps::Map_printer(VectorWrapper Converter, int y, int x, int screen_height, int screen_width) {
     for (int i=y;i<y+screen_height;i++){
         for(int j=x;j<x+screen_width;j++){
-            mvaddch(i + 1, j, Converter.TDVEC[i][j]);
+            mvaddch(i, j, Converter.TDVEC[i][j]);
         }
     }
 }

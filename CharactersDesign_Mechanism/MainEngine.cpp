@@ -15,7 +15,7 @@ int main() {
     curs_set(0); // Hide cursor
 
     // Set up initial variables
-    int x = 87, y = 25;
+    int x = 87, y = 23;
     int key_input;
     string file_path = "/Users/M1/Documents/GitHub/Initial/Map_Objects/Map_resources/Classroom.txt";
     // Set up screen size
@@ -80,7 +80,7 @@ int main() {
             case 'w':
                 y--;
                 current_character = char_up;
-                if (mapData.TDVEC[y+3][x+4] != ' ') {
+                if (mapData.TDVEC[y+4][x+2] != ' ') {
                     y++;
                     break;
                 }
@@ -89,7 +89,7 @@ int main() {
             case 's':
                 y++;
                 current_character = char_down;
-                if (mapData.TDVEC[y+3][x+4] != ' ') {
+                if (mapData.TDVEC[y+4][x+2] != ' ') {
                     y--;
                     break;
                 }
@@ -98,7 +98,7 @@ int main() {
             case 'a':
                 x-=2;
                 current_character = char_left;
-                if (mapData.TDVEC[y+3][x+4] != ' '|| mapData.TDVEC[y+3][x+5] != ' ') {
+                if (mapData.TDVEC[y+4][x] != ' '|| mapData.TDVEC[y+4][x+1] != ' ') {
                     x+=2;
                     break;
                 }
@@ -107,7 +107,7 @@ int main() {
             case 'd':
                 x+=2;
                 current_character = char_right;
-                if (mapData.TDVEC[y+3][x+4] != ' ' || mapData.TDVEC[y+3][x+3] != ' ') {
+                if (mapData.TDVEC[y+4][x+4] != ' ' || mapData.TDVEC[y+4][x+3] != ' ') {
                     x-=2;
                     break;
                 }
