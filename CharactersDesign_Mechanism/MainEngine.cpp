@@ -15,9 +15,9 @@ int main() {
     curs_set(0); // Hide cursor
 
     // Set up initial variables
-    int x = 0, y = 0;
+    int x = 87, y = 25;
     int key_input;
-    string file_path = "/Users/M1/Documents/GitHub/Initial/Map_Objects/Map_resources/grid.txt";
+    string file_path = "/Users/M1/Documents/GitHub/Initial/Map_Objects/Map_resources/Classroom.txt";
     // Set up screen size
     int screen_height=0;
     int screen_width=0;
@@ -42,7 +42,7 @@ int main() {
     }
     inputline.close();
 
-    ifstream charline("/Users/M1/Documents/GitHub/Initial/CharactersDesign_Mechanism/character2.txt");
+    ifstream charline("/Users/M1/Documents/GitHub/Initial/CharactersDesign_Mechanism/character3.txt");
     if (charline.fail()) {
         cout<<"no file!"<<endl;
         exit(1);
@@ -65,20 +65,7 @@ int main() {
     }
     charline.close();
 
-    vector<pair<int,int> > walls;
-
-    ifstream wallsfile("/Users/M1/Documents/GitHub/Initial/CharactersDesign_Mechanism/walls.txt");
-    if (wallsfile.fail()) {
-        cout << "Failed to open walls file" << endl;
-        exit(1);
-    }
-    int wallx, wally;
-    while (wallsfile >> wallx >> wally) {
-        walls.push_back(make_pair(wallx,wally));
-    }
-    wallsfile.close();
-
-    string *current_character = char_right;
+    string *current_character = char_up;
 
     // Main loop
     while ((key_input = getch()) != 27) { // Exit on ESC key press
@@ -93,44 +80,36 @@ int main() {
             case 'w':
                 y--;
                 current_character = char_up;
-                for (const std::pair<int, int> wall : walls) {
-                    if (wall.first == x && wall.second == y) {
-                        y++;
-                        break;
-                    }
+                if (mapData.TDVEC[y+3][x+4] != ' ') {
+                    y++;
+                    break;
                 }
                 break;
 
             case 's':
                 y++;
                 current_character = char_down;
-                for (const std::pair<int, int>& wall : walls) {
-                    if (wall.first == x && wall.second == y) {
-                        y--;
-                        break;
-                    }
+                if (mapData.TDVEC[y+3][x+4] != ' ') {
+                    y--;
+                    break;
                 }
                 break;
 
             case 'a':
                 x-=2;
                 current_character = char_left;
-                for (const std::pair<int, int>& wall : walls) {
-                    if (wall.first == x && wall.second == y) {
-                        x+=2;
-                        break;
-                    }
+                if (mapData.TDVEC[y+3][x+4] != ' '|| mapData.TDVEC[y+3][x+5] != ' ') {
+                    x+=2;
+                    break;
                 }
                 break;
 
             case 'd':
                 x+=2;
                 current_character = char_right;
-                for (const std::pair<int, int>& wall : walls) {
-                    if (wall.first == x && wall.second == y) {
-                        x-=2;
-                        break;
-                    }
+                if (mapData.TDVEC[y+3][x+4] != ' ' || mapData.TDVEC[y+3][x+3] != ' ') {
+                    x-=2;
+                    break;
                 }
                 break;
         }
@@ -140,21 +119,21 @@ int main() {
             x = 1;
         } if (y < 3) {
             y = 2;
-        } if (x >= screen_width - 1) {
-            x = screen_width - 2;
-        } if (y >= screen_height - 1) {
-            y = screen_height - 2;
+        } if (x >= screen_width - 5) {
+            x = screen_width - 6;
+        } if (y >= screen_height - 5) {
+            y = screen_height - 5;
         }
         //for later: add coordinates of objects for each map, so that character can't pass
 
-//        for (int i = 0; i < charsize; i++) {
-//            for (int j = 0; j < current_character[i].length(); j++) {
-//                if (current_character[i][j] != '~') {
-//                    mvaddch(y+i, x+j, current_character[i][j]);
-//                }
-//            }
-//        }
-        mvaddch(y, x, 'O');
+        for (int i = 0; i < charsize; i++) {
+            for (int j = 0; j < current_character[i].length(); j++) {
+                if (current_character[i][j] != '~') {
+                    mvaddch(y+i, x+j, current_character[i][j]);
+                }
+            }
+        }
+//        mvaddch(y, x, 'O');
 
         // Refresh screen
         refresh();
