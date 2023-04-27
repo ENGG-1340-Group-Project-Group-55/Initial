@@ -202,6 +202,37 @@ build startpage: CXX_EXECUTABLE_LINKER__startpage_Debug CMakeFiles/startpage.dir
   TARGET_PDB = startpage.dbg
 
 # =============================================================================
+# Object build statements for EXECUTABLE target startpage2
+
+
+#############################################
+# Order-only phony target for startpage2
+
+build cmake_object_order_depends_target_startpage2: phony || CMakeFiles/startpage2.dir
+
+build CMakeFiles/startpage2.dir/UI/startpage2.cpp.o: CXX_COMPILER__startpage2_Debug /Users/minchankim/Documents/GitHub/Initial/UI/startpage2.cpp || cmake_object_order_depends_target_startpage2
+  DEP_FILE = CMakeFiles/startpage2.dir/UI/startpage2.cpp.o.d
+  FLAGS = -g -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX13.3.sdk -fcolor-diagnostics -std=gnu++17
+  OBJECT_DIR = CMakeFiles/startpage2.dir
+  OBJECT_FILE_DIR = CMakeFiles/startpage2.dir/UI
+
+
+# =============================================================================
+# Link build statements for EXECUTABLE target startpage2
+
+
+#############################################
+# Link the executable startpage2
+
+build startpage2: CXX_EXECUTABLE_LINKER__startpage2_Debug CMakeFiles/startpage2.dir/UI/startpage2.cpp.o
+  FLAGS = -g -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX13.3.sdk
+  OBJECT_DIR = CMakeFiles/startpage2.dir
+  POST_BUILD = :
+  PRE_LINK = :
+  TARGET_FILE = startpage2
+  TARGET_PDB = startpage2.dbg
+
+# =============================================================================
 # Object build statements for EXECUTABLE target base2
 
 
@@ -396,7 +427,7 @@ build rebuild_cache: phony CMakeFiles/rebuild_cache.util
 #############################################
 # Folder: /Users/minchankim/Documents/GitHub/Initial/cmake-build-debug
 
-build all: phony Map_loading_save inventory inventory2 base startpage base2 Enginev1 Enginev2 Character_Design MainEngine
+build all: phony Map_loading_save inventory inventory2 base startpage startpage2 base2 Enginev1 Enginev2 Character_Design MainEngine
 
 # =============================================================================
 # Built-in targets
