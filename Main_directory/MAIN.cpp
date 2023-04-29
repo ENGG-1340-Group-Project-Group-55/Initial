@@ -13,6 +13,7 @@ public:
     void RoofTop();
     string SchoolMap(int,int);
     void TeachersOffice();
+    string roomchooser(int);
 };
 
 int main()
@@ -144,15 +145,28 @@ void rooms::Clubroom()
      string file_path = "..";
     int x_door = 0;
     int y_door = 0;
-    //int C_Or_R = main_engine(file_path,x_door,y_door);
-    //if (C_Or_R == 1)
-    {
-        //return "ToCorridor"
-    }
-    //else
-    {
-        //return "RoofTop"
-    }
+    //int roomdecider = main_engine(file_path,x_door,y_door);
+    
+ }
 
-
+ string rooms::roomchooser(int roomdecider){
+    switch (roomdecider)
+    {
+    case 1:
+        return "Classroom";
+        break;
+    case 2:
+        return "Clubroom";
+        break;
+    case 3:
+        return "Music_room";
+        break;
+    case 4:
+        return "TeachersOffice";   
+    case 5:      
+        return ""   
+    
+    default:
+        break;
+    }
  }
