@@ -6,13 +6,13 @@ using namespace std;
 class rooms
 {
 public:
-    string Classroom();
-    string Clubroom();
-    string Music_Room();
+    void Classroom();
+    void Clubroom();
+    void Music_Room();
     string Rooftop_Stairs();
-    string Rooftop();
-    string SchoolMap(string);
-    string TeachersOffice();
+    void RoofTop();
+    string SchoolMap(int,int);
+    void TeachersOffice();
 };
 
 int main()
@@ -20,6 +20,7 @@ int main()
     initialize();
     int *x = new int;
     int *y = new int;
+    string exitfrom;
     string entered;
     rooms RM;
     bool flag = true;
@@ -28,45 +29,130 @@ int main()
         if (entered == "Classroom")
         {
             RM.Classroom();
-            entered = "Classroom";
-            *x = Corridor[entered].x_coordinates;
-            *y = Corridor[entered].y_coordinates;
+            exitfrom = "Classroom";
+            *x = Corridor[exitfrom].x_coordinates;
+            *y = Corridor[exitfrom].y_coordinates;
+            entered = "SchoolMap"
         }
         else if (entered == "Clubroom")
         {
             RM.Clubroom();
-            entered = "Clubroom";
-            *x = Corridor[entered].x_coordinates;
-            *y = Corridor[entered].y_coordinates;
+            exitfrom = "Clubroom";
+            *x = Corridor[exitfrom].x_coordinates;
+            *y = Corridor[exitfrom].y_coordinates;
+            entered = "SchoolMap"
         }
         else if (entered == "Music_Room")
         {
             RM.Music_Room();
-            entered = "Music_Room";
-            *x = Corridor[entered].x_coordinates;
-            *y = Corridor[entered].y_coordinates;
+            exitfrom = "Music_Room";
+            *x = Corridor[exitfrom].x_coordinates;
+            *y = Corridor[exitfrom].y_coordinates;
+            entered = "SchoolMap";
         }
         else if (entered == "TeachersOffice")
         {
             RM.TeachersOffice();
-            entered = "TeachersOffice";
-            *x = Corridor[entered].x_coordinates;
-            *y = Corridor[entered].y_coordinates;
+            exitfrom = "TeachersOffice";
+            *x = Corridor[exitfrom].x_coordinates;
+            *y = Corridor[exitfrom].y_coordinates;
+            entered = "SchoolMap";
         }
-        else if (entered == "Rooftop")
+        else if (entered == "RoofTop")
         {
             RM.Rooftop();
-            entered = "RoofTop";
-            *x = Stairs[entered].x_coordinates;
-            *y = Stairs[entered].y_coordinates;
+            exitfrom = "RoofTop";
+            *x = Stairs[exitfrom].x_coordinates;
+            *y = Stairs[exitfrom].y_coordinates;
+            entered = "SchoolMap";
         }
         else if (entered == "Rooftop_Stairs")
         {
-            entered = RM.Rooftop_Stairs();
-            *x = Stairs[entered].x_coordinates;
-            *y = Stairs[entered].y_coordinates;
+            exitfrom = RM.Rooftop_Stairs();
+            *x = Stairs[exitfrom].x_coordinates;
+            *y = Stairs[exitfrom].y_coordinates;
+            if (exitfrom == "ToCorridor")
+            {
+                entered = "SchoolMap";
+            }
+            else
+            {
+                entered = "RoofTop";
+            }
         }
-
-        if (entered == "Rooftop")
+        else if (entered == "SchoolMap")
+        {
+            entered = RM.SchoolMap(*x,*y);
+        }
     }
+} 
+
+void rooms::Classroom()
+{
+    string file_path = "..";
+    int x_door = 0;
+    int y_door = 0;
+    //main_engine(file_path,x_door,y_door);
 }
+void rooms::Clubroom()
+{
+    string file_path = "..";
+    int x_door = 0;
+    int y_door = 0;
+    //main_engine(file_path,x_door,y_door);
+}
+ void rooms::Music_Room()
+ {
+    string file_path = "..";
+    int x_door = 0;
+    int y_door = 0;
+    //main_engine(file_path,x_door,y_door);
+ }
+
+ void rooms::RoofTop(){
+    string file_path = "..";
+    int x_door = 0;
+    int y_door = 0;
+    //main_engine(file_path,x_door,y_door);
+ }
+
+ void rooms::TeachersOffice()
+ {
+    string file_path = "..";
+    int x_door = 0;
+    int y_door = 0;
+    //main_engine(file_path,x_door,y_door);
+ }
+
+ string rooms::Rooftop_Stairs()
+ {
+    string file_path = "..";
+    int x_door = 0;
+    int y_door = 0;
+    //int C_Or_R = main_engine(file_path,x_door,y_door);
+    //if (C_Or_R == 1)
+    {
+        //return "ToCorridor"
+    }
+    //else
+    {
+        //return "RoofTop"
+    }
+ }
+
+ string rooms::SchoolMap(int a,int b){
+     string file_path = "..";
+    int x_door = 0;
+    int y_door = 0;
+    //int C_Or_R = main_engine(file_path,x_door,y_door);
+    //if (C_Or_R == 1)
+    {
+        //return "ToCorridor"
+    }
+    //else
+    {
+        //return "RoofTop"
+    }
+
+
+ }
