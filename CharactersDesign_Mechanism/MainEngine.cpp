@@ -200,3 +200,4 @@ void addItem(vector<string>& inventory, string item) {
     } else {
         cout << "Unable to open file for writing." << endl;
     }
+}
