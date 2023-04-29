@@ -20,7 +20,7 @@ void printInventory(vector<string> inventory);
 vector<string> loadInventoryFromFile();
 
 
-int main() {
+int main_engine(string file_path, int &x, int &y) {
 // Initialize ncurses
     initscr();
     cbreak();
@@ -29,8 +29,6 @@ int main() {
     curs_set(0); // Hide cursor
 
     //Set up initial variables
-    int x = 87, y = 24;
-    string file_path = "/Users/M1/Documents/GitHub/Initial/Map_Objects/Map_resources/Classroom.txt";
     char ch;
     bool flag = TRUE;
 
@@ -215,4 +213,10 @@ void printInventory(vector<string> inventory) {
         }
     }
     delwin(inventoryWin);
+}
+
+int main() {
+    int x = 87, y = 24;
+    string file_path = "/Users/M1/Documents/GitHub/Initial/Map_Objects/Map_resources/Classroom.txt";
+    main_engine(file_path, x, y);
 }
