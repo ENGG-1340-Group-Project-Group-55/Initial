@@ -1,6 +1,9 @@
 #include "doorcoordinate.h"
 #include <iostream>
 
+using namespace std;
+
+
 void initialize(){
     Corridor.insert({"Classroom",Classroom});
     Corridor.insert({"Clubroom",Clubroom});

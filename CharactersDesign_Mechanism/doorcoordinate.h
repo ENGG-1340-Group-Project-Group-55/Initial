@@ -12,6 +12,8 @@ struct coordinates
     int x_coordinates;
 };
 
+void initialize();
+void clear();
 
 map<string,coordinates> Corridor;
 map<string,coordinates> Stairs;
