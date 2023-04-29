@@ -61,7 +61,7 @@ int main()
         }
         else if (entered == "RoofTop")
         {
-            RM.Rooftop();
+            RM.RoofTop();
             exitfrom = "RoofTop";
             *x = Stairs[exitfrom].x_coordinates;
             *y = Stairs[exitfrom].y_coordinates;
@@ -131,14 +131,8 @@ void rooms::Clubroom()
     int x_door = 0;
     int y_door = 0;
     //int C_Or_R = main_engine(file_path,x_door,y_door);
-    //if (C_Or_R == 1)
-    {
-        //return "ToCorridor"
-    }
-    //else
-    {
-        //return "RoofTop"
-    }
+    //return roomchooser(C_Or_R);
+   
  }
 
  string rooms::SchoolMap(int a,int b){
@@ -146,6 +140,7 @@ void rooms::Clubroom()
     int x_door = 0;
     int y_door = 0;
     //int roomdecider = main_engine(file_path,x_door,y_door);
+    //return roomchooser(roomdecider);
     
  }
 
@@ -162,10 +157,17 @@ void rooms::Clubroom()
         return "Music_room";
         break;
     case 4:
-        return "TeachersOffice";   
+        return "TeachersOffice";
+        break;
     case 5:      
-        return ""   
-    
+        return "RoofTop";
+        break;
+    case 6:
+        return "Rooftop_Stairs";
+        break;
+    case 7:
+        return "ToCorridor";
+        break;   
     default:
         break;
     }
