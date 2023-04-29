@@ -1,21 +1,32 @@
 #include <iostream>
+#include <string>
+#include "CharactersDesign_Mechanism/doorcoordinate.h"
 using namespace std;
 
 class rooms{
     public:
-    int Classroom();
-    int Clubroom();
-    int Music_Room();
-    int Rooftop_Stairs();
-    int Rooftop();
-    int SchoolMap();
-    int TeachersOffice();
+    string Classroom();
+    string Clubroom();
+    string Music_Room();
+    string Rooftop_Stairs();
+    string Rooftop();
+    string SchoolMap();
+    string TeachersOffice();
 };
 
 
 int main()
 {
+    initialize();
     rooms RM;
+    bool flag = true;
+    while (flag)
+    {
+        if ()
+
+    }
+
+
 }
 
 
