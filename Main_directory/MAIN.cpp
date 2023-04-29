@@ -135,8 +135,9 @@ void rooms::Clubroom()
    
  }
 
- string rooms::SchoolMap(int a,int b){
-     string file_path = "..";
+ string rooms::SchoolMap(int a,int b)
+ {
+    string file_path = "..";
     int x_door = a;
     int y_door = b;
     //int roomdecider = main_engine(file_path,x_door,y_door);
