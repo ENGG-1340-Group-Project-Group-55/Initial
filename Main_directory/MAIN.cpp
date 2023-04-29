@@ -9,7 +9,7 @@ public:
     void Classroom();
     void Clubroom();
     void Music_Room();
-    string Rooftop_Stairs();
+    string Rooftop_Stairs(int,int);
     void RoofTop();
     string SchoolMap(int,int);
     void TeachersOffice();
@@ -125,11 +125,11 @@ void rooms::Clubroom()
     //main_engine(file_path,x_door,y_door);
  }
 
- string rooms::Rooftop_Stairs()
+ string rooms::Rooftop_Stairs(int a,int b)
  {
     string file_path = "..";
-    int x_door = 0;
-    int y_door = 0;
+    int x_door = a;
+    int y_door = b;
     //int C_Or_R = main_engine(file_path,x_door,y_door);
     //return roomchooser(C_Or_R);
    
