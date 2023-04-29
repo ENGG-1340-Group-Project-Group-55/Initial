@@ -6,6 +6,10 @@
 
 //compile using: g++ -pedantic-errors -std=c++11 CharactersDesign_Mechanism/MainEngine.cpp Map_Objects/Map_loading.cpp -o Game -lncurses
 
+WINDOW* createInventoryWindow(int inv_height, int inv_width);
+void printInventory(vector<string> inventory);
+void addItem(vector<string>& inventory, string item);
+
 int main() {
     // Initialize ncurses
     initscr();
@@ -143,3 +147,56 @@ int main() {
     endwin();
     return 0;
 }
+
+void printInventory(vector<string> inventory) {
+    int inv_height = 20;
+    int inv_width = 40;
+
+    initscr();
+    raw();
+    noecho();
+    curs_set(0);
+    keypad(stdscr, TRUE);
+
+    WINDOW* inventoryWin = createInventoryWindow(inv_height, inv_width);
+
+    mvwprintw(inventoryWin, 1, 1, "Inventory:");
+    for (int i = 0; i < inventory.size(); i++) {
+        mvwprintw(inventoryWin, i + 2, 1, "%d. %s", i + 1, inventory[i].c_str());
+    }
+    wrefresh(inventoryWin);
+
+    //screen displayed until 'q' is pressed
+    while (true) {              // consider while ((key_input = getch()) != 27) {
+        int ch = getch();
+        if (ch == 'q') {
+            break;
+        }
+    }
+
+    delwin(inventoryWin);
+    endwin();
+}
+
+WINDOW* createInventoryWindow(int inv_height, int width) {
+    int startY = (LINES - inv_height) / 2;
+    int startX = (COLS - width) / 2;
+
+    WINDOW* win = newwin(inv_height, width, startY, startX);
+    box(win, 0, 0);
+    refresh();
+    wrefresh(win);
+
+    return win;
+}
+
+void addItem(vector<string>& inventory, string item) {
+    ofstream outputFile("/Users/M1/CLionProjects/1340GP/UI/inventory.txt", ios::app); // Open the file in append mode
+    if (outputFile.is_open()) {
+        inventory.push_back(item);
+        outputFile << item << endl; // Write the item to the file
+        outputFile.close(); // Close the file
+        cout << "Added " << item << " to the inventory." << endl;
+    } else {
+        cout << "Unable to open file for writing." << endl;
+    }
