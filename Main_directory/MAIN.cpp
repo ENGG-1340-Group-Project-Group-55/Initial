@@ -96,6 +96,9 @@ int main()
             entered = RM.SchoolMap(*x,*y);
         }
     }*/
+
+    delete x;
+    delete y;
 } 
 
 void rooms::Classroom()
