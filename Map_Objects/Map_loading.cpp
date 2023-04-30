@@ -2,7 +2,7 @@
 #include <fstream>
 #include <string>
 #include <vector>
-#include "/Users/M1/Documents/GitHub/Initial/CharactersDesign_Mechanism/MapLoader.h"
+#include "CharactersDesign_Mechanism/MapLoader.h"
 #include <ncurses.h>
 
 using namespace std;
