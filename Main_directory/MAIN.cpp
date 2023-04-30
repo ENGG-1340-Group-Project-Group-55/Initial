@@ -177,6 +177,7 @@ void rooms::Clubroom()
         return "ToCorridor";
         break;   
     default:
+        return "NONE";
         break;
     }
 }
