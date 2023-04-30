@@ -13,7 +13,7 @@ struct coordinates
 };
 
 void initialize();
-void clear();
+void clears();
 
 map<string,coordinates> Corridor;
 map<string,coordinates> Stairs;

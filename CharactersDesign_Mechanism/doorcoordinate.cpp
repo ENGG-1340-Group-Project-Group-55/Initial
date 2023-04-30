@@ -15,7 +15,7 @@ void initialize(){
     Stairs.insert({"RoofTop",RoofTop});
 }
 
-void clear()
+void clears()
 {
     Corridor.clear();
     Stairs.clear();
