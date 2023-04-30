@@ -20,7 +20,7 @@ void printInventory(vector<string> inventory);
 vector<string> loadInventoryFromFile();
 
 
-int main_engine(string file_path, int x, int y) {
+int main_engine(string file_path, int& x, int& y) {
 // Initialize ncurses
     initscr();
     cbreak();
@@ -213,10 +213,4 @@ void printInventory(vector<string> inventory) {
         }
     }
     delwin(inventoryWin);
-}
-
-int main() {
-    int x = 87, y = 24;
-    string file_path = "/Users/M1/Documents/GitHub/Initial/Map_Objects/Map_resources/Classroom.txt";
-    main_engine(file_path, x, y);
 }

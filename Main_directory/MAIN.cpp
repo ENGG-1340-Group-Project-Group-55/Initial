@@ -30,7 +30,7 @@ int main()
 
     int x = 87, y = 24;
     string file_path = "/Map_Objects/Map_resources/Classroom.txt";
-    main_engine(file_path, x, y);
+    main_engine(file_path,int&x, int&y);
 
     
     while (flag)
@@ -77,7 +77,7 @@ int main()
         }
         else if (entered == "Rooftop_Stairs")
         {
-            exitfrom = RM.Rooftop_Stairs(a,b);
+            exitfrom = RM.Rooftop_Stairs(*x,*y);
             *x = Stairs[exitfrom].x_coordinates;
             *y = Stairs[exitfrom].y_coordinates;
             if (exitfrom == "ToCorridor")
