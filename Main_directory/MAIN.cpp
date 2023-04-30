@@ -33,7 +33,7 @@ int main()
     main_engine(file_path,*x,*y);
 
     
-    while (flag)
+    /*while (flag)
     {
         if (entered == "Classroom")
         {
@@ -93,7 +93,7 @@ int main()
         {
             entered = RM.SchoolMap(*x,*y);
         }
-    }
+    }*/
 } 
 
 void rooms::Classroom()
@@ -179,4 +179,4 @@ void rooms::Clubroom()
     default:
         break;
     }
- }
+}
