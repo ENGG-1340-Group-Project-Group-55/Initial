@@ -3,7 +3,6 @@
 #include <string>
 #include <fstream>
 #include "MapLoader.h"
-#include "MainEngine.h"
 
 //compile using: g++ -pedantic-errors -std=c++11 CharactersDesign_Mechanism/MainEngine.cpp Map_Objects/Map_loading.cpp -o game -lncurses
 
@@ -21,7 +20,7 @@ void printInventory(vector<string> inventory);
 vector<string> loadInventoryFromFile();
 
 
-int main_engine(string file_path, int& x, int& y) {
+int main_engine(string file_path, int&x, int& y) {
 // Initialize ncurses
     initscr();
     cbreak();
@@ -214,4 +213,10 @@ void printInventory(vector<string> inventory) {
         }
     }
     delwin(inventoryWin);
+}
+
+int main() {
+    int x = 87, y = 24;
+    string file_path = "Map_Objects/Map_resources/Classroom.txt";
+    main_engine(file_path, x, y);
 }

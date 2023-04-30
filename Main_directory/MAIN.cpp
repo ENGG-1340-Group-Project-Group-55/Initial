@@ -27,6 +27,8 @@ int main()
     rooms RM;
     bool flag = true;
 
+    cout<<"HI!"<<endl;
+
 
     *x = 87, *y = 24;
     string file_path = "/Map_Objects/Map_resources/Classroom.txt";
