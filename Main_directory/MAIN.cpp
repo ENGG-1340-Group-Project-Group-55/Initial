@@ -1,6 +1,6 @@
 #include <iostream>
 #include <string>
-#include "/Users/M1/Documents/GitHub/Initial/CharactersDesign_Mechanism/doorcoordinate.h"
+#include "CharactersDesign_Mechanism/doorcoordinate.h"
 using namespace std;
 
 class rooms
@@ -140,8 +140,8 @@ void rooms::Clubroom()
     string file_path = "..";
     int x_door = a;
     int y_door = b;
-    //int roomdecider = main_engine(file_path,x_door,y_door);
-    //return roomchooser(roomdecider);
+    int roomdecider = main_engine(file_path,x_door,y_door);
+    return roomchooser(roomdecider);
  }
 
  string rooms::roomchooser(int roomdecider){
