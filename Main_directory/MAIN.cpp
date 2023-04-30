@@ -1,6 +1,7 @@
 #include <iostream>
 #include <string>
 #include "CharactersDesign_Mechanism/doorcoordinate.h"
+#include "CharactersDesign_Mechanism/MainEngine.h"
 using namespace std;
 
 class rooms
@@ -93,28 +94,28 @@ void rooms::Classroom()
     string file_path = "..";
     int x_door = 0;
     int y_door = 0;
-    //main_engine(file_path,x_door,y_door);
+    main_engine(file_path,x_door,y_door);
 }
 void rooms::Clubroom()
 {
     string file_path = "..";
     int x_door = 0;
     int y_door = 0;
-    //main_engine(file_path,x_door,y_door);
+    main_engine(file_path,x_door,y_door);
 }
  void rooms::Music_Room()
  {
     string file_path = "..";
     int x_door = 0;
     int y_door = 0;
-    //main_engine(file_path,x_door,y_door);
+    main_engine(file_path,x_door,y_door);
  }
 
  void rooms::RoofTop(){
     string file_path = "..";
     int x_door = 0;
     int y_door = 0;
-    //main_engine(file_path,x_door,y_door);
+    main_engine(file_path,x_door,y_door);
  }
 
  void rooms::TeachersOffice()
@@ -122,7 +123,7 @@ void rooms::Clubroom()
     string file_path = "..";
     int x_door = 0;
     int y_door = 0;
-    //main_engine(file_path,x_door,y_door);
+    main_engine(file_path,x_door,y_door);
  }
 
  string rooms::Rooftop_Stairs(int a,int b)
@@ -130,8 +131,8 @@ void rooms::Clubroom()
     string file_path = "..";
     int x_door = a;
     int y_door = b;
-    //int C_Or_R = main_engine(file_path,x_door,y_door);
-    //return roomchooser(C_Or_R);
+    int C_Or_R = main_engine(file_path,x_door,y_door);
+    return roomchooser(C_Or_R);
    
  }
 
