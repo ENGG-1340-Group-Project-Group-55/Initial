@@ -28,7 +28,7 @@ int main()
     bool flag = true;
 
 
-    int x = 87, y = 24;
+    *x = 87, *y = 24;
     string file_path = "/Map_Objects/Map_resources/Classroom.txt";
     main_engine(file_path,*x,*y);
 
