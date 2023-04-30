@@ -3,6 +3,7 @@
 
 #include <vector>
 #include <fstream>
+#include <ncurses.h>
 
 using namespace std;
 
@@ -21,7 +22,7 @@ public:
     int map_width;
     VectorWrapper Map_Loader(string &file_path);
     VectorWrapper MapToArray(ifstream&);
-    void Map_printer(VectorWrapper, int, int, int, int);
+    void Map_printer(VectorWrapper, int, int, int, int, WINDOW*);
 };
 
 #endif

@@ -2,32 +2,43 @@
 #include <iostream>
 #include <string>
 #include <fstream>
-#include "MapLoader.h"
+#include "/workspaces/Initial/CharactersDesign_Mechanism/MapLoader.h"
 
-//compile using: g++ -pedantic-errors -std=c++11 CharactersDesign_Mechanism/MainEngine.cpp Map_Objects/Map_loading.cpp -o Game -lncurses
+//compile using: g++ -pedantic-errors -std=c++11 CharactersDesign_Mechanism/MainEngine.cpp Map_Objects/Map_loading.cpp -o game -lncurses
 
-int main() {
-    // Initialize ncurses
+// Function to create a centered window with a box border
+WINDOW* CreateWindow(int screen_height, int screen_width) {
+    int startY = (LINES - screen_height) / 2 ;
+    int startX = (COLS - screen_width) / 2 ;
+    WINDOW* win = newwin(screen_height, screen_width, startY, startX);
+    refresh();
+    wrefresh(win);
+    return win;
+}
+
+void printInventory(vector<string> inventory);
+vector<string> loadInventoryFromFile();
+
+
+int main_engine(string file_path, int&x, int& y) {
+// Initialize ncurses
     initscr();
     cbreak();
     noecho();
     keypad(stdscr, TRUE);
     curs_set(0); // Hide cursor
 
-    // Set up initial variables
-    int x = 0, y = 0;
-    int key_input;
-    string file_path = "/Users/M1/Documents/GitHub/Initial/Map_Objects/Map_resources/grid.txt";
-    // Set up screen size
-    int screen_height=0;
-    int screen_width=0;
+    //Set up initial variables
     char ch;
     bool flag = TRUE;
 
+    //count dimensions of a map
+    int screen_height=0;
+    int screen_width=0;
     ifstream inputline;
     inputline.open(file_path);
     if (inputline.fail()) {
-        cout<<"파일이 없다잖아 병신아!!!"<<endl;
+        cout<<"no file for map"<<endl;
         exit(1);
     }
     while (inputline >> noskipws >> ch) {
@@ -42,9 +53,12 @@ int main() {
     }
     inputline.close();
 
-    ifstream charline("/Users/M1/Documents/GitHub/Initial/CharactersDesign_Mechanism/character2.txt");
+    WINDOW *game_window = CreateWindow(screen_height, screen_width);
+
+    //store character into arrays
+    ifstream charline("/workspaces/Initial/CharactersDesign_Mechanism/character3.txt");
     if (charline.fail()) {
-        cout<<"no file!"<<endl;
+        cout<<"no character file!"<<endl;
         exit(1);
     }
     int const charsize = 5;
@@ -65,73 +79,59 @@ int main() {
     }
     charline.close();
 
-    vector<pair<int,int> > walls;
+    string *current_character = char_up;
 
-    ifstream wallsfile("/Users/M1/Documents/GitHub/Initial/CharactersDesign_Mechanism/walls.txt");
-    if (wallsfile.fail()) {
-        cout << "Failed to open walls file" << endl;
-        exit(1);
-    }
-    int wallx, wally;
-    while (wallsfile >> wallx >> wally) {
-        walls.push_back(make_pair(wallx,wally));
-    }
-    wallsfile.close();
-
-    string *current_character = char_right;
-
-    // Main loop
-    while ((key_input = getch()) != 27) { // Exit on ESC key press
-        clear(); //clear screen
-        Maps gameMap(screen_height, screen_width);
-        VectorWrapper mapData = gameMap.Map_Loader(file_path);
+// Main loop
+    int key_input;
+    while ((key_input = wgetch(game_window)) != 27) { // Exit on ESC key press
+        // Clear window
+        werase(game_window);
+        bool flag1 = FALSE;
 
         // Draw the map
-        gameMap.Map_printer(mapData, 0, 0, screen_height, screen_width);
+        Maps gameMap(screen_height, screen_width);
+        VectorWrapper mapData = gameMap.Map_Loader(file_path);
+        gameMap.Map_printer(mapData, 0, 0, screen_height, screen_width, game_window);
 
         switch(key_input) {
             case 'w':
                 y--;
                 current_character = char_up;
-                for (const std::pair<int, int> wall : walls) {
-                    if (wall.first == x && wall.second == y) {
-                        y++;
-                        break;
-                    }
+                if (mapData.TDVEC[y+4][x+1] != ' ' || mapData.TDVEC[y+4][x+2] != ' ' || mapData.TDVEC[y+4][x+3] != ' ' || mapData.TDVEC[y+4][x+4] != ' ') {
+                    y++;
+                    break;
                 }
                 break;
 
             case 's':
                 y++;
                 current_character = char_down;
-                for (const std::pair<int, int>& wall : walls) {
-                    if (wall.first == x && wall.second == y) {
-                        y--;
-                        break;
-                    }
+                if (mapData.TDVEC[y+4][x+1] != ' ' || mapData.TDVEC[y+4][x+2] != ' ' || mapData.TDVEC[y+4][x+3] != ' ' || mapData.TDVEC[y+4][x+4] != ' ') {
+                    y--;
+                    break;
                 }
                 break;
 
             case 'a':
                 x-=2;
                 current_character = char_left;
-                for (const std::pair<int, int>& wall : walls) {
-                    if (wall.first == x && wall.second == y) {
-                        x+=2;
-                        break;
-                    }
+                if (mapData.TDVEC[y+4][x+1] != ' '|| mapData.TDVEC[y+4][x+2] != ' ') {
+                    x+=2;
+                    break;
                 }
                 break;
 
             case 'd':
                 x+=2;
                 current_character = char_right;
-                for (const std::pair<int, int>& wall : walls) {
-                    if (wall.first == x && wall.second == y) {
-                        x-=2;
-                        break;
-                    }
+                if (mapData.TDVEC[y+4][x+4] != ' ' || mapData.TDVEC[y+4][x+3] != ' ') {
+                    x-=2;
+                    break;
                 }
+                break;
+
+            case 'i':
+                flag1 = TRUE;
                 break;
         }
 
@@ -140,27 +140,83 @@ int main() {
             x = 1;
         } if (y < 3) {
             y = 2;
-        } if (x >= screen_width - 1) {
-            x = screen_width - 2;
-        } if (y >= screen_height - 1) {
-            y = screen_height - 2;
+        } if (x >= screen_width - 5) {
+            x = screen_width - 6;
+        } if (y >= screen_height - 5) {
+            y = screen_height - 6;
         }
-        //for later: add coordinates of objects for each map, so that character can't pass
 
-//        for (int i = 0; i < charsize; i++) {
-//            for (int j = 0; j < current_character[i].length(); j++) {
-//                if (current_character[i][j] != '~') {
-//                    mvaddch(y+i, x+j, current_character[i][j]);
-//                }
-//            }
-//        }
-        mvaddch(y, x, 'O');
+        // Draw the player character
+        for (int i = 0; i < charsize; i++) {
+            for (int j = 0; j < current_character[i].length(); j++) {
+                if (current_character[i][j] != '~') {
+                    mvwaddch(game_window, y+i, x+j, current_character[i][j]);
+                }
+            }
+        }
+        //mvwaddch(game_window, y, x, 'O');
 
-        // Refresh screen
-        refresh();
-
+        // Refresh the window
+        wrefresh(game_window);
+        if (flag1 == TRUE) {
+            vector<string> inventory = loadInventoryFromFile();
+            printInventory(inventory);
+        }
     }
-    // Clean up ncurses
+
+// End ncurses mode
     endwin();
+
     return 0;
+}
+
+vector<string> loadInventoryFromFile() {
+    vector<string> inventory;
+    ifstream inputFile("/workspaces/Initial/UI/inventory.txt"); // Open the file for reading
+    string line;
+
+    if (inputFile.is_open()) {
+        while (getline(inputFile, line)) {
+            inventory.push_back(line); // Read and store the items from the file
+        }
+        inputFile.close(); // Close the file
+    } else {
+        cout << "No inventory file." << endl;
+    }
+
+    return inventory;
+}
+
+void printInventory(vector<string> inventory) {
+    int inv_height = 15;
+    int inv_width = 30;
+
+    initscr();
+    raw();
+    noecho();
+    curs_set(0);
+    keypad(stdscr, TRUE);
+
+    WINDOW* inventoryWin = CreateWindow(inv_height, inv_width);
+    box(inventoryWin, 0, 0);
+    mvwprintw(inventoryWin, 1, 1, "Inventory:");
+    for (int i = 0; i < inventory.size(); i++) {
+        mvwprintw(inventoryWin, i + 2, 1, "%d. %s", i + 1, inventory[i].c_str());
+    }
+    wrefresh(inventoryWin);
+
+    //screen displayed until 'q' is pressed
+    while (true) {              // consider while ((key_input = getch()) != 27) {
+        int ch = getch();
+        if (ch == 27) {
+            break;
+        }
+    }
+    delwin(inventoryWin);
+}
+
+int main() {
+    int x = 87,y = 24;
+    string file_path = "/workspaces/Initial/Map_Objects/Map_resources/Classroom.txt";
+    main_engine(file_path, x, y);
 }

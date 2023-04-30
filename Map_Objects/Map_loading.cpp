@@ -2,7 +2,7 @@
 #include <fstream>
 #include <string>
 #include <vector>
-#include "/Users/M1/Documents/GitHub/Initial/CharactersDesign_Mechanism/MapLoader.h"
+#include "/workspaces/Initial/CharactersDesign_Mechanism/MapLoader.h"
 #include <ncurses.h>
 
 using namespace std;
@@ -18,7 +18,7 @@ VectorWrapper Maps::Map_Loader(string &file_path) {
     ifstream inputline;
     inputline.open(file_path);
     if (inputline.fail()) {
-        cout<<"파일이 없다잖아 병신아!!!"<<endl;
+        cout<<"No map file"<<endl;
         exit(1);
     }
     VectorWrapper Converter = MapToArray(inputline);
@@ -53,11 +53,11 @@ VectorWrapper Maps::MapToArray(ifstream& inputline) {
     return Converter;
 }
 
-void Maps::Map_printer(VectorWrapper Converter, int y, int x, int screen_height, int screen_width) {
+void Maps::Map_printer(VectorWrapper Converter, int y, int x, int screen_height, int screen_width, WINDOW* win) {
     for (int i=y;i<y+screen_height;i++){
         for(int j=x;j<x+screen_width;j++){
-            mvaddch(i + 1, j, Converter.TDVEC[i][j]);
+            mvwaddch(win, i-y, j-x, Converter.TDVEC[i][j]);
         }
     }
+    wrefresh(win);
 }
-
