@@ -20,7 +20,7 @@ void printInventory(vector<string> inventory);
 vector<string> loadInventoryFromFile();
 
 
-int main_engine(string file_path, int &x, int &y) {
+int main_engine(string file_path, int x, int y) {
 // Initialize ncurses
     initscr();
     cbreak();

@@ -26,6 +26,13 @@ int main()
     string entered;
     rooms RM;
     bool flag = true;
+
+
+    int x = 87, y = 24;
+    string file_path = "/Map_Objects/Map_resources/Classroom.txt";
+    main_engine(file_path, x, y);
+
+    
     while (flag)
     {
         if (entered == "Classroom")
@@ -34,7 +41,7 @@ int main()
             exitfrom = "Classroom";
             *x = Corridor[exitfrom].x_coordinates;
             *y = Corridor[exitfrom].y_coordinates;
-            entered = "SchoolMap"
+            entered = "SchoolMap";
         }
         else if (entered == "Clubroom")
         {
@@ -42,7 +49,7 @@ int main()
             exitfrom = "Clubroom";
             *x = Corridor[exitfrom].x_coordinates;
             *y = Corridor[exitfrom].y_coordinates;
-            entered = "SchoolMap"
+            entered = "SchoolMap";
         }
         else if (entered == "Music_Room")
         {
@@ -70,7 +77,7 @@ int main()
         }
         else if (entered == "Rooftop_Stairs")
         {
-            exitfrom = RM.Rooftop_Stairs();
+            exitfrom = RM.Rooftop_Stairs(a,b);
             *x = Stairs[exitfrom].x_coordinates;
             *y = Stairs[exitfrom].y_coordinates;
             if (exitfrom == "ToCorridor")
