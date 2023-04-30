@@ -3,6 +3,7 @@
 #include <string>
 #include <fstream>
 #include "MapLoader.h"
+#include "MainEngine.h"
 
 //compile using: g++ -pedantic-errors -std=c++11 CharactersDesign_Mechanism/MainEngine.cpp Map_Objects/Map_loading.cpp -o game -lncurses
 
