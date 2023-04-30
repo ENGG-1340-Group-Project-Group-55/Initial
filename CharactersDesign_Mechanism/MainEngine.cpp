@@ -56,7 +56,7 @@ int main_engine(string file_path, int&x, int& y) {
     WINDOW *game_window = CreateWindow(screen_height, screen_width);
 
     //store character into arrays
-    ifstream charline("/Users/M1/Documents/GitHub/Initial/CharactersDesign_Mechanism/character3.txt");
+    ifstream charline("/workspaces/Initial/CharactersDesign_Mechanism/character3.txt");
     if (charline.fail()) {
         cout<<"no character file!"<<endl;
         exit(1);
@@ -172,7 +172,7 @@ int main_engine(string file_path, int&x, int& y) {
 
 vector<string> loadInventoryFromFile() {
     vector<string> inventory;
-    ifstream inputFile("/Users/M1/Documents/GitHub/Initial/UI/inventory.txt"); // Open the file for reading
+    ifstream inputFile("/workspaces/Initial/UI/inventory.txt"); // Open the file for reading
     string line;
 
     if (inputFile.is_open()) {
@@ -217,6 +217,6 @@ void printInventory(vector<string> inventory) {
 
 int main() {
     int x = 87,y = 24;
-    string file_path = "Map_Objects/Map_resources/Classroom.txt";
+    string file_path = "/workspaces/Initial/Map_Objects/Map_resources/Classroom.txt";
     main_engine(file_path, x, y);
 }
