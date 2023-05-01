@@ -1,10 +1,29 @@
 #include <ncurses.h>
-#include <iostream> 
+#include <iostream>
+#include <ctime>
+#include <iomanip>
+#include <sstream>
+#include <vector>
 #include <string>
 #include <fstream>
+#include <cmath>
 #include "/workspaces/Initial/CharactersDesign_Mechanism/MapLoader.h"
 
 //compile using: g++ -pedantic-errors -std=c++11 CharactersDesign_Mechanism/MainEngine.cpp Map_Objects/Map_loading.cpp -o game -lncurses
+
+int VISION_RADIUS = 20;
+time_t start_time;
+
+// Function to update the timer and VISION_RADIUS
+int updateTimerAndVisionRadius(int countdown_duration) {
+    time_t current_time = time(NULL);
+    int remaining_time = countdown_duration - static_cast<int>(difftime(current_time, start_time));
+    VISION_RADIUS = 20 - (100 * (1 - static_cast<double>(remaining_time) / countdown_duration));
+    if (VISION_RADIUS < 5) {
+        VISION_RADIUS = 5;
+    }
+    return remaining_time;
+}
 
 // Function to create a centered window with a box border
 WINDOW* CreateWindow(int screen_height, int screen_width) {
@@ -19,7 +38,7 @@ WINDOW* CreateWindow(int screen_height, int screen_width) {
 void printInventory(vector<string> inventory);
 vector<string> loadInventoryFromFile();
 
-void printMenu(vector<string> menu);
+void printMenu(vector<string> menu, int remaining_time);
 void printStartpage(VectorWrapper StartData);
 void display_instructions(VectorWrapper StartData);
 
@@ -36,6 +55,10 @@ int main_engine(string file_path, int&x, int& y) {
     init_pair(2, COLOR_GREEN, COLOR_BLACK); // Pair 2: Green text on a black background
     init_pair(3, COLOR_BLUE, COLOR_BLACK); // Pair 3: Blue text on a black background
     init_pair(4, COLOR_YELLOW, COLOR_BLACK); // Pair 4: Yellow text on a black background
+
+    // Initialize the timer
+    int countdown_duration = 900; // Set this to the desired countdown duration (15 minutes)
+    start_time = time(NULL);
 
     //Set up initial variables
     char ch;
@@ -113,6 +136,27 @@ int main_engine(string file_path, int&x, int& y) {
         int y4 = y+4;
         int x4 = x+4;
 
+        // Darken the entire screen
+        wattron(game_window, COLOR_PAIR(4)); // Set color pair 4 (yellow on black)
+        for (int i = 0; i < screen_height; i++) {
+            for (int j = 0; j < screen_width; j++) {
+                mvwaddch(game_window, i, j, ' ');
+            }
+        }
+        wattroff(game_window, COLOR_PAIR(4)); // Unset color pair 4
+
+        // Render the map within the circular vision radius
+        for (int i = y - VISION_RADIUS; i <= y + VISION_RADIUS; i++) {
+            for (int j = x - 2 * VISION_RADIUS; j <= x + 2 * VISION_RADIUS; j++) {
+                int dist_y = i - y;
+                int dist_x = (j - x) / 2; // Divide by 2 to adjust for character width
+                double euclidean_distance = sqrt(dist_y * dist_y + dist_x * dist_x);
+                if (i >= 0 && i < screen_height && j >= 0 && j < screen_width && euclidean_distance <= VISION_RADIUS) {
+                    mvwaddch(game_window, i, j, mapData.TDVEC[i][j]);
+                }
+            }
+        }
+
         switch(key_input) {
             case 'w':
                 y--;
@@ -161,7 +205,7 @@ int main_engine(string file_path, int&x, int& y) {
                             return 8;
                         }
                     }
-                } 
+                }
 
                 for (int i=1; i<5; i++) {
                     if (mapData.TDVEC[y+4][x+i] != ' '){
@@ -266,7 +310,7 @@ int main_engine(string file_path, int&x, int& y) {
             case '0':
                 flag3 = true;
                 break;
-            
+
         }
 
         // Keep character within screen boundaries
@@ -290,6 +334,9 @@ int main_engine(string file_path, int&x, int& y) {
         }
         //mvwaddch(game_window, y, x, 'O');
 
+        // Update the timer and VISION_RADIUS
+        int remaining_time = updateTimerAndVisionRadius(countdown_duration);
+
         // Refresh the window
         wrefresh(game_window);
         if (flag1 == true) {
@@ -298,7 +345,7 @@ int main_engine(string file_path, int&x, int& y) {
         }
         if (flag2 == true) {
             vector<string> menu;
-            printMenu(menu);
+            printMenu(menu, remaining_time);
         }
         if (flag3 == true) {
             printStartpage(StartData);
@@ -361,9 +408,14 @@ void printInventory(vector<string> inventory) {
     delwin(inventoryWin);
 }
 
-void printMenu(vector<string> menu) {
-    int menu_height = 15;
-    int menu_width = 30;
+void printMenu(vector<string> menu, int remaining_time) {
+    // ...
+    int menu_height = 20;
+    int menu_width = 50;
+
+    int countdown_duration = 900; // Set this to the desired countdown duration (15 minutes)
+    time_t start_time = time(NULL);
+    time_t end_time = start_time + countdown_duration;
 
     initscr();
     raw();
@@ -373,18 +425,58 @@ void printMenu(vector<string> menu) {
 
     WINDOW* menuWin = CreateWindow(menu_height, menu_width);
     box(menuWin, 0, 0);
-    mvwprintw(menuWin, 1, 1, "Menu:");
-    for (int i = 0; i < menu.size(); i++) {
-        mvwprintw(menuWin, i + 2, 1, "%d. %s", i + 1, menu[i].c_str());
-    }
+    mvwprintw(menuWin, 1, 1, "    .___  ___.  _______ .__   __.  __    __ ");
+    mvwprintw(menuWin, 2, 1, "    |   \\/   | |   ____||  \\ |  | |  |  |  |");
+    mvwprintw(menuWin, 3, 1, "    |  \\  /  | |  |__   |   \\|  | |  |  |  |");
+    mvwprintw(menuWin, 4, 1, "    |  |\\/|  | |   __|  |  . `  | |  |  |  |");
+    mvwprintw(menuWin, 5, 1, "    |  |  |  | |  |____ |  |\\   | |  `--'  |");
+    mvwprintw(menuWin, 6, 1, "    |__|  |__| |_______||__| \\__|  \\______/");
+    mvwprintw(menuWin, 7, 1, "    ");
+    mvwprintw(menuWin, 8, 1, "    ");
+    mvwprintw(menuWin, 9, 1, "              _     ___           ");
+    mvwprintw(menuWin, 10, 1, "            / |   / __| __ ___ _____");
+    mvwprintw(menuWin, 11, 1, "            | |_  \\__ \\/ _` \\ V / -_)");
+    mvwprintw(menuWin, 12, 1, "            |_(_) |___/\\__,_|\\_/\\___|");
+    mvwprintw(menuWin, 13, 1, "    ");
+    mvwprintw(menuWin, 14, 1, "       ___     ___        _            _  ");
+    mvwprintw(menuWin, 15, 1, "      |_  )   | _ \\___ __| |_ __ _ _ _| |");
+    mvwprintw(menuWin, 16, 1, "       / / _  |   / -_|_-<  _/ _` | '_|  _|");
+    mvwprintw(menuWin, 17, 1, "      /___(_) |_|_\\___/__/\\__\\__,_|_|  \\__|");
+
+
+
+    nodelay(menuWin, TRUE);
+    // Display the remaining time
+    time_t current_time = time(NULL);
+    int remaining_minutes = remaining_time / 60;
+    int remaining_seconds = remaining_time % 60;
+    mvwprintw(menuWin, 18, 1, "Time remaining: %02d:%02d", remaining_minutes, remaining_seconds);
     wrefresh(menuWin);
 
     //screen displayed until 'q' is pressed
     while (true) {              // consider while ((key_input = getch()) != 27) {
         int ch = getch();
-        if (ch == 27) {
+        if (ch == '1') {
+            //Save character's current location to a file
+            ofstream outFile("saved_location.txt");
+            if (outFile.is_open()) {
+                outFile << "Character X: " << "x좌표" << endl;
+                outFile << "Character Y: " << "y좌표" << endl;
+                outFile.close();
+                cout << "Saving Game";
+            } else {
+                cout << "Unable to save";
+            }
+        }
+        else if (ch == '2') {
+            delwin(menuWin);
+            clear();
+
+        }
+        else if (ch == 'q') {
             break;
         }
+
     }
 
     delwin(menuWin);
