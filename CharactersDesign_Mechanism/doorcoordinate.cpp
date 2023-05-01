@@ -7,13 +7,13 @@ map<string,coordinates> Corridor;
 map<string,coordinates> Stairs;
 
 coordinates ClassRoom = {21,11};
-coordinates ClubRoom = {75,13};
+coordinates ClubRoom = {75,11};
 coordinates MusicRoom = {77,11};
 coordinates TeachersOffice = {101,11};
 coordinates RoofTopStairs = {107,23};
 coordinates ToCorridor = {48,30};
 coordinates RoofTop = {48,14};
-coordinates DiningRoom = {21,44};///
+coordinates DiningRoom = {21,40};///
 coordinates RestRoom = {38,14};///
 
 void initialize(){

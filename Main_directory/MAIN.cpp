@@ -24,8 +24,7 @@ public:
 
 int main()
 {
-    int *x = new int;
-    int *y = new int;
+    int x, y;
     int counter = 0;
     string exitfrom;
     string entered;
@@ -80,9 +79,9 @@ int main()
         initialize();
         if (counter == 0)
         {
-            *x = 20, *y = 20;
+            x = 20, y = 20;
             string file_path = "/workspaces/Initial/Map_Objects/Map_resources/Classroom.txt";
-            main_engine(file_path,*x,*y);
+            main_engine(file_path,x,y);
             entered="SchoolMap";
             counter++;
         }
@@ -91,63 +90,63 @@ int main()
         {
             RM.ClassRoom();
             exitfrom = "ClassRoom";
-            *x = Corridor[exitfrom].x_coordinates;
-            *y = Corridor[exitfrom].y_coordinates;
+            x = Corridor[exitfrom].x_coordinates;
+            y = Corridor[exitfrom].y_coordinates;
             entered = "SchoolMap";
         }
         else if (entered == "ClubRoom")
         {
             RM.ClubRoom();
             exitfrom = "ClubRoom";
-            *x = Corridor[exitfrom].x_coordinates;
-            *y = Corridor[exitfrom].y_coordinates;
+            x = Corridor[exitfrom].x_coordinates;
+            y = Corridor[exitfrom].y_coordinates;
             entered = "SchoolMap";
         }
         else if (entered == "MusicRoom")
         {
             RM.MusicRoom();
             exitfrom = "MusicRoom";
-            *x = Corridor[exitfrom].x_coordinates;
-            *y = Corridor[exitfrom].y_coordinates;
+            x = Corridor[exitfrom].x_coordinates;
+            y = Corridor[exitfrom].y_coordinates;
             entered = "SchoolMap";
         }
         else if (entered == "TeachersOffice")
         {
             RM.TeachersOffice();
             exitfrom = "TeachersOffice";
-            *x = Corridor[exitfrom].x_coordinates;
-            *y = Corridor[exitfrom].y_coordinates;
+            x = Corridor[exitfrom].x_coordinates;
+            y = Corridor[exitfrom].y_coordinates;
             entered = "SchoolMap";
         }
         else if (entered == "DiningRoom")
         {
             RM.DiningRoom();
             exitfrom = "DiningRoom";
-            *x = Corridor[exitfrom].x_coordinates;
-            *y = Corridor[exitfrom].y_coordinates;
+            x = Corridor[exitfrom].x_coordinates;
+            y = Corridor[exitfrom].y_coordinates;
             entered = "SchoolMap";
         }
          else if (entered == "RestRoom")
         {
             RM.RestRoom();
             exitfrom = "RestRoom";
-            *x = Corridor[exitfrom].x_coordinates;
-            *y = Corridor[exitfrom].y_coordinates;
+            x = Corridor[exitfrom].x_coordinates;
+            y = Corridor[exitfrom].y_coordinates;
             entered = "SchoolMap";
         }
         else if (entered == "RoofTop")
         {
             RM.RoofTop();
             exitfrom = "RoofTop";
-            *x = Stairs[exitfrom].x_coordinates;
-            *y = Stairs[exitfrom].y_coordinates;
+            x = Stairs[exitfrom].x_coordinates;
+            y = Stairs[exitfrom].y_coordinates;
             entered = "SchoolMap";
         }
         else if (entered == "RoofTopStairs")
         {
-            exitfrom = RM.RoofTopStairs(*x,*y);
-            *x = Stairs[exitfrom].x_coordinates;
-            *y = Stairs[exitfrom].y_coordinates;
+            exitfrom = RM.RoofTopStairs(x,y);
+            x = Stairs[exitfrom].x_coordinates;
+            y = Stairs[exitfrom].y_coordinates;
             if (exitfrom == "ToCorridor")
             {
                 entered = "SchoolMap";
@@ -159,13 +158,10 @@ int main()
         }
         else if (entered == "SchoolMap")
         {
-            entered = RM.SchoolMap(*x,*y);
+            entered = RM.SchoolMap(x,y);
         }
         clears();
     }
-
-    delete x;
-    delete y;
 }
 
 void rooms::ClassRoom()
@@ -179,6 +175,7 @@ void rooms::ClubRoom()
 {   
 
     string file_path = "/workspaces/Initial/Map_Objects/Map_resources/Club Room.txt"; 
+<<<<<<< HEAD
 // =======
     string file_path;
     char randroom1 = 'C';
@@ -212,6 +209,8 @@ void rooms::ClubRoom()
     else {
         string file_path = "/workspaces/Initial/Map_Objects/Map_resources/Club Room.txt"; }
         
+=======
+>>>>>>> 53b0f96 (.)
     int x_door = 90;
     int y_door = 29;
     main_engine(file_path,x_door,y_door);
