@@ -116,16 +116,20 @@ int main_engine(string file_path, int&x, int& y) {
             case 'w':
                 y--;
                 current_character = char_up;
-                if (file_path == "/workspaces/Initial/Map_Objects/Map_resources/School map.txt"){
-                    if (tempy == 14 || tempy == 13) {
-                        if (x == 19 || x == 20 || x == 21) {
+                if (file_path == "/workspaces/Initial/Map_Objects/Map_resources/schoolmap.txt"){
+                    if (tempy == 14) {
+                        if (x >= 15 && x <= 25) {
                             enterflag++;
+                            return enterflag;
                         } else if (x == 35 || x == 36 || x == 37) {
                             enterflag += 2;
+                            return enterflag;
                         } else if (x == 74 || x == 75 || x == 76) {
                             enterflag += 3;
+                            return enterflag;
                         } else if (x == 102 || x == 103 || x == 104) {
                             enterflag += 4;
+                            return enterflag;
                         }
                     }
                 }
@@ -139,13 +143,16 @@ int main_engine(string file_path, int&x, int& y) {
                 y++;
                 current_character = char_down;
                 if (file_path == "/workspaces/Initial/Map_Objects/Map_resources/School map.txt"){
-                    if (tempy == 25) {
-                        if (x == 25 || x == 26 || x == 27) {
+                    if (tempy >= 14 && tempy <= 25) {
+                        if (x>= 20 && x<= 30) {
                             enterflag += 5;
+                            return enterflag;
                         } else if (x == 42 || x == 43 || x == 44) {
                             enterflag += 6;
+                            return enterflag;
                         } else if (x == 101 || x == 102 || x == 103 || x == 104 || x == 105 || x == 106) {
                             enterflag += 7;
+                            return enterflag;
                         }
                     }
                 }
@@ -403,7 +410,8 @@ void display_instructions(VectorWrapper StartData) {
 
 int main(){
     int x = 87, y = 24;
-    string file_path = "/workspaces/Initial/Map_Objects/Map_resources/School map.txt";
+    string file_path = "/workspaces/Initial/Map_Objects/Map_resources/schoolmap.txt";
     main_engine(file_path,x,y);
+    endwin();
 }
 
