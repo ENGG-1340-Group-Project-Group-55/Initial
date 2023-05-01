@@ -8,8 +8,8 @@ using namespace std;
 
 struct coordinates
 {
-    int y_coordinates;
     int x_coordinates;
+    int y_coordinates;
 };
 
 void initialize();

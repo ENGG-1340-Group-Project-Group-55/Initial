@@ -127,16 +127,16 @@ int main()
 void rooms::ClassRoom()
 {
     string file_path = "/workspaces/Initial/Map_Objects/Map_resources/Classroom.txt";
-    int x_door = 87;
-    int y_door = 24;
+    int x_door = 91;
+    int y_door = 29;
     main_engine(file_path,x_door,y_door);
 }
 void rooms::ClubRoom()
 {
     
     string file_path = "/workspaces/Initial/Map_Objects/Map_resources/Club Room.txt";
-    int x_door = 28;
-    int y_door = 28;
+    int x_door = 90;
+    int y_door = 29;
     main_engine(file_path,x_door,y_door);
 }
 
@@ -159,7 +159,7 @@ void rooms::ClubRoom()
  void rooms::TeachersOffice()
  {
     string file_path = "/workspaces/Initial/Map_Objects/Map_resources/Teacher's office.txt";
-    int x_door = 79;
+    int x_door = 90;
     int y_door = 29;
     main_engine(file_path,x_door,y_door);
  }
@@ -168,7 +168,7 @@ void rooms::ClubRoom()
  {
     string file_path = "/workspaces/Initial/Map_Objects/Map_resources/Restroom.txt";
     int x_door = 90;
-    int y_door = 23;
+    int y_door = 29;
     main_engine(file_path,x_door,y_door);
 
  }
@@ -188,7 +188,6 @@ void rooms::DiningRoom()
     int y_door = b;
     int C_Or_R = main_engine(file_path,x_door,y_door);
     return roomchooser(C_Or_R);
-   
  }
 
  string rooms::SchoolMap(int a,int b)
@@ -204,13 +203,13 @@ void rooms::DiningRoom()
     switch (roomdecider)
     {
     case 1:
-        return "Classroom";
+        return "ClassRoom";
         break;
     case 2:
         return "RestRoom";
         break;
     case 3:
-        return "Clubroom";
+        return "ClubRoom";
         break;
     case 4:
         return "TeachersOffice";
