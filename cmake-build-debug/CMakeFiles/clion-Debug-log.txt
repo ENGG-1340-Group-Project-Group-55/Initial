@@ -6,8 +6,18 @@ CMake Error at CMakeLists.txt:7 (add_executable):
     /workspaces/Initial/CharactersDesign_Mechanism/doorcoordinate.h
 
 
+CMake Error at CMakeLists.txt:8 (add_executable):
+  Cannot find source file:
+
+    /workspaces/Initial/CharactersDesign_Mechanism/MainEngine.cpp
+
+
 CMake Error at CMakeLists.txt:7 (add_executable):
   No SOURCES given to target: MAIN
+
+
+CMake Error at CMakeLists.txt:8 (add_executable):
+  No SOURCES given to target: MainEngine
 
 
 CMake Generate step failed.  Build files cannot be regenerated correctly.
