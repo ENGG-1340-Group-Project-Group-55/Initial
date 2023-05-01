@@ -190,7 +190,7 @@ vector<string> loadInventoryFromFile() {
 void printInventory(vector<string> inventory) {
     int inv_height = 15;
     int inv_width = 30;
-    sdiofsj;
+
     initscr();
     raw();
     noecho();
