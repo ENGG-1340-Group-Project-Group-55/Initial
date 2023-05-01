@@ -90,13 +90,13 @@ int main_engine(string file_path, int&x, int& y) {
 
     string *current_character = char_up;
 
-    string startpath = "/Users/minchankim/CLionProjects/1340GP/startpage.txt";
+    string startpath = "/workspaces/Initial/CharactersDesign_Mechanism/startpage.txt";
     Maps Start(28, 104);
     VectorWrapper StartData = Start.Map_Loader(startpath);
 
 // Main loop
     int key_input;
-    while ((key_input = wgetch(game_window)) != 27) { // Exit on ESC key press
+    while ((key_input = wgetch(game_window)) != 'q') { // Exit on 'q' key press
         // Clear window
         werase(game_window);
         bool flag1 = FALSE;
@@ -107,6 +107,7 @@ int main_engine(string file_path, int&x, int& y) {
         Maps gameMap(screen_height, screen_width);
         VectorWrapper mapData = gameMap.Map_Loader(file_path);
         gameMap.Map_printer(mapData, 0, 0, screen_height, screen_width, game_window);
+
 
         switch(key_input) {
             case 'w':
@@ -246,6 +247,34 @@ void printInventory(vector<string> inventory) {
     delwin(inventoryWin);
 }
 
+void printMenu(vector<string> menu) {
+    int menu_height = 15;
+    int menu_width = 30;
+
+    initscr();
+    raw();
+    noecho();
+    curs_set(0);
+    keypad(stdscr, TRUE);
+
+    WINDOW* menuWin = CreateWindow(menu_height, menu_width);
+    box(menuWin, 0, 0);
+    mvwprintw(menuWin, 1, 1, "Menu:");
+    for (int i = 0; i < menu.size(); i++) {
+        mvwprintw(menuWin, i + 2, 1, "%d. %s", i + 1, menu[i].c_str());
+    }
+    wrefresh(menuWin);
+
+    //screen displayed until 'q' is pressed
+    while (true) {              // consider while ((key_input = getch()) != 27) {
+        int ch = getch();
+        if (ch == 27) {
+            break;
+        }
+    }
+
+    delwin(menuWin);
+}
 void printStartpage(VectorWrapper StartData) {
     clear();
 
@@ -287,12 +316,15 @@ void printStartpage(VectorWrapper StartData) {
     while (true) {
         int ch = getch();
         if (ch == '1') {
-            cout << "Starting Game";
+            clear();
+            int x = 87, y = 24;
+            string file_path = "/workspaces/Initial/Map_Objects/Map_resources/Classroom.txt";
+            main_engine(file_path,x,y);
         }
         else if (ch == '2') {
             display_instructions(StartData);
         }
-        if (ch == 27) {
+        if (ch == 'q') {
             break;
         }
     }
@@ -303,6 +335,7 @@ void printStartpage(VectorWrapper StartData) {
 
 void display_instructions(VectorWrapper StartData) {
     clear();
+
     attron(COLOR_PAIR(1));
     printw("\n");
     printw("  ___ _  _ ___ _____ ___ _   _  ___ _____ ___ ___  _  _ \n");
@@ -337,8 +370,9 @@ void display_instructions(VectorWrapper StartData) {
     printStartpage(StartData);
 }
 
-int main(){
-    *x = 87, *y = 24;
-    string file_path = "/Map_Objects/Map_resources/Classroom.txt";
-    main_engine(file_path,*x,*y);
-}
+// int main(){
+//     int x = 87, y = 24;
+//     string file_path = "/workspaces/Initial/Map_Objects/Map_resources/Classroom.txt";
+//     main_engine(file_path,x,y);
+// }
+
