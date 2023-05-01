@@ -13,7 +13,7 @@ coordinates TeachersOffice = {101,11};
 coordinates RoofTopStairs = {107,23};
 coordinates ToCorridor = {48,30};
 coordinates RoofTop = {48,14};
-coordinates DiningRoom = {21,40};///
+coordinates DiningRoom = {40,17};///
 coordinates RestRoom = {38,14};///
 
 void initialize(){
