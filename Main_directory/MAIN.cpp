@@ -183,7 +183,7 @@ void rooms::ClubRoom()
 {   
     
     char randroom1 = 'C';
-    char randroom1 = 'C';
+    char randroom2 = 'C';
     int randnum = 1;
     if (randroom1 == 'C' || randroom2 == 'C') {
         if (randnum == 1) {
