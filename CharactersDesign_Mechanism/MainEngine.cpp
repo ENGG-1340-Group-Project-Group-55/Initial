@@ -19,6 +19,9 @@ WINDOW* CreateWindow(int screen_height, int screen_width) {
 void printInventory(vector<string> inventory);
 vector<string> loadInventoryFromFile();
 
+void printMenu(vector<string> menu);
+void printStartpage(VectorWrapper StartData);
+void display_instructions(VectorWrapper StartData);
 
 int main_engine(string file_path, int&x, int& y) {
 // Initialize ncurses
@@ -27,6 +30,12 @@ int main_engine(string file_path, int&x, int& y) {
     noecho();
     keypad(stdscr, TRUE);
     curs_set(0); // Hide cursor
+
+    start_color();
+    init_pair(1, COLOR_RED, COLOR_BLACK); // Pair 1: Red text on a black background
+    init_pair(2, COLOR_GREEN, COLOR_BLACK); // Pair 2: Green text on a black background
+    init_pair(3, COLOR_BLUE, COLOR_BLACK); // Pair 3: Blue text on a black background
+    init_pair(4, COLOR_YELLOW, COLOR_BLACK); // Pair 4: Yellow text on a black background
 
     //Set up initial variables
     char ch;
@@ -81,12 +90,18 @@ int main_engine(string file_path, int&x, int& y) {
 
     string *current_character = char_up;
 
+    string startpath = "/Users/minchankim/CLionProjects/1340GP/startpage.txt";
+    Maps Start(28, 104);
+    VectorWrapper StartData = Start.Map_Loader(startpath);
+
 // Main loop
     int key_input;
     while ((key_input = wgetch(game_window)) != 27) { // Exit on ESC key press
         // Clear window
         werase(game_window);
         bool flag1 = FALSE;
+        bool flag2 = FALSE;
+        bool flag3 = FALSE;
 
         // Draw the map
         Maps gameMap(screen_height, screen_width);
@@ -133,6 +148,15 @@ int main_engine(string file_path, int&x, int& y) {
             case 'i':
                 flag1 = TRUE;
                 break;
+
+            case 27:
+                flag2 = TRUE;
+                break;
+
+            case '0':
+                flag3 = TRUE;
+                break;
+            
         }
 
         // Keep character within screen boundaries
@@ -161,6 +185,13 @@ int main_engine(string file_path, int&x, int& y) {
         if (flag1 == TRUE) {
             vector<string> inventory = loadInventoryFromFile();
             printInventory(inventory);
+        }
+        if (flag2 == TRUE) {
+            vector<string> menu;
+            printMenu(menu);
+        }
+        if (flag3 == TRUE) {
+            printStartpage(StartData);
         }
     }
 
@@ -252,9 +283,15 @@ void printStartpage(VectorWrapper StartData) {
 
     wrefresh(startWin);
 
-    // Screen displayed until 'q' is pressed
+    // Screen displayed until 'esc' is pressed
     while (true) {
         int ch = getch();
+        if (ch == '1') {
+            cout << "Starting Game";
+        }
+        else if (ch == '2') {
+            display_instructions(StartData);
+        }
         if (ch == 27) {
             break;
         }
@@ -262,4 +299,46 @@ void printStartpage(VectorWrapper StartData) {
 
     delwin(startWin);
     wrefresh(startWin);
+}
+
+void display_instructions(VectorWrapper StartData) {
+    clear();
+    attron(COLOR_PAIR(1));
+    printw("\n");
+    printw("  ___ _  _ ___ _____ ___ _   _  ___ _____ ___ ___  _  _ \n");
+    printw(" |_ _| \\| / __|_   _| _ \\ | | |/ __|_   _|_ _/ _ \\| \\| |\n");
+    printw("  | || .` \\__ \\ | | |   / |_| | (__  | |  | | (_) | .` |\n");
+    printw(" |___|_|\\_|___/ |_| |_|_\\\\___/ \\___| |_| |___\\___/|_|\\_|\n");
+    printw("                                                        ");
+    printw("\n");
+    attroff(COLOR_PAIR(1));
+    attron(COLOR_PAIR(4));
+    printw("1. Welcome to horror school escape game!\n");
+    printw("\n");
+    printw("2. While playing the game, you will be guided to choose an action from several options while playing the game. To make a choice, enter the corresponding number and press Enter.\n");
+    printw("\n");
+    printw("3. Please choose wisely, as you cannot change your choice and the storyline changes by your decisions.\n");
+    printw("\n");
+    printw("4. You can move your character by using W, A, S, and D in your keyboard to move to another place. (W = up, S = down, A = left, D = right)\n");
+    printw("\n");
+    printw("5. You can press E to open your inventory and press F to grab items while playing the game.\n");
+    printw("\n");
+    printw("\nPress Enter to return to the start page.");
+    attroff(COLOR_PAIR(4));
+
+    refresh();
+
+    // Wait for the user to press Enter
+    int ch;
+    do {
+        ch = getch();
+    } while (ch != '\n' && ch != '\r');
+
+    printStartpage(StartData);
+}
+
+int main(){
+    *x = 87, *y = 24;
+    string file_path = "/Map_Objects/Map_resources/Classroom.txt";
+    main_engine(file_path,*x,*y);
 }
