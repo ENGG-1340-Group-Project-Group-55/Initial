@@ -2,11 +2,7 @@
 #include <iostream> 
 #include <string>
 #include <fstream>
-<<<<<<< HEAD
 #include "/workspaces/Initial/CharactersDesign_Mechanism/MapLoader.h"
-=======
-#include "/CharactersDesign_Mechanism/MapLoader.h"
->>>>>>> c8a6c29 (ver)
 
 //compile using: g++ -pedantic-errors -std=c++11 CharactersDesign_Mechanism/MainEngine.cpp Map_Objects/Map_loading.cpp -o game -lncurses
 
