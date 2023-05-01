@@ -22,21 +22,23 @@ int main()
     initialize();
     int *x = new int;
     int *y = new int;
+    int counter = 0;
     string exitfrom;
     string entered;
     rooms RM;
     bool flag = true;
-
-    cout<<"HI!"<<endl;
-
-
-    *x = 87, *y = 24;
-    string file_path = "/workspaces/Initial/Map_Objects/Map_resources/Classroom.txt";
-    main_engine(file_path,*x,*y);
-
-    
-    while (flag)
+          
+     while (flag)
     {
+        if (counter == 0)
+        {
+            *x = 20, *y = 20;
+            string file_path = "/workspaces/Initial/Map_Objects/Map_resources/Club Room.txt";
+            main_engine(file_path,*x,*y);
+            entered="SchoolMap";
+            counter++;
+        }
+
         if (entered == "Classroom")
         {
             RM.Classroom();
@@ -103,28 +105,28 @@ int main()
 
 void rooms::Classroom()
 {
-    string file_path = "..";
+    string file_path = "/workspaces/Initial/Map_Objects/Map_resources/Classroom.txt";
     int x_door = 87;
     int y_door = 24;
     main_engine(file_path,x_door,y_door);
 }
 void rooms::Clubroom()
 {
-    string file_path = "..";
+    string file_path = "/workspaces/Initial/Map_Objects/Map_resources/Club Room.txt";
     int x_door = 28;
     int y_door = 28;
     main_engine(file_path,x_door,y_door);
 }
  void rooms::Music_Room()
  {
-    string file_path = "..";
+    string file_path = "/workspaces/Initial/Map_Objects/Map_resources/Music Room.txt";
     int x_door = 82;
     int y_door = 10;
     main_engine(file_path,x_door,y_door);
  }
 
  void rooms::RoofTop(){
-    string file_path = "..";
+    string file_path = "/workspaces/Initial/Map_Objects/Map_resources/Music Room.txt";
     int x_door = 0;
     int y_door = 0;
     main_engine(file_path,x_door,y_door);
@@ -132,7 +134,7 @@ void rooms::Clubroom()
 
  void rooms::TeachersOffice()
  {
-    string file_path = "..";
+    string file_path = "/workspaces/Initial/Map_Objects/Map_resources/Teacher's office.txt";
     int x_door = 79;
     int y_door = 29;
     main_engine(file_path,x_door,y_door);
@@ -140,7 +142,7 @@ void rooms::Clubroom()
 
  string rooms::Rooftop_Stairs(int a,int b)
  {
-    string file_path = "..";
+    string file_path = "/workspaces/Initial/Map_Objects/Map_resources/Rooftop stairs.txt";
     int x_door = a;
     int y_door = b;
     int C_Or_R = main_engine(file_path,x_door,y_door);
@@ -150,7 +152,7 @@ void rooms::Clubroom()
 
  string rooms::SchoolMap(int a,int b)
  {
-    string file_path = "..";
+    string file_path = "/workspaces/Initial/Map_Objects/Map_resources/School map.txt";
     int x_door = a;
     int y_door = b;
     int roomdecider = main_engine(file_path,x_door,y_door);
