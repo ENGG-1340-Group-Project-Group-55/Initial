@@ -24,7 +24,6 @@ public:
 
 int main()
 {
-    initialize();
     int *x = new int;
     int *y = new int;
     int counter = 0;
@@ -35,6 +34,7 @@ int main()
     
      while (flag)
     {
+        initialize();
         if (counter == 0)
         {
             *x = 20, *y = 20;
@@ -60,7 +60,7 @@ int main()
             *y = Corridor[exitfrom].y_coordinates;
             entered = "SchoolMap";
         }
-        else if (entered == "Music_Room")
+        else if (entered == "MusicRoom")
         {
             RM.MusicRoom();
             exitfrom = "MusicRoom";
@@ -118,6 +118,7 @@ int main()
         {
             entered = RM.SchoolMap(*x,*y);
         }
+        clears();
     }
 
     delete x;
