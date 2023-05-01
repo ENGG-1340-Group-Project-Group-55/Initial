@@ -307,7 +307,7 @@ void rooms::ClubRoom(char randroom1,char randroom2,int randnum)
     main_engine(file_path,x_door,y_door);
  }
 
-void rooms::DiningRoom()
+void rooms::DiningRoom(char randroom1,char randroom2,int randnum)
  {
     if (randroom1 == "R" || randroom2 == "R") {
         if (randnum == 1) {
