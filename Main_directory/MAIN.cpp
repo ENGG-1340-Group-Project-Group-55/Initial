@@ -102,7 +102,7 @@ int main()
             exitfrom = "RoofTop";
             *x = Stairs[exitfrom].x_coordinates;
             *y = Stairs[exitfrom].y_coordinates;
-            previous = "RoofTop"
+            previous = "RoofTop";
             entered = "SchoolMap";
         }
         else if (entered == "RoofTopStairs")
@@ -131,7 +131,7 @@ int main()
         }
         else if (entered == "SchoolMap")
         {
-            previous = "SchoolMap"
+            previous = "SchoolMap";
             entered = RM.SchoolMap(*x,*y);
         }
     }
