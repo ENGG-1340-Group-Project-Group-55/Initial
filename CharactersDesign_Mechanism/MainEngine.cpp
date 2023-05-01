@@ -577,8 +577,8 @@ void display_instructions(VectorWrapper StartData) {
 }
 
 // int main(){
-//     int x = 46, y = 16;
-//     string file_path = "/workspaces/Initial/Map_Objects/Map_resources/schoolmap.txt";
+//     int x = 64, y = 20;
+//     string file_path = "/workspaces/Initial/Map_Objects/Map_resources/Restroom.txt";
 //     main_engine(file_path,x,y);
 //     endwin();
 // }
