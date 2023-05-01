@@ -159,14 +159,14 @@ int main()
     delete y;
 }
 
-void rooms::Classroom()
+void rooms::ClassRoom()
 {
     string file_path = "/workspaces/Initial/Map_Objects/Map_resources/Classroom.txt";
     int x_door = 87;
     int y_door = 24;
     main_engine(file_path,x_door,y_door);
 }
-void rooms::Clubroom()
+void rooms::ClubRoom()
 {
     if (randroom1 == "C" || randroom2 == "C") {
         if (randnum = "1") {
