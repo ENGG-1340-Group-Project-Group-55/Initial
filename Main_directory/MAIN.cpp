@@ -168,7 +168,7 @@ void rooms::ClassRoom()
 }
 void rooms::ClubRoom(char randroom1,char randroom2,int randnum)
 {
-    if (randroom1 == "C" || randroom2 == "C") {
+    if ((randroom1 == "C") || (randroom2 == "C")) {
         if (randnum == 1) {
             string file_path = "/workspaces/Initial/Map_Objects/Map_resources/Club Room 1.txt";
         }
@@ -202,7 +202,7 @@ void rooms::ClubRoom(char randroom1,char randroom2,int randnum)
  void rooms::MusicRoom(char randroom1,char randroom2,int randnum)
  {
     
-     if (randroom1 == "M" || randroom2 == "M") {
+     if ((randroom1 == "M") || (randroom2 == "M")) {
         if (randnum == 1) {
             string file_path = "/workspaces/Initial/Map_Objects/Map_resources/Music Room 1.txt";
         }
@@ -244,7 +244,7 @@ void rooms::ClubRoom(char randroom1,char randroom2,int randnum)
 
  void rooms::TeachersOffice(char randroom1,char randroom2,int randnum)
  {
-    if (randroom1 == "T" || randroom2 == "T") {
+    if ((randroom1 == "T") || (randroom2 == "T")) {
         if (randnum == 1) {
             string file_path = "/workspaces/Initial/Map_Objects/Map_resources/Teacher's office 1.txt";
         }
@@ -277,7 +277,7 @@ void rooms::ClubRoom(char randroom1,char randroom2,int randnum)
 
  void rooms::RestRoom(char randroom1, char randroom2,int randnum)
  {
-    if (randroom1 == "R" || randroom2 == "R") {
+    if ((randroom1 == "R") || (randroom2 == "R")) {
         if (randnum == 1) {
             string file_path = "/workspaces/Initial/Map_Objects/Map_resources/Restroom 1.txt";
         }
@@ -309,7 +309,7 @@ void rooms::ClubRoom(char randroom1,char randroom2,int randnum)
 
 void rooms::DiningRoom(char randroom1,char randroom2,int randnum)
  {
-    if (randroom1 == "R" || randroom2 == "R") {
+    if ((randroom1 == "R") || (randroom2 == "R")) {
         if (randnum == 1) {
             string file_path = "/workspaces/Initial/Map_Objects/Map_resources/Dining Room 1.txt";
         }
