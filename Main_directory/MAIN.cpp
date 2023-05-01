@@ -31,11 +31,11 @@ int main()
 
 
     *x = 87, *y = 24;
-    string file_path = "/Map_Objects/Map_resources/Classroom.txt";
+    string file_path = "/workspaces/Initial/Map_Objects/Map_resources/Classroom.txt";
     main_engine(file_path,*x,*y);
 
     
-    /*while (flag)
+    while (flag)
     {
         if (entered == "Classroom")
         {
@@ -95,7 +95,7 @@ int main()
         {
             entered = RM.SchoolMap(*x,*y);
         }
-    }*/
+    }
 
     delete x;
     delete y;

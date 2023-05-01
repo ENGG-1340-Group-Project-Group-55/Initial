@@ -369,12 +369,10 @@ void display_instructions(VectorWrapper StartData) {
 
     printStartpage(StartData);
 }
-<<<<<<< HEAD
 
 // int main(){
 //     int x = 87, y = 24;
 //     string file_path = "/workspaces/Initial/Map_Objects/Map_resources/Classroom.txt";
 //     main_engine(file_path,x,y);
 // }
-=======
->>>>>>> 7051599 (fixed everyfiles and completed all myself.)
+
