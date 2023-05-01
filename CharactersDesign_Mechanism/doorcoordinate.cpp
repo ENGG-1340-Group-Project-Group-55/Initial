@@ -6,10 +6,10 @@ using namespace std;
 map<string,coordinates> Corridor;
 map<string,coordinates> Stairs;
 
-coordinates ClassRoom = {21,14};
+coordinates ClassRoom = {21,11};
 coordinates ClubRoom = {75,13};
-coordinates MusicRoom = {77,14};
-coordinates TeachersOffice = {104,14};
+coordinates MusicRoom = {77,11};
+coordinates TeachersOffice = {101,11};
 coordinates RoofTopStairs = {107,23};
 coordinates ToCorridor = {48,30};
 coordinates RoofTop = {48,14};

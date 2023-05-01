@@ -134,41 +134,41 @@ void rooms::ClassRoom()
 }
 void rooms::ClubRoom()
 {   
-<<<<<<< HEAD
-    string file_path = "/workspaces/Initial/Map_Objects/Map_resources/Club Room.txt"; }
-=======
-    string file_path;
-    char randroom1 = 'C';
-    char randroom2 = 'C';
-    int randnum = 1;
-    if (randroom1 == 'C' || randroom2 == 'C') {
-        if (randnum == 1) {
-            string file_path = "/workspaces/Initial/Map_Objects/Map_resources/Club Room 1.txt";
-        }
+
+    string file_path = "/workspaces/Initial/Map_Objects/Map_resources/Club Room.txt"; 
+// =======
+//     string file_path;
+//     char randroom1 = 'C';
+//     char randroom2 = 'C';
+//     int randnum = 1;
+//     if (randroom1 == 'C' || randroom2 == 'C') {
+//         if (randnum == 1) {
+//             string file_path = "/workspaces/Initial/Map_Objects/Map_resources/Club Room 1.txt";
+//         }
         
-        if (randnum == 2) {
-            string file_path = "/workspaces/Initial/Map_Objects/Map_resources/Club Room 2.txt";
-        }
+//         if (randnum == 2) {
+//             string file_path = "/workspaces/Initial/Map_Objects/Map_resources/Club Room 2.txt";
+//         }
 
-        if (randnum == 3) {
-            string file_path = "/workspaces/Initial/Map_Objects/Map_resources/Club Room 3.txt";
-        }
+//         if (randnum == 3) {
+//             string file_path = "/workspaces/Initial/Map_Objects/Map_resources/Club Room 3.txt";
+//         }
 
-        if (randnum == 4) {
-            string file_path = "/workspaces/Initial/Map_Objects/Map_resources/Club Room 4.txt";
-        }
+//         if (randnum == 4) {
+//             string file_path = "/workspaces/Initial/Map_Objects/Map_resources/Club Room 4.txt";
+//         }
 
-        if (randnum == 5) {
-            string file_path = "/workspaces/Initial/Map_Objects/Map_resources/Club Room 5.txt";
-        }
+//         if (randnum == 5) {
+//             string file_path = "/workspaces/Initial/Map_Objects/Map_resources/Club Room 5.txt";
+//         }
 
-        if (randnum == 6) {
-            string file_path = "/workspaces/Initial/Map_Objects/Map_resources/Club Room 6.txt";
-        }
-    }
-    else {
-        string file_path = "/workspaces/Initial/Map_Objects/Map_resources/Club Room.txt"; }
->>>>>>> 883a9f2 (.)
+//         if (randnum == 6) {
+//             string file_path = "/workspaces/Initial/Map_Objects/Map_resources/Club Room 6.txt";
+//         }
+//     }
+//     else {
+//         string file_path = "/workspaces/Initial/Map_Objects/Map_resources/Club Room.txt"; }
+// >>>>>>> 883a9f2 (.)
     int x_door = 90;
     int y_door = 29;
     main_engine(file_path,x_door,y_door);
@@ -193,7 +193,7 @@ void rooms::ClubRoom()
  void rooms::TeachersOffice()
  {
     string file_path = "/workspaces/Initial/Map_Objects/Map_resources/Teacher's office.txt";
-    int x_door = 89;
+    int x_door = 87;
     int y_door = 29;
     main_engine(file_path,x_door,y_door);
  }
