@@ -24,7 +24,7 @@ public:
 
 int main()
 {
-    int x, y;
+    static int x, y;
     int counter = 0;
     string exitfrom;
     string entered;
