@@ -12,10 +12,10 @@ public:
     void MusicRoom();
     void DiningRoom();
     void RestRoom();
-    string RoofTopStairs(int,int);
     void RoofTop();
-    string SchoolMap(int,int);
     void TeachersOffice();
+    string SchoolMap(int,int);
+    string RoofTopStairs(int,int);
     string roomchooser(int);
 };
 
