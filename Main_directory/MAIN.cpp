@@ -38,7 +38,7 @@ int main()
         initialize();
         if (counter == 0)
         {
-            *x = 20, *y = 20;
+            *x = 20, *y = 60;
             string file_path = "/workspaces/Initial/Map_Objects/Map_resources/Restroom.txt";
             main_engine(file_path,*x,*y);
             entered="SchoolMap";
