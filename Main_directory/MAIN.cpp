@@ -24,9 +24,10 @@ public:
 
 int main()
 {
-
-    int *x = new int;
-    int *y = new int;
+    int a;
+    int b;
+    int *x = &a;
+    int *y = &b;
     int counter = 0;
     string exitfrom;
     string entered;
@@ -121,8 +122,6 @@ int main()
         clears();
     }
 
-    delete x;
-    delete y;
 }
 
 void rooms::ClassRoom()
