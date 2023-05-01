@@ -110,24 +110,25 @@ int main_engine(string file_path, int&x, int& y) {
 
         VectorWrapper mapData = gameMap.Map_Loader(file_path);
         gameMap.Map_printer(mapData, 0, 0, screen_height, screen_width, game_window);
-        int tempy = y+4;
+        int y4 = y+4;
+        int x4 = x+4;
 
         switch(key_input) {
             case 'w':
                 y--;
                 current_character = char_up;
                 if (file_path == "/workspaces/Initial/Map_Objects/Map_resources/schoolmap.txt"){
-                    if (tempy == 13) {
-                        if (x >= 15 && x <= 22) {
+                    if (y4 == 13) {
+                        if (x4 >= 19 && x4 <= 24) {
                             enterflag++;
                             return enterflag;
-                        } else if (x == 35 || x == 36 || x == 37) {
+                        } else if (x4 >= 36 && x4 <= 41) {
                             enterflag += 2;
                             return enterflag;
-                        } else if (x == 74 || x == 75 || x == 76) {
+                        } else if (x4 >= 74 && x4 <= 79) {
                             enterflag += 3;
                             return enterflag;
-                        } else if (x == 102 || x == 103 || x == 104) {
+                        } else if (x4 >= 102 && x4 <= 107) {
                             enterflag += 4;
                             return enterflag;
                         }
@@ -144,18 +145,20 @@ int main_engine(string file_path, int&x, int& y) {
             case 's':
                 y++;
                 current_character = char_down;
-                if (file_path == "/workspaces/Initial/Map_Objects/Map_resources/School map.txt"){
-                    if (tempy >= 14 && tempy <= 25) {
-                        if (x>= 20 && x<= 30) {
+                if (file_path == "/workspaces/Initial/Map_Objects/Map_resources/schoolmap.txt"){
+                    if (y4 == 20) {
+                        if (x4>= 26 && x4<= 31) {
                             enterflag += 5;
                             return enterflag;
-                        } else if (x == 42 || x == 43 || x == 44) {
+                        } else if (x4 >= 43 && x4 <= 48) {
                             enterflag += 6;
                             return enterflag;
-                        } else if (x == 101 || x == 102 || x == 103 || x == 104 || x == 105 || x == 106) {
+                        }
+                        }
+                    } if (y4 == 22) {
+                        if (x4 >= 100 && x4 <= 111) {
                             enterflag += 7;
                             return enterflag;
-                        }
                     }
                 }
                 for (int i=1; i<5; i++) {
@@ -164,9 +167,6 @@ int main_engine(string file_path, int&x, int& y) {
                         break;
                     }
                 }
-                // if (mapData.TDVEC[y+4][x+1] != ' ' || mapData.TDVEC[y+4][x+2] != ' ' || mapData.TDVEC[y+4][x+3] != ' ' || mapData.TDVEC[y+4][x+4] != ' ') {
-                //     y--;
-                // }
                 break;
 
             case 'a':
@@ -239,9 +239,6 @@ int main_engine(string file_path, int&x, int& y) {
     endwin();
     return enterflag;
 }
-
-
-
 
 
 

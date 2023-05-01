@@ -157,7 +157,7 @@ int main()
 
     delete x;
     delete y;
-} 
+}
 
 void rooms::Classroom()
 {
@@ -365,25 +365,25 @@ void rooms::DiningRoom()
         return "Classroom";
         break;
     case 2:
-        return "Clubroom";
+        return "RestRoom";
         break;
     case 3:
-        return "MusicRoom";
+        return "Clubroom";
         break;
     case 4:
         return "TeachersOffice";
         break;
     case 5:      
-        return "RoofTop";
+        return "MusicRoom";
         break;
     case 6:
         return "DiningRoom";
         break;
     case 7:
-        return "RestRoom";
+        return "RoofTopStairs";
         break;
     case 8:
-        return "RoofTopStairs";
+        return "RoofTop";
         break;
     case 9:
         return "ToCorridor";
