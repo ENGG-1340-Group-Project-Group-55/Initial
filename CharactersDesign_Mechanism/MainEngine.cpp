@@ -469,9 +469,9 @@ void display_instructions(VectorWrapper StartData) {
     printStartpage(StartData);
 }
 
-int main(){
+/*int main(){
     int x = 46, y = 16;
     string file_path = "/workspaces/Initial/Map_Objects/Map_resources/schoolmap.txt";
     main_engine(file_path,x,y);
     endwin();
-}
+}*/
