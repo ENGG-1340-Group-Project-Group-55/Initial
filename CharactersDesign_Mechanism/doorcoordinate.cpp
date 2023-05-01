@@ -5,7 +5,7 @@ using namespace std;
 
 map<string,coordinates> Corridor;
 map<string,coordinates> Stairs;
-
+                      //{x, y}
 coordinates ClassRoom = {18,8};
 coordinates ClubRoom = {75,11};
 coordinates MusicRoom = {23,16};
