@@ -11,8 +11,14 @@ coordinates ClubRoom = {74,8};
 coordinates MusicRoom = {23,17};
 coordinates TeachersOffice = {100,8};
 coordinates RoofTopStairs = {105,19};
+<<<<<<< HEAD
 coordinates ToCorridor = {44,23};
 coordinates RoofTop = {47,9};
+=======
+coordinates ToCorridor = {46,20};
+coordinates RoofTop = {48,20};
+coordinates ToRoofTop = {48,20};
+>>>>>>> bc6a5a9 (ver)
 coordinates DiningRoom = {40,17};///
 coordinates RestRoom = {34,8};///
 
@@ -26,6 +32,7 @@ void initialize(){
     Corridor.insert({"RestRoom",RestRoom});
 
     Stairs.insert({"ToCorridor",ToCorridor});
+    Stairs.insert({"ToRoofTop",ToRoofTop});
     Stairs.insert({"RoofTop",RoofTop});
 }
 

@@ -102,8 +102,8 @@ int main()
             exitfrom = "RoofTop";
             *x = Stairs[exitfrom].x_coordinates;
             *y = Stairs[exitfrom].y_coordinates;
-            previous = "RoofTop";
-            entered = "SchoolMap";
+            previous = "ToRoofTop";
+            entered = "RoofTopStairs";
         }
         else if (entered == "RoofTopStairs")
         {
@@ -116,7 +116,7 @@ int main()
             {
                 entered = "SchoolMap";
             }
-            else
+            else if (exitfrom == "ToRoofTop")
             {
                 entered = "RoofTop";
             }
@@ -233,7 +233,9 @@ void rooms::DiningRoom()
         break;
     case 9:
         return "ToCorridor";
-        break;   
+        break;
+    case 10:
+        return "ToRoofTop";       
     default:
         return "NONE";
         break;

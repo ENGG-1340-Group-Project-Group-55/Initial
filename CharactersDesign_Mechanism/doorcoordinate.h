@@ -25,6 +25,7 @@ extern coordinates TeachersOffice;
 extern coordinates RoofTopStairs;
 extern coordinates ToCorridor;
 extern coordinates RoofTop;
+extern coordinates ToRoofTop;
 extern coordinates DiningRoom;
 extern coordinates RestRoom;
 
