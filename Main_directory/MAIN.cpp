@@ -71,7 +71,6 @@ int main()
 
     // generate a random number
     int randnum = dist(gen);
-    cout << randroom1 << randroom2 << randnum << endl;
     
     
     
