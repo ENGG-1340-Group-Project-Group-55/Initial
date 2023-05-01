@@ -180,7 +180,11 @@ void rooms::ClassRoom()
     main_engine(file_path,x_door,y_door);
 }
 void rooms::ClubRoom()
-{
+{   
+    
+    char randroom1 = 'C';
+    char randroom1 = 'C';
+    int randnum = 1;
     if (randroom1 == 'C' || randroom2 == 'C') {
         if (randnum == 1) {
             string file_path = "/workspaces/Initial/Map_Objects/Map_resources/Club Room 1.txt";
