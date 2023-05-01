@@ -42,6 +42,8 @@ int main()
             string file_path = "/workspaces/Initial/Map_Objects/Map_resources/Classroom.txt";
             main_engine(file_path,*x,*y);
             entered="SchoolMap";
+            *x = Corridor[entered].x_coordinates;
+            *y = Corridor[entered].y_coordinates;
             counter++;
         }
 
