@@ -24,6 +24,7 @@ public:
 
 int main()
 {
+    initialize();
     int a;
     int b;
     int *x = &a;
@@ -35,7 +36,6 @@ int main()
     bool flag = true;
      while (flag)
     {
-        initialize();
         if (counter == 0)
         {
             *x = 60, *y = 20;
