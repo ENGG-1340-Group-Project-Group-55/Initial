@@ -117,8 +117,8 @@ int main_engine(string file_path, int&x, int& y) {
                 y--;
                 current_character = char_up;
                 if (file_path == "/workspaces/Initial/Map_Objects/Map_resources/schoolmap.txt"){
-                    if (tempy == 14) {
-                        if (x >= 15 && x <= 25) {
+                    if (tempy == 13) {
+                        if (x >= 15 && x <= 22) {
                             enterflag++;
                             return enterflag;
                         } else if (x == 35 || x == 36 || x == 37) {
@@ -133,9 +133,11 @@ int main_engine(string file_path, int&x, int& y) {
                         }
                     }
                 }
-            
-                if (mapData.TDVEC[y+4][x+1] != ' ' || mapData.TDVEC[y+4][x+2] != ' ' || mapData.TDVEC[y+4][x+3] != ' ' || mapData.TDVEC[y+4][x+4] != ' ') {
-                    y++;
+                for (int i=1; i<5; i++) {
+                    if (mapData.TDVEC[y+4][x+i] != ' '){
+                        y++;
+                        break;
+                    }
                 }
                 break;
 
@@ -156,9 +158,15 @@ int main_engine(string file_path, int&x, int& y) {
                         }
                     }
                 }
-                if (mapData.TDVEC[y+4][x+1] != ' ' || mapData.TDVEC[y+4][x+2] != ' ' || mapData.TDVEC[y+4][x+3] != ' ' || mapData.TDVEC[y+4][x+4] != ' ') {
-                    y--;
+                for (int i=1; i<5; i++) {
+                    if (mapData.TDVEC[y+4][x+i] != ' '){
+                        y--;
+                        break;
+                    }
                 }
+                // if (mapData.TDVEC[y+4][x+1] != ' ' || mapData.TDVEC[y+4][x+2] != ' ' || mapData.TDVEC[y+4][x+3] != ' ' || mapData.TDVEC[y+4][x+4] != ' ') {
+                //     y--;
+                // }
                 break;
 
             case 'a':
