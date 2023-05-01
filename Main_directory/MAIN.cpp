@@ -10,7 +10,7 @@ using namespace std;
 class rooms
 {
 public:
-    void ClassRoom(char,char,int);
+    void ClassRoom();
     void ClubRoom(char,char,int);
     void MusicRoom(char,char,int);
     void DiningRoom(char,char,int);
@@ -194,6 +194,10 @@ void rooms::ClubRoom(char randroom1,char randroom2,int randnum)
         }
 
     }
+    else
+    {
+        string file_path = "/workspaces/Initial/Map_Objects/Map_resources/Club Room.txt";
+    }
     int x_door = 28;
     int y_door = 28;
     main_engine(file_path,x_door,y_door);
@@ -227,6 +231,10 @@ void rooms::ClubRoom(char randroom1,char randroom2,int randnum)
             string file_path = "/workspaces/Initial/Map_Objects/Map_resources/Music Room 6.txt";
         }
 
+    }
+    else
+    {
+        string file_path = "/workspaces/Initial/Map_Objects/Map_resources/Music Room.txt";
     }
      
     int x_door = 0;
@@ -270,6 +278,10 @@ void rooms::ClubRoom(char randroom1,char randroom2,int randnum)
         }
 
     }
+    else
+    {
+        string file_path = "/workspaces/Initial/Map_Objects/Map_resources/Teacher's office.txt";
+    }
     int x_door = 79;
     int y_door = 29;
     main_engine(file_path,x_door,y_door);
@@ -302,9 +314,15 @@ void rooms::ClubRoom(char randroom1,char randroom2,int randnum)
             string file_path = "/workspaces/Initial/Map_Objects/Map_resources/Restroom 6.txt";
         }
     }
+    else
+    {
+        string file_path = "/workspaces/Initial/Map_Objects/Map_resources/Restroom.txt";
+
+    }
     int x_door = 0;
     int y_door = 0;
     main_engine(file_path,x_door,y_door);
+
  }
 
 void rooms::DiningRoom(char randroom1,char randroom2,int randnum)
@@ -334,6 +352,11 @@ void rooms::DiningRoom(char randroom1,char randroom2,int randnum)
             string file_path = "/workspaces/Initial/Map_Objects/Map_resources/Dining Room 6.txt";
         }
     }
+    else
+    {
+        string file_path = "/workspaces/Initial/Map_Objects/Map_resources/Diningroom.txt";
+
+    }
     int x_door = 0;
     int y_door = 0;
     main_engine(file_path,x_door,y_door);
@@ -351,7 +374,7 @@ void rooms::DiningRoom(char randroom1,char randroom2,int randnum)
 
  string rooms::SchoolMap(int a,int b)
  {
-    string file_path = "/workspaces/Initial/Map_Objects/Map_resources/School map.txt";
+    string file_path = "/workspaces/Initial/Map_Objects/Map_resources/schoolmap.txt";
     int x_door = a;
     int y_door = b;
     int roomdecider = main_engine(file_path,x_door,y_door);
