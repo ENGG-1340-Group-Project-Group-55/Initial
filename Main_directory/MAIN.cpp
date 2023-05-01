@@ -1,5 +1,8 @@
 #include <iostream>
 #include <string>
+#include <cstdlib>
+#include <ctime>
+#include <random>
 #include "/workspaces/Initial/CharactersDesign_Mechanism/doorcoordinate.h"
 #include "/workspaces/Initial/CharactersDesign_Mechanism/MainEngine.h"
 using namespace std;
