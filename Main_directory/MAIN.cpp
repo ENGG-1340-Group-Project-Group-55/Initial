@@ -119,7 +119,6 @@ int main()
         {
             entered = RM.SchoolMap(*x,*y);
         }
-        clears();
     }
 
 }
