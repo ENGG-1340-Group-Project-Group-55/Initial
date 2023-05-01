@@ -1,4 +1,23 @@
 /Applications/CLion.app/Contents/bin/cmake/mac/bin/cmake -DCMAKE_BUILD_TYPE=Debug -DCMAKE_MAKE_PROGRAM=/Applications/CLion.app/Contents/bin/ninja/mac/ninja -G Ninja -S /Users/minchankim/Documents/GitHub/Initial -B /Users/minchankim/Documents/GitHub/Initial/cmake-build-debug
 -- Configuring done
--- Generating done
--- Build files have been written to: /Users/minchankim/Documents/GitHub/Initial/cmake-build-debug
+CMake Error at CMakeLists.txt:7 (add_executable):
+  Cannot find source file:
+
+    /workspaces/Initial/CharactersDesign_Mechanism/doorcoordinate.h
+
+
+CMake Error at CMakeLists.txt:8 (add_executable):
+  Cannot find source file:
+
+    /workspaces/Initial/CharactersDesign_Mechanism/MainEngine.cpp
+
+
+CMake Error at CMakeLists.txt:7 (add_executable):
+  No SOURCES given to target: MAIN
+
+
+CMake Error at CMakeLists.txt:8 (add_executable):
+  No SOURCES given to target: MainEngine
+
+
+CMake Generate step failed.  Build files cannot be regenerated correctly.

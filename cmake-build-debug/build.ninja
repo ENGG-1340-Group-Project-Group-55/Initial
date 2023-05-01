@@ -41,6 +41,99 @@ include CMakeFiles/rules.ninja
 
 cmake_ninja_workdir = /Users/minchankim/Documents/GitHub/Initial/cmake-build-debug/
 # =============================================================================
+# Object build statements for EXECUTABLE target Map_loading_save
+
+
+#############################################
+# Order-only phony target for Map_loading_save
+
+build cmake_object_order_depends_target_Map_loading_save: phony || CMakeFiles/Map_loading_save.dir
+
+build CMakeFiles/Map_loading_save.dir/Map_Objects/Map_loading_save.cpp.o: CXX_COMPILER__Map_loading_save_Debug /Users/minchankim/Documents/GitHub/Initial/Map_Objects/Map_loading_save.cpp || cmake_object_order_depends_target_Map_loading_save
+  DEP_FILE = CMakeFiles/Map_loading_save.dir/Map_Objects/Map_loading_save.cpp.o.d
+  FLAGS = -g -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX13.3.sdk -fcolor-diagnostics -std=gnu++17
+  OBJECT_DIR = CMakeFiles/Map_loading_save.dir
+  OBJECT_FILE_DIR = CMakeFiles/Map_loading_save.dir/Map_Objects
+
+
+# =============================================================================
+# Link build statements for EXECUTABLE target Map_loading_save
+
+
+#############################################
+# Link the executable Map_loading_save
+
+build Map_loading_save: CXX_EXECUTABLE_LINKER__Map_loading_save_Debug CMakeFiles/Map_loading_save.dir/Map_Objects/Map_loading_save.cpp.o
+  FLAGS = -g -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX13.3.sdk
+  OBJECT_DIR = CMakeFiles/Map_loading_save.dir
+  POST_BUILD = :
+  PRE_LINK = :
+  TARGET_FILE = Map_loading_save
+  TARGET_PDB = Map_loading_save.dbg
+
+# =============================================================================
+# Object build statements for EXECUTABLE target inventory
+
+
+#############################################
+# Order-only phony target for inventory
+
+build cmake_object_order_depends_target_inventory: phony || CMakeFiles/inventory.dir
+
+build CMakeFiles/inventory.dir/UI/inventory.cpp.o: CXX_COMPILER__inventory_Debug /Users/minchankim/Documents/GitHub/Initial/UI/inventory.cpp || cmake_object_order_depends_target_inventory
+  DEP_FILE = CMakeFiles/inventory.dir/UI/inventory.cpp.o.d
+  FLAGS = -g -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX13.3.sdk -fcolor-diagnostics -std=gnu++17
+  OBJECT_DIR = CMakeFiles/inventory.dir
+  OBJECT_FILE_DIR = CMakeFiles/inventory.dir/UI
+
+
+# =============================================================================
+# Link build statements for EXECUTABLE target inventory
+
+
+#############################################
+# Link the executable inventory
+
+build inventory: CXX_EXECUTABLE_LINKER__inventory_Debug CMakeFiles/inventory.dir/UI/inventory.cpp.o
+  FLAGS = -g -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX13.3.sdk
+  OBJECT_DIR = CMakeFiles/inventory.dir
+  POST_BUILD = :
+  PRE_LINK = :
+  TARGET_FILE = inventory
+  TARGET_PDB = inventory.dbg
+
+# =============================================================================
+# Object build statements for EXECUTABLE target inventory2
+
+
+#############################################
+# Order-only phony target for inventory2
+
+build cmake_object_order_depends_target_inventory2: phony || CMakeFiles/inventory2.dir
+
+build CMakeFiles/inventory2.dir/UI/inventory2.cpp.o: CXX_COMPILER__inventory2_Debug /Users/minchankim/Documents/GitHub/Initial/UI/inventory2.cpp || cmake_object_order_depends_target_inventory2
+  DEP_FILE = CMakeFiles/inventory2.dir/UI/inventory2.cpp.o.d
+  FLAGS = -g -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX13.3.sdk -fcolor-diagnostics -std=gnu++17
+  OBJECT_DIR = CMakeFiles/inventory2.dir
+  OBJECT_FILE_DIR = CMakeFiles/inventory2.dir/UI
+
+
+# =============================================================================
+# Link build statements for EXECUTABLE target inventory2
+
+
+#############################################
+# Link the executable inventory2
+
+build inventory2: CXX_EXECUTABLE_LINKER__inventory2_Debug CMakeFiles/inventory2.dir/UI/inventory2.cpp.o
+  FLAGS = -g -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX13.3.sdk
+  OBJECT_DIR = CMakeFiles/inventory2.dir
+  POST_BUILD = :
+  PRE_LINK = :
+  TARGET_FILE = inventory2
+  TARGET_PDB = inventory2.dbg
+
+# =============================================================================
 # Object build statements for EXECUTABLE target MAIN
 
 
@@ -51,27 +144,9 @@ build cmake_object_order_depends_target_MAIN: phony || CMakeFiles/MAIN.dir
 
 build CMakeFiles/MAIN.dir/Main_directory/MAIN.cpp.o: CXX_COMPILER__MAIN_Debug /Users/minchankim/Documents/GitHub/Initial/Main_directory/MAIN.cpp || cmake_object_order_depends_target_MAIN
   DEP_FILE = CMakeFiles/MAIN.dir/Main_directory/MAIN.cpp.o.d
-  FLAGS = -lncurses -g -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX13.3.sdk -fcolor-diagnostics -std=gnu++17
+  FLAGS = -g -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX13.3.sdk -fcolor-diagnostics -std=gnu++17
   OBJECT_DIR = CMakeFiles/MAIN.dir
   OBJECT_FILE_DIR = CMakeFiles/MAIN.dir/Main_directory
-
-build CMakeFiles/MAIN.dir/CharactersDesign_Mechanism/doorcoordinate.cpp.o: CXX_COMPILER__MAIN_Debug /Users/minchankim/Documents/GitHub/Initial/CharactersDesign_Mechanism/doorcoordinate.cpp || cmake_object_order_depends_target_MAIN
-  DEP_FILE = CMakeFiles/MAIN.dir/CharactersDesign_Mechanism/doorcoordinate.cpp.o.d
-  FLAGS = -lncurses -g -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX13.3.sdk -fcolor-diagnostics -std=gnu++17
-  OBJECT_DIR = CMakeFiles/MAIN.dir
-  OBJECT_FILE_DIR = CMakeFiles/MAIN.dir/CharactersDesign_Mechanism
-
-build CMakeFiles/MAIN.dir/CharactersDesign_Mechanism/MainEngine.cpp.o: CXX_COMPILER__MAIN_Debug /Users/minchankim/Documents/GitHub/Initial/CharactersDesign_Mechanism/MainEngine.cpp || cmake_object_order_depends_target_MAIN
-  DEP_FILE = CMakeFiles/MAIN.dir/CharactersDesign_Mechanism/MainEngine.cpp.o.d
-  FLAGS = -lncurses -g -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX13.3.sdk -fcolor-diagnostics -std=gnu++17
-  OBJECT_DIR = CMakeFiles/MAIN.dir
-  OBJECT_FILE_DIR = CMakeFiles/MAIN.dir/CharactersDesign_Mechanism
-
-build CMakeFiles/MAIN.dir/Map_Objects/Map_loading.cpp.o: CXX_COMPILER__MAIN_Debug /Users/minchankim/Documents/GitHub/Initial/Map_Objects/Map_loading.cpp || cmake_object_order_depends_target_MAIN
-  DEP_FILE = CMakeFiles/MAIN.dir/Map_Objects/Map_loading.cpp.o.d
-  FLAGS = -lncurses -g -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX13.3.sdk -fcolor-diagnostics -std=gnu++17
-  OBJECT_DIR = CMakeFiles/MAIN.dir
-  OBJECT_FILE_DIR = CMakeFiles/MAIN.dir/Map_Objects
 
 
 # =============================================================================
@@ -81,13 +156,236 @@ build CMakeFiles/MAIN.dir/Map_Objects/Map_loading.cpp.o: CXX_COMPILER__MAIN_Debu
 #############################################
 # Link the executable MAIN
 
-build MAIN: CXX_EXECUTABLE_LINKER__MAIN_Debug CMakeFiles/MAIN.dir/Main_directory/MAIN.cpp.o CMakeFiles/MAIN.dir/CharactersDesign_Mechanism/doorcoordinate.cpp.o CMakeFiles/MAIN.dir/CharactersDesign_Mechanism/MainEngine.cpp.o CMakeFiles/MAIN.dir/Map_Objects/Map_loading.cpp.o
-  FLAGS = -lncurses -g -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX13.3.sdk
+build MAIN: CXX_EXECUTABLE_LINKER__MAIN_Debug CMakeFiles/MAIN.dir/Main_directory/MAIN.cpp.o
+  FLAGS = -g -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX13.3.sdk
   OBJECT_DIR = CMakeFiles/MAIN.dir
   POST_BUILD = :
   PRE_LINK = :
   TARGET_FILE = MAIN
   TARGET_PDB = MAIN.dbg
+
+# =============================================================================
+# Object build statements for EXECUTABLE target inventory3
+
+
+#############################################
+# Order-only phony target for inventory3
+
+build cmake_object_order_depends_target_inventory3: phony || CMakeFiles/inventory3.dir
+
+build CMakeFiles/inventory3.dir/UI/inventory3.cpp.o: CXX_COMPILER__inventory3_Debug /Users/minchankim/Documents/GitHub/Initial/UI/inventory3.cpp || cmake_object_order_depends_target_inventory3
+  DEP_FILE = CMakeFiles/inventory3.dir/UI/inventory3.cpp.o.d
+  FLAGS = -g -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX13.3.sdk -fcolor-diagnostics -std=gnu++17
+  OBJECT_DIR = CMakeFiles/inventory3.dir
+  OBJECT_FILE_DIR = CMakeFiles/inventory3.dir/UI
+
+
+# =============================================================================
+# Link build statements for EXECUTABLE target inventory3
+
+
+#############################################
+# Link the executable inventory3
+
+build inventory3: CXX_EXECUTABLE_LINKER__inventory3_Debug CMakeFiles/inventory3.dir/UI/inventory3.cpp.o
+  FLAGS = -g -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX13.3.sdk
+  OBJECT_DIR = CMakeFiles/inventory3.dir
+  POST_BUILD = :
+  PRE_LINK = :
+  TARGET_FILE = inventory3
+  TARGET_PDB = inventory3.dbg
+
+# =============================================================================
+# Object build statements for EXECUTABLE target startpage
+
+
+#############################################
+# Order-only phony target for startpage
+
+build cmake_object_order_depends_target_startpage: phony || CMakeFiles/startpage.dir
+
+build CMakeFiles/startpage.dir/UI/startpage.cpp.o: CXX_COMPILER__startpage_Debug /Users/minchankim/Documents/GitHub/Initial/UI/startpage.cpp || cmake_object_order_depends_target_startpage
+  DEP_FILE = CMakeFiles/startpage.dir/UI/startpage.cpp.o.d
+  FLAGS = -g -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX13.3.sdk -fcolor-diagnostics -std=gnu++17
+  OBJECT_DIR = CMakeFiles/startpage.dir
+  OBJECT_FILE_DIR = CMakeFiles/startpage.dir/UI
+
+
+# =============================================================================
+# Link build statements for EXECUTABLE target startpage
+
+
+#############################################
+# Link the executable startpage
+
+build startpage: CXX_EXECUTABLE_LINKER__startpage_Debug CMakeFiles/startpage.dir/UI/startpage.cpp.o
+  FLAGS = -g -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX13.3.sdk
+  OBJECT_DIR = CMakeFiles/startpage.dir
+  POST_BUILD = :
+  PRE_LINK = :
+  TARGET_FILE = startpage
+  TARGET_PDB = startpage.dbg
+
+# =============================================================================
+# Object build statements for EXECUTABLE target startpage2
+
+
+#############################################
+# Order-only phony target for startpage2
+
+build cmake_object_order_depends_target_startpage2: phony || CMakeFiles/startpage2.dir
+
+build CMakeFiles/startpage2.dir/UI/startpage2.cpp.o: CXX_COMPILER__startpage2_Debug /Users/minchankim/Documents/GitHub/Initial/UI/startpage2.cpp || cmake_object_order_depends_target_startpage2
+  DEP_FILE = CMakeFiles/startpage2.dir/UI/startpage2.cpp.o.d
+  FLAGS = -g -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX13.3.sdk -fcolor-diagnostics -std=gnu++17
+  OBJECT_DIR = CMakeFiles/startpage2.dir
+  OBJECT_FILE_DIR = CMakeFiles/startpage2.dir/UI
+
+
+# =============================================================================
+# Link build statements for EXECUTABLE target startpage2
+
+
+#############################################
+# Link the executable startpage2
+
+build startpage2: CXX_EXECUTABLE_LINKER__startpage2_Debug CMakeFiles/startpage2.dir/UI/startpage2.cpp.o
+  FLAGS = -g -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX13.3.sdk
+  OBJECT_DIR = CMakeFiles/startpage2.dir
+  POST_BUILD = :
+  PRE_LINK = :
+  TARGET_FILE = startpage2
+  TARGET_PDB = startpage2.dbg
+
+# =============================================================================
+# Object build statements for EXECUTABLE target base2
+
+
+#############################################
+# Order-only phony target for base2
+
+build cmake_object_order_depends_target_base2: phony || CMakeFiles/base2.dir
+
+build CMakeFiles/base2.dir/UI/base2.cpp.o: CXX_COMPILER__base2_Debug /Users/minchankim/Documents/GitHub/Initial/UI/base2.cpp || cmake_object_order_depends_target_base2
+  DEP_FILE = CMakeFiles/base2.dir/UI/base2.cpp.o.d
+  FLAGS = -g -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX13.3.sdk -fcolor-diagnostics -std=gnu++17
+  OBJECT_DIR = CMakeFiles/base2.dir
+  OBJECT_FILE_DIR = CMakeFiles/base2.dir/UI
+
+build CMakeFiles/base2.dir/Main_directory/MAIN.cpp.o: CXX_COMPILER__base2_Debug /Users/minchankim/Documents/GitHub/Initial/Main_directory/MAIN.cpp || cmake_object_order_depends_target_base2
+  DEP_FILE = CMakeFiles/base2.dir/Main_directory/MAIN.cpp.o.d
+  FLAGS = -g -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX13.3.sdk -fcolor-diagnostics -std=gnu++17
+  OBJECT_DIR = CMakeFiles/base2.dir
+  OBJECT_FILE_DIR = CMakeFiles/base2.dir/Main_directory
+
+
+# =============================================================================
+# Link build statements for EXECUTABLE target base2
+
+
+#############################################
+# Link the executable base2
+
+build base2: CXX_EXECUTABLE_LINKER__base2_Debug CMakeFiles/base2.dir/UI/base2.cpp.o CMakeFiles/base2.dir/Main_directory/MAIN.cpp.o
+  FLAGS = -g -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX13.3.sdk
+  OBJECT_DIR = CMakeFiles/base2.dir
+  POST_BUILD = :
+  PRE_LINK = :
+  TARGET_FILE = base2
+  TARGET_PDB = base2.dbg
+
+# =============================================================================
+# Object build statements for EXECUTABLE target Enginev1
+
+
+#############################################
+# Order-only phony target for Enginev1
+
+build cmake_object_order_depends_target_Enginev1: phony || CMakeFiles/Enginev1.dir
+
+build CMakeFiles/Enginev1.dir/CharactersDesign_Mechanism/Enginev1.cpp.o: CXX_COMPILER__Enginev1_Debug /Users/minchankim/Documents/GitHub/Initial/CharactersDesign_Mechanism/Enginev1.cpp || cmake_object_order_depends_target_Enginev1
+  DEP_FILE = CMakeFiles/Enginev1.dir/CharactersDesign_Mechanism/Enginev1.cpp.o.d
+  FLAGS = -g -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX13.3.sdk -fcolor-diagnostics -std=gnu++17
+  OBJECT_DIR = CMakeFiles/Enginev1.dir
+  OBJECT_FILE_DIR = CMakeFiles/Enginev1.dir/CharactersDesign_Mechanism
+
+
+# =============================================================================
+# Link build statements for EXECUTABLE target Enginev1
+
+
+#############################################
+# Link the executable Enginev1
+
+build Enginev1: CXX_EXECUTABLE_LINKER__Enginev1_Debug CMakeFiles/Enginev1.dir/CharactersDesign_Mechanism/Enginev1.cpp.o
+  FLAGS = -g -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX13.3.sdk
+  OBJECT_DIR = CMakeFiles/Enginev1.dir
+  POST_BUILD = :
+  PRE_LINK = :
+  TARGET_FILE = Enginev1
+  TARGET_PDB = Enginev1.dbg
+
+# =============================================================================
+# Object build statements for EXECUTABLE target Enginev2
+
+
+#############################################
+# Order-only phony target for Enginev2
+
+build cmake_object_order_depends_target_Enginev2: phony || CMakeFiles/Enginev2.dir
+
+build CMakeFiles/Enginev2.dir/CharactersDesign_Mechanism/Enginev2.cpp.o: CXX_COMPILER__Enginev2_Debug /Users/minchankim/Documents/GitHub/Initial/CharactersDesign_Mechanism/Enginev2.cpp || cmake_object_order_depends_target_Enginev2
+  DEP_FILE = CMakeFiles/Enginev2.dir/CharactersDesign_Mechanism/Enginev2.cpp.o.d
+  FLAGS = -g -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX13.3.sdk -fcolor-diagnostics -std=gnu++17
+  OBJECT_DIR = CMakeFiles/Enginev2.dir
+  OBJECT_FILE_DIR = CMakeFiles/Enginev2.dir/CharactersDesign_Mechanism
+
+
+# =============================================================================
+# Link build statements for EXECUTABLE target Enginev2
+
+
+#############################################
+# Link the executable Enginev2
+
+build Enginev2: CXX_EXECUTABLE_LINKER__Enginev2_Debug CMakeFiles/Enginev2.dir/CharactersDesign_Mechanism/Enginev2.cpp.o
+  FLAGS = -g -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX13.3.sdk
+  OBJECT_DIR = CMakeFiles/Enginev2.dir
+  POST_BUILD = :
+  PRE_LINK = :
+  TARGET_FILE = Enginev2
+  TARGET_PDB = Enginev2.dbg
+
+# =============================================================================
+# Object build statements for EXECUTABLE target Character_Design
+
+
+#############################################
+# Order-only phony target for Character_Design
+
+build cmake_object_order_depends_target_Character_Design: phony || CMakeFiles/Character_Design.dir
+
+build CMakeFiles/Character_Design.dir/CharactersDesign_Mechanism/Character_Design.cpp.o: CXX_COMPILER__Character_Design_Debug /Users/minchankim/Documents/GitHub/Initial/CharactersDesign_Mechanism/Character_Design.cpp || cmake_object_order_depends_target_Character_Design
+  DEP_FILE = CMakeFiles/Character_Design.dir/CharactersDesign_Mechanism/Character_Design.cpp.o.d
+  FLAGS = -g -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX13.3.sdk -fcolor-diagnostics -std=gnu++17
+  OBJECT_DIR = CMakeFiles/Character_Design.dir
+  OBJECT_FILE_DIR = CMakeFiles/Character_Design.dir/CharactersDesign_Mechanism
+
+
+# =============================================================================
+# Link build statements for EXECUTABLE target Character_Design
+
+
+#############################################
+# Link the executable Character_Design
+
+build Character_Design: CXX_EXECUTABLE_LINKER__Character_Design_Debug CMakeFiles/Character_Design.dir/CharactersDesign_Mechanism/Character_Design.cpp.o
+  FLAGS = -g -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX13.3.sdk
+  OBJECT_DIR = CMakeFiles/Character_Design.dir
+  POST_BUILD = :
+  PRE_LINK = :
+  TARGET_FILE = Character_Design
+  TARGET_PDB = Character_Design.dbg
 
 # =============================================================================
 # Object build statements for EXECUTABLE target MainEngine
@@ -100,27 +398,15 @@ build cmake_object_order_depends_target_MainEngine: phony || CMakeFiles/MainEngi
 
 build CMakeFiles/MainEngine.dir/CharactersDesign_Mechanism/MainEngine.cpp.o: CXX_COMPILER__MainEngine_Debug /Users/minchankim/Documents/GitHub/Initial/CharactersDesign_Mechanism/MainEngine.cpp || cmake_object_order_depends_target_MainEngine
   DEP_FILE = CMakeFiles/MainEngine.dir/CharactersDesign_Mechanism/MainEngine.cpp.o.d
-  FLAGS = -lncurses -g -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX13.3.sdk -fcolor-diagnostics -std=gnu++17
+  FLAGS = -g -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX13.3.sdk -fcolor-diagnostics -std=gnu++17
   OBJECT_DIR = CMakeFiles/MainEngine.dir
   OBJECT_FILE_DIR = CMakeFiles/MainEngine.dir/CharactersDesign_Mechanism
 
 build CMakeFiles/MainEngine.dir/Map_Objects/Map_loading.cpp.o: CXX_COMPILER__MainEngine_Debug /Users/minchankim/Documents/GitHub/Initial/Map_Objects/Map_loading.cpp || cmake_object_order_depends_target_MainEngine
   DEP_FILE = CMakeFiles/MainEngine.dir/Map_Objects/Map_loading.cpp.o.d
-  FLAGS = -lncurses -g -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX13.3.sdk -fcolor-diagnostics -std=gnu++17
+  FLAGS = -g -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX13.3.sdk -fcolor-diagnostics -std=gnu++17
   OBJECT_DIR = CMakeFiles/MainEngine.dir
   OBJECT_FILE_DIR = CMakeFiles/MainEngine.dir/Map_Objects
-
-build CMakeFiles/MainEngine.dir/Main_directory/MAIN.cpp.o: CXX_COMPILER__MainEngine_Debug /Users/minchankim/Documents/GitHub/Initial/Main_directory/MAIN.cpp || cmake_object_order_depends_target_MainEngine
-  DEP_FILE = CMakeFiles/MainEngine.dir/Main_directory/MAIN.cpp.o.d
-  FLAGS = -lncurses -g -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX13.3.sdk -fcolor-diagnostics -std=gnu++17
-  OBJECT_DIR = CMakeFiles/MainEngine.dir
-  OBJECT_FILE_DIR = CMakeFiles/MainEngine.dir/Main_directory
-
-build CMakeFiles/MainEngine.dir/CharactersDesign_Mechanism/doorcoordinate.cpp.o: CXX_COMPILER__MainEngine_Debug /Users/minchankim/Documents/GitHub/Initial/CharactersDesign_Mechanism/doorcoordinate.cpp || cmake_object_order_depends_target_MainEngine
-  DEP_FILE = CMakeFiles/MainEngine.dir/CharactersDesign_Mechanism/doorcoordinate.cpp.o.d
-  FLAGS = -lncurses -g -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX13.3.sdk -fcolor-diagnostics -std=gnu++17
-  OBJECT_DIR = CMakeFiles/MainEngine.dir
-  OBJECT_FILE_DIR = CMakeFiles/MainEngine.dir/CharactersDesign_Mechanism
 
 
 # =============================================================================
@@ -130,8 +416,8 @@ build CMakeFiles/MainEngine.dir/CharactersDesign_Mechanism/doorcoordinate.cpp.o:
 #############################################
 # Link the executable MainEngine
 
-build MainEngine: CXX_EXECUTABLE_LINKER__MainEngine_Debug CMakeFiles/MainEngine.dir/CharactersDesign_Mechanism/MainEngine.cpp.o CMakeFiles/MainEngine.dir/Map_Objects/Map_loading.cpp.o CMakeFiles/MainEngine.dir/Main_directory/MAIN.cpp.o CMakeFiles/MainEngine.dir/CharactersDesign_Mechanism/doorcoordinate.cpp.o
-  FLAGS = -lncurses -g -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX13.3.sdk
+build MainEngine: CXX_EXECUTABLE_LINKER__MainEngine_Debug CMakeFiles/MainEngine.dir/CharactersDesign_Mechanism/MainEngine.cpp.o CMakeFiles/MainEngine.dir/Map_Objects/Map_loading.cpp.o
+  FLAGS = -g -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX13.3.sdk
   OBJECT_DIR = CMakeFiles/MainEngine.dir
   POST_BUILD = :
   PRE_LINK = :
@@ -172,7 +458,7 @@ build rebuild_cache: phony CMakeFiles/rebuild_cache.util
 #############################################
 # Folder: /Users/minchankim/Documents/GitHub/Initial/cmake-build-debug
 
-build all: phony MAIN MainEngine
+build all: phony Map_loading_save inventory inventory2 MAIN inventory3 startpage startpage2 base2 Enginev1 Enginev2 Character_Design MainEngine
 
 # =============================================================================
 # Built-in targets

@@ -1,4 +1,0 @@
-/Users/minchankim/Documents/GitHub/Initial/cmake-build-debug/CMakeFiles/MAIN.dir
-/Users/minchankim/Documents/GitHub/Initial/cmake-build-debug/CMakeFiles/MainEngine.dir
-/Users/minchankim/Documents/GitHub/Initial/cmake-build-debug/CMakeFiles/edit_cache.dir
-/Users/minchankim/Documents/GitHub/Initial/cmake-build-debug/CMakeFiles/rebuild_cache.dir
