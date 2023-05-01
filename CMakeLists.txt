@@ -17,7 +17,3 @@ add_executable(MainEngine CharactersDesign_Mechanism/MainEngine.cpp Map_Objects/
 =======
 add_executable(MAIN Main_directory/MAIN.cpp CharactersDesign_Mechanism/doorcoordinate.cpp /workspaces/Initial/CharactersDesign_Mechanism/doorcoordinate.h CharactersDesign_Mechanism/MainEngine.cpp Map_Objects/Map_loading.cpp CharactersDesign_Mechanism/MapLoader.h)
 add_executable(MainEngine /workspaces/Initial/CharactersDesign_Mechanism/MainEngine.cpp /workspaces/Initial/Map_Objects/Map_loading.cpp /workspaces/Initial/CharactersDesign_Mechanism/MapLoader.h)
-
->>>>>>> 923121c (.)
->>>>>>> 94a2f56 (.)
->>>>>>> 192f210 (.)
