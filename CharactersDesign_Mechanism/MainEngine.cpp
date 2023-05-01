@@ -96,9 +96,8 @@ int main_engine(string file_path, int&x, int& y) {
 
 // Main loop
     int key_input;
-    int enterflag = 0;
 
-    while ((key_input = wgetch(game_window)) != 'q' && (enterflag < 1)) { // Exit on 'q' key press
+    while ((key_input = wgetch(game_window)) != 'q') { // Exit on 'q' key press
         // Clear window
         werase(game_window);
         bool flag1 = false;
@@ -117,27 +116,49 @@ int main_engine(string file_path, int&x, int& y) {
             case 'w':
                 y--;
                 current_character = char_up;
-                if (file_path == "/workspaces/Initial/Map_Objects/Map_resources/schoolmap.txt"){
+                if (file_path == "/workspaces/Initial/Map_Objects/Map_resources/schoolmap.txt") {
                     if (y4 == 13) {
                         if (x4 >= 19 && x4 <= 24) {
-                            enterflag++;
-                            return enterflag;
+                            return 1;
                         } else if (x4 >= 36 && x4 <= 41) {
-                            enterflag += 2;
-                            return enterflag;
+                            return 2;
                         } else if (x4 >= 74 && x4 <= 79) {
-                            enterflag += 3;
-                            return enterflag;
+                            return 3;
                         } else if (x4 >= 102 && x4 <= 107) {
-                            enterflag += 4;
-                            return enterflag;
+                            return 4;
                         }
                     }
-                }
+                } else if (file_path == "/workspaces/Initial/Map_Objects/Map_resources/Music Room.txt") {
+                    if (y4 == 10) {
+                        if (x4>=80 && x4<=85) {
+                            return 0;
+                        }
+                    }
+                } else if (file_path == "/workspaces/Initial/Map_Objects/Map_resources/Diningroom.txt") {
+                    if (y4 == 10) {
+                        if (x4>=65 && x4<=70) {
+                            return 0;
+                        }
+                    }
+                } else if (file_path == "/workspaces/Initial/Map_Objects/Map_resources/Rooftop stairs.txt") {
+                    if (y4 == 12 || y4 == 11) {
+                        if (x4>=44 && x4<=53) {
+                            return 8;
+                        }
+                    }
+                } 
+
                 for (int i=1; i<5; i++) {
                     if (mapData.TDVEC[y+4][x+i] != ' '){
                         y++;
                         break;
+                    }
+                }
+                if (file_path == "/workspaces/Initial/Map_Objects/Map_resources/Rooftop stairs.txt") {
+                    for (int i=1; i<5; i++) {
+                        if (mapData.TDVEC[y+3][x+i] == '_') {
+                            y--;
+                        }
                     }
                 }
                 break;
@@ -145,19 +166,34 @@ int main_engine(string file_path, int&x, int& y) {
             case 's':
                 y++;
                 current_character = char_down;
-                if (file_path == "/workspaces/Initial/Map_Objects/Map_resources/schoolmap.txt"){
+                if (file_path == "/workspaces/Initial/Map_Objects/Map_resources/schoolmap.txt") {
                     if (y4 == 20) {
                         if (x4>= 26 && x4<= 31) {
-                            enterflag += 5;
-                            return enterflag;
+                            return 5;
                         } else if (x4 >= 43 && x4 <= 48) {
-                            enterflag += 6;
-                            return enterflag;
+                            return 6;
                         }
                     } if (y4 == 22) {
                         if (x4 >= 100 && x4 <= 111) {
-                            enterflag += 7;
-                            return enterflag;
+                            return 7;
+                        }
+                    }
+                } else if (file_path == "/workspaces/Initial/Map_Objects/Map_resources/Classroom.txt") {
+                    if (y4 == 29 -2) {
+                        if (x4>=88 && x4<=93) {
+                            return 0;
+                        }
+                    }
+                } else if (file_path == "/workspaces/Initial/Map_Objects/Map_resources/Restroom.txt" || file_path == "/workspaces/Initial/Map_Objects/Map_resources/Club Room.txt" || file_path == "/workspaces/Initial/Map_Objects/Map_resources/Teacher's office.txt") {
+                    if (y4 == 29 -2) {
+                        if (x4>=87 && x4<=92) {
+                            return 0;
+                        }
+                    }
+                } else if (file_path == "/workspaces/Initial/Map_Objects/Map_resources/Rooftop stairs.txt" || file_path == "/workspaces/Initial/Map_Objects/Map_resources/Club Room.txt" || file_path == "/workspaces/Initial/Map_Objects/Map_resources/Teacher's office.txt") {
+                    if (y4 == 30 -2) {
+                        if (x4>=40 && x4<=60) {
+                            return 9;
                         }
                     }
                 }
@@ -165,6 +201,13 @@ int main_engine(string file_path, int&x, int& y) {
                     if (mapData.TDVEC[y+4][x+i] != ' '){
                         y--;
                         break;
+                    }
+                }
+                if (file_path == "/workspaces/Initial/Map_Objects/Map_resources/Rooftop stairs.txt") {
+                    for (int i=1; i<5; i++) {
+                        if (mapData.TDVEC[y+5][x+i] == '_') {
+                            y++;
+                        }
                     }
                 }
                 break;
@@ -237,7 +280,7 @@ int main_engine(string file_path, int&x, int& y) {
 
 // End ncurses mode
     endwin();
-    return enterflag;
+    return 0;
 }
 
 
@@ -413,10 +456,10 @@ void display_instructions(VectorWrapper StartData) {
     printStartpage(StartData);
 }
 
-int main(){
-    int x = 87, y = 24;
-    string file_path = "/workspaces/Initial/Map_Objects/Map_resources/schoolmap.txt";
-    main_engine(file_path,x,y);
-    endwin();
-}
+// int main(){
+//     int x = 46, y = 16;
+//     string file_path = "/workspaces/Initial/Map_Objects/Map_resources/Rooftop stairs.txt";
+//     main_engine(file_path,x,y);
+//     endwin();
+// }
 
