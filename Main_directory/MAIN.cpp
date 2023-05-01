@@ -46,7 +46,7 @@ int main()
 
         if (entered == "ClassRoom")
         {
-            RM.ClassRoom(randroom1,randroom2,randnum);
+            RM.ClassRoom();
             exitfrom = "ClassRoom";
             *x = Corridor[exitfrom].x_coordinates;
             *y = Corridor[exitfrom].y_coordinates;
@@ -54,7 +54,7 @@ int main()
         }
         else if (entered == "ClubRoom")
         {
-            RM.ClubRoom(randroom1,randroom2,randrum);
+            RM.ClubRoom();
             exitfrom = "ClubRoom";
             *x = Corridor[exitfrom].x_coordinates;
             *y = Corridor[exitfrom].y_coordinates;
@@ -62,7 +62,7 @@ int main()
         }
         else if (entered == "Music_Room")
         {
-            RM.MusicRoom(randroom1,randroom2,randnum);
+            RM.MusicRoom();
             exitfrom = "MusicRoom";
             *x = Corridor[exitfrom].x_coordinates;
             *y = Corridor[exitfrom].y_coordinates;
@@ -70,7 +70,7 @@ int main()
         }
         else if (entered == "TeachersOffice")
         {
-            RM.TeachersOffice(randroom1,randroom2,randnum);
+            RM.TeachersOffice();
             exitfrom = "TeachersOffice";
             *x = Corridor[exitfrom].x_coordinates;
             *y = Corridor[exitfrom].y_coordinates;
@@ -86,7 +86,7 @@ int main()
         }
          else if (entered == "RestRoom")
         {
-            RM.RestRoom(randroom1,randroom2,randnum);
+            RM.RestRoom();
             exitfrom = "RestRoom";
             *x = Corridor[exitfrom].x_coordinates;
             *y = Corridor[exitfrom].y_coordinates;
