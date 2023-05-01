@@ -37,8 +37,8 @@ int main()
     {
         if (counter == 0)
         {
-            *x = 20, *y = 20;
-            string file_path = "/workspaces/Initial/Map_Objects/Map_resources/Club Room.txt";
+            *x = 21, *y = 44;
+            string file_path = "/workspaces/Initial/Map_Objects/Map_resources/Classroom.txt";
             main_engine(file_path,*x,*y);
             entered="SchoolMap";
             counter++;
