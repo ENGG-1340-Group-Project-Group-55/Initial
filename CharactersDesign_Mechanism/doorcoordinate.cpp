@@ -11,10 +11,10 @@ coordinates ClubRoom = {75,11};
 coordinates MusicRoom = {23,16};
 coordinates TeachersOffice = {103,10};
 coordinates RoofTopStairs = {105,19};
-coordinates ToCorridor = {46,25};
+coordinates ToCorridor = {44,25};
 coordinates RoofTop = {47,9};
 coordinates DiningRoom = {40,17};///
-coordinates RestRoom = {38,14};///
+coordinates RestRoom = {34,8};///
 
 void initialize(){
     Corridor.insert({"ClassRoom",ClassRoom});

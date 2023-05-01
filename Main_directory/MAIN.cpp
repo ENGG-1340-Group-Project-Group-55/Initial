@@ -123,11 +123,7 @@ int main()
         }
         else if (entered == "SchoolMap")
         {
-<<<<<<< HEAD
             previous = "ToCorridor";
-=======
-            previous = "SchoolMap";
->>>>>>> 32536d4 (.)
             entered = RM.SchoolMap(*x,*y);
         }
     }
@@ -176,7 +172,7 @@ void rooms::ClubRoom()
  void rooms::RestRoom()
  {
     string file_path = "/workspaces/Initial/Map_Objects/Map_resources/Restroom.txt";
-    int x_door = 90;
+    int x_door = 86;
     int y_door = 29;
     main_engine(file_path,x_door,y_door);
 
