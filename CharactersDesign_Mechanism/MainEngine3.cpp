@@ -51,7 +51,7 @@ int main() {
     ifstream inputline;
     inputline.open(file_path);
     if (inputline.fail()) {
-        cout<<"파일이 없다잖아 병신아!!!"<<endl;
+        cout<<"No file found"<<endl;
         exit(1);
     }
     while (inputline >> noskipws >> ch) {
