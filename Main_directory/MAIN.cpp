@@ -196,7 +196,6 @@ void rooms::Clubroom()
     main_engine(file_path,x_door,y_door);
 }
 
-}
  void rooms::MusicRoom()
  {
     
@@ -227,7 +226,6 @@ void rooms::Clubroom()
 
     }
      
-    }
     int x_door = 0;
     int y_door = 0;
     main_engine(file_path,x_door,y_door);
