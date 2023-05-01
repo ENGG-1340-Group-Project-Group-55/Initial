@@ -215,8 +215,51 @@ void printInventory(vector<string> inventory) {
     delwin(inventoryWin);
 }
 
-int main() {
-    int x = 87,y = 24;
-    string file_path = "/workspaces/Initial/Map_Objects/Map_resources/Classroom.txt";
-    main_engine(file_path, x, y);
+void printStartpage(VectorWrapper StartData) {
+    clear();
+
+    int start_height = 28;
+    int start_width = 104;
+
+    raw();
+    noecho();
+    curs_set(0);
+    keypad(stdscr, TRUE);
+
+    WINDOW* startWin = CreateWindow(start_height, start_width);
+
+    // Draw the start page with colors
+    for (int i = 0; i < StartData.TDVEC.size(); i++) {
+        for (int j = 0; j < StartData.TDVEC[i].size(); j++) {
+            if (StartData.TDVEC[i][j] == '.') {
+                continue; // Skip '.' characters
+            }
+            if (i < 17) {
+                wattron(startWin, COLOR_PAIR(1));
+                mvwaddch(startWin, i, j, StartData.TDVEC[i][j]);
+                wattroff(startWin, COLOR_PAIR(1));
+            } else if (i < 19) {
+                wattron(startWin, COLOR_PAIR(3));
+                mvwaddch(startWin, i, j, StartData.TDVEC[i][j]);
+                wattroff(startWin, COLOR_PAIR(3));
+            } else {
+                wattron(startWin, COLOR_PAIR(2));
+                mvwaddch(startWin, i, j, StartData.TDVEC[i][j]);
+                wattroff(startWin, COLOR_PAIR(2));
+            }
+        }
+    }
+
+    wrefresh(startWin);
+
+    // Screen displayed until 'q' is pressed
+    while (true) {
+        int ch = getch();
+        if (ch == 27) {
+            break;
+        }
+    }
+
+    delwin(startWin);
+    wrefresh(startWin);
 }

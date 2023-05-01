@@ -32,7 +32,6 @@ int main() {
     keypad(stdscr, TRUE);
     curs_set(0); // Hide cursor
 
-    initscr();
     start_color();
     init_pair(1, COLOR_RED, COLOR_BLACK); // Pair 1: Red text on a black background
     init_pair(2, COLOR_GREEN, COLOR_BLACK); // Pair 2: Green text on a black background
