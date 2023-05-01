@@ -117,9 +117,6 @@ int main()
                 *x = Corridor[previous].x_coordinates;
                 *y = Corridor[previous].y_coordinates;
             }
-
-
-
             exitfrom = RM.RoofTopStairs(*x,*y);
             *x = Stairs[exitfrom].x_coordinates;
             *y = Stairs[exitfrom].y_coordinates;
