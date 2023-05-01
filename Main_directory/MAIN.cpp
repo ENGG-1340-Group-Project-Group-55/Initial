@@ -123,7 +123,11 @@ int main()
         }
         else if (entered == "SchoolMap")
         {
+<<<<<<< HEAD
             previous = "ToCorridor";
+=======
+            previous = "SchoolMap";
+>>>>>>> 32536d4 (.)
             entered = RM.SchoolMap(*x,*y);
         }
     }

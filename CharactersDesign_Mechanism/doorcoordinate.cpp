@@ -5,14 +5,14 @@ using namespace std;
 
 map<string,coordinates> Corridor;
 map<string,coordinates> Stairs;
-                      //{x, y}
+            //to corridor{x, y}
 coordinates ClassRoom = {18,8};
 coordinates ClubRoom = {75,11};
 coordinates MusicRoom = {23,16};
-coordinates TeachersOffice = {101,11};
-coordinates RoofTopStairs = {107,23};
-coordinates ToCorridor = {48,30};
-coordinates RoofTop = {48,14};
+coordinates TeachersOffice = {103,10};
+coordinates RoofTopStairs = {105,19};
+coordinates ToCorridor = {46,25};
+coordinates RoofTop = {47,9};
 coordinates DiningRoom = {40,17};///
 coordinates RestRoom = {38,14};///
 
