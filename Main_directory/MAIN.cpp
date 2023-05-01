@@ -10,13 +10,13 @@ using namespace std;
 class rooms
 {
 public:
-    void ClassRoom();
-    void ClubRoom();
-    void MusicRoom();
-    void DiningRoom();
-    void RestRoom();
+    void ClassRoom(char,char,int);
+    void ClubRoom(char,char,int);
+    void MusicRoom(char,char,int);
+    void DiningRoom(char,char,int);
+    void RestRoom(char,char,int);
+    void TeachersOffice(char,char,int);
     void RoofTop();
-    void TeachersOffice();
     string SchoolMap(int,int);
     string RoofTopStairs(int,int);
     string roomchooser(int);
@@ -81,7 +81,7 @@ int main()
 
         if (entered == "ClassRoom")
         {
-            RM.ClassRoom();
+            RM.ClassRoom(randroom1,randroom2,randnum);
             exitfrom = "ClassRoom";
             *x = Corridor[exitfrom].x_coordinates;
             *y = Corridor[exitfrom].y_coordinates;
@@ -89,7 +89,7 @@ int main()
         }
         else if (entered == "ClubRoom")
         {
-            RM.ClubRoom();
+            RM.ClubRoom(randroom1,randroom2,randrum);
             exitfrom = "ClubRoom";
             *x = Corridor[exitfrom].x_coordinates;
             *y = Corridor[exitfrom].y_coordinates;
@@ -97,7 +97,7 @@ int main()
         }
         else if (entered == "Music_Room")
         {
-            RM.MusicRoom();
+            RM.MusicRoom(randroom1,randroom2,randnum);
             exitfrom = "MusicRoom";
             *x = Corridor[exitfrom].x_coordinates;
             *y = Corridor[exitfrom].y_coordinates;
@@ -105,7 +105,7 @@ int main()
         }
         else if (entered == "TeachersOffice")
         {
-            RM.TeachersOffice();
+            RM.TeachersOffice(randroom1,randroom2,randnum);
             exitfrom = "TeachersOffice";
             *x = Corridor[exitfrom].x_coordinates;
             *y = Corridor[exitfrom].y_coordinates;
@@ -121,7 +121,7 @@ int main()
         }
          else if (entered == "RestRoom")
         {
-            RM.RestRoom();
+            RM.RestRoom(randroom1,randroom2,randnum);
             exitfrom = "RestRoom";
             *x = Corridor[exitfrom].x_coordinates;
             *y = Corridor[exitfrom].y_coordinates;
@@ -166,30 +166,30 @@ void rooms::ClassRoom()
     int y_door = 24;
     main_engine(file_path,x_door,y_door);
 }
-void rooms::ClubRoom()
+void rooms::ClubRoom(char randroom1,char randroom2,int randnum)
 {
     if (randroom1 == "C" || randroom2 == "C") {
-        if (randnum = "1") {
+        if (randnum == 1) {
             string file_path = "/workspaces/Initial/Map_Objects/Map_resources/Club Room 1.txt";
         }
         
-        if (randnum = "2") {
+        if (randnum == 2) {
             string file_path = "/workspaces/Initial/Map_Objects/Map_resources/Club Room 2.txt";
         }
 
-        if (randnum = "3") {
+        if (randnum == 3) {
             string file_path = "/workspaces/Initial/Map_Objects/Map_resources/Club Room 3.txt";
         }
 
-        if (randnum = "4") {
+        if (randnum == 4) {
             string file_path = "/workspaces/Initial/Map_Objects/Map_resources/Club Room 4.txt";
         }
 
-        if (randnum = "5") {
+        if (randnum == 5) {
             string file_path = "/workspaces/Initial/Map_Objects/Map_resources/Club Room 5.txt";
         }
 
-        if (randnum = "6") {
+        if (randnum == 6) {
             string file_path = "/workspaces/Initial/Map_Objects/Map_resources/Club Room 6.txt";
         }
 
@@ -199,31 +199,31 @@ void rooms::ClubRoom()
     main_engine(file_path,x_door,y_door);
 }
 
- void rooms::MusicRoom()
+ void rooms::MusicRoom(char randroom1,char randroom2,int randnum)
  {
     
      if (randroom1 == "M" || randroom2 == "M") {
-        if (randnum = "1") {
+        if (randnum == 1) {
             string file_path = "/workspaces/Initial/Map_Objects/Map_resources/Music Room 1.txt";
         }
         
-        if (randnum = "2") {
+        if (randnum == 2) {
             string file_path = "/workspaces/Initial/Map_Objects/Map_resources/Music Room 2.txt";
         }
 
-        if (randnum = "3") {
+        if (randnum == 3) {
             string file_path = "/workspaces/Initial/Map_Objects/Map_resources/Music Room 3.txt";
         }
 
-        if (randnum = "4") {
+        if (randnum == 4) {
             string file_path = "/workspaces/Initial/Map_Objects/Map_resources/Music Room 4.txt";
         }
 
-        if (randnum = "5") {
+        if (randnum == 5) {
             string file_path = "/workspaces/Initial/Map_Objects/Map_resources/Music Room 5.txt";
         }
 
-        if (randnum = "6") {
+        if (randnum == 6) {
             string file_path = "/workspaces/Initial/Map_Objects/Map_resources/Music Room 6.txt";
         }
 
@@ -242,30 +242,30 @@ void rooms::ClubRoom()
     main_engine(file_path,x_door,y_door);
  }
 
- void rooms::TeachersOffice()
+ void rooms::TeachersOffice(char randroom1,char randroom2,int randnum)
  {
     if (randroom1 == "T" || randroom2 == "T") {
-        if (randnum = "1") {
+        if (randnum == 1) {
             string file_path = "/workspaces/Initial/Map_Objects/Map_resources/Teacher's office 1.txt";
         }
         
-        if (randnum = "2") {
+        if (randnum == 2) {
             string file_path = "/workspaces/Initial/Map_Objects/Map_resources/Teacher's office 2.txt";
         }
 
-        if (randnum = "3") {
+        if (randnum == 3) {
             string file_path = "/workspaces/Initial/Map_Objects/Map_resources/Teacher's office 3.txt";
         }
 
-        if (randnum = "4") {
+        if (randnum == 4) {
             string file_path = "/workspaces/Initial/Map_Objects/Map_resources/Teacher's office 4.txt";
         }
 
-        if (randnum = "5") {
+        if (randnum == 5) {
             string file_path = "/workspaces/Initial/Map_Objects/Map_resources/Teacher's office 5.txt";
         }
 
-        if (randnum = "6") {
+        if (randnum == 6) {
             string file_path = "/workspaces/Initial/Map_Objects/Map_resources/Teacher's office 6.txt";
         }
 
@@ -275,30 +275,30 @@ void rooms::ClubRoom()
     main_engine(file_path,x_door,y_door);
  }
 
- void rooms::RestRoom()
+ void rooms::RestRoom(char randroom1, char randroom2,int randnum)
  {
     if (randroom1 == "R" || randroom2 == "R") {
-        if (randnum = "1") {
+        if (randnum == 1) {
             string file_path = "/workspaces/Initial/Map_Objects/Map_resources/Restroom 1.txt";
         }
         
-        if (randnum = "2") {
+        if (randnum == 2) {
             string file_path = "/workspaces/Initial/Map_Objects/Map_resources/Restroom 2.txt";
         }
 
-        if (randnum = "3") {
+        if (randnum == 3) {
             string file_path = "/workspaces/Initial/Map_Objects/Map_resources/Restroom 3.txt";
         }
 
-        if (randnum = "4") {
+        if (randnum == 4) {
             string file_path = "/workspaces/Initial/Map_Objects/Map_resources/Restroom 4.txt";
         }
 
-        if (randnum = "5") {
+        if (randnum == 5) {
             string file_path = "/workspaces/Initial/Map_Objects/Map_resources/Restroom 5.txt";
         }
 
-        if (randnum = "6") {
+        if (randnum == 6) {
             string file_path = "/workspaces/Initial/Map_Objects/Map_resources/Restroom 6.txt";
         }
     }
@@ -310,27 +310,27 @@ void rooms::ClubRoom()
 void rooms::DiningRoom()
  {
     if (randroom1 == "R" || randroom2 == "R") {
-        if (randnum = "1") {
+        if (randnum == 1) {
             string file_path = "/workspaces/Initial/Map_Objects/Map_resources/Dining Room 1.txt";
         }
         
-        if (randnum = "2") {
+        if (randnum == 2) {
             string file_path = "/workspaces/Initial/Map_Objects/Map_resources/Dining Room 2.txt";
         }
 
-        if (randnum = "3") {
+        if (randnum == 3) {
             string file_path = "/workspaces/Initial/Map_Objects/Map_resources/Dining Room 3.txt";
         }
 
-        if (randnum = "4") {
+        if (randnum == 4) {
             string file_path = "/workspaces/Initial/Map_Objects/Map_resources/Dining Room 4.txt";
         }
 
-        if (randnum = "5") {
+        if (randnum == 5) {
             string file_path = "/workspaces/Initial/Map_Objects/Map_resources/Dining Room 5.txt";
         }
 
-        if (randnum = "6") {
+        if (randnum == 6) {
             string file_path = "/workspaces/Initial/Map_Objects/Map_resources/Dining Room 6.txt";
         }
     }
