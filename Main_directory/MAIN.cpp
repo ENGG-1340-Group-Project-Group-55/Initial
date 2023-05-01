@@ -211,7 +211,7 @@ void rooms::ClubRoom()
     }
     else {
         string file_path = "/workspaces/Initial/Map_Objects/Map_resources/Club Room.txt"; }
-// >>>>>>> 883a9f2 (.)
+        
     int x_door = 90;
     int y_door = 29;
     main_engine(file_path,x_door,y_door);
