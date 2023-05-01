@@ -39,7 +39,11 @@ int main()
         if (counter == 0)
         {
             *x = 60, *y = 20;
+<<<<<<< HEAD
             string file_path = "/workspaces/Initial/Map_Objects/Map_resources/Restroom.txt";
+=======
+            string file_path = "/workspaces/Initial/Map_Objects/Map_resources/Classroom.txt";
+>>>>>>> b8f3565 (.)
             main_engine(file_path,*x,*y);
             entered="SchoolMap";
             counter++;

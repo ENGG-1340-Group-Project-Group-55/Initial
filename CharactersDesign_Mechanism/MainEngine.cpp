@@ -27,8 +27,8 @@ int updateTimerAndVisionRadius(int countdown_duration) {
 
 // Function to create a centered window with a box border
 WINDOW* CreateWindow(int screen_height, int screen_width) {
-    int startY = (LINES - screen_height) / 2 ;
-    int startX = (COLS - screen_width) / 2 ;
+    int startY = (34 - screen_height) / 2 ;
+    int startX = (115 - screen_width) / 2 ;
     WINDOW* win = newwin(screen_height, screen_width, startY, startX);
     refresh();
     wrefresh(win);
@@ -129,10 +129,9 @@ int main_engine(string file_path, int&x, int& y) {
 
         // Draw the map
         Maps gameMap(screen_height, screen_width);
-
         VectorWrapper mapData = gameMap.Map_Loader(file_path);
         gameMap.Map_printer(mapData, 0, 0, screen_height, screen_width, game_window);
-
+        
         int y4 = y+4;
         int x4 = x+4;
 
