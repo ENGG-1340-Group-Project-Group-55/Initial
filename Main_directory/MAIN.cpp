@@ -89,8 +89,8 @@ int main()
         }
         else if (entered == "ClubRoom")
         {
-            RM.Clubroom();
-            exitfrom = "Clubroom";
+            RM.ClubRoom();
+            exitfrom = "ClubRoom";
             *x = Corridor[exitfrom].x_coordinates;
             *y = Corridor[exitfrom].y_coordinates;
             entered = "SchoolMap";
@@ -137,7 +137,7 @@ int main()
         }
         else if (entered == "RoofTopStairs")
         {
-            exitfrom = RM.Rooftop_Stairs(*x,*y);
+            exitfrom = RM.RoofTopStairs(*x,*y);
             *x = Stairs[exitfrom].x_coordinates;
             *y = Stairs[exitfrom].y_coordinates;
             if (exitfrom == "ToCorridor")
