@@ -39,7 +39,7 @@ int main_engine(string file_path, int&x, int& y) {
 
     //Set up initial variables
     char ch;
-    bool flag = TRUE;
+    bool flag = true;
 
     //count dimensions of a map
     int screen_height=0;
@@ -96,35 +96,61 @@ int main_engine(string file_path, int&x, int& y) {
 
 // Main loop
     int key_input;
-    while ((key_input = wgetch(game_window)) != 'q') { // Exit on 'q' key press
+    int enterflag = 0;
+
+    while ((key_input = wgetch(game_window)) != 'q' && (enterflag < 1)) { // Exit on 'q' key press
         // Clear window
         werase(game_window);
-        bool flag1 = FALSE;
-        bool flag2 = FALSE;
-        bool flag3 = FALSE;
+        bool flag1 = false;
+        bool flag2 = false;
+        bool flag3 = false;
 
         // Draw the map
         Maps gameMap(screen_height, screen_width);
+
         VectorWrapper mapData = gameMap.Map_Loader(file_path);
         gameMap.Map_printer(mapData, 0, 0, screen_height, screen_width, game_window);
-
+        int tempy = y+4;
 
         switch(key_input) {
             case 'w':
                 y--;
                 current_character = char_up;
+                if (file_path == "/workspaces/Initial/Map_Objects/Map_resources/School map.txt"){
+                    if (tempy == 14 || tempy == 13) {
+                        if (x == 19 || x == 20 || x == 21) {
+                            enterflag++;
+                        } else if (x == 35 || x == 36 || x == 37) {
+                            enterflag += 2;
+                        } else if (x == 74 || x == 75 || x == 76) {
+                            enterflag += 3;
+                        } else if (x == 102 || x == 103 || x == 104) {
+                            enterflag += 4;
+                        }
+                    }
+                }
+            
                 if (mapData.TDVEC[y+4][x+1] != ' ' || mapData.TDVEC[y+4][x+2] != ' ' || mapData.TDVEC[y+4][x+3] != ' ' || mapData.TDVEC[y+4][x+4] != ' ') {
                     y++;
-                    break;
                 }
                 break;
 
             case 's':
                 y++;
                 current_character = char_down;
+                if (file_path == "/workspaces/Initial/Map_Objects/Map_resources/School map.txt"){
+                    if (tempy == 25) {
+                        if (x == 25 || x == 26 || x == 27) {
+                            enterflag += 5;
+                        } else if (x == 42 || x == 43 || x == 44) {
+                            enterflag += 6;
+                        } else if (x == 101 || x == 102 || x == 103 || x == 104 || x == 105 || x == 106) {
+                            enterflag += 7;
+                        }
+                    }
+                }
                 if (mapData.TDVEC[y+4][x+1] != ' ' || mapData.TDVEC[y+4][x+2] != ' ' || mapData.TDVEC[y+4][x+3] != ' ' || mapData.TDVEC[y+4][x+4] != ' ') {
                     y--;
-                    break;
                 }
                 break;
 
@@ -133,7 +159,6 @@ int main_engine(string file_path, int&x, int& y) {
                 current_character = char_left;
                 if (mapData.TDVEC[y+4][x+1] != ' '|| mapData.TDVEC[y+4][x+2] != ' ') {
                     x+=2;
-                    break;
                 }
                 break;
 
@@ -142,20 +167,19 @@ int main_engine(string file_path, int&x, int& y) {
                 current_character = char_right;
                 if (mapData.TDVEC[y+4][x+4] != ' ' || mapData.TDVEC[y+4][x+3] != ' ') {
                     x-=2;
-                    break;
                 }
                 break;
 
             case 'i':
-                flag1 = TRUE;
+                flag1 = true;
                 break;
 
             case 27:
-                flag2 = TRUE;
+                flag2 = true;
                 break;
 
             case '0':
-                flag3 = TRUE;
+                flag3 = true;
                 break;
             
         }
@@ -183,24 +207,31 @@ int main_engine(string file_path, int&x, int& y) {
 
         // Refresh the window
         wrefresh(game_window);
-        if (flag1 == TRUE) {
+        if (flag1 == true) {
             vector<string> inventory = loadInventoryFromFile();
             printInventory(inventory);
         }
-        if (flag2 == TRUE) {
+        if (flag2 == true) {
             vector<string> menu;
             printMenu(menu);
         }
-        if (flag3 == TRUE) {
+        if (flag3 == true) {
             printStartpage(StartData);
         }
     }
 
 // End ncurses mode
     endwin();
-
-    return 0;
+    return enterflag;
 }
+
+
+
+
+
+
+
+
 
 vector<string> loadInventoryFromFile() {
     vector<string> inventory;
@@ -352,7 +383,7 @@ void display_instructions(VectorWrapper StartData) {
     printw("\n");
     printw("3. Please choose wisely, as you cannot change your choice and the storyline changes by your decisions.\n");
     printw("\n");
-    printw("4. You can move your character by using W, A, S, and D in your keyboard to move to another place. (W = up, S = down, A = left, D = right)\n");
+    printw("4. You can move your character by using W, A, S, D in your keyboard to move to another place. (W = up, S = down, A = left, D = right)\n");
     printw("\n");
     printw("5. You can press E to open your inventory and press F to grab items while playing the game.\n");
     printw("\n");
@@ -370,9 +401,9 @@ void display_instructions(VectorWrapper StartData) {
     printStartpage(StartData);
 }
 
-// int main(){
-//     int x = 87, y = 24;
-//     string file_path = "/workspaces/Initial/Map_Objects/Map_resources/Classroom.txt";
-//     main_engine(file_path,x,y);
-// }
+int main(){
+    int x = 87, y = 24;
+    string file_path = "/workspaces/Initial/Map_Objects/Map_resources/School map.txt";
+    main_engine(file_path,x,y);
+}
 
