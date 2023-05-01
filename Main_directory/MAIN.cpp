@@ -128,7 +128,7 @@ int main()
 void rooms::ClassRoom()
 {
     string file_path = "/workspaces/Initial/Map_Objects/Map_resources/Classroom.txt";
-    int x_door = 91;
+    int x_door = 88;
     int y_door = 29;
     main_engine(file_path,x_door,y_door);
 }
