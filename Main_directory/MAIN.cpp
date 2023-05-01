@@ -143,8 +143,8 @@ void rooms::ClubRoom()
  void rooms::MusicRoom()
  {
     string file_path = "/workspaces/Initial/Map_Objects/Map_resources/Music Room.txt";
-    int x_door = 83;
-    int y_door = 12;
+    int x_door = 78;
+    int y_door = 7;
     main_engine(file_path,x_door,y_door);
  }
 
