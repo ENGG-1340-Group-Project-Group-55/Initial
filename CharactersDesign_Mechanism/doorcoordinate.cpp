@@ -8,7 +8,7 @@ map<string,coordinates> Stairs;
 
 coordinates ClassRoom = {21,11};
 coordinates ClubRoom = {75,11};
-coordinates MusicRoom = {77,11};
+coordinates MusicRoom = {29,14};
 coordinates TeachersOffice = {101,11};
 coordinates RoofTopStairs = {107,23};
 coordinates ToCorridor = {48,30};
