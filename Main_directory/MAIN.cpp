@@ -107,16 +107,8 @@ int main()
         }
         else if (entered == "RoofTopStairs")
         {
-            if (previous == "RoofTop")
-            {
-                *x = Stairs[previous].x_coordinates;
-                *y = Stairs[previous].y_coordinates;
-            }
-            else
-            {
-                *x = Corridor[previous].x_coordinates;
-                *y = Corridor[previous].y_coordinates;
-            }
+            *x = Stairs[previous].x_coordinates;
+            *y = Stairs[previous].y_coordinates;
             exitfrom = RM.RoofTopStairs(*x,*y);
             *x = Stairs[exitfrom].x_coordinates;
             *y = Stairs[exitfrom].y_coordinates;
@@ -131,7 +123,7 @@ int main()
         }
         else if (entered == "SchoolMap")
         {
-            previous = "SchoolMap";
+            previous = "ToCorridor";
             entered = RM.SchoolMap(*x,*y);
         }
     }
