@@ -27,8 +27,8 @@ int updateTimerAndVisionRadius(int countdown_duration) {
 
 // Function to create a centered window with a box border
 WINDOW* CreateWindow(int screen_height, int screen_width) {
-    int startY = (34 - screen_height) / 2 ;
-    int startX = (115 - screen_width) / 2 ;
+    int startY = 0;//(LINES - screen_height) / 2 ;
+    int startX = 0; //(COLS - screen_width) / 2 ;
     WINDOW* win = newwin(screen_height, screen_width, startY, startX);
     refresh();
     wrefresh(win);
