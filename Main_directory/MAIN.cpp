@@ -205,6 +205,7 @@ void rooms::ClubRoom()
         if (randnum == 6) {
             string file_path = "/workspaces/Initial/Map_Objects/Map_resources/Club Room 6.txt";
         }
+    }
     else {
         string file_path = "/workspaces/Initial/Map_Objects/Map_resources/Club Room.txt"; }
     int x_door = 90;
