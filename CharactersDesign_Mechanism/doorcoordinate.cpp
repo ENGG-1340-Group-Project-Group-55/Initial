@@ -6,20 +6,24 @@ using namespace std;
 map<string,coordinates> Corridor;
 map<string,coordinates> Stairs;
 
-coordinates Classroom = {20,13};
-coordinates Clubroom = {75,13};
-coordinates Musicroom = {24,27};
+coordinates ClassRoom = {20,13};
+coordinates ClubRoom = {75,13};
+coordinates MusicRoom = {24,27};
 coordinates TeachersOffice = {13,104};
 coordinates RoofTopStairs = {22,105};
 coordinates ToCorridor = {48,30};
 coordinates RoofTop = {48,14};
+coordinates DiningRoom = {1,2};
+coordinates RestRoom = {3,4};
 
 void initialize(){
-    Corridor.insert({"Classroom",Classroom});
-    Corridor.insert({"Clubroom",Clubroom});
-    Corridor.insert({"Musicroom",Musicroom});
+    Corridor.insert({"ClassRoom",ClassRoom});
+    Corridor.insert({"ClubRoom",ClubRoom});
+    Corridor.insert({"MusicRoom",MusicRoom});
     Corridor.insert({"TeachersOffice",TeachersOffice});
     Corridor.insert({"RoofTopStairs",RoofTopStairs});
+    Corridor.insert({"DiningRoom",DiningRoom});
+    Corridor.insert({"RestRoom",RestRoom});
 
     Stairs.insert({"ToCorridor",ToCorridor});
     Stairs.insert({"RoofTop",RoofTop});

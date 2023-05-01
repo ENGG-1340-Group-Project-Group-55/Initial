@@ -41,15 +41,15 @@ int main()
             counter++;
         }
 
-        if (entered == "Classroom")
+        if (entered == "ClassRoom")
         {
-            RM.Classroom();
-            exitfrom = "Classroom";
+            RM.ClassRoom();
+            exitfrom = "ClassRoom";
             *x = Corridor[exitfrom].x_coordinates;
             *y = Corridor[exitfrom].y_coordinates;
             entered = "SchoolMap";
         }
-        else if (entered == "Clubroom")
+        else if (entered == "ClubRoom")
         {
             RM.Clubroom();
             exitfrom = "Clubroom";
@@ -97,7 +97,7 @@ int main()
             *y = Stairs[exitfrom].y_coordinates;
             entered = "SchoolMap";
         }
-        else if (entered == "Rooftop_Stairs")
+        else if (entered == "RoofTopStairs")
         {
             exitfrom = RM.Rooftop_Stairs(*x,*y);
             *x = Stairs[exitfrom].x_coordinates;

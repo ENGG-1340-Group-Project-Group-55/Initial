@@ -18,12 +18,14 @@ void clears();
 extern map<string,coordinates> Corridor;
 extern map<string,coordinates> Stairs;
 
-extern coordinates Classroom;
-extern coordinates Clubroom;
-extern coordinates Musicroom;
+extern coordinates ClassRoom;
+extern coordinates ClubRoom;
+extern coordinates MusicRoom;
 extern coordinates TeachersOffice;
 extern coordinates RoofTopStairs;
 extern coordinates ToCorridor;
 extern coordinates RoofTop;
+extern coordinates DiningRoom;
+extern coordinates RestRoom;
 
 #endif //INITIAL_DOORCOORDINATE_H
