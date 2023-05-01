@@ -7,14 +7,14 @@ map<string,coordinates> Corridor;
 map<string,coordinates> Stairs;
 
 coordinates ClassRoom = {21,14};
-coordinates ClubRoom = {75,13};/////
-coordinates MusicRoom = {24,27};/////
+coordinates ClubRoom = {75,13};
+coordinates MusicRoom = {77,14};
 coordinates TeachersOffice = {104,14};
 coordinates RoofTopStairs = {107,23};
-coordinates ToCorridor = {48,30};///
-coordinates RoofTop = {48,14};///
-coordinates DiningRoom = {21,46};///
-coordinates RestRoom = {3,4};///
+coordinates ToCorridor = {48,30};
+coordinates RoofTop = {48,14};
+coordinates DiningRoom = {21,44};///
+coordinates RestRoom = {38,14};///
 
 void initialize(){
     Corridor.insert({"ClassRoom",ClassRoom});
