@@ -7,11 +7,11 @@ map<string,coordinates> Corridor;
 map<string,coordinates> Stairs;
             //to corridor{x, y}
 coordinates ClassRoom = {18,8};
-coordinates ClubRoom = {75,11};
-coordinates MusicRoom = {23,16};
-coordinates TeachersOffice = {103,10};
+coordinates ClubRoom = {74,8};
+coordinates MusicRoom = {23,17};
+coordinates TeachersOffice = {100,8};
 coordinates RoofTopStairs = {105,19};
-coordinates ToCorridor = {44,20};
+coordinates ToCorridor = {44,23};
 coordinates RoofTop = {47,9};
 coordinates DiningRoom = {40,17};///
 coordinates RestRoom = {34,8};///
