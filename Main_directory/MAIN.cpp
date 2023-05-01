@@ -186,14 +186,14 @@ void rooms::DiningRoom()
     main_engine(file_path,x_door,y_door);
  }
 
- string rooms::RoofTopStairs(int a,int b)
- {
-    string file_path = "/workspaces/Initial/Map_Objects/Map_resources/Rooftop stairs.txt";
-    int x_door = a;
-    int y_door = b;
-    int C_Or_R = main_engine(file_path,x_door,y_door);
-    return roomchooser(C_Or_R);
- }
+//  string rooms::RoofTopStairs(int a,int b)
+//  {
+//     string file_path = "/workspaces/Initial/Map_Objects/Map_resources/Rooftop stairs.txt";
+//     int x_door = a;
+//     int y_door = b;
+//     int C_Or_R = main_engine(file_path,x_door,y_door);
+//     return roomchooser(C_Or_R);
+//  }
 
  string rooms::SchoolMap(int a,int b)
  {
@@ -226,16 +226,16 @@ void rooms::DiningRoom()
         return "DiningRoom";
         break;
     case 7:
-        return "RoofTopStairs";
+        return "MapToStair";
         break;
     case 8:
-        return "RoofTop";
+        return "StairToRoof";
         break;
     case 9:
-        return "ToCorridor";
+        return "RoofToStair";
         break;
     case 10:
-        return "ToRoofTop";       
+        return "StairToMap";       
     default:
         return "NONE";
         break;
