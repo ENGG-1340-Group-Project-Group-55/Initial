@@ -30,7 +30,50 @@ int main()
     string exitfrom;
     string entered;
     rooms RM;
-    bool flag = true;   
+    bool flag = true;
+    
+    
+    
+    
+    
+    // Seed the random number generator with the current time
+    srand(time(nullptr));
+
+    char letters[] = {'M', 'T', 'D', 'C', 'R'};
+
+    int numLetters = sizeof(letters) / sizeof(letters[0]);
+
+    // Generate the first random index into the array
+    int randIndex1 = rand() % numLetters;
+
+    // Get the first random letter from the array
+    char randroom1 = letters[randIndex1];
+
+    // Generate the second random index into the array
+    int randIndex2;
+
+    // Keep generating a new random index for randIndex2 until it is different from randIndex1
+    do {
+        randIndex2 = rand() % numLetters;
+    } while (randIndex2 == randIndex1);
+
+    // Get the second random letter from the array
+    char randroom2 = letters[randIndex2];
+
+
+    // seed the random number generator
+    random_device rd;
+    mt19937 gen(rd());
+
+    // define the range of values
+    uniform_int_distribution<int> dist(1, 6);
+
+    // generate a random number
+    int randnum = dist(gen);
+    
+    
+    
+    
     
      while (flag)
     {
@@ -137,37 +180,37 @@ void rooms::ClubRoom()
 
     string file_path = "/workspaces/Initial/Map_Objects/Map_resources/Club Room.txt"; 
 // =======
-//     string file_path;
-//     char randroom1 = 'C';
-//     char randroom2 = 'C';
-//     int randnum = 1;
-//     if (randroom1 == 'C' || randroom2 == 'C') {
-//         if (randnum == 1) {
-//             string file_path = "/workspaces/Initial/Map_Objects/Map_resources/Club Room 1.txt";
-//         }
+    string file_path;
+    char randroom1 = 'C';
+    char randroom2 = 'C';
+    int randnum = 1;
+    if (randroom1 == 'C' || randroom2 == 'C') {
+        if (randnum == 1) {
+            string file_path = "/workspaces/Initial/Map_Objects/Map_resources/Club Room 1.txt";
+        }
         
-//         if (randnum == 2) {
-//             string file_path = "/workspaces/Initial/Map_Objects/Map_resources/Club Room 2.txt";
-//         }
+        if (randnum == 2) {
+            string file_path = "/workspaces/Initial/Map_Objects/Map_resources/Club Room 2.txt";
+        }
 
-//         if (randnum == 3) {
-//             string file_path = "/workspaces/Initial/Map_Objects/Map_resources/Club Room 3.txt";
-//         }
+        if (randnum == 3) {
+            string file_path = "/workspaces/Initial/Map_Objects/Map_resources/Club Room 3.txt";
+        }
 
-//         if (randnum == 4) {
-//             string file_path = "/workspaces/Initial/Map_Objects/Map_resources/Club Room 4.txt";
-//         }
+        if (randnum == 4) {
+            string file_path = "/workspaces/Initial/Map_Objects/Map_resources/Club Room 4.txt";
+        }
 
-//         if (randnum == 5) {
-//             string file_path = "/workspaces/Initial/Map_Objects/Map_resources/Club Room 5.txt";
-//         }
+        if (randnum == 5) {
+            string file_path = "/workspaces/Initial/Map_Objects/Map_resources/Club Room 5.txt";
+        }
 
-//         if (randnum == 6) {
-//             string file_path = "/workspaces/Initial/Map_Objects/Map_resources/Club Room 6.txt";
-//         }
-//     }
-//     else {
-//         string file_path = "/workspaces/Initial/Map_Objects/Map_resources/Club Room.txt"; }
+        if (randnum == 6) {
+            string file_path = "/workspaces/Initial/Map_Objects/Map_resources/Club Room 6.txt";
+        }
+    }
+    else {
+        string file_path = "/workspaces/Initial/Map_Objects/Map_resources/Club Room.txt"; }
 // >>>>>>> 883a9f2 (.)
     int x_door = 90;
     int y_door = 29;
