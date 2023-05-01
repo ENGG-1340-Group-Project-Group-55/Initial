@@ -1,5 +1,5 @@
 #include <ncurses.h>
-#include <iostream>
+#include <iostream> 
 #include <string>
 #include <fstream>
 #include "CharactersDesign_Mechanism/MapLoader.h"
@@ -56,7 +56,7 @@ int main_engine(string file_path, int&x, int& y) {
     WINDOW *game_window = CreateWindow(screen_height, screen_width);
 
     //store character into arrays
-    ifstream charline("/workspaces/Initial/CharactersDesign_Mechanism/character3.txt");
+    ifstream charline("/workspaces/Initial/CharactersDesign_Mechanism/Character_Ghosts.resources/character3.txt");
     if (charline.fail()) {
         cout<<"no character file!"<<endl;
         exit(1);
