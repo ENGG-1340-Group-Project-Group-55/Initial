@@ -15,16 +15,15 @@ struct coordinates
 void initialize();
 void clears();
 
-map<string,coordinates> Corridor;
-map<string,coordinates> Stairs;
+extern map<string,coordinates> Corridor;
+extern map<string,coordinates> Stairs;
 
-coordinates Classroom = {20,13};
-coordinates Clubroom = {75,13};
-coordinates Musicroom = {24,27};
-coordinates TeachersOffice = {13,104};
-coordinates RoofTopStairs = {22,105};
-
-coordinates ToCorridor = {48,30};
-coordinates RoofTop = {48,14};
+extern coordinates Classroom;
+extern coordinates Clubroom;
+extern coordinates Musicroom;
+extern coordinates TeachersOffice;
+extern coordinates RoofTopStairs;
+extern coordinates ToCorridor;
+extern coordinates RoofTop;
 
 #endif //INITIAL_DOORCOORDINATE_H
