@@ -154,11 +154,11 @@ int main_engine(string file_path, int&x, int& y) {
                             enterflag += 6;
                             return enterflag;
                         }
-                        }
                     } if (y4 == 22) {
                         if (x4 >= 100 && x4 <= 111) {
                             enterflag += 7;
                             return enterflag;
+                        }
                     }
                 }
                 for (int i=1; i<5; i++) {
