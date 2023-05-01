@@ -109,6 +109,7 @@ int main_engine(string file_path, int&x, int& y) {
 
         VectorWrapper mapData = gameMap.Map_Loader(file_path);
         gameMap.Map_printer(mapData, 0, 0, screen_height, screen_width, game_window);
+
         int y4 = y+4;
         int x4 = x+4;
 
@@ -119,30 +120,37 @@ int main_engine(string file_path, int&x, int& y) {
                 if (file_path == "/workspaces/Initial/Map_Objects/Map_resources/schoolmap.txt") {
                     if (y4 == 13) {
                         if (x4 >= 19 && x4 <= 24) {
+                            endwin();
                             return 1;
                         } else if (x4 >= 36 && x4 <= 41) {
+                            endwin();
                             return 2;
                         } else if (x4 >= 74 && x4 <= 79) {
+                            endwin();
                             return 3;
                         } else if (x4 >= 102 && x4 <= 107) {
+                            endwin();
                             return 4;
                         }
                     }
                 } else if (file_path == "/workspaces/Initial/Map_Objects/Map_resources/Music Room.txt") {
                     if (y4 == 10) {
                         if (x4>=80 && x4<=85) {
+                            endwin();
                             return 0;
                         }
                     }
                 } else if (file_path == "/workspaces/Initial/Map_Objects/Map_resources/Diningroom.txt") {
                     if (y4 == 10) {
                         if (x4>=65 && x4<=70) {
+                            endwin();
                             return 0;
                         }
                     }
                 } else if (file_path == "/workspaces/Initial/Map_Objects/Map_resources/Rooftop stairs.txt") {
                     if (y4 == 12 || y4 == 11) {
                         if (x4>=44 && x4<=53) {
+                            endwin();
                             return 8;
                         }
                     }
@@ -169,30 +177,36 @@ int main_engine(string file_path, int&x, int& y) {
                 if (file_path == "/workspaces/Initial/Map_Objects/Map_resources/schoolmap.txt") {
                     if (y4 == 20) {
                         if (x4>= 26 && x4<= 31) {
+                            endwin();
                             return 5;
                         } else if (x4 >= 43 && x4 <= 48) {
+                            endwin();
                             return 6;
                         }
                     } if (y4 == 22) {
                         if (x4 >= 100 && x4 <= 111) {
+                            endwin();
                             return 7;
                         }
                     }
                 } else if (file_path == "/workspaces/Initial/Map_Objects/Map_resources/Classroom.txt") {
                     if (y4 == 29 -2) {
                         if (x4>=88 && x4<=93) {
+                            endwin();
                             return 0;
                         }
                     }
                 } else if (file_path == "/workspaces/Initial/Map_Objects/Map_resources/Restroom.txt" || file_path == "/workspaces/Initial/Map_Objects/Map_resources/Club Room.txt" || file_path == "/workspaces/Initial/Map_Objects/Map_resources/Teacher's office.txt") {
                     if (y4 == 29 -2) {
                         if (x4>=87 && x4<=92) {
+                            endwin();
                             return 0;
                         }
                     }
                 } else if (file_path == "/workspaces/Initial/Map_Objects/Map_resources/Rooftop stairs.txt" || file_path == "/workspaces/Initial/Map_Objects/Map_resources/Club Room.txt" || file_path == "/workspaces/Initial/Map_Objects/Map_resources/Teacher's office.txt") {
                     if (y4 == 30 -2) {
                         if (x4>=40 && x4<=60) {
+                            endwin();
                             return 9;
                         }
                     }
@@ -301,7 +315,6 @@ vector<string> loadInventoryFromFile() {
     } else {
         cout << "No inventory file." << endl;
     }
-
     return inventory;
 }
 
@@ -405,6 +418,7 @@ void printStartpage(VectorWrapper StartData) {
             clear();
             int x = 87, y = 24;
             string file_path = "/workspaces/Initial/Map_Objects/Map_resources/Classroom.txt";
+            delwin(startWin);
             main_engine(file_path,x,y);
         }
         else if (ch == '2') {
@@ -416,7 +430,6 @@ void printStartpage(VectorWrapper StartData) {
     }
 
     delwin(startWin);
-    wrefresh(startWin);
 }
 
 void display_instructions(VectorWrapper StartData) {
@@ -456,10 +469,9 @@ void display_instructions(VectorWrapper StartData) {
     printStartpage(StartData);
 }
 
-// int main(){
-//     int x = 46, y = 16;
-//     string file_path = "/workspaces/Initial/Map_Objects/Map_resources/Rooftop stairs.txt";
-//     main_engine(file_path,x,y);
-//     endwin();
-// }
-
+int main(){
+    int x = 46, y = 16;
+    string file_path = "/workspaces/Initial/Map_Objects/Map_resources/schoolmap.txt";
+    main_engine(file_path,x,y);
+    endwin();
+}
