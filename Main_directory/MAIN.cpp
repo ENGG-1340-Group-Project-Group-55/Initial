@@ -104,8 +104,8 @@ int main()
 void rooms::Classroom()
 {
     string file_path = "..";
-    int x_door = 28;
-    int y_door = 99;
+    int x_door = 87;
+    int y_door = 24;
     main_engine(file_path,x_door,y_door);
 }
 void rooms::Clubroom()
