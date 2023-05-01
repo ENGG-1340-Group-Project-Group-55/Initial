@@ -104,22 +104,22 @@ int main()
 void rooms::Classroom()
 {
     string file_path = "..";
-    int x_door = 0;
-    int y_door = 0;
+    int x_door = 28;
+    int y_door = 99;
     main_engine(file_path,x_door,y_door);
 }
 void rooms::Clubroom()
 {
     string file_path = "..";
-    int x_door = 0;
-    int y_door = 0;
+    int x_door = 28;
+    int y_door = 28;
     main_engine(file_path,x_door,y_door);
 }
  void rooms::Music_Room()
  {
     string file_path = "..";
-    int x_door = 0;
-    int y_door = 0;
+    int x_door = 82;
+    int y_door = 10;
     main_engine(file_path,x_door,y_door);
  }
 
@@ -133,8 +133,8 @@ void rooms::Clubroom()
  void rooms::TeachersOffice()
  {
     string file_path = "..";
-    int x_door = 0;
-    int y_door = 0;
+    int x_door = 79;
+    int y_door = 29;
     main_engine(file_path,x_door,y_door);
  }
 
