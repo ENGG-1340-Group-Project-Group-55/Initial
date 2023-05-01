@@ -243,7 +243,7 @@ int main_engine(string file_path, int&x, int& y) {
                         }
                     }
                 } else if (file_path == "/workspaces/Initial/Map_Objects/Map_resources/Classroom.txt") {
-                    if (y4 == 29 -1) {
+                    if (y4 == 28) {
                         if (x4>=88 && x4<=93) {
                             delwin(game_window);
                             clear();
@@ -251,15 +251,15 @@ int main_engine(string file_path, int&x, int& y) {
                         }
                     }
                 } else if (file_path == "/workspaces/Initial/Map_Objects/Map_resources/Restroom.txt" || file_path == "/workspaces/Initial/Map_Objects/Map_resources/Club Room.txt" || file_path == "/workspaces/Initial/Map_Objects/Map_resources/Teacher's office.txt") {
-                    if (y4 == 29 -1) {
+                    if (y4 == 28) {
                         if (x4>=87 && x4<=92) {
                             delwin(game_window);
                             clear();
                             return 0;
                         }
                     }
-                } else if (file_path == "/workspaces/Initial/Map_Objects/Map_resources/Rooftop stairs.txt" || file_path == "/workspaces/Initial/Map_Objects/Map_resources/Club Room.txt" || file_path == "/workspaces/Initial/Map_Objects/Map_resources/Teacher's office.txt") {
-                    if (y4 == 30 -1) {
+                } else if (file_path == "/workspaces/Initial/Map_Objects/Map_resources/Rooftop stairs.txt") {
+                    if (y4 == 26 || y4 == 27) {
                         if (x4>=40 && x4<=60) {
                             delwin(game_window);
                             clear();

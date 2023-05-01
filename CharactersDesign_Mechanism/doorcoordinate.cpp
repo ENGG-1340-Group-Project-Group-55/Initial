@@ -5,7 +5,7 @@ using namespace std;
 
 map<string,coordinates> Corridor;
 map<string,coordinates> Stairs;
-            //to corridor{x, y}
+//coordinates for exiting to map {x, y} point on head
 coordinates ClassRoom = {18,8};
 coordinates ClubRoom = {74,8};
 coordinates MusicRoom = {23,17};

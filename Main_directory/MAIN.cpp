@@ -129,7 +129,7 @@ int main()
     }
 
 }
-
+//coordinates inside each room (point on feet)
 void rooms::ClassRoom()
 {
     string file_path = "/workspaces/Initial/Map_Objects/Map_resources/Classroom.txt";
