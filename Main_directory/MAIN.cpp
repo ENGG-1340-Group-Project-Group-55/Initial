@@ -30,6 +30,7 @@ int main()
     int *x = &a;
     int *y = &b;
     int counter = 0;
+    string exitto;
     string previous;
     string exitfrom;
     string entered;
@@ -100,8 +101,6 @@ int main()
         {
             RM.RoofTop();
             exitfrom = "RoofTop";
-            *x = Stairs[exitfrom].x_coordinates;
-            *y = Stairs[exitfrom].y_coordinates;
             previous = "ToRoofTop";
             entered = "RoofTopStairs";
         }
@@ -109,16 +108,16 @@ int main()
         {
             *x = Stairs[previous].x_coordinates;
             *y = Stairs[previous].y_coordinates;
-            exitfrom = RM.RoofTopStairs(*x,*y);
-            *x = Stairs[exitfrom].x_coordinates;
-            *y = Stairs[exitfrom].y_coordinates;
-            if (exitfrom == "ToCorridor")
+            exitto = RM.RoofTopStairs(*x,*y);
+            if (exitto == "SchoolMap")
             {
-                entered = "SchoolMap";
+                *x = Corridor["RoofTopStairs"].x_coordinates;
+                *y = Corridor["RoofTopStairs"].y_coordinates;
             }
-            else if (exitfrom == "ToRoofTop")
+            else if (exitto == "RoofTop")
             {
-                entered = "RoofTop";
+                *x = Stairs["RoofTop"].x_coordinates;
+                *y = Stairs["RoofTop"].y_coordinates;
             }
         }
         else if (entered == "SchoolMap")
