@@ -119,6 +119,7 @@ int main()
                 *x = Stairs["RoofTop"].x_coordinates;
                 *y = Stairs["RoofTop"].y_coordinates;
             }
+            entered = exitto;
         }
         else if (entered == "SchoolMap")
         {
