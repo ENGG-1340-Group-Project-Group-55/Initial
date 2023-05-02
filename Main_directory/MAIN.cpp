@@ -5,6 +5,7 @@
 #include <random>
 #include "/workspaces/Initial/CharactersDesign_Mechanism/doorcoordinate.h"
 #include "/workspaces/Initial/CharactersDesign_Mechanism/MainEngine.h"
+
 using namespace std;
 
 class rooms
@@ -48,6 +49,7 @@ uniform_int_distribution<int> dist(1, 6);
 
 // generate a random number
 int randnum = dist(gen);
+std::string str_randnum = std::to_string(randnum);
 
 
 int main()
@@ -174,6 +176,7 @@ void rooms::ClassRoom()
 }
 void rooms::ClubRoom()
 {   
+<<<<<<< HEAD
     string file_path;
     if (randroom != 'C') {
         
@@ -204,6 +207,11 @@ void rooms::ClubRoom()
     else {
         file_path = "/workspaces/Initial/Map_Objects/Map_resources/Club Room.txt";
     }
+=======
+    string file_path = "/workspaces/Initial/Map_Objects/Map_resources/Club Room .txt";
+    int file_length = file_path.length();
+    file_path.insert(file_length - 4, str_randnum);
+>>>>>>> 7c34aae (auto random map)
     
     int x_door = 20;
     int y_door = 5;
@@ -212,6 +220,7 @@ void rooms::ClubRoom()
 
  void rooms::MusicRoom()
  {  
+<<<<<<< HEAD
     string file_path;
     if (randroom != 'M') {
         
@@ -243,6 +252,13 @@ void rooms::ClubRoom()
         file_path = "/workspaces/Initial/Map_Objects/Map_resources/Music Room.txt"; 
     }
     
+=======
+
+    string file_path = "/workspaces/Initial/Map_Objects/Map_resources/Music Room .txt";
+    int file_length = file_path.length();
+    file_path.insert(file_length - 4, str_randnum);
+
+>>>>>>> 7c34aae (auto random map)
     int x_door = 79;
     int y_door = 5;
     main_engine(file_path,x_door,y_door);
@@ -258,6 +274,7 @@ void rooms::ClubRoom()
 
  void rooms::TeachersOffice()
  {
+<<<<<<< HEAD
     string file_path;
     if (randroom != 'T') {
         
@@ -288,6 +305,11 @@ void rooms::ClubRoom()
     else {
         file_path = "/workspaces/Initial/Map_Objects/Map_resources/Teacher's office.txt"; 
     }
+=======
+    string file_path = "/workspaces/Initial/Map_Objects/Map_resources/Teacher's office .txt";
+    int file_length = file_path.length();
+    file_path.insert(file_length - 4, str_randnum);
+>>>>>>> 7c34aae (auto random map)
     
     int x_door = 86;
     int y_door = 29;
@@ -296,6 +318,7 @@ void rooms::ClubRoom()
 
  void rooms::RestRoom()
  {
+<<<<<<< HEAD
     string file_path;
     if (randroom != 'R') {
         
@@ -326,6 +349,11 @@ void rooms::ClubRoom()
     else {
         file_path = "/workspaces/Initial/Map_Objects/Map_resources/Restroom.txt"; 
     }
+=======
+    string file_path = "/workspaces/Initial/Map_Objects/Map_resources/Restroom .txt";
+    int file_length = file_path.length();
+    file_path.insert(file_length - 4, str_randnum);
+>>>>>>> 7c34aae (auto random map)
     
     int x_door = 86;
     int y_door = 29;
@@ -335,6 +363,7 @@ void rooms::ClubRoom()
 
 void rooms::DiningRoom()
  {
+<<<<<<< HEAD
     string file_path;
     if (randroom != 'D') {
         
@@ -366,6 +395,12 @@ void rooms::DiningRoom()
         file_path = "/workspaces/Initial/Map_Objects/Map_resources/Diningroom.txt"; 
     }
     
+=======
+    string file_path = "/workspaces/Initial/Map_Objects/Map_resources/Dining Room .txt";
+    int file_length = file_path.length();
+    file_path.insert(file_length - 4, str_randnum);
+
+>>>>>>> 7c34aae (auto random map)
     int x_door = 64;
     int y_door = 5;
     main_engine(file_path,x_door,y_door);
