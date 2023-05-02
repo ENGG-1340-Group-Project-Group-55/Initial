@@ -229,13 +229,14 @@ void rooms::DiningRoom()
         return "MapToStair";
         break;
     case 8:
+<<<<<<< HEAD
         return "StairToRoof";
         break;
     case 9:
         return "RoofToStair";
         break;
     case 10:
-        return "StairToMap";       
+        return "StairToMap";   
     default:
         return "NONE";
         break;
