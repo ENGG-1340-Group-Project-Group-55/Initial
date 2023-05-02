@@ -190,7 +190,7 @@ void rooms::DiningRoom()
 
  string rooms::RoofTopStairs(int a,int b)
 {
-    string file_path = "/workspaces/Initial/Map_Objects/Map_resources/Rooftop Stairs.txt";
+    string file_path = "/workspaces/Initial/Map_Objects/Map_resources/Rooftop stairs.txt";
     int x_door = a;
     int y_door = b;
     int C_Or_R = main_engine(file_path,x_door,y_door);
