@@ -14,6 +14,7 @@ WINDOW* CreateWindow(int screen_height, int screen_width) {
     wrefresh(win);
     return win;
 }
+testingasd;fljasdl;kd
 
 void printInventory(vector<string> inventory);
 vector<string> loadInventoryFromFile();
