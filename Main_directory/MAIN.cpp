@@ -49,7 +49,7 @@ uniform_int_distribution<int> valueDist(1, 6);
 
 // generate a random number
 int randnum = valueDist(gen);
-
+std::string str_randnum = std::to_string(randnum);
 
 
 int main()
@@ -175,7 +175,7 @@ void rooms::ClubRoom()
     if (randroom != 'C') {
         file_path = "/workspaces/Initial/Map_Objects/Map_resources/Club Room .txt";
         int file_length = file_path.length();
-        file_path.insert(file_length - 4, std::str_randnum);
+        file_path.insert(file_length - 4, str_randnum);
     }
     else {
         file_path = "/workspaces/Initial/Map_Objects/Map_resources/Club Room.txt";
@@ -192,7 +192,7 @@ void rooms::ClubRoom()
     if (randroom != 'M') {
         file_path = "/workspaces/Initial/Map_Objects/Map_resources/Music Room .txt";
         int file_length = file_path.length();
-        file_path.insert(file_length - 4, std::str_randnum);
+        file_path.insert(file_length - 4, str_randnum);
     } 
     else {
         file_path = "/workspaces/Initial/Map_Objects/Map_resources/Music Room.txt"; 
@@ -216,7 +216,7 @@ void rooms::ClubRoom()
     if (randroom != 'T') {
         file_path = "/workspaces/Initial/Map_Objects/Map_resources/Teacher's office .txt";
         int file_length = file_path.length();
-        file_path.insert(file_length - 4, std::str_randnum);
+        file_path.insert(file_length - 4, str_randnum);
     }
     else {
         file_path = "/workspaces/Initial/Map_Objects/Map_resources/Teacher's office.txt"; 
@@ -233,7 +233,7 @@ void rooms::ClubRoom()
     if (randroom != 'R') {
         file_path = "/workspaces/Initial/Map_Objects/Map_resources/Restroom .txt";
         int file_length = file_path.length();
-        file_path.insert(file_length - 4, std::str_randnum);
+        file_path.insert(file_length - 4, str_randnum);
     }
     else {
         file_path = "/workspaces/Initial/Map_Objects/Map_resources/Restroom.txt"; 
@@ -251,7 +251,7 @@ void rooms::DiningRoom()
     if (randroom != 'D') {
         file_path = "/workspaces/Initial/Map_Objects/Map_resources/Dining Room .txt";
         int file_length = file_path.length();
-        file_path.insert(file_length - 4, std::str_randnum);
+        file_path.insert(file_length - 4, str_randnum);
     }
     else {
         file_path = "/workspaces/Initial/Map_Objects/Map_resources/Diningroom.txt"; 
