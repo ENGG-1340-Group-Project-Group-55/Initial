@@ -109,17 +109,19 @@ int main()
             *x = Stairs[previous].x_coordinates;
             *y = Stairs[previous].y_coordinates;
             exitto = RM.RoofTopStairs(*x,*y);
-            if (exitto == "SchoolMap")
+            if (exitto == "NONE")
             {
                 *x = Corridor["RoofTopStairs"].x_coordinates;
                 *y = Corridor["RoofTopStairs"].y_coordinates;
+                entered = "SchoolMap";
             }
             else if (exitto == "RoofTop")
             {
                 *x = Stairs["RoofTop"].x_coordinates;
                 *y = Stairs["RoofTop"].y_coordinates;
+                entered = exitto;
             }
-            entered = exitto;
+        
         }
         else if (entered == "SchoolMap")
         {
