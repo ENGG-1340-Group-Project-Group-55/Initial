@@ -11,7 +11,7 @@
 
 //compile using: g++ -pedantic-errors -std=c++11 CharactersDesign_Mechanism/MainEngine.cpp Map_Objects/Map_loading.cpp -o game -lncurses
 
-int VISION_RADIUS = 20;
+int VISION_RADIUS;
 time_t start_time;
 
 // Function to update the timer and VISION_RADIUS
