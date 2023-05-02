@@ -179,6 +179,7 @@ void rooms::ClubRoom()
     string file_path = "/workspaces/Initial/Map_Objects/Map_resources/Club Room .txt";
     int file_length = file_path.length();
     file_path.insert(file_length - 4, str_randnum);
+    
     int x_door = 20;
     int y_door = 5;
     main_engine(file_path,x_door,y_door);
@@ -186,9 +187,11 @@ void rooms::ClubRoom()
 
  void rooms::MusicRoom()
  {  
+
     string file_path = "/workspaces/Initial/Map_Objects/Map_resources/Music Room .txt";
     int file_length = file_path.length();
     file_path.insert(file_length - 4, str_randnum);
+
     int x_door = 79;
     int y_door = 5;
     main_engine(file_path,x_door,y_door);
@@ -204,10 +207,10 @@ void rooms::ClubRoom()
 
  void rooms::TeachersOffice()
  {
-
     string file_path = "/workspaces/Initial/Map_Objects/Map_resources/Teacher's office .txt";
     int file_length = file_path.length();
     file_path.insert(file_length - 4, str_randnum);
+    
     int x_door = 86;
     int y_door = 29;
     main_engine(file_path,x_door,y_door);
@@ -218,6 +221,7 @@ void rooms::ClubRoom()
     string file_path = "/workspaces/Initial/Map_Objects/Map_resources/Restroom .txt";
     int file_length = file_path.length();
     file_path.insert(file_length - 4, str_randnum);
+    
     int x_door = 86;
     int y_door = 29;
     main_engine(file_path,x_door,y_door);
@@ -226,10 +230,10 @@ void rooms::ClubRoom()
 
 void rooms::DiningRoom()
  {
-
     string file_path = "/workspaces/Initial/Map_Objects/Map_resources/Dining Room .txt";
     int file_length = file_path.length();
     file_path.insert(file_length - 4, str_randnum);
+
     int x_door = 64;
     int y_door = 5;
     main_engine(file_path,x_door,y_door);
