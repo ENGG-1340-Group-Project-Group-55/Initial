@@ -201,7 +201,7 @@ int main_engine(string file_path, int&x, int& y) {
                         if (x4>=44 && x4<=53) {
                             delwin(game_window);
                             clear();
-                            return 8;
+                            return 7;
                         }
                     }
                 }
@@ -239,7 +239,7 @@ int main_engine(string file_path, int&x, int& y) {
                         if (x4 >= 100 && x4 <= 111) {
                             delwin(game_window);
                             clear();
-                            return 7;
+                            return 8;
                         }
                     }
                 } else if (file_path == "/workspaces/Initial/Map_Objects/Map_resources/Classroom.txt") {
