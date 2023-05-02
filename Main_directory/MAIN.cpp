@@ -181,7 +181,6 @@ void rooms::ClassRoom()
 }
 void rooms::ClubRoom()
 {   
-<<<<<<< HEAD
     string file_path;
     if (randroom != 'C') {
         
@@ -212,19 +211,10 @@ void rooms::ClubRoom()
     else {
         file_path = "/workspaces/Initial/Map_Objects/Map_resources/Club Room.txt";
     }
-=======
+
     string file_path = "/workspaces/Initial/Map_Objects/Map_resources/Club Room .txt";
     int file_length = file_path.length();
     file_path.insert(file_length - 4, str_randnum);
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
->>>>>>> 7c34aae (auto random map)
->>>>>>> parent of b3a3cd9 (ver)
-=======
->>>>>>> 7c34aae (auto random map)
->>>>>>> 2f2a186 (ver)
-    
     int x_door = 20;
     int y_door = 5;
     main_engine(file_path,x_door,y_door);
@@ -232,12 +222,6 @@ void rooms::ClubRoom()
 
  void rooms::MusicRoom()
  {  
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-=======
->>>>>>> 2f2a186 (ver)
     string file_path;
     if (randroom != 'M') {
         
@@ -268,25 +252,9 @@ void rooms::ClubRoom()
     else {
         file_path = "/workspaces/Initial/Map_Objects/Map_resources/Music Room.txt"; 
     }
-    
-=======
-<<<<<<< HEAD
->>>>>>> parent of b3a3cd9 (ver)
-=======
->>>>>>> 2f2a186 (ver)
-
     string file_path = "/workspaces/Initial/Map_Objects/Map_resources/Music Room .txt";
     int file_length = file_path.length();
     file_path.insert(file_length - 4, str_randnum);
-
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
->>>>>>> 7c34aae (auto random map)
->>>>>>> parent of b3a3cd9 (ver)
-=======
->>>>>>> 7c34aae (auto random map)
->>>>>>> 2f2a186 (ver)
     int x_door = 79;
     int y_door = 5;
     main_engine(file_path,x_door,y_door);
@@ -307,8 +275,7 @@ void rooms::ClubRoom()
     string file_path = "/workspaces/Initial/Map_Objects/Map_resources/Teacher's office .txt";
     int file_length = file_path.length();
     file_path.insert(file_length - 4, str_randnum);
-=======
-<<<<<<< HEAD
+
     string file_path;
     if (randroom != 'T') {
         
