@@ -263,7 +263,15 @@ int main_engine(string file_path, int&x, int& y) {
                         if (x4>=40 && x4<=60) {
                             delwin(game_window);
                             clear();
-                            return 9;
+                            return 0;
+                        }
+                    }
+                } else if (file_path == "/workspaces/Initial/Map_Objects/Map_resources/Rooftop.txt") {
+                    if (y4 == 21 || y4 == 20) {
+                        if (x4>=45 && x4<=50) {
+                            delwin(game_window);
+                            clear();
+                            return 8;
                         }
                     }
                 }
