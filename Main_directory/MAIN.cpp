@@ -46,8 +46,12 @@ int main()
     string exitfrom;
     string entered;
     rooms RM;
-
     bool flag = true;
+
+
+    
+
+
      while (flag)
     {
         if (counter == 0)
