@@ -173,11 +173,11 @@ int main_engine(string file_path, int&x, int& y) {
                         } else if (x4 >= 74 && x4 <= 79) {
                             delwin(game_window);
                             clear();
-                            return 3;
-                        } else if (x4 >= 102 && x4 <= 107) {
+                            return 4;
+                        } else if (x4 >= 93 && x4 <= 112) {
                             delwin(game_window);
                             clear();
-                            return 4;
+                            return 8;
                         }
                     }
                 } else if (file_path == "/workspaces/Initial/Map_Objects/Map_resources/Music Room.txt") {
@@ -191,6 +191,14 @@ int main_engine(string file_path, int&x, int& y) {
                 } else if (file_path == "/workspaces/Initial/Map_Objects/Map_resources/Diningroom.txt") {
                     if (y4 == 10) {
                         if (x4>=65 && x4<=70) {
+                            delwin(game_window);
+                            clear();
+                            return 0;
+                        }
+                    }
+                } else if (file_path == "/workspaces/Initial/Map_Objects/Map_resources/Club Room.txt") {
+                    if (y4 == 10) {
+                        if (x4>=21 && x4<=26) {
                             delwin(game_window);
                             clear();
                             return 0;
@@ -234,12 +242,10 @@ int main_engine(string file_path, int&x, int& y) {
                             delwin(game_window);
                             clear();
                             return 6;
-                        }
-                    } if (y4 == 22) {
-                        if (x4 >= 100 && x4 <= 111) {
+                        } else if (x4 >= 92 && x4 <= 97) {
                             delwin(game_window);
                             clear();
-                            return 8;
+                            return 3;
                         }
                     }
                 } else if (file_path == "/workspaces/Initial/Map_Objects/Map_resources/Classroom.txt") {
@@ -250,7 +256,7 @@ int main_engine(string file_path, int&x, int& y) {
                             return 0;
                         }
                     }
-                } else if (file_path == "/workspaces/Initial/Map_Objects/Map_resources/Restroom.txt" || file_path == "/workspaces/Initial/Map_Objects/Map_resources/Club Room.txt" || file_path == "/workspaces/Initial/Map_Objects/Map_resources/Teacher's office.txt") {
+                } else if (file_path == "/workspaces/Initial/Map_Objects/Map_resources/Restroom.txt" || file_path == "/workspaces/Initial/Map_Objects/Map_resources/Teacher's office.txt") {
                     if (y4 == 28) {
                         if (x4>=87 && x4<=92) {
                             delwin(game_window);

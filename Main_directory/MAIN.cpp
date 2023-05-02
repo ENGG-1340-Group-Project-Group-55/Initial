@@ -135,15 +135,15 @@ int main()
 void rooms::ClassRoom()
 {
     string file_path = "/workspaces/Initial/Map_Objects/Map_resources/Classroom.txt";
-    int x_door = 88;
+    int x_door = 87;
     int y_door = 29;
     main_engine(file_path,x_door,y_door);
 }
 void rooms::ClubRoom()
 {   
     string file_path = "/workspaces/Initial/Map_Objects/Map_resources/Club Room.txt"; 
-    int x_door = 86;
-    int y_door = 29;
+    int x_door = 20;
+    int y_door = 5;
     main_engine(file_path,x_door,y_door);
 }
 
