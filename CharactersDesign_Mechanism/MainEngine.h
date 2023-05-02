@@ -12,5 +12,7 @@ WINDOW* CreateWindow(int screen_height, int screen_width);
 void printInventory(std::vector<std::string> inventory);
 std::vector<std::string> loadInventoryFromFile();
 int main_engine(std::string file_path, int& x, int& y);
+void printStartpage(VectorWrapper StartData);
+
 
 #endif // MAIN_ENGINE_H
