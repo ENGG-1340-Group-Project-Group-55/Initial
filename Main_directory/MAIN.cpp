@@ -34,8 +34,8 @@ char letters[] = {'M', 'T', 'D', 'C', 'R'};
 int numLetters = sizeof(letters) / sizeof(letters[0]);
 
 // Generate a random index into the array
-uniform_int_distribution<int> dist(0, numLetters - 1);
-int randIndex = dist(rng);
+uniform_int_distribution<int> indexDist(0, numLetters - 1);
+int randIndex = indexDist(rng);
 
 // Get the random room from the array
 char randroom = letters[randIndex];
@@ -45,11 +45,16 @@ random_device rd;
 mt19937 gen(rd());
 
 // define the range of values
-uniform_int_distribution<int> dist(1, 6);
+uniform_int_distribution<int> valueDist(1, 6);
 
 // generate a random number
+<<<<<<< HEAD
 int randnum = dist(gen);
 std::string str_randnum = std::to_string(randnum);
+=======
+int randnum = valueDist(gen);
+
+>>>>>>> 140fdb5 (random room)
 
 
 int main()
