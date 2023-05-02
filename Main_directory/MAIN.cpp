@@ -157,7 +157,7 @@ void rooms::ClubRoom()
  {
     string file_path = "/workspaces/Initial/Map_Objects/Map_resources/Rooftop.txt";
     int x_door = 49;
-    int y_door = 23;
+    int y_door = 20;
     main_engine(file_path,x_door,y_door);
  }
 
