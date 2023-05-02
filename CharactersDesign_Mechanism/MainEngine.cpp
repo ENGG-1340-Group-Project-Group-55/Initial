@@ -188,7 +188,7 @@ int main_engine(string file_path, int&x, int& y) {
                             return 0;
                         }
                     }
-                } else if (file_path == "/workspaces/Initial/Map_Objects/Map_resources/Diningroom.txt" || file_path == "/workspaces/Initial/Map_Objects/Map_resources/Dinning Room 1.txt" || file_path == "/workspaces/Initial/Map_Objects/Map_resources/Dinning Room 2.txt" || file_path == "/workspaces/Initial/Map_Objects/Map_resources/Dinning Room 3.txt" || file_path == "/workspaces/Initial/Map_Objects/Map_resources/Dinning Room 4.txt" || file_path == "/workspaces/Initial/Map_Objects/Map_resources/Dinning Room 5.txt" || file_path == "/workspaces/Initial/Map_Objects/Map_resources/Dinning Room 6.txt") {
+                } else if (file_path == "/workspaces/Initial/Map_Objects/Map_resources/Diningroom.txt" || file_path == "/workspaces/Initial/Map_Objects/Map_resources/Dining Room 1.txt" || file_path == "/workspaces/Initial/Map_Objects/Map_resources/Dining Room 2.txt" || file_path == "/workspaces/Initial/Map_Objects/Map_resources/Dining Room 3.txt" || file_path == "/workspaces/Initial/Map_Objects/Map_resources/Dining Room 4.txt" || file_path == "/workspaces/Initial/Map_Objects/Map_resources/Dining Room 5.txt" || file_path == "/workspaces/Initial/Map_Objects/Map_resources/Dining` Room 6.txt") {
                     if (y4 == 10) {
                         if (x4>=65 && x4<=70) {
                             delwin(game_window);
@@ -256,7 +256,15 @@ int main_engine(string file_path, int&x, int& y) {
                             return 0;
                         }
                     }
-                } else if (file_path == "/workspaces/Initial/Map_Objects/Map_resources/Restroom.txt" || file_path == "/workspaces/Initial/Map_Objects/Map_resources/Restroom 1.txt" || file_path == "/workspaces/Initial/Map_Objects/Map_resources/Restroom 2.txt" || file_path == "/workspaces/Initial/Map_Objects/Map_resources/Restroom 3.txt" || file_path == "/workspaces/Initial/Map_Objects/Map_resources/Restroom 4.txt" || file_path == "/workspaces/Initial/Map_Objects/Map_resources/Restroom 5.txt" || file_path == "/workspaces/Initial/Map_Objects/Map_resources/Restroom 6.txt" || file_path == "/workspaces/Initial/Map_Objects/Map_resources/Teacher's office.txt" || file_path == "/workspaces/Initial/Map_Objects/Map_resources/Teacher's office 1.txt" || file_path == "/workspaces/Initial/Map_Objects/Map_resources/Teacher's office 2.txt" || file_path == "/workspaces/Initial/Map_Objects/Map_resources/Teacher's office 3.txt" || file_path == "/workspaces/Initial/Map_Objects/Map_resources/Teacher's office 4.txt" || file_path == "/workspaces/Initial/Map_Objects/Map_resources/Teacher's office 5.txt" || file_path == "/workspaces/Initial/Map_Objects/Map_resources/Teacher's office 6.txt") {
+                } else if (file_path == "/workspaces/Initial/Map_Objects/Map_resources/Restroom.txt" || file_path == "/workspaces/Initial/Map_Objects/Map_resources/Restroom 1.txt" || file_path == "/workspaces/Initial/Map_Objects/Map_resources/Restroom 2.txt" || file_path == "/workspaces/Initial/Map_Objects/Map_resources/Restroom 3.txt" || file_path == "/workspaces/Initial/Map_Objects/Map_resources/Restroom 4.txt" || file_path == "/workspaces/Initial/Map_Objects/Map_resources/Restroom 5.txt" || file_path == "/workspaces/Initial/Map_Objects/Map_resources/Restroom 6.txt" ) {
+                    if (y4 == 28) {
+                        if (x4>=87 && x4<=92) {
+                            delwin(game_window);
+                            clear();
+                            return 0;
+                        }
+                    }
+                 } else if (file_path == "/workspaces/Initial/Map_Objects/Map_resources/Teacher's office.txt" || file_path == "/workspaces/Initial/Map_Objects/Map_resources/Teacher's office 1.txt" || file_path == "/workspaces/Initial/Map_Objects/Map_resources/Teacher's office 2.txt" || file_path == "/workspaces/Initial/Map_Objects/Map_resources/Teacher's office 3.txt" || file_path == "/workspaces/Initial/Map_Objects/Map_resources/Teacher's office 4.txt" || file_path == "/workspaces/Initial/Map_Objects/Map_resources/Teacher's office 5.txt" || file_path == "/workspaces/Initial/Map_Objects/Map_resources/Teacher's office 6.txt") {
                     if (y4 == 28) {
                         if (x4>=87 && x4<=92) {
                             delwin(game_window);
