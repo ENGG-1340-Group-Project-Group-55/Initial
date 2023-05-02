@@ -13,7 +13,7 @@ coordinates TeachersOffice = {100,8};
 coordinates RoofTopStairs = {105,19};
 coordinates ToCorridor = {44,23};
 coordinates RoofTop = {47,9};
-coordinates ToRoofTop = {49,15};
+coordinates ToRoofTop = {47,9};
 coordinates DiningRoom = {40,17};///
 coordinates RestRoom = {34,8};///
 
