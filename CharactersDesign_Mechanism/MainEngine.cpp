@@ -71,6 +71,7 @@ int main_engine(string file_path, int&x, int& y) {
     init_pair(3, COLOR_BLUE, COLOR_BLACK); // Pair 3: Blue text on a black background
     init_pair(4, COLOR_YELLOW, COLOR_BLACK); // Pair 4: Yellow text on a black background
 
+<<<<<<< HEAD
 
     if (intro == 1) {
         vector<string> chatboxintro = loadChatboxIntroFromFile();
@@ -78,6 +79,8 @@ int main_engine(string file_path, int&x, int& y) {
         intro = 0;
     }
 
+=======
+>>>>>>> 22bd27f (s)
     // Initialize the timer
     int countdown_duration = 900; // Set this to the desired countdown duration (15 minutes)
 
@@ -144,7 +147,10 @@ int main_engine(string file_path, int&x, int& y) {
     Maps Start(28, 104);
     VectorWrapper StartData = Start.Map_Loader(startpath);
 
+    
+
 // Main loop ///////////////////////////////////////////////////////////////////////////////////////////////////
+    
     int key_input;
     while ((key_input = wgetch(game_window)) != 'q') { // Exit on 'q' key press
         // Clear window
@@ -176,6 +182,13 @@ int main_engine(string file_path, int&x, int& y) {
                 }
             }
         }
+
+        if (intro == 1) {
+            vector<string> chatboxintro = loadChatboxIntroFromFile();
+            printChatboxIntro(chatboxintro);
+            intro = 0;
+        }
+    
 
         switch(key_input) {
             case 'w':
@@ -439,6 +452,11 @@ vector<string> loadChatboxIntroFromFile() {
 }
 
 
+<<<<<<< HEAD
+=======
+
+
+>>>>>>> 22bd27f (s)
 void printChatboxIntro(vector<string> chatboxintro) {
     int chatbox_height = 7;
     int chatbox_width = 80;
