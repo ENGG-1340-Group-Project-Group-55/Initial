@@ -203,7 +203,7 @@ int main_engine(string file_path, int&x, int& y) {
                             return 0;
                         }
                     }
-                } else if (file_path == "/workspaces/Initial/Map_Objects/Map_resources/Diningroom.txt" || file_path == "/workspaces/Initial/Map_Objects/Map_resources/Dining Room 1.txt" || file_path == "/workspaces/Initial/Map_Objects/Map_resources/Dining Room 2.txt" || file_path == "/workspaces/Initial/Map_Objects/Map_resources/Dining Room 3.txt" || file_path == "/workspaces/Initial/Map_Objects/Map_resources/Dining Room 4.txt" || file_path == "/workspaces/Initial/Map_Objects/Map_resources/Dining Room 5.txt" || file_path == "/workspaces/Initial/Map_Objects/Map_resources/Dining` Room 6.txt") {
+                } else if (file_path == "/workspaces/Initial/Map_Objects/Map_resources/Diningroom.txt" || file_path == "/workspaces/Initial/Map_Objects/Map_resources/Dining Room 1.txt" || file_path == "/workspaces/Initial/Map_Objects/Map_resources/Dining Room 2.txt" || file_path == "/workspaces/Initial/Map_Objects/Map_resources/Dining Room 3.txt" || file_path == "/workspaces/Initial/Map_Objects/Map_resources/Dining Room 4.txt" || file_path == "/workspaces/Initial/Map_Objects/Map_resources/Dining Room 5.txt" || file_path == "/workspaces/Initial/Map_Objects/Map_resources/Dining Room 6.txt") {
                     if (y4 == 10) {
                         if (x4>=65 && x4<=70) {
                             delwin(game_window);
@@ -334,6 +334,17 @@ int main_engine(string file_path, int&x, int& y) {
                     x-=2;
                 }
                 break;
+            
+            case 'f':
+                for (int i = 0; i < charsize+2; i++) {
+                    for (int j = 0; j < current_character[i].length()+2; j++) {
+                        if (mapData.TDVEC[i+y][j+x] == '*') {
+                            flag1 = true;
+                            break;
+                        }
+                    }
+                }
+                break;
 
             case 'i':
                 flag1 = true;
@@ -372,20 +383,6 @@ int main_engine(string file_path, int&x, int& y) {
 
         // Update the timer and VISION_RADIUS
         int remaining_time = updateTimerAndVisionRadius(countdown_duration);
-
-        // Refresh the window
-        // wrefresh(game_window);
-        // if (flag1 == true) {
-        //     vector<string> inventory = loadInventoryFromFile();
-        //     printInventory(inventory);
-        // }
-        // if (flag2 == true) {
-        //     vector<string> menu;
-        //     printMenu(menu, remaining_time);
-        // }
-        // if (flag3 == true) {
-        //     printStartpage(StartData);
-        // }
 
         if (flag1 == true) {
             vector<string> inventory = loadInventoryFromFile();
