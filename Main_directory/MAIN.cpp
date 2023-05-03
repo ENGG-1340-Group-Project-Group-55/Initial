@@ -11,6 +11,14 @@
 
 using namespace std;
 
+string startpath = "/workspaces/Initial/CharactersDesign_Mechanism/startpage.txt";
+Maps Start(28, 104);
+VectorWrapper StartData = Start.Map_Loader(startpath);
+
+void printStartpage(VectorWrapper StartData);
+void display_instructions(VectorWrapper StartData);
+void startGame();
+
 class rooms
 {
 public:
@@ -60,9 +68,30 @@ int roomflag3 = 0;
 int roomflag4 = 0;
 int roomflag5 = 0;
 
-int main()
-{
+int main() {
     initialize();
+    printStartpage(StartData);
+
+    while (true) {
+        int ch = getch();
+        if (ch == '1') {
+            clear();
+            startGame();
+            break;
+        }
+        else if (ch == '2') {
+            display_instructions(StartData);
+        }
+        if (ch == 'q') {
+            break;
+        }
+    }
+    endwin();
+    return 0;
+}
+
+void startGame()
+{
     int a;
     int b;
     int *x = &a;
@@ -79,8 +108,6 @@ int main()
     if (out_file) {
         out_file << start_time;
         out_file.close();
-    } else {
-        return -1;
     }
 
     rooms RM;
@@ -330,4 +357,76 @@ void rooms::DiningRoom()
         return "NONE";
         break;
     }
+}
+void printStartpage(VectorWrapper StartData) {
+    int start_height = 28;
+    int start_width = 104;
+
+    raw();
+    noecho();
+    curs_set(0);
+    keypad(stdscr, TRUE);
+
+    WINDOW* startWin = CreateWindow(start_height, start_width);
+
+    // Draw the start page with colors
+    for (int i = 0; i < StartData.TDVEC.size(); i++) {
+        for (int j = 0; j < StartData.TDVEC[i].size(); j++) {
+            if (StartData.TDVEC[i][j] == '.') {
+                continue; // Skip '.' characters
+            }
+            if (i < 17) {
+                wattron(startWin, COLOR_PAIR(1));
+                mvwaddch(startWin, i, j, StartData.TDVEC[i][j]);
+                wattroff(startWin, COLOR_PAIR(1));
+            } else if (i < 19) {
+                wattron(startWin, COLOR_PAIR(3));
+                mvwaddch(startWin, i, j, StartData.TDVEC[i][j]);
+                wattroff(startWin, COLOR_PAIR(3));
+            } else {
+                wattron(startWin, COLOR_PAIR(2));
+                mvwaddch(startWin, i, j, StartData.TDVEC[i][j]);
+                wattroff(startWin, COLOR_PAIR(2));
+            }
+        }
+    }
+
+    delwin(startWin);
+}
+
+void display_instructions(VectorWrapper StartData) {
+    clear();
+
+    attron(COLOR_PAIR(1));
+    printw("\n");
+    printw("  ___ _  _ ___ _____ ___ _   _  ___ _____ ___ ___  _  _ \n");
+    printw(" |_ _| \\| / __|_   _| _ \\ | | |/ __|_   _|_ _/ _ \\| \\| |\n");
+    printw("  | || .` \\__ \\ | | |   / |_| | (__  | |  | | (_) | .` |\n");
+    printw(" |___|_|\\_|___/ |_| |_|_\\\\___/ \\___| |_| |___\\___/|_|\\_|\n");
+    printw("                                                        ");
+    printw("\n");
+    attroff(COLOR_PAIR(1));
+    attron(COLOR_PAIR(4));
+    printw("1. Welcome to horror school escape game!\n");
+    printw("\n");
+    printw("2. While playing the game, you will be guided to choose an action from several options while playing the game. To make a choice, enter the corresponding number and press Enter.\n");
+    printw("\n");
+    printw("3. Please choose wisely, as you cannot change your choice and the storyline changes by your decisions.\n");
+    printw("\n");
+    printw("4. You can move your character by using W, A, S, D in your keyboard to move to another place. (W = up, S = down, A = left, D = right)\n");
+    printw("\n");
+    printw("5. You can press E to open your inventory and press F to grab items while playing the game.\n");
+    printw("\n");
+    printw("\nPress Enter to return to the start page.");
+    attroff(COLOR_PAIR(4));
+
+    refresh();
+
+    // Wait for the user to press Enter
+    int ch;
+    do {
+        ch = getch();
+    } while (ch != '\n' && ch != '\r');
+
+    printStartpage(StartData);
 }
