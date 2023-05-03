@@ -7,6 +7,7 @@
 #include <random>
 #include "/workspaces/Initial/CharactersDesign_Mechanism/doorcoordinate.h"
 #include "/workspaces/Initial/CharactersDesign_Mechanism/MainEngine.h"
+#include "/workspaces/Initial/CharactersDesign_Mechanism/MapLoader.h"
 
 using namespace std;
 
