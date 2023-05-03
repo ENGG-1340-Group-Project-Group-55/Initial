@@ -72,6 +72,12 @@ int main_engine(string file_path, int&x, int& y) {
     init_pair(4, COLOR_YELLOW, COLOR_BLACK); // Pair 4: Yellow text on a black background
 
 
+    if (intro == 1) {
+        vector<string> chatboxintro = loadChatboxIntroFromFile();
+        printChatboxIntro(chatboxintro);
+        intro = 0;
+    }
+
     // Initialize the timer
     int countdown_duration = 900; // Set this to the desired countdown duration (15 minutes)
 
@@ -138,18 +144,7 @@ int main_engine(string file_path, int&x, int& y) {
     Maps Start(28, 104);
     VectorWrapper StartData = Start.Map_Loader(startpath);
 
-
 // Main loop ///////////////////////////////////////////////////////////////////////////////////////////////////
-
-    Maps gameMap(screen_height, screen_width);
-    VectorWrapper mapData = gameMap.Map_Loader(file_path);
-    if (file_path == "/workspaces/Initial/Map_Objects/Map_resources/Rooftop.txt") {
-        gameMap.Map_printer(mapData, 0, 0, screen_height, screen_width, game_window);
-
-    }
-
-// Main loop
-
     int key_input;
     while ((key_input = wgetch(game_window)) != 'q') { // Exit on 'q' key press
         // Clear window
@@ -235,7 +230,6 @@ int main_engine(string file_path, int&x, int& y) {
                         if (x4>=44 && x4<=53) {
                             delwin(game_window);
                             clear();
-
                             return 7;
                         }
                     }
@@ -444,9 +438,10 @@ vector<string> loadChatboxIntroFromFile() {
     return chatboxintro;
 }
 
+
 void printChatboxIntro(vector<string> chatboxintro) {
-    int chatbox_height = 8;
-    int chatbox_width = 83;
+    int chatbox_height = 7;
+    int chatbox_width = 80;
 
     initscr();
     raw();
@@ -454,18 +449,18 @@ void printChatboxIntro(vector<string> chatboxintro) {
     curs_set(0);
     keypad(stdscr, TRUE);
 
-    WINDOW* chatboxWin = CreateWindow(chatbox_height, chatbox_width);
-    box(chatboxWin, 0, 0);
-    wrefresh(chatboxWin);
-
     int currentFileIndex = 1;
     while (currentFileIndex <= chatboxintro.size()) {
+        WINDOW* chatboxWin = CreateWindow(chatbox_height, chatbox_width); // create window for each file
+        box(chatboxWin, 0, 0);
+        wrefresh(chatboxWin);
+
         string filePath = "/workspaces/Initial/UI/chatboxintro/chatboxintro" + to_string(currentFileIndex) + ".txt";
         ifstream inputFile(filePath);
         string line;
 
         while (getline(inputFile, line)) {
-            mvwprintw(chatboxWin, currentFileIndex % chatbox_height + 1, 1, "%s", line.c_str());
+            mvwprintw(chatboxWin, 3, 6, "%s", line.c_str());
             wrefresh(chatboxWin);
             int ch = getch();
             if (ch == 10) { // Enter key
@@ -473,6 +468,7 @@ void printChatboxIntro(vector<string> chatboxintro) {
             }
         }
 
+        delwin(chatboxWin); // delete window after displaying the file
         inputFile.close();
         currentFileIndex++;
 
@@ -486,16 +482,7 @@ void printChatboxIntro(vector<string> chatboxintro) {
             }
         }
     }
-
-    // Wait for the user to press enter before exiting
-    while (true) {
-        int ch = getch();
-        if (ch == 10) { // Enter key
-            break;
-        }
-    }
-
-    delwin(chatboxWin);
+    endwin();
 }
 
 vector<string> loadInventoryFromFile() {
@@ -658,8 +645,6 @@ void printStartpage(VectorWrapper StartData) {
             int x = 87, y = 24;
             string file_path = "/workspaces/Initial/Map_Objects/Map_resources/Classroom.txt";
             delwin(startWin);
-            vector<string> chatboxintro = loadChatboxIntroFromFile();
-            printChatboxIntro(chatboxintro);
             main_engine(file_path,x,y);
             
         }
