@@ -45,6 +45,7 @@ void printMenu(vector<string> menu, int remaining_time);
 void printStartpage(VectorWrapper StartData);
 void display_instructions(VectorWrapper StartData);
 
+int intro = 1;
 int main_engine(string file_path, int&x, int& y) {
 // Initialize ncurses
     initscr();
@@ -58,6 +59,7 @@ int main_engine(string file_path, int&x, int& y) {
     init_pair(2, COLOR_GREEN, COLOR_BLACK); // Pair 2: Green text on a black background
     init_pair(3, COLOR_BLUE, COLOR_BLACK); // Pair 3: Blue text on a black background
     init_pair(4, COLOR_YELLOW, COLOR_BLACK); // Pair 4: Yellow text on a black background
+
 
     // Initialize the timer
     int countdown_duration = 900; // Set this to the desired countdown duration (15 minutes)
@@ -383,14 +385,6 @@ int main_engine(string file_path, int&x, int& y) {
     return 0;
 }
 
-
-@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@
-vector<string> loadChatboxIntroFromFile() {
-    vector<string> chatboxintro;
-    ifstream inputFile("/workspaces/Initial/UI/chatboxintro/inventory.txt"); // Open the file for reading
-    string line;
-
-
 vector<string> loadChatboxIntroFromFile() {
     vector<string> chatboxintro;
     string folderPath = "/workspaces/Initial/UI/chatboxintro/";
@@ -402,7 +396,7 @@ vector<string> loadChatboxIntroFromFile() {
 
         if (inputFile.is_open()) {
             while (getline(inputFile, line)) {
-                inventory.push_back(line); // Read and store the items from the file
+                chatboxintro.push_back(line); // Read and store the lines from the file
             }
             inputFile.close(); // Close the file
         } else {
@@ -410,11 +404,12 @@ vector<string> loadChatboxIntroFromFile() {
         }
     }
 
-    return inventory;
+    return chatboxintro;
 }
 
+
 void printChatboxIntro(vector<string> chatboxintro) {
-    int chatbox_height = 5;
+    int chatbox_height = 8;
     int chatbox_width = 83;
 
     initscr();
@@ -425,44 +420,47 @@ void printChatboxIntro(vector<string> chatboxintro) {
 
     WINDOW* chatboxWin = CreateWindow(chatbox_height, chatbox_width);
     box(chatboxWin, 0, 0);
-    mvwprintw(chatboxWin, 1, 1, "Chatbox Intro:");
     wrefresh(chatboxWin);
 
-    int currentFileIndex = 0;
-    while (currentFileIndex < chatboxintro.size()) {
-        string filePath = "/workspaces/Initial/UI/chatboxintro/" + chatboxintro[currentFileIndex];
+    int currentFileIndex = 1;
+    while (currentFileIndex <= chatboxintro.size()) {
+        string filePath = "/workspaces/Initial/UI/chatboxintro/chatboxintro" + to_string(currentFileIndex) + ".txt";
         ifstream inputFile(filePath);
         string line;
 
-        if (inputFile.is_open()) {
-            while (getline(inputFile, line)) {
-                mvwprintw(chatboxWin, currentFileIndex + 2, 1, "%s", line.c_str());
-                wrefresh(chatboxWin);
+        while (getline(inputFile, line)) {
+            mvwprintw(chatboxWin, currentFileIndex % chatbox_height + 1, 1, "%s", line.c_str());
+            wrefresh(chatboxWin);
+            int ch = getch();
+            if (ch == 10) { // Enter key
+                break;
+            }
+        }
+
+        inputFile.close();
+        currentFileIndex++;
+
+        if (currentFileIndex % chatbox_height == 0) {
+            // Wait for the user to press enter before displaying the next set of messages
+            while (true) {
                 int ch = getch();
                 if (ch == 10) { // Enter key
-                    currentFileIndex++;
                     break;
                 }
             }
-            inputFile.close();
-        } else {
-            mvwprintw(chatboxWin, currentFileIndex + 2, 1, "No %s file.", chatboxintro[currentFileIndex].c_str());
-            wrefresh(chatboxWin);
-            currentFileIndex++;
         }
     }
 
-    //screen displayed until 'q' is pressed
+    // Wait for the user to press enter before exiting
     while (true) {
         int ch = getch();
-        if (ch == 27) { // Escape key
+        if (ch == 10) { // Enter key
             break;
         }
     }
+
     delwin(chatboxWin);
 }
-
-
 
 
 vector<string> loadInventoryFromFile() {
@@ -582,6 +580,7 @@ void printMenu(vector<string> menu, int remaining_time) {
 
     delwin(menuWin);
 }
+
 void printStartpage(VectorWrapper StartData) {
     clear();
 
@@ -627,7 +626,10 @@ void printStartpage(VectorWrapper StartData) {
             int x = 87, y = 24;
             string file_path = "/workspaces/Initial/Map_Objects/Map_resources/Classroom.txt";
             delwin(startWin);
+            vector<string> chatboxintro = loadChatboxIntroFromFile();
+            printChatboxIntro(chatboxintro);
             main_engine(file_path,x,y);
+            
         }
         else if (ch == '2') {
             display_instructions(StartData);
