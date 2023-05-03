@@ -670,6 +670,7 @@ void printChatboxIntro(vector<string> chatboxintro) {
     endwin();
 }
 
+<<<<<<< HEAD
 vector<string> loadHelicopterFromFile() {
     vector<string> helicopter;
     string folderPath = "/workspaces/Initial/Map_Objects/Map_resources/";
@@ -734,6 +735,11 @@ void printHelicopter() {
 void ToInventory(string object) {
     string fp = "/workspaces/Initial/UI/inventory.txt";
     ofstream outputFile(fp, ios::app);
+=======
+
+void ToInventory(string object) {
+    ofstream outputFile("/workspaces/Initial/UI/inventory.txt");
+>>>>>>> 7a4a020 (.)
     if (outputFile.is_open()) {
         outputFile << object;
         outputFile.close();
