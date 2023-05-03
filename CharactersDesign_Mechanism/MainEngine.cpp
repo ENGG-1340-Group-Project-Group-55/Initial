@@ -71,16 +71,12 @@ int main_engine(string file_path, int&x, int& y) {
     init_pair(3, COLOR_BLUE, COLOR_BLACK); // Pair 3: Blue text on a black background
     init_pair(4, COLOR_YELLOW, COLOR_BLACK); // Pair 4: Yellow text on a black background
 
-<<<<<<< HEAD
 
     if (intro == 1) {
         vector<string> chatboxintro = loadChatboxIntroFromFile();
         printChatboxIntro(chatboxintro);
         intro = 0;
     }
-
-=======
->>>>>>> 22bd27f (s)
     // Initialize the timer
     int countdown_duration = 900; // Set this to the desired countdown duration (15 minutes)
 
