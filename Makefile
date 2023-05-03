@@ -1,5 +1,5 @@
 CC = g++
-CXXFLAGS = -std=c++17
+CXXFLAGS = -std=c++11
 LDFLAGS = -lncurses
 TARGETS = MAIN MainEngine
 OBJDIR = ./obj
