@@ -38,6 +38,9 @@ WINDOW* CreateWindow(int screen_height, int screen_width) {
 void printInventory(vector<string> inventory);
 vector<string> loadInventoryFromFile();
 
+void printChatboxIntro(vector<string> chatboxintro);
+vector<string> loadChatboxIntroFromFile();
+
 void printMenu(vector<string> menu, int remaining_time);
 void printStartpage(VectorWrapper StartData);
 void display_instructions(VectorWrapper StartData);
@@ -381,6 +384,83 @@ int main_engine(string file_path, int&x, int& y) {
 }
 
 
+@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@
+vector<string> loadChatboxIntroFromFile() {
+    vector<string> chatboxintro;
+    ifstream inputFile("/workspaces/Initial/UI/chatboxintro/inventory.txt"); // Open the file for reading
+    string line;
+
+
+vector<string> loadChatboxIntroFromFile() {
+    vector<string> chatboxintro;
+    string folderPath = "/workspaces/Initial/UI/chatboxintro/";
+
+    for (string fileName : {"chatboxintro1.txt", "chatboxintro2.txt", "chatboxintro3.txt", "chatboxintro4.txt", "chatboxintro5.txt", "chatboxintro6.txt", "chatboxintro7.txt"}) {
+        string filePath = folderPath + fileName;
+        ifstream inputFile(filePath); // Open the file for reading
+        string line;
+
+        if (inputFile.is_open()) {
+            while (getline(inputFile, line)) {
+                inventory.push_back(line); // Read and store the items from the file
+            }
+            inputFile.close(); // Close the file
+        } else {
+            cout << "No " << fileName << " file." << endl;
+        }
+    }
+
+    return inventory;
+}
+
+void printChatboxIntro(vector<string> chatboxintro) {
+    int chatbox_height = 5;
+    int chatbox_width = 83;
+
+    initscr();
+    raw();
+    noecho();
+    curs_set(0);
+    keypad(stdscr, TRUE);
+
+    WINDOW* chatboxWin = CreateWindow(chatbox_height, chatbox_width);
+    box(chatboxWin, 0, 0);
+    mvwprintw(chatboxWin, 1, 1, "Chatbox Intro:");
+    wrefresh(chatboxWin);
+
+    int currentFileIndex = 0;
+    while (currentFileIndex < chatboxintro.size()) {
+        string filePath = "/workspaces/Initial/UI/chatboxintro/" + chatboxintro[currentFileIndex];
+        ifstream inputFile(filePath);
+        string line;
+
+        if (inputFile.is_open()) {
+            while (getline(inputFile, line)) {
+                mvwprintw(chatboxWin, currentFileIndex + 2, 1, "%s", line.c_str());
+                wrefresh(chatboxWin);
+                int ch = getch();
+                if (ch == 10) { // Enter key
+                    currentFileIndex++;
+                    break;
+                }
+            }
+            inputFile.close();
+        } else {
+            mvwprintw(chatboxWin, currentFileIndex + 2, 1, "No %s file.", chatboxintro[currentFileIndex].c_str());
+            wrefresh(chatboxWin);
+            currentFileIndex++;
+        }
+    }
+
+    //screen displayed until 'q' is pressed
+    while (true) {
+        int ch = getch();
+        if (ch == 27) { // Escape key
+            break;
+        }
+    }
+    delwin(chatboxWin);
+}
 
 
 
