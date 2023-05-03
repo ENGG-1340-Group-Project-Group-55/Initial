@@ -67,9 +67,8 @@ int main()
     string exitfrom;
     string entered;
 
-    time_t start_time = time(NULL);
-
     // Write start_time to the text file
+    time_t start_time = time(NULL);
     std::ofstream out_file("start_time.txt");
     if (out_file) {
         out_file << start_time;
