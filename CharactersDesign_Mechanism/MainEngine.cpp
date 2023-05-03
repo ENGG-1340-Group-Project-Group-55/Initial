@@ -448,11 +448,6 @@ vector<string> loadChatboxIntroFromFile() {
 }
 
 
-<<<<<<< HEAD
-=======
-
-
->>>>>>> 22bd27f (s)
 void printChatboxIntro(vector<string> chatboxintro) {
     int chatbox_height = 7;
     int chatbox_width = 80;
