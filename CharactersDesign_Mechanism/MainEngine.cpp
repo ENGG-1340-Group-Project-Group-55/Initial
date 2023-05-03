@@ -56,11 +56,7 @@ void printMenu(vector<string> menu, int remaining_time);
 void printStartpage(VectorWrapper StartData);
 void display_instructions(VectorWrapper StartData);
 
-<<<<<<< HEAD
 int intro = 1;
-=======
-
->>>>>>> 9d3d64c (.)
 int main_engine(string file_path, int&x, int& y) {
 // Initialize ncurses
     initscr();
@@ -142,9 +138,8 @@ int main_engine(string file_path, int&x, int& y) {
     Maps Start(28, 104);
     VectorWrapper StartData = Start.Map_Loader(startpath);
 
-<<<<<<< HEAD
+
 // Main loop ///////////////////////////////////////////////////////////////////////////////////////////////////
-=======
 
     Maps gameMap(screen_height, screen_width);
     VectorWrapper mapData = gameMap.Map_Loader(file_path);
@@ -154,7 +149,7 @@ int main_engine(string file_path, int&x, int& y) {
     }
 
 // Main loop
->>>>>>> 9d3d64c (.)
+
     int key_input;
     while ((key_input = wgetch(game_window)) != 'q') { // Exit on 'q' key press
         // Clear window
@@ -449,8 +444,6 @@ vector<string> loadChatboxIntroFromFile() {
     return chatboxintro;
 }
 
-<<<<<<< HEAD
-
 void printChatboxIntro(vector<string> chatboxintro) {
     int chatbox_height = 8;
     int chatbox_width = 83;
@@ -505,9 +498,6 @@ void printChatboxIntro(vector<string> chatboxintro) {
     delwin(chatboxWin);
 }
 
-
-=======
->>>>>>> 9d3d64c (.)
 vector<string> loadInventoryFromFile() {
     vector<string> inventory;
     ifstream inputFile("/workspaces/Initial/UI/inventory.txt"); // Open the file for reading
