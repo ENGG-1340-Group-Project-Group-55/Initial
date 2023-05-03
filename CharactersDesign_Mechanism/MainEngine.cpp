@@ -12,11 +12,22 @@
 //compile using: g++ -pedantic-errors -std=c++11 CharactersDesign_Mechanism/MainEngine.cpp Map_Objects/Map_loading.cpp -o game -lncurses
 
 int VISION_RADIUS;
-time_t start_time;
+
 
 // Function to update the timer and VISION_RADIUS
 int updateTimerAndVisionRadius(int countdown_duration) {
     time_t current_time = time(NULL);
+    time_t start_time;
+
+    // Read start_time from the text file
+    std::ifstream in_file("start_time.txt");
+    if (in_file) {
+        in_file >> start_time;
+        in_file.close();
+    } else {
+        return -1;
+    }
+
     int remaining_time = countdown_duration - static_cast<int>(difftime(current_time, start_time));
     VISION_RADIUS = 20 - (100 * (1 - static_cast<double>(remaining_time) / countdown_duration));
     if (VISION_RADIUS < 5) {
@@ -63,7 +74,7 @@ int main_engine(string file_path, int&x, int& y) {
 
     // Initialize the timer
     int countdown_duration = 900; // Set this to the desired countdown duration (15 minutes)
-    start_time = time(NULL);
+
 
     //Set up initial variables
     char ch;
@@ -529,9 +540,6 @@ void printMenu(vector<string> menu, int remaining_time) {
     int menu_height = 20;
     int menu_width = 50;
 
-    int countdown_duration = 900; // Set this to the desired countdown duration (15 minutes)
-    time_t start_time = time(NULL);
-    time_t end_time = start_time + countdown_duration;
 
     initscr();
     raw();

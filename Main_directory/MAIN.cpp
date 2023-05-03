@@ -2,6 +2,8 @@
 #include <string>
 #include <cstdlib>
 #include <ctime>
+#include <fstream>
+#include <iomanip>
 #include <random>
 #include "/workspaces/Initial/CharactersDesign_Mechanism/doorcoordinate.h"
 #include "/workspaces/Initial/CharactersDesign_Mechanism/MainEngine.h"
@@ -64,6 +66,18 @@ int main()
     string previous;
     string exitfrom;
     string entered;
+
+    time_t start_time = time(NULL);
+
+    // Write start_time to the text file
+    std::ofstream out_file("start_time.txt");
+    if (out_file) {
+        out_file << start_time;
+        out_file.close();
+    } else {
+        return -1;
+    }
+
     rooms RM;
     bool flag = true;
      while (flag)
