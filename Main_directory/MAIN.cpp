@@ -223,7 +223,7 @@ void rooms::ClubRoom()
     }
     
     int x_door = 86;
-    int y_door = 29;
+    int y_door = 28;
     main_engine(file_path,x_door,y_door);
  }
 
@@ -240,7 +240,7 @@ void rooms::ClubRoom()
     }
     
     int x_door = 86;
-    int y_door = 29;
+    int y_door = 28;
     main_engine(file_path,x_door,y_door);
 
  }
