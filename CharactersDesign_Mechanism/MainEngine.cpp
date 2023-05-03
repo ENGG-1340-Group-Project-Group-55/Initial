@@ -56,7 +56,11 @@ void printMenu(vector<string> menu, int remaining_time);
 void printStartpage(VectorWrapper StartData);
 void display_instructions(VectorWrapper StartData);
 
+<<<<<<< HEAD
 int intro = 1;
+=======
+
+>>>>>>> 9d3d64c (.)
 int main_engine(string file_path, int&x, int& y) {
 // Initialize ncurses
     initscr();
@@ -138,7 +142,19 @@ int main_engine(string file_path, int&x, int& y) {
     Maps Start(28, 104);
     VectorWrapper StartData = Start.Map_Loader(startpath);
 
+<<<<<<< HEAD
 // Main loop ///////////////////////////////////////////////////////////////////////////////////////////////////
+=======
+
+    Maps gameMap(screen_height, screen_width);
+    VectorWrapper mapData = gameMap.Map_Loader(file_path);
+    if (file_path == "/workspaces/Initial/Map_Objects/Map_resources/Rooftop.txt") {
+        gameMap.Map_printer(mapData, 0, 0, screen_height, screen_width, game_window);
+
+    }
+
+// Main loop
+>>>>>>> 9d3d64c (.)
     int key_input;
     while ((key_input = wgetch(game_window)) != 'q') { // Exit on 'q' key press
         // Clear window
@@ -224,6 +240,7 @@ int main_engine(string file_path, int&x, int& y) {
                         if (x4>=44 && x4<=53) {
                             delwin(game_window);
                             clear();
+
                             return 7;
                         }
                     }
@@ -432,6 +449,7 @@ vector<string> loadChatboxIntroFromFile() {
     return chatboxintro;
 }
 
+<<<<<<< HEAD
 
 void printChatboxIntro(vector<string> chatboxintro) {
     int chatbox_height = 8;
@@ -488,6 +506,8 @@ void printChatboxIntro(vector<string> chatboxintro) {
 }
 
 
+=======
+>>>>>>> 9d3d64c (.)
 vector<string> loadInventoryFromFile() {
     vector<string> inventory;
     ifstream inputFile("/workspaces/Initial/UI/inventory.txt"); // Open the file for reading
