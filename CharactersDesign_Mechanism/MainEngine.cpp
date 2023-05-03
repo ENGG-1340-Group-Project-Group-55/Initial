@@ -117,25 +117,24 @@ int main_engine(string file_path, int&x, int& y) {
     charline.close();
 
     string *current_character = char_up;
+    
+    // Draw the map
+    Maps gameMap(screen_height, screen_width);
+    VectorWrapper mapData = gameMap.Map_Loader(file_path);
+    //gameMap.Map_printer(mapData, 0, 0, screen_height, screen_width, game_window);
 
     string startpath = "/workspaces/Initial/CharactersDesign_Mechanism/startpage.txt";
     Maps Start(28, 104);
     VectorWrapper StartData = Start.Map_Loader(startpath);
 
-// Main loop
+// Main loop ///////////////////////////////////////////////////////////////////////////////////////////////////
     int key_input;
-
     while ((key_input = wgetch(game_window)) != 'q') { // Exit on 'q' key press
         // Clear window
-        werase(game_window);
+        //werase(game_window);
         bool flag1 = false;
         bool flag2 = false;
         bool flag3 = false;
-
-        // Draw the map
-        Maps gameMap(screen_height, screen_width);
-        VectorWrapper mapData = gameMap.Map_Loader(file_path);
-        gameMap.Map_printer(mapData, 0, 0, screen_height, screen_width, game_window);
         
         int y4 = y+4;
         int x4 = x+4;
@@ -364,19 +363,37 @@ int main_engine(string file_path, int&x, int& y) {
         int remaining_time = updateTimerAndVisionRadius(countdown_duration);
 
         // Refresh the window
-        wrefresh(game_window);
+        // wrefresh(game_window);
+        // if (flag1 == true) {
+        //     vector<string> inventory = loadInventoryFromFile();
+        //     printInventory(inventory);
+        // }
+        // if (flag2 == true) {
+        //     vector<string> menu;
+        //     printMenu(menu, remaining_time);
+        // }
+        // if (flag3 == true) {
+        //     printStartpage(StartData);
+        // }
+
         if (flag1 == true) {
             vector<string> inventory = loadInventoryFromFile();
             printInventory(inventory);
+            wrefresh(game_window);
         }
         if (flag2 == true) {
             vector<string> menu;
             printMenu(menu, remaining_time);
+            wrefresh(game_window);
         }
         if (flag3 == true) {
             printStartpage(StartData);
+            wrefresh(game_window);
+        } else {
+            wrefresh(game_window);
         }
     }
+    //main loop end ////////////////////////////////////////////////////////////////////////////////////////////
 
 // End ncurses mode
     delwin(game_window);
