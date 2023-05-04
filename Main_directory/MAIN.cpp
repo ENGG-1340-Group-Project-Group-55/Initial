@@ -15,8 +15,8 @@ string startpath = "/workspaces/Initial/CharactersDesign_Mechanism/startpage.txt
 Maps Start(28, 104);
 VectorWrapper StartData = Start.Map_Loader(startpath);
 
-void display_instructions(VectorWrapper StartData);
-void startGame();
+bool display_instructions(VectorWrapper StartData);
+
 
 class rooms
 {
@@ -74,6 +74,7 @@ int main()
     int b;
     int *x = &a;
     int *y = &b;
+    bool intro_flag = true;
     int counter = 0;
     string exitto;
     string previous;
@@ -93,6 +94,9 @@ int main()
     string filep = "/workspaces/Initial/CharactersDesign_Mechanism/startpage.txt";
     VectorWrapper start = mp.Map_Loader(filep);
 
+
+    while (intro_flag)
+    {
     initscr();
     start_color();
     init_pair(1, COLOR_RED, COLOR_BLACK); // Pair 1: Red text on the default background
@@ -136,15 +140,16 @@ int main()
     if (getch() == '1')
     {
         flag = true;
+        intro_flag = false;
     }
     else if (getch() == '2')
     {
-        display_instructions(start);
+        intro_flag = display_instructions(start);
     }
     clear(); // Clear the screen
     refresh(); // Refresh the screen after clearing
     endwin();
-
+    }
     rooms RM;
      while (flag)
     {
@@ -393,7 +398,8 @@ void rooms::DiningRoom()
     }
 }
 
-void display_instructions(VectorWrapper StartData) {
+bool display_instructions(VectorWrapper StartData) {
+    bool flag = true;
     clear();
 
     attron(COLOR_PAIR(1));
@@ -427,9 +433,14 @@ void display_instructions(VectorWrapper StartData) {
 
     // Wait for the user to press Enter
     int ch;
-    do {
-        ch = getch();
-    } while (ch != '\n' && ch != '\r');
+    while (flag)
+    {
+        if (getch()=='\n')
+    {
+        return true;
+    }
+    }
+   
 
     
 }
