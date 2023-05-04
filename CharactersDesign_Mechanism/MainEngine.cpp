@@ -456,181 +456,12 @@ int main_engine(string file_path, int&x, int& y) {
                 flag2 = true;
                 break;
 
-            case '0':
-                flag3 = true;
-                break;
-
             case 'f':
                 for (int i = 0; i < charsize+2; i++) {
                     for (int j = 0; j < current_character[i].length()+2; j++) {
                         if (mapData.TDVEC[i+y][j+x] == '*') {
-                            point += 1;
-                            if (point == 1) {
-                                int chatbox_height = 7;
-                                int chatbox_width = 80;
-                                string object;
-
-
-                                initscr();
-                                raw();
-                                noecho();
-                                curs_set(0);
-                                keypad(stdscr, TRUE);
-
-                                WINDOW* chatboxWin = CreateWindow(chatbox_height, chatbox_width); // create window for each file
-                                box(chatboxWin, 0, 0);
-                                wrefresh(chatboxWin);
-
-                                string filePath = "/workspaces/Initial/UI/chatboxintro/chatboxfound1.txt";
-                                ifstream inputFile(filePath);
-                                string line;
-
-                                while (getline(inputFile, line)) {
-                                    mvwprintw(chatboxWin, 3, 6, "%s", line.c_str());
-                                    wrefresh(chatboxWin);
-                                    int ch = getch();
-                                    if (ch == 10) { // Enter key
-                                        break;
-                                    }
-                                }
-
-                                delwin(chatboxWin); // delete window after displaying the file
-                                inputFile.close();
-
-                                object = "Key \n";
-                                ToInventory(object);}
-
-                            if (point == 2) {
-                                VISION_RADIUS_INCREASE += 10;
-                                int chatbox_height = 7;
-                                int chatbox_width = 80;
-                                string object;
-
-
-                                initscr();
-                                raw();
-                                noecho();
-                                curs_set(0);
-                                keypad(stdscr, TRUE);
-
-                                WINDOW* chatboxWin = CreateWindow(chatbox_height, chatbox_width); // create window for each file
-                                box(chatboxWin, 0, 0);
-                                wrefresh(chatboxWin);
-
-                                string filePath = "/workspaces/Initial/UI/chatboxintro/chatboxfound2.txt";
-                                ifstream inputFile(filePath);
-                                string line;
-
-                                while (getline(inputFile, line)) {
-                                    mvwprintw(chatboxWin, 3, 6, "%s", line.c_str());
-                                    wrefresh(chatboxWin);
-                                    int ch = getch();
-                                    if (ch == 10) { // Enter key
-                                        break;
-                                    }
-                                }
-
-                                delwin(chatboxWin); // delete window after displaying the file
-                                inputFile.close();
-                                
-
-
-                                object = "Battery \n";
-                                ToInventory(object); }
-
-                            if (point == 3) {
-                                //printing out ghosts
-                                int chatbox_height = 20;
-                                int chatbox_width = 20;
-                                string object;
-
-
-                                initscr();
-                                raw();
-                                noecho();
-                                curs_set(0);
-                                keypad(stdscr, TRUE);
-
-                                WINDOW* chatboxWin = CreateWindow(chatbox_height, chatbox_width); // create window for each file
-                                box(chatboxWin, 0, 0);
-                                wrefresh(chatboxWin);
-
-                                string filePath = "/workspaces/Initial/CharactersDesign_Mechanism/Character_Ghosts.resources/ghostfinal.txt";
-                                ifstream inputFile(filePath);
-                                string line;
-
-                                while (getline(inputFile, line)) {
-                                    mvwprintw(chatboxWin, 1, 1, "%s", line.c_str());
-                                    wrefresh(chatboxWin);
-                                    int ch = getch();
-                                    if (ch == 10) { // Enter key
-                                        break;
-                                    }
-                                }
-                                
-                                delwin(chatboxWin); // delete window after displaying the file
-                                inputFile.close();
-                                
-                                chatbox_height = 7;
-                                chatbox_width = 80;
-
-                                WINDOW* chatboxWin2 = CreateWindow(chatbox_height, chatbox_width); // create new window for the second chatbox
-                                box(chatboxWin2, 0, 0);
-                                wrefresh(chatboxWin2);
-
-                                filePath = "/workspaces/Initial/UI/chatboxintro/chatboxfound3.txt";
-                                ifstream inputFile2(filePath);
-                                line;
-
-                                while (getline(inputFile2, line)) {
-                                    mvwprintw(chatboxWin2, 3, 6, "%s", line.c_str());
-                                    wrefresh(chatboxWin2);
-                                    int ch = getch();
-                                    if (ch == 10) { // Enter key
-                                        break;
-                                    }
-                                }
-
-                                delwin(chatboxWin2); // delete window after displaying the file
-                                inputFile2.close();
-
-                                object = "Ghost Poster \n";
-                                ToInventory(object); }
-
-                            if (point == 4) {
-                                int chatbox_height = 7;
-                                int chatbox_width = 80;
-                                string object;
-                                object = "Key \n";
-                                ToInventory(object);
-                                std::ofstream outfile("/workspaces/Initial/UI/inventory.txt", std::ios::out | std::ios::trunc);
-                                outfile.close();
-
-                                initscr();
-                                raw();
-                                noecho();
-                                curs_set(0);
-                                keypad(stdscr, TRUE);
-
-                                WINDOW* chatboxWin = CreateWindow(chatbox_height, chatbox_width); // create window for each file
-                                box(chatboxWin, 0, 0);
-                                wrefresh(chatboxWin);
-
-                                string filePath = "/workspaces/Initial/UI/chatboxintro/chatboxfound1.txt";
-                                ifstream inputFile(filePath);
-                                string line;
-
-                                while (getline(inputFile, line)) {
-                                    mvwprintw(chatboxWin, 3, 6, "%s", line.c_str());
-                                    wrefresh(chatboxWin);
-                                    int ch = getch();
-                                    if (ch == 10) { // Enter key
-                                        break;
-                                    }
-                                }
-
-                                delwin(chatboxWin); // delete window after displaying the file
-                                inputFile.close();}                             
+                            flag3 = true;
+                          
 
                                 
                             
@@ -676,7 +507,176 @@ int main_engine(string file_path, int&x, int& y) {
             wrefresh(game_window);
         }
         if (flag3 == true) {
-            wrefresh(game_window);
+            point += 1;
+            if (point == 1) {
+                int chatbox_height = 7;
+                int chatbox_width = 80;
+                string object;
+
+
+                initscr();
+                raw();
+                noecho();
+                curs_set(0);
+                keypad(stdscr, TRUE);
+
+                WINDOW* chatboxWin = CreateWindow(chatbox_height, chatbox_width); // create window for each file
+                box(chatboxWin, 0, 0);
+                wrefresh(chatboxWin);
+
+                string filePath = "/workspaces/Initial/UI/chatboxintro/chatboxfound1.txt";
+                ifstream inputFile(filePath);
+                string line;
+
+                while (getline(inputFile, line)) {
+                    mvwprintw(chatboxWin, 3, 6, "%s", line.c_str());
+                    wrefresh(chatboxWin);
+                    int ch = getch();
+                    if (ch == 10) { // Enter key
+                        break;
+                    }
+                }
+
+                delwin(chatboxWin); // delete window after displaying the file
+                inputFile.close();
+
+                object = "Key \n";
+                ToInventory(object);
+            }
+            if (point == 2) {
+                VISION_RADIUS_INCREASE += 10;
+                int chatbox_height = 7;
+                int chatbox_width = 80;
+                string object;
+
+
+                initscr();
+                raw();
+                noecho();
+                curs_set(0);
+                keypad(stdscr, TRUE);
+
+                WINDOW* chatboxWin = CreateWindow(chatbox_height, chatbox_width); // create window for each file
+                box(chatboxWin, 0, 0);
+                wrefresh(chatboxWin);
+
+                string filePath = "/workspaces/Initial/UI/chatboxintro/chatboxfound2.txt";
+                ifstream inputFile(filePath);
+                string line;
+
+                while (getline(inputFile, line)) {
+                    mvwprintw(chatboxWin, 3, 6, "%s", line.c_str());
+                    wrefresh(chatboxWin);
+                    int ch = getch();
+                    if (ch == 10) { // Enter key
+                        break;
+                    }
+                }
+
+                delwin(chatboxWin); // delete window after displaying the file
+                inputFile.close();
+                
+
+
+                object = "Battery \n";
+                ToInventory(object); 
+            }
+
+            if (point == 3) {
+                //printing out ghosts
+                int chatbox_height = 20;
+                int chatbox_width = 20;
+                string object;
+
+
+                initscr();
+                raw();
+                noecho();
+                curs_set(0);
+                keypad(stdscr, TRUE);
+
+                WINDOW* chatboxWin = CreateWindow(chatbox_height, chatbox_width); // create window for each file
+                box(chatboxWin, 0, 0);
+                wrefresh(chatboxWin);
+
+                string filePath = "/workspaces/Initial/CharactersDesign_Mechanism/Character_Ghosts.resources/ghostfinal.txt";
+                ifstream inputFile(filePath);
+                string line;
+
+                while (getline(inputFile, line)) {
+                    mvwprintw(chatboxWin, 1, 1, "%s", line.c_str());
+                    wrefresh(chatboxWin);
+                    int ch = getch();
+                    if (ch == 10) { // Enter key
+                        break;
+                    }
+                }
+                
+                delwin(chatboxWin); // delete window after displaying the file
+                inputFile.close();
+                
+                chatbox_height = 7;
+                chatbox_width = 80;
+
+                WINDOW* chatboxWin2 = CreateWindow(chatbox_height, chatbox_width); // create new window for the second chatbox
+                box(chatboxWin2, 0, 0);
+                wrefresh(chatboxWin2);
+
+                filePath = "/workspaces/Initial/UI/chatboxintro/chatboxfound3.txt";
+                ifstream inputFile2(filePath);
+                line;
+
+                while (getline(inputFile2, line)) {
+                    mvwprintw(chatboxWin2, 3, 6, "%s", line.c_str());
+                    wrefresh(chatboxWin2);
+                    int ch = getch();
+                    if (ch == 10) { // Enter key
+                        break;
+                    }
+                }
+
+                delwin(chatboxWin2); // delete window after displaying the file
+                inputFile2.close();
+
+                object = "Ghost Poster \n";
+                ToInventory(object); 
+            }
+
+            if (point == 4) {
+                int chatbox_height = 7;
+                int chatbox_width = 80;
+                string object;
+                object = "Key \n";
+                ToInventory(object);
+                std::ofstream outfile("/workspaces/Initial/UI/inventory.txt", std::ios::out | std::ios::trunc);
+                outfile.close();
+
+                initscr();
+                raw();
+                noecho();
+                curs_set(0);
+                keypad(stdscr, TRUE);
+
+                WINDOW* chatboxWin = CreateWindow(chatbox_height, chatbox_width); // create window for each file
+                box(chatboxWin, 0, 0);
+                wrefresh(chatboxWin);
+
+                string filePath = "/workspaces/Initial/UI/chatboxintro/chatboxfound1.txt";
+                ifstream inputFile(filePath);
+                string line;
+
+                while (getline(inputFile, line)) {
+                    mvwprintw(chatboxWin, 3, 6, "%s", line.c_str());
+                    wrefresh(chatboxWin);
+                    int ch = getch();
+                    if (ch == 10) { // Enter key
+                        break;
+                    }
+                }
+
+                delwin(chatboxWin); // delete window after displaying the file
+                inputFile.close();
+            }   
         } else {
             wrefresh(game_window);
         }
