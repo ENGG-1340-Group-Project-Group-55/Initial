@@ -467,7 +467,7 @@ bool display_instructions(VectorWrapper StartData) {
     printw("\n");
     printw("4. You can move your character by using 'W, A, S, D' in your keyboard to move to another place. (W = up, S = down, A = left, D = right)\n");
     printw("\n");
-    printw("5. You can press 'I' to open your inventory and 'M' to open the menu.\n");
+    printw("5. You can press 'I' to open/close your inventory and 'M' to open/close the menu.\n");
     printw("\n");
     printw("6. Your flashlight will lose battery as time passes, so find a battery before it dies out! \n");
     printw("\n");

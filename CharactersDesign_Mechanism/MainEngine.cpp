@@ -1122,11 +1122,3 @@ void printMenu(vector<string> menu, int remaining_time) {
 
     delwin(menuWin);
 }
-
-
-// int main(){
-//     int x = 64, y = 20;
-//     string file_path = "/workspaces/Initial/Map_Objects/Map_resources/Restroom.txt";
-//     main_engine(file_path,x,y);
-//     endwin();
-// }
