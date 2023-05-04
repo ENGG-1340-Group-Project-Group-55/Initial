@@ -23,6 +23,13 @@ int musicflag;
 int diningflag;
 int clubflag;
 
+void reset_inventory() {
+    string filepath = "/workspaces/Initial/UI/inventory.txt";
+    ofstream outputFile(filepath, ios::trunc);
+    if (outputFile.is_open()) {
+        outputFile.close();
+    } 
+}
 
 // Function to update the timer and VISION_RADIUS
 int updateTimerAndVisionRadius(int countdown_duration) {
@@ -652,8 +659,7 @@ int main_engine(string file_path, int&x, int& y) {
                 string object;
                 object = "Key \n";
                 ToInventory(object);
-                std::ofstream outfile("/workspaces/Initial/UI/inventory.txt", std::ios::out | std::ios::trunc);
-                outfile.close();
+            
 
                 initscr();
                 raw();

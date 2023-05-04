@@ -1,19 +1,1 @@
 Key 
-<<<<<<< HEAD
-Battery 
-Ghost Poster 
-Key 
-Battery 
-Ghost Poster 
-=======
-Key 
-Battery 
-Key 
-Key 
-<<<<<<< HEAD
->>>>>>> 6b7e5bc (.)
-=======
-Battery 
-Key 
-Battery 
->>>>>>> 939996a (.)
