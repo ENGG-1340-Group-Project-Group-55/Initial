@@ -501,6 +501,7 @@ int main_engine(string file_path, int&x, int& y) {
                 for (int i = 0; i < charsize+2; i++) {
                     for (int j = 0; j < current_character[i].length()+2; j++) {
                         if (mapData.TDVEC[i+y][j+x] == '*') {
+<<<<<<< HEAD
                             flag3 = true;
                             ofstream outroomflag("/workspaces/Initial/Map_Objects/Map_resources/RoomFlags.txt", ios_base::app);
                             if (!outroomflag.is_open()) {
@@ -532,6 +533,10 @@ int main_engine(string file_path, int&x, int& y) {
                             // } else if (clubcount > 0) {
                             //     clubflag = 1;
                             // }
+=======
+
+                            flag3 = true;
+>>>>>>> d3a1944 (.)
                             break;
                         }
                     }
@@ -650,9 +655,9 @@ int main_engine(string file_path, int&x, int& y) {
             }
 
             if (point == 3) {
-                //printing out ghosts
-                int chatbox_height = 20;
-                int chatbox_width = 20;
+            //printing out ghosts
+                int ghost_height = 40;
+                int ghost_width = 140;
                 string object;
 
 
@@ -662,28 +667,37 @@ int main_engine(string file_path, int&x, int& y) {
                 curs_set(0);
                 keypad(stdscr, TRUE);
 
-                WINDOW* chatboxWin = CreateWindow(chatbox_height, chatbox_width); // create window for each file
-                box(chatboxWin, 0, 0);
-                wrefresh(chatboxWin);
-
                 string filePath = "/workspaces/Initial/CharactersDesign_Mechanism/Character_Ghosts.resources/ghostfinal.txt";
                 ifstream inputFile(filePath);
                 string line;
 
+                WINDOW* ghostWin = CreateWindow(ghost_height, ghost_width); // create window for each file
+                box(ghostWin, 0, 0);
+
+                int row = 1;
                 while (getline(inputFile, line)) {
-                    mvwprintw(chatboxWin, 1, 1, "%s", line.c_str());
-                    wrefresh(chatboxWin);
+                    mvwprintw(ghostWin, row, 1, "%s", line.c_str());
+                    row++;
+                }
+                wrefresh(ghostWin);
+
+                while (true) {
                     int ch = getch();
                     if (ch == 10) { // Enter key
                         break;
                     }
                 }
-                
-                delwin(chatboxWin); // delete window after displaying the file
+                                
+                werase(ghostWin);
+                wrefresh(ghostWin);
+
+                delwin(ghostWin); // delete window after displaying the file
                 inputFile.close();
-                
-                chatbox_height = 7;
-                chatbox_width = 80;
+
+                endwin();
+                                
+                int chatbox_height = 7;
+                int chatbox_width = 80;
 
                 WINDOW* chatboxWin2 = CreateWindow(chatbox_height, chatbox_width); // create new window for the second chatbox
                 box(chatboxWin2, 0, 0);
@@ -706,8 +720,8 @@ int main_engine(string file_path, int&x, int& y) {
                 inputFile2.close();
 
                 object = "Ghost Poster \n";
-                ToInventory(object); 
-            }
+                ToInventory(object); }
+
 
             if (point == 4) {
                 int chatbox_height = 7;
