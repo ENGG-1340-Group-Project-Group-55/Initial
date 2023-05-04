@@ -95,10 +95,10 @@ int main()
 
     initscr();
     start_color();
-    init_pair(1, COLOR_RED, COLOR_BLACK); // Pair 1: Red text on a black background
-    init_pair(2, COLOR_GREEN, COLOR_BLACK); // Pair 2: Green text on a black background
-    init_pair(3, COLOR_BLUE, COLOR_BLACK); // Pair 3: Blue text on a black background
-    init_pair(4, COLOR_YELLOW, COLOR_BLACK); // Pair 4: Yellow text on a black background
+    init_pair(1, COLOR_RED, -1); // Pair 1: Red text on the default background
+    init_pair(2, COLOR_GREEN, -1); // Pair 2: Green text on the default background
+    init_pair(3, COLOR_BLUE, -1); // Pair 3: Blue text on the default background
+    init_pair(4, COLOR_YELLOW, -1); // Pair 4: Yellow text on the default background
     clear();
     refresh();
     curs_set(0);
