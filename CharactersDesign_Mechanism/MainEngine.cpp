@@ -31,6 +31,14 @@ void reset_inventory() {
     }
 }
 
+void reset_roomflag() {
+    string filepath = "/workspaces/Initial/Map_Objects/Map_resources/RoomFlags.txt";
+    ofstream outputFile(filepath, ios::trunc);
+    if (outputFile.is_open()) {
+        outputFile.close();
+    }
+}
+
 // Function to update the timer and VISION_RADIUS
 int updateTimerAndVisionRadius(int countdown_duration) {
     time_t current_time = time(NULL);
@@ -370,7 +378,6 @@ int main_engine(string file_path, int&x, int& y) {
                                 ofstream outfile;
                                 outfile.open("/workspaces/Initial/UI/inventory.txt", ios::out | ios::trunc);
                                 outfile.close();
-
                                 return 7;
                             }
                         }
@@ -378,7 +385,9 @@ int main_engine(string file_path, int&x, int& y) {
                 } else if (file_path == "/workspaces/Initial/Map_Objects/Map_resources/Rooftop6.txt") {
                     if (y4 == 16) {
                         if (x4>=27 && x4<=35) {
-
+                            delwin(game_window);
+                            clear();
+                            return 99;
                         }
                     }
                 }
