@@ -420,7 +420,7 @@ void display_instructions(VectorWrapper StartData) {
     printw("\n");
     printw("*The surroundings of the character will become darker and darker, so find a battery to brighten up the surroundings!*\n");
     printw("\n");
-
+    printw("\nPress Enter to return to the start page.");
     attroff(COLOR_PAIR(4));
 
     refresh();
