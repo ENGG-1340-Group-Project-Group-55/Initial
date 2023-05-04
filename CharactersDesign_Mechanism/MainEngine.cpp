@@ -161,9 +161,6 @@ int main_engine(string file_path, int&x, int& y) {
 
     string *current_character = char_up;
 
-    //gameMap.Map_printer(mapData, 0, 0, screen_height, screen_width, game_window);
-
-    
 
 // Main loop ...............................................................................
     
