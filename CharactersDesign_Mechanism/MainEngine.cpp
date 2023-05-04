@@ -378,7 +378,7 @@ int main_engine(string file_path, int&x, int& y) {
                 } else if (file_path == "/workspaces/Initial/Map_Objects/Map_resources/Rooftop6.txt") {
                     if (y4 == 16) {
                         if (x4>=27 && x4<=35) {
-
+                            return 99;
                         }
                     }
                 }
