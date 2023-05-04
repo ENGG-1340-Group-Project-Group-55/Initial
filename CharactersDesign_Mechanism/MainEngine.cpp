@@ -80,11 +80,8 @@ int main_engine(string file_path, int&x, int& y) {
         printChatboxIntro(chatboxintro);
         intro = 0;
     }
-<<<<<<< HEAD
-=======
 
 
->>>>>>> a66646a (,.)
     // Initialize the timer
     int countdown_duration = 900; // Set this to the desired countdown duration (15 minutes)
 
@@ -604,10 +601,6 @@ vector<string> loadChatboxIntroFromFile() {
     return chatboxintro;
 }
 
-<<<<<<< HEAD
-
-=======
->>>>>>> a66646a (,.)
 void printChatboxIntro(vector<string> chatboxintro) {
     int chatbox_height = 7;
     int chatbox_width = 80;
@@ -713,6 +706,17 @@ void printHelicopter() {
     }
 
     endwin();
+}
+
+void ToInventory(string object) {
+    string fp = "/workspaces/Initial/UI/inventory.txt";
+    ofstream outputFile(fp, ios::app);
+    if (outputFile.is_open()) {
+        outputFile << object;
+        outputFile.close();
+    } else {
+        cout << "Error opening file!" << endl;
+    }
 }
 
 vector<string> loadInventoryFromFile() {
@@ -831,106 +835,6 @@ void printMenu(vector<string> menu, int remaining_time) {
     delwin(menuWin);
 }
 
-<<<<<<< HEAD
-=======
-void printStartpage(VectorWrapper StartData) {
-    clear();
-
-    int start_height = 28;
-    int start_width = 104;
-
-    raw();
-    noecho();
-    curs_set(0);
-    keypad(stdscr, TRUE);
-
-    WINDOW* startWin = CreateWindow(start_height, start_width);
-
-    // Draw the start page with colors
-    for (int i = 0; i < StartData.TDVEC.size(); i++) {
-        for (int j = 0; j < StartData.TDVEC[i].size(); j++) {
-            if (StartData.TDVEC[i][j] == '.') {
-                continue; // Skip '.' characters
-            }
-            if (i < 17) {
-                wattron(startWin, COLOR_PAIR(1));
-                mvwaddch(startWin, i, j, StartData.TDVEC[i][j]);
-                wattroff(startWin, COLOR_PAIR(1));
-            } else if (i < 19) {
-                wattron(startWin, COLOR_PAIR(3));
-                mvwaddch(startWin, i, j, StartData.TDVEC[i][j]);
-                wattroff(startWin, COLOR_PAIR(3));
-            } else {
-                wattron(startWin, COLOR_PAIR(2));
-                mvwaddch(startWin, i, j, StartData.TDVEC[i][j]);
-                wattroff(startWin, COLOR_PAIR(2));
-            }
-        }
-    }
-
-    wrefresh(startWin);
-
-    // Screen displayed until 'esc' is pressed
-    while (true) {
-        int ch = getch();
-        if (ch == '1') {
-            clear();
-            int x = 87, y = 24;
-            string file_path = "/workspaces/Initial/Map_Objects/Map_resources/Classroom.txt";
-            delwin(startWin);
-            vector<string> helicopter = loadHelicopterFromFile();
-            printHelicopter();
-            main_engine(file_path,x,y);
-            
-        }
-        else if (ch == '2') {
-            display_instructions(StartData);
-        }
-        if (ch == 'q') {
-            break;
-        }
-    }
-
-    delwin(startWin);
-}
-
-void display_instructions(VectorWrapper StartData) {
-    clear();
-
-    attron(COLOR_PAIR(1));
-    printw("\n");
-    printw("  ___ _  _ ___ _____ ___ _   _  ___ _____ ___ ___  _  _ \n");
-    printw(" |_ _| \\| / __|_   _| _ \\ | | |/ __|_   _|_ _/ _ \\| \\| |\n");
-    printw("  | || .` \\__ \\ | | |   / |_| | (__  | |  | | (_) | .` |\n");
-    printw(" |___|_|\\_|___/ |_| |_|_\\\\___/ \\___| |_| |___\\___/|_|\\_|\n");
-    printw("                                                        ");
-    printw("\n");
-    attroff(COLOR_PAIR(1));
-    attron(COLOR_PAIR(4));
-    printw("1. Welcome to horror school escape game!\n");
-    printw("\n");
-    printw("2. While playing the game, you will be guided to choose an action from several options while playing the game. To make a choice, enter the corresponding number and press Enter.\n");
-    printw("\n");
-    printw("3. Please choose wisely, as you cannot change your choice and the storyline changes by your decisions.\n");
-    printw("\n");
-    printw("4. You can move your character by using W, A, S, D in your keyboard to move to another place. (W = up, S = down, A = left, D = right)\n");
-    printw("\n");
-    printw("5. You can press E to open your inventory and press F to grab items while playing the game.\n");
-    printw("\n");
-    printw("\nPress Enter to return to the start page.");
-    attroff(COLOR_PAIR(4));
-
-    refresh();
-
-    // Wait for the user to press Enter
-    int ch;
-    do {
-        ch = getch();
-    } while (ch != '\n' && ch != '\r');
-
-    printStartpage(StartData);
-}
->>>>>>> a66646a (,.)
 
 // int main(){
 //     int x = 64, y = 20;

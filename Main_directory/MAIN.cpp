@@ -139,7 +139,7 @@ int main()
     }
     else if (getch() == '2')
     {
-        display_instructions(start);2
+        display_instructions(start);
     }
     clear(); // Clear the screen
     refresh(); // Refresh the screen after clearing
@@ -427,5 +427,5 @@ void display_instructions(VectorWrapper StartData) {
         ch = getch();
     } while (ch != '\n' && ch != '\r');
 
-    printStartpage(StartData);
+    
 }
