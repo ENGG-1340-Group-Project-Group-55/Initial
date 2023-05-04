@@ -7,6 +7,8 @@
 #include <string>
 #include <fstream>
 #include <cmath>
+#include <chrono>
+#include <thread>
 #include "/workspaces/Initial/CharactersDesign_Mechanism/MapLoader.h"
 
 //compile using: g++ -pedantic-errors -std=c++11 CharactersDesign_Mechanism/MainEngine.cpp Map_Objects/Map_loading.cpp -o game -lncurses
@@ -477,8 +479,9 @@ int main_engine(string file_path, int&x, int& y) {
                                 ToInventory(object); }
 
                             if (point == 3) {
-                                int chatbox_height = 7;
-                                int chatbox_width = 80;
+                                //printing out ghosts
+                                int chatbox_height = 20;
+                                int chatbox_width = 20;
                                 string object;
 
 
@@ -492,21 +495,44 @@ int main_engine(string file_path, int&x, int& y) {
                                 box(chatboxWin, 0, 0);
                                 wrefresh(chatboxWin);
 
-                                string filePath = "/workspaces/Initial/UI/chatboxintro/chatboxfound3.txt";
+                                string filePath = "/workspaces/Initial/CharactersDesign_Mechanism/Character_Ghosts.resources/ghostfinal.txt";
                                 ifstream inputFile(filePath);
                                 string line;
 
                                 while (getline(inputFile, line)) {
-                                    mvwprintw(chatboxWin, 3, 6, "%s", line.c_str());
+                                    mvwprintw(chatboxWin, 1, 1, "%s", line.c_str());
                                     wrefresh(chatboxWin);
                                     int ch = getch();
                                     if (ch == 10) { // Enter key
                                         break;
                                     }
                                 }
-
+                                
                                 delwin(chatboxWin); // delete window after displaying the file
                                 inputFile.close();
+                                
+                                chatbox_height = 7;
+                                chatbox_width = 80;
+
+                                WINDOW* chatboxWin2 = CreateWindow(chatbox_height, chatbox_width); // create new window for the second chatbox
+                                box(chatboxWin2, 0, 0);
+                                wrefresh(chatboxWin2);
+
+                                filePath = "/workspaces/Initial/UI/chatboxintro/chatboxfound3.txt";
+                                ifstream inputFile2(filePath);
+                                line;
+
+                                while (getline(inputFile2, line)) {
+                                    mvwprintw(chatboxWin2, 3, 6, "%s", line.c_str());
+                                    wrefresh(chatboxWin2);
+                                    int ch = getch();
+                                    if (ch == 10) { // Enter key
+                                        break;
+                                    }
+                                }
+
+                                delwin(chatboxWin2); // delete window after displaying the file
+                                inputFile2.close();
 
                                 object = "Ghost Poster \n";
                                 ToInventory(object); }
@@ -515,7 +541,10 @@ int main_engine(string file_path, int&x, int& y) {
                                 int chatbox_height = 7;
                                 int chatbox_width = 80;
                                 string object;
-
+                                object = "Key \n";
+                                ToInventory(object);
+                                std::ofstream outfile("/workspaces/Initial/UI/inventory.txt", std::ios::out | std::ios::trunc);
+                                outfile.close();
 
                                 initscr();
                                 raw();
@@ -541,10 +570,9 @@ int main_engine(string file_path, int&x, int& y) {
                                 }
 
                                 delwin(chatboxWin); // delete window after displaying the file
-                                inputFile.close();
+                                inputFile.close();}                             
 
-                                object = "Key \n";
-                                ToInventory(object); }
+                                
                             
                             break;
                         }
@@ -645,8 +673,10 @@ void printChatboxIntro(vector<string> chatboxintro) {
         string line;
 
         while (getline(inputFile, line)) {
-            mvwprintw(chatboxWin, 3, 6, "%s", line.c_str());
-            wrefresh(chatboxWin);
+            for (int i = 0; i < line.length(); i++) {
+                mvwprintw(chatboxWin, 3, 6+i, "%c", line[i]);
+                wrefresh(chatboxWin);
+                this_thread::sleep_for(chrono::milliseconds(30)); }
             int ch = getch();
             if (ch == 10) { // Enter key
                 break;
@@ -670,7 +700,7 @@ void printChatboxIntro(vector<string> chatboxintro) {
     endwin();
 }
 
-<<<<<<< HEAD
+
 vector<string> loadHelicopterFromFile() {
     vector<string> helicopter;
     string folderPath = "/workspaces/Initial/Map_Objects/Map_resources/";
@@ -732,14 +762,10 @@ void printHelicopter() {
     endwin();
 }
 
+
 void ToInventory(string object) {
     string fp = "/workspaces/Initial/UI/inventory.txt";
     ofstream outputFile(fp, ios::app);
-=======
-
-void ToInventory(string object) {
-    ofstream outputFile("/workspaces/Initial/UI/inventory.txt");
->>>>>>> 7a4a020 (.)
     if (outputFile.is_open()) {
         outputFile << object;
         outputFile.close();
@@ -758,7 +784,8 @@ vector<string> loadInventoryFromFile() {
             inventory.push_back(line); // Read and store the items from the file
         }
         inputFile.close(); // Close the file
-    } else {
+    } 
+    else {
         cout << "No inventory file." << endl;
     }
     return inventory;
