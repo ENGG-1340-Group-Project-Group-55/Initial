@@ -11,6 +11,7 @@
 #include <map>
 #include <thread>
 #include "/workspaces/Initial/CharactersDesign_Mechanism/MapLoader.h"
+using namespace std;
 
 //compile using: g++ -pedantic-errors -std=c++11 CharactersDesign_Mechanism/MainEngine.cpp Map_Objects/Map_loading.cpp -o game -lncurses
 
@@ -60,8 +61,10 @@ int updateTimerAndVisionRadius(int countdown_duration) {
     // Increase the VISION_RADIUS by the global variable value
     VISION_RADIUS += VISION_RADIUS_INCREASE;
 
-    if (VISION_RADIUS < 5) {
-        VISION_RADIUS = 5;
+    if (VISION_RADIUS < 3) {
+        cout << "YOU'VE GOT EATEN BY DARKNESS." << endl;
+        endwin();
+        exit(0);
     }
     return remaining_time;
 }
