@@ -1,2 +1,4 @@
-restroom
+musicroom
 diningroom
+clubroom
+restroom

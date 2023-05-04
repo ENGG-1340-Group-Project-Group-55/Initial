@@ -268,10 +268,12 @@ int main()
     box(endingWin, 0, 0);
 
     int row = 1; // start at row 1
+    wattron(endingWin, COLOR_PAIR(2));
     while (getline(inputFile, line)) {
         mvwprintw(endingWin, row, 1, "%s", line.c_str());
         row++; // increment row after printing the line
     }
+    wattroff(endingWin, COLOR_PAIR(2));
     wrefresh(endingWin);
 
     while (true) {

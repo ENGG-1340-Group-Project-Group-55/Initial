@@ -56,6 +56,9 @@ int updateTimerAndVisionRadius(int countdown_duration) {
     time_t current_time = time(NULL);
     time_t start_time;
 
+    start_color();
+    init_pair(1, COLOR_RED, COLOR_BLACK); // Pair 1: Red text on a black background
+
     // Read start_time from the text file
     std::ifstream in_file("start_time.txt");
     if (in_file) {
@@ -92,10 +95,12 @@ int updateTimerAndVisionRadius(int countdown_duration) {
         box(deathWin, 0, 0);
 
         int row = 1; // start at row 1
+        wattron(deathWin, COLOR_PAIR(1));
         while (getline(inputFile, line)) {
             mvwprintw(deathWin, row, 1, "%s", line.c_str());
             row++; // increment row after printing the line
         }
+        wattroff(deathWin, COLOR_PAIR(1));
         wrefresh(deathWin);
 
         while (true) {
