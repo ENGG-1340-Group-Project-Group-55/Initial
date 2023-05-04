@@ -463,7 +463,7 @@ bool display_instructions(VectorWrapper StartData) {
     printw("\n");
     printw("2. You will have to find the key(s) to escape from the school, which is presented as *.\n");
     printw("\n");
-    printw("3. You have to press f to pick up *.\n");
+    printw("3. You have to press 'F' to pick up *.\n");
     printw("\n");
     printw("4. You can move your character by using 'W, A, S, D' in your keyboard to move to another place. (W = up, S = down, A = left, D = right)\n");
     printw("\n");
