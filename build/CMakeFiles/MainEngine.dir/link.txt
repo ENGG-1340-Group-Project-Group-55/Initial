@@ -1,0 +1,1 @@
+/usr/bin/c++ -lncurses -g CMakeFiles/MainEngine.dir/CharactersDesign_Mechanism/MainEngine.cpp.o CMakeFiles/MainEngine.dir/Map_Objects/Map_loading.cpp.o CMakeFiles/MainEngine.dir/Main_directory/MAIN.cpp.o CMakeFiles/MainEngine.dir/CharactersDesign_Mechanism/doorcoordinate.cpp.o -o MainEngine 

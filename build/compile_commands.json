@@ -1,0 +1,50 @@
+[
+{
+  "directory": "/workspaces/Initial/build",
+  "command": "/usr/bin/c++   -lncurses -g -std=gnu++17 -o CMakeFiles/MAIN.dir/Main_directory/MAIN.cpp.o -c /workspaces/Initial/Main_directory/MAIN.cpp",
+  "file": "/workspaces/Initial/Main_directory/MAIN.cpp",
+  "output": "CMakeFiles/MAIN.dir/Main_directory/MAIN.cpp.o"
+},
+{
+  "directory": "/workspaces/Initial/build",
+  "command": "/usr/bin/c++   -lncurses -g -std=gnu++17 -o CMakeFiles/MAIN.dir/CharactersDesign_Mechanism/doorcoordinate.cpp.o -c /workspaces/Initial/CharactersDesign_Mechanism/doorcoordinate.cpp",
+  "file": "/workspaces/Initial/CharactersDesign_Mechanism/doorcoordinate.cpp",
+  "output": "CMakeFiles/MAIN.dir/CharactersDesign_Mechanism/doorcoordinate.cpp.o"
+},
+{
+  "directory": "/workspaces/Initial/build",
+  "command": "/usr/bin/c++   -lncurses -g -std=gnu++17 -o CMakeFiles/MAIN.dir/CharactersDesign_Mechanism/MainEngine.cpp.o -c /workspaces/Initial/CharactersDesign_Mechanism/MainEngine.cpp",
+  "file": "/workspaces/Initial/CharactersDesign_Mechanism/MainEngine.cpp",
+  "output": "CMakeFiles/MAIN.dir/CharactersDesign_Mechanism/MainEngine.cpp.o"
+},
+{
+  "directory": "/workspaces/Initial/build",
+  "command": "/usr/bin/c++   -lncurses -g -std=gnu++17 -o CMakeFiles/MAIN.dir/Map_Objects/Map_loading.cpp.o -c /workspaces/Initial/Map_Objects/Map_loading.cpp",
+  "file": "/workspaces/Initial/Map_Objects/Map_loading.cpp",
+  "output": "CMakeFiles/MAIN.dir/Map_Objects/Map_loading.cpp.o"
+},
+{
+  "directory": "/workspaces/Initial/build",
+  "command": "/usr/bin/c++   -lncurses -g -std=gnu++17 -o CMakeFiles/MainEngine.dir/CharactersDesign_Mechanism/MainEngine.cpp.o -c /workspaces/Initial/CharactersDesign_Mechanism/MainEngine.cpp",
+  "file": "/workspaces/Initial/CharactersDesign_Mechanism/MainEngine.cpp",
+  "output": "CMakeFiles/MainEngine.dir/CharactersDesign_Mechanism/MainEngine.cpp.o"
+},
+{
+  "directory": "/workspaces/Initial/build",
+  "command": "/usr/bin/c++   -lncurses -g -std=gnu++17 -o CMakeFiles/MainEngine.dir/Map_Objects/Map_loading.cpp.o -c /workspaces/Initial/Map_Objects/Map_loading.cpp",
+  "file": "/workspaces/Initial/Map_Objects/Map_loading.cpp",
+  "output": "CMakeFiles/MainEngine.dir/Map_Objects/Map_loading.cpp.o"
+},
+{
+  "directory": "/workspaces/Initial/build",
+  "command": "/usr/bin/c++   -lncurses -g -std=gnu++17 -o CMakeFiles/MainEngine.dir/Main_directory/MAIN.cpp.o -c /workspaces/Initial/Main_directory/MAIN.cpp",
+  "file": "/workspaces/Initial/Main_directory/MAIN.cpp",
+  "output": "CMakeFiles/MainEngine.dir/Main_directory/MAIN.cpp.o"
+},
+{
+  "directory": "/workspaces/Initial/build",
+  "command": "/usr/bin/c++   -lncurses -g -std=gnu++17 -o CMakeFiles/MainEngine.dir/CharactersDesign_Mechanism/doorcoordinate.cpp.o -c /workspaces/Initial/CharactersDesign_Mechanism/doorcoordinate.cpp",
+  "file": "/workspaces/Initial/CharactersDesign_Mechanism/doorcoordinate.cpp",
+  "output": "CMakeFiles/MainEngine.dir/CharactersDesign_Mechanism/doorcoordinate.cpp.o"
+}
+]
