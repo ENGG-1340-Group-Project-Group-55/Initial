@@ -275,9 +275,9 @@ int main_engine(string file_path, int&x, int& y) {
             intro = 0;
         }
     
-        if (file_path == "/workspaces/Initial/Map_Objects/Map_resources/Rooftop6.txt") {
-            
-        }
+        // if (file_path == "/workspaces/Initial/Map_Objects/Map_resources/Rooftop6.txt") {
+        //     return 9;
+        // }
 
         switch(key_input) {
             case 'w':
@@ -358,19 +358,20 @@ int main_engine(string file_path, int&x, int& y) {
                                 }
 
                                 delwin(chatboxWin); // delete window after displaying the file
-                                inputFile.close();}
+                                inputFile.close();
+                            }
 
                             else if (point == 4) {
-                                    VISION_RADIUS_INCREASE += 100;
-                            delwin(game_window);
-                            clear();
-                            vector<string> helicopter = loadHelicopterFromFile();
-                            printHelicopter();
-                            ofstream outfile;
-                            outfile.open("/workspaces/Initial/UI/inventory.txt", ios::out | ios::trunc);
-                            outfile.close();
+                                VISION_RADIUS_INCREASE += 100;
+                                delwin(game_window);
+                                clear();
+                                vector<string> helicopter = loadHelicopterFromFile();
+                                printHelicopter();
+                                ofstream outfile;
+                                outfile.open("/workspaces/Initial/UI/inventory.txt", ios::out | ios::trunc);
+                                outfile.close();
 
-                            return 7;
+                                return 7;
                                 }
                         }
                     }
@@ -378,6 +379,8 @@ int main_engine(string file_path, int&x, int& y) {
                     if (y4 == 16) {
                         if (x4>=27 && x4<=35) {
 
+                        }
+                    }
                 }
 
                 for (int i=1; i<5; i++) {
