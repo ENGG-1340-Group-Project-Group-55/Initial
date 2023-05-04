@@ -1,2 +1,9 @@
+<<<<<<< HEAD
 teacheroffice
 clubroom
+=======
+diningroom
+restroom
+musicroom
+teacheroffice
+>>>>>>> 069a7eb (ver)

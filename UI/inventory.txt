@@ -1,5 +1,6 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 Key 
 <<<<<<< HEAD
@@ -72,3 +73,8 @@ Ghost Poster
 Key 
 Battery 
 >>>>>>> 24285f2 (timer fixed 2)
+=======
+Key 
+Key 
+Battery 
+>>>>>>> 069a7eb (ver)
