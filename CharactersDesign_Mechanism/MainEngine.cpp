@@ -57,7 +57,7 @@ vector<string> loadInventoryFromFile();
 void printChatboxIntro(vector<string> chatboxintro);
 vector<string> loadChatboxIntroFromFile();
 
-void printHelicopter(vector<string> helicopter);
+void printHelicopter();
 vector<string> loadHelicopterFromFile();
 
 void ToInventory(string object);
@@ -191,6 +191,9 @@ int main_engine(string file_path, int&x, int& y) {
             intro = 0;
         }
     
+        if (file_path == "/workspaces/Initial/Map_Objects/Map_resources/Rooftop6.txt") {
+            
+        }
 
         switch(key_input) {
             case 'w':
@@ -211,7 +214,6 @@ int main_engine(string file_path, int&x, int& y) {
                             clear();
                             return 4;
                         } else if (x4 >= 99 && x4 <= 112) {
-                          
                             delwin(game_window);
                             clear();
                             return 8;
@@ -247,6 +249,8 @@ int main_engine(string file_path, int&x, int& y) {
                             VISION_RADIUS_INCREASE += 100;
                             delwin(game_window);
                             clear();
+                            vector<string> helicopter = loadHelicopterFromFile();
+                            printHelicopter();
                             return 7;
                         }
                     }
@@ -318,15 +322,16 @@ int main_engine(string file_path, int&x, int& y) {
                             return 0;
                         }
                     }
-                } else if (file_path == "/workspaces/Initial/Map_Objects/Map_resources/Rooftop.txt") {
-                    if (y4 == 23) {
-                        if (x4>=45 && x4<=50) {
-                            delwin(game_window);
-                            clear();
-                            return 8;
-                        }
-                    }
-                }
+                } 
+                // else if (file_path == "/workspaces/Initial/Map_Objects/Map_resources/Rooftop.txt") {
+                //     if (y4 == 23) {
+                //         if (x4>=45 && x4<=50) {
+                //             delwin(game_window);
+                //             clear();
+                //             return 8;
+                //         }
+                //     }
+                // }
                 for (int i=1; i<5; i++) {
                     if (mapData.TDVEC[y+4][x+i] != ' '){
                         y--;
