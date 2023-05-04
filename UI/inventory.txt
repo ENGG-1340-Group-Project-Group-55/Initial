@@ -1,6 +1,7 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 Key 
 <<<<<<< HEAD
 =======
@@ -16,3 +17,5 @@ Key
 Battery 
 Ghost Poster 
 >>>>>>> bb74bfa (ver)
+=======
+>>>>>>> 8a9d674 (.)

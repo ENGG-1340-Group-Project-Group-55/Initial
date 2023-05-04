@@ -501,7 +501,6 @@ int main_engine(string file_path, int&x, int& y) {
                 for (int i = 0; i < charsize+2; i++) {
                     for (int j = 0; j < current_character[i].length()+2; j++) {
                         if (mapData.TDVEC[i+y][j+x] == '*') {
-<<<<<<< HEAD
                             flag3 = true;
                             ofstream outroomflag("/workspaces/Initial/Map_Objects/Map_resources/RoomFlags.txt", ios_base::app);
                             if (!outroomflag.is_open()) {
@@ -533,10 +532,8 @@ int main_engine(string file_path, int&x, int& y) {
                             // } else if (clubcount > 0) {
                             //     clubflag = 1;
                             // }
-=======
 
                             flag3 = true;
->>>>>>> d3a1944 (.)
                             break;
                         }
                     }
