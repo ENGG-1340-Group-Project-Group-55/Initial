@@ -67,6 +67,8 @@ std::string str_randnum = std::to_string(randnum);
 int main()
 {
     initialize();
+    void reset_inventory();
+    void reset_roomflag();
     int a;
     int b;
     int *x = &a;
