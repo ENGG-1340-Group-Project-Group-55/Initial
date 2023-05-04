@@ -95,10 +95,10 @@ int main()
 
     initscr();
     start_color();
-    init_pair(1, COLOR_RED, -1); // Pair 1: Red text on the default background
-    init_pair(2, COLOR_GREEN, -1); // Pair 2: Green text on the default background
-    init_pair(3, COLOR_BLUE, -1); // Pair 3: Blue text on the default background
-    init_pair(4, COLOR_YELLOW, -1); // Pair 4: Yellow text on the default background
+    init_pair(1, COLOR_RED, COLOR_BLACK); // Pair 1: Red text on the default background
+    init_pair(2, COLOR_GREEN, COLOR_BLACK); // Pair 2: Green text on the default background
+    init_pair(3, COLOR_BLUE, COLOR_BLACK); // Pair 3: Blue text on the default background
+    init_pair(4, COLOR_YELLOW, COLOR_BLACK); // Pair 4: Yellow text on the default background
     clear();
     refresh();
     curs_set(0);
@@ -110,9 +110,9 @@ int main()
     int row_offset = (screen_rows - 28) / 2;
     int col_offset = (screen_cols - 104) / 2;
 
-        for (int i = 0; i < start.TDVEC.size(); i++) {
+    for (int i = 0; i < start.TDVEC.size(); i++) {
         for (int j = 0; j < start.TDVEC[i].size(); j++) {
-            if (StartData.TDVEC[i][j] == '.') {
+            if (start.TDVEC[i][j] == '.') {
                 continue; // Skip '.' characters
             }
             if (i < 17) {
@@ -408,13 +408,13 @@ void display_instructions(VectorWrapper StartData) {
     attron(COLOR_PAIR(4));
     printw("1. Welcome to horror school escape game!\n");
     printw("\n");
-    printw("2. You will have to find the key(s) to escape from the school, which is presented as "*".\n");
+    printw("2. You will have to find the key(s) to escape from the school, which is presented as *.\n");
     printw("\n");
-    printw("3. You have to press "F" to pick up "*".\n");
+    printw("3. You have to press F to pick up *.\n");
     printw("\n");
     printw("4. You can move your character by using W, A, S, D in your keyboard to move to another place. (W = up, S = down, A = left, D = right)\n");
     printw("\n");
-    printw("5. You can press "I" to open your inventory and "esc" to open the menu.\n");
+    printw("5. You can press I to open your inventory and esc to open the menu.\n");
     printw("\n");
     printw("*Please keep going forward, when entered another room.*\n");
     printw("\n");
