@@ -68,30 +68,9 @@ int roomflag3 = 0;
 int roomflag4 = 0;
 int roomflag5 = 0;
 
-int main() {
-    initialize();
-    printStartpage(StartData);
-
-    while (true) {
-        int ch = getch();
-        if (ch == '1') {
-            clear();
-            startGame();
-            break;
-        }
-        else if (ch == '2') {
-            display_instructions(StartData);
-        }
-        if (ch == 'q') {
-            break;
-        }
-    }
-    endwin();
-    return 0;
-}
-
-void startGame()
+int main()
 {
+    initialize();
     int a;
     int b;
     int *x = &a;
@@ -101,6 +80,7 @@ void startGame()
     string previous;
     string exitfrom;
     string entered;
+    bool flag = true;
 
     // Write start_time to the text file
     time_t start_time = time(NULL);
@@ -110,8 +90,43 @@ void startGame()
         out_file.close();
     }
 
+    Maps mp(28, 104);
+    string filep = "/workspaces/Initial/CharactersDesign_Mechanism/startpage.txt";
+    VectorWrapper start = mp.Map_Loader(filep);
+
+    initscr();
+    clear();
+    refresh();
+    curs_set(0);
+    noecho();
+
+    int screen_rows, screen_cols;
+    getmaxyx(stdscr, screen_rows, screen_cols); // Get the size of the screen
+
+    int row_offset = (screen_rows - 28) / 2;
+    int col_offset = (screen_cols - 104) / 2;
+
+    for (int i = 0; i < 28; i++) {
+        for (int j = 0; j < 104; j++) {
+            mvprintw(row_offset + i, col_offset + j, "%c", start.TDVEC[i][j]);
+        }
+    }
+
+    refresh();
+
+    if (getch() == '1')
+    {
+        flag = true;
+    }
+    else if (getch() == '2')
+    {
+        display_instructions(start);
+    }
+    clear(); // Clear the screen
+    refresh(); // Refresh the screen after clearing
+    endwin();
+
     rooms RM;
-    bool flag = true;
      while (flag)
     {
         if (counter == 0)
