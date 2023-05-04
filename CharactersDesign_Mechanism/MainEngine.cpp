@@ -105,7 +105,7 @@ int main_engine(string file_path, int&x, int& y) {
 
 
     // Initialize the timer
-    int countdown_duration = 900; // Set this to the desired countdown duration (15 minutes)
+    int countdown_duration = 180; // Set this to the desired countdown duration (15 minutes)
 
 
     //Set up initial variables
