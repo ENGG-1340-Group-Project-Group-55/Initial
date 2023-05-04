@@ -13,6 +13,7 @@
 
 int VISION_RADIUS;
 int point;
+int VISION_RADIUS_INCREASE = 0;
 
 // Function to update the timer and VISION_RADIUS
 int updateTimerAndVisionRadius(int countdown_duration) {
@@ -30,6 +31,10 @@ int updateTimerAndVisionRadius(int countdown_duration) {
 
     int remaining_time = countdown_duration - static_cast<int>(difftime(current_time, start_time));
     VISION_RADIUS = 20 - (100 * (1 - static_cast<double>(remaining_time) / countdown_duration));
+
+    // Increase the VISION_RADIUS by the global variable value
+    VISION_RADIUS += VISION_RADIUS_INCREASE;
+
     if (VISION_RADIUS < 5) {
         VISION_RADIUS = 5;
     }
@@ -415,7 +420,7 @@ int main_engine(string file_path, int&x, int& y) {
                                 ToInventory(object);}
 
                             if (point == 2) {
-                                VISION_RADIUS += 20;
+                                VISION_RADIUS_INCREASE += 10;
                                 int chatbox_height = 7;
                                 int chatbox_width = 80;
                                 string object;
@@ -551,7 +556,6 @@ int main_engine(string file_path, int&x, int& y) {
         }
         //mvwaddch(game_window, y, x, 'O');
 
-        // Update the timer and VISION_RADIUS
         int remaining_time = updateTimerAndVisionRadius(countdown_duration);
 
         if (flag1 == true) {
