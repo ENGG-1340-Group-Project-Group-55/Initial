@@ -582,6 +582,7 @@ void printMenu(vector<string> menu, int remaining_time) {
             if (outFile.is_open()) {
                 outFile << "Character X: " << "x좌표" << endl;
                 outFile << "Character Y: " << "y좌표" << endl;
+                
                 outFile.close();
                 cout << "Saving Game";
             } else {

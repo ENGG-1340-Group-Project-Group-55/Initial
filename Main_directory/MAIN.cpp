@@ -120,7 +120,7 @@ int main()
     }
     else if (getch() == '2')
     {
-        display_instructions(start);
+        display_instructions(start);2
     }
     clear(); // Clear the screen
     refresh(); // Refresh the screen after clearing
