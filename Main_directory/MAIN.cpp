@@ -67,8 +67,8 @@ std::string str_randnum = std::to_string(randnum);
 int main()
 {
     initialize();
-    void reset_inventory();
-    void reset_roomflag();
+    reset_inventory();
+    reset_roomflag();
     int a;
     int b;
     int *x = &a;
@@ -96,61 +96,61 @@ int main()
 
     while (intro_flag)
     {
-    initscr();
-    start_color();
-    init_pair(1, COLOR_RED, COLOR_BLACK); // Pair 1: Red text on the default background
-    init_pair(2, COLOR_GREEN, COLOR_BLACK); // Pair 2: Green text on the default background
-    init_pair(3, COLOR_BLUE, COLOR_BLACK); // Pair 3: Blue text on the default background
-    init_pair(4, COLOR_YELLOW, COLOR_BLACK); // Pair 4: Yellow text on the default background
-    clear();
-    refresh();
-    curs_set(0);
-    noecho();
+        initscr();
+        start_color();
+        init_pair(1, COLOR_RED, COLOR_BLACK); // Pair 1: Red text on the default background
+        init_pair(2, COLOR_GREEN, COLOR_BLACK); // Pair 2: Green text on the default background
+        init_pair(3, COLOR_BLUE, COLOR_BLACK); // Pair 3: Blue text on the default background
+        init_pair(4, COLOR_YELLOW, COLOR_BLACK); // Pair 4: Yellow text on the default background
+        clear();
+        refresh();
+        curs_set(0);
+        noecho();
 
-    int screen_rows, screen_cols;
-    getmaxyx(stdscr, screen_rows, screen_cols); // Get the size of the screen
+        int screen_rows, screen_cols;
+        getmaxyx(stdscr, screen_rows, screen_cols); // Get the size of the screen
 
-    int row_offset = (screen_rows - 28) / 2;
-    int col_offset = (screen_cols - 104) / 2;
+        int row_offset = (screen_rows - 28) / 2;
+        int col_offset = (screen_cols - 104) / 2;
 
-    for (int i = 0; i < start.TDVEC.size(); i++) {
-        for (int j = 0; j < start.TDVEC[i].size(); j++) {
-            if (start.TDVEC[i][j] == '.') {
-                continue; // Skip '.' characters
-            }
-            if (i < 17) {
-                attron(COLOR_PAIR(1));
-                mvprintw(row_offset + i, col_offset + j, "%c", start.TDVEC[i][j]);
-                attroff(COLOR_PAIR(1));
-            } else if (i < 19) {
-                attron(COLOR_PAIR(3));
-                mvprintw(row_offset + i, col_offset + j, "%c", start.TDVEC[i][j]);
-                attroff(COLOR_PAIR(3));
-            } else {
-                attron(COLOR_PAIR(2));
-                mvprintw(row_offset + i, col_offset + j, "%c", start.TDVEC[i][j]);
-                attroff(COLOR_PAIR(2));
+        for (int i = 0; i < start.TDVEC.size(); i++) {
+            for (int j = 0; j < start.TDVEC[i].size(); j++) {
+                if (start.TDVEC[i][j] == '.') {
+                    continue; // Skip '.' characters
+                }
+                if (i < 17) {
+                    attron(COLOR_PAIR(1));
+                    mvprintw(row_offset + i, col_offset + j, "%c", start.TDVEC[i][j]);
+                    attroff(COLOR_PAIR(1));
+                } else if (i < 19) {
+                    attron(COLOR_PAIR(3));
+                    mvprintw(row_offset + i, col_offset + j, "%c", start.TDVEC[i][j]);
+                    attroff(COLOR_PAIR(3));
+                } else {
+                    attron(COLOR_PAIR(2));
+                    mvprintw(row_offset + i, col_offset + j, "%c", start.TDVEC[i][j]);
+                    attroff(COLOR_PAIR(2));
+                }
             }
         }
-    }
 
-    refresh();
+        refresh();
 
-    if (getch() == '1')
-    {
-        flag = true;
-        intro_flag = false;
-    }
-    else if (getch() == '2')
-    {
-        intro_flag = display_instructions(start);
-    }
-    clear(); // Clear the screen
-    refresh(); // Refresh the screen after clearing
-    endwin();
+        if (getch() == '1')
+        {
+            flag = true;
+            intro_flag = false;
+        }
+        else if (getch() == '2')
+        {
+            intro_flag = display_instructions(start);
+        }
+        clear(); // Clear the screen
+        refresh(); // Refresh the screen after clearing
+        endwin();
     }
     rooms RM;
-     while (flag)
+    while (flag)
     {
         if (counter == 0)
         {
@@ -203,7 +203,7 @@ int main()
             *y = Corridor[exitfrom].y_coordinates;
             entered = "SchoolMap";
         }
-         else if (entered == "RestRoom")
+        else if (entered == "RestRoom")
         {
             RM.RestRoom();
             exitfrom = "RestRoom";
@@ -239,7 +239,7 @@ int main()
                 *y = Stairs["RoofTop"].y_coordinates;
                 entered = exitto;
             }
-        
+
         }
         else if (entered == "SchoolMap")
         {
@@ -259,7 +259,7 @@ void rooms::ClassRoom()
     main_engine(file_path,x_door,y_door);
 }
 void rooms::ClubRoom()
-{   
+{
     string file_path;
     if (randroom != 'C') {
         file_path = "/workspaces/Initial/Map_Objects/Map_resources/Club Room .txt";
@@ -275,33 +275,33 @@ void rooms::ClubRoom()
     main_engine(file_path,x_door,y_door);
 }
 
- void rooms::MusicRoom()
- {  
+void rooms::MusicRoom()
+{
     string file_path;
     if (randroom != 'M') {
         file_path = "/workspaces/Initial/Map_Objects/Map_resources/Music Room .txt";
         int file_length = file_path.length();
         file_path.insert(file_length - 4, str_randnum);
-    } 
+    }
     else {
-        file_path = "/workspaces/Initial/Map_Objects/Map_resources/Music Room.txt"; 
+        file_path = "/workspaces/Initial/Map_Objects/Map_resources/Music Room.txt";
     }
     int x_door = 79;
     int y_door = 5;
     main_engine(file_path,x_door,y_door);
- }
+}
 
- int rooms::RoofTop()
- {
+int rooms::RoofTop()
+{
     string file_path = "/workspaces/Initial/Map_Objects/Map_resources/Rooftop6.txt";
     int x_door = 44;
     int y_door = 20;
     int a = main_engine(file_path,x_door,y_door);
     return a;
- }
+}
 
- void rooms::TeachersOffice()
- {
+void rooms::TeachersOffice()
+{
     string file_path;
     if (randroom != 'T') {
         file_path = "/workspaces/Initial/Map_Objects/Map_resources/Teacher's office .txt";
@@ -309,16 +309,16 @@ void rooms::ClubRoom()
         file_path.insert(file_length - 4, str_randnum);
     }
     else {
-        file_path = "/workspaces/Initial/Map_Objects/Map_resources/Teacher's office.txt"; 
+        file_path = "/workspaces/Initial/Map_Objects/Map_resources/Teacher's office.txt";
     }
-    
+
     int x_door = 86;
     int y_door = 26;
     main_engine(file_path,x_door,y_door);
- }
+}
 
- void rooms::RestRoom()
- {
+void rooms::RestRoom()
+{
     string file_path;
     if (randroom != 'R') {
         file_path = "/workspaces/Initial/Map_Objects/Map_resources/Restroom .txt";
@@ -326,17 +326,17 @@ void rooms::ClubRoom()
         file_path.insert(file_length - 4, str_randnum);
     }
     else {
-        file_path = "/workspaces/Initial/Map_Objects/Map_resources/Restroom.txt"; 
+        file_path = "/workspaces/Initial/Map_Objects/Map_resources/Restroom.txt";
     }
-    
+
     int x_door = 86;
     int y_door = 26;
     main_engine(file_path,x_door,y_door);
 
- }
+}
 
 void rooms::DiningRoom()
- {  
+{
     str_randnum = "5";
     string file_path;
     if (randroom != 'D') {
@@ -345,61 +345,61 @@ void rooms::DiningRoom()
         file_path.insert(file_length - 4, str_randnum);
     }
     else {
-        file_path = "/workspaces/Initial/Map_Objects/Map_resources/Diningroom.txt"; 
+        file_path = "/workspaces/Initial/Map_Objects/Map_resources/Diningroom.txt";
     }
     int x_door = 64;
     int y_door = 5;
     main_engine(file_path,x_door,y_door);
- }
+}
 
- string rooms::RoofTopStairs(int a,int b)
+string rooms::RoofTopStairs(int a,int b)
 {
     string file_path = "/workspaces/Initial/Map_Objects/Map_resources/Rooftop stairs.txt";
-    int x_door = a; 
+    int x_door = a;
     int y_door = b;
     int C_Or_R = main_engine(file_path,x_door,y_door);
     return roomchooser(C_Or_R);
 }
 
- string rooms::SchoolMap(int a,int b)
- {
+string rooms::SchoolMap(int a,int b)
+{
     string file_path = "/workspaces/Initial/Map_Objects/Map_resources/schoolmap.txt";
     int x_door = a;
     int y_door = b;
     int roomdecider = main_engine(file_path,x_door,y_door);
     return roomchooser(roomdecider);
- }
+}
 
- string rooms::roomchooser(int roomdecider){
+string rooms::roomchooser(int roomdecider){
     switch (roomdecider)
     {
-    case 1:
-        return "ClassRoom";
-        break;
-    case 2:
-        return "RestRoom";
-        break;
-    case 3:
-        return "ClubRoom";
-        break;
-    case 4:
-        return "TeachersOffice";
-        break;
-    case 5:      
-        return "MusicRoom";
-        break;
-    case 6:
-        return "DiningRoom";
-        break;
-    case 7:
-        return "RoofTop";
-        break;
-    case 8:
-        return "RoofTopStairs";
-        break;
-    default:
-        return "NONE";
-        break;
+        case 1:
+            return "ClassRoom";
+            break;
+        case 2:
+            return "RestRoom";
+            break;
+        case 3:
+            return "ClubRoom";
+            break;
+        case 4:
+            return "TeachersOffice";
+            break;
+        case 5:
+            return "MusicRoom";
+            break;
+        case 6:
+            return "DiningRoom";
+            break;
+        case 7:
+            return "RoofTop";
+            break;
+        case 8:
+            return "RoofTopStairs";
+            break;
+        default:
+            return "NONE";
+            break;
     }
 }
 
@@ -442,7 +442,7 @@ bool display_instructions(VectorWrapper StartData) {
     {
 
     }
-     return true;
+    return true;
 
-    
+
 }
