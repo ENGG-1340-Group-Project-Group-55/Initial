@@ -288,12 +288,44 @@ int main_engine(string file_path, int&x, int& y) {
                 } else if (file_path == "/workspaces/Initial/Map_Objects/Map_resources/Rooftop stairs.txt") {
                     if (y4 == 12 || y4 == 11) {
                         if (x4>=44 && x4<=53) {
-                            VISION_RADIUS_INCREASE += 100;
+                            if (point != 4) {
+                                int chatbox_height = 7;
+                                int chatbox_width = 80;
+
+                                initscr();
+                                raw();
+                                noecho();
+                                curs_set(0);
+                                keypad(stdscr, TRUE);
+
+                                WINDOW* chatboxWin = CreateWindow(chatbox_height, chatbox_width); // create window for each file
+                                box(chatboxWin, 0, 0);
+                                wrefresh(chatboxWin);
+
+                                string filePath = "/workspaces/Initial/UI/chatboxintro/chatboxneed.txt";
+                                ifstream inputFile(filePath);
+                                string line;
+
+                                while (getline(inputFile, line)) {
+                                    mvwprintw(chatboxWin, 3, 6, "%s", line.c_str());
+                                    wrefresh(chatboxWin);
+                                    int ch = getch();
+                                    if (ch == 10) { // Enter key
+                                        break;
+                                    }
+                                }
+
+                                delwin(chatboxWin); // delete window after displaying the file
+                                inputFile.close();}
+
+                            else if (point == 4) {
+                                    VISION_RADIUS_INCREASE += 100;
                             delwin(game_window);
                             clear();
                             vector<string> helicopter = loadHelicopterFromFile();
                             printHelicopter();
                             return 7;
+                                }
                         }
                     }
                 }
