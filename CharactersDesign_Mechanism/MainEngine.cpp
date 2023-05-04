@@ -175,6 +175,34 @@ int main_engine(string file_path, int&x, int& y) {
         int diningcount = 0;
         int clubcount = 0;
         
+        if (file_path == "/workspaces/Initial/Map_Objects/Map_resources/Restroom 1.txt" || file_path == "/workspaces/Initial/Map_Objects/Map_resources/Restroom 2.txt" || file_path == "/workspaces/Initial/Map_Objects/Map_resources/Restroom 3.txt" || file_path == "/workspaces/Initial/Map_Objects/Map_resources/Restroom 4.txt" || file_path == "/workspaces/Initial/Map_Objects/Map_resources/Restroom 5.txt" || file_path == "/workspaces/Initial/Map_Objects/Map_resources/Restroom 6.txt") {
+            restcount++;
+        } else if (file_path == "/workspaces/Initial/Map_Objects/Map_resources/Teacher's office 1.txt" || file_path == "/workspaces/Initial/Map_Objects/Map_resources/Teacher's office 2.txt" || file_path == "/workspaces/Initial/Map_Objects/Map_resources/Teacher's office 3.txt" || file_path == "/workspaces/Initial/Map_Objects/Map_resources/Teacher's office 4.txt" || file_path == "/workspaces/Initial/Map_Objects/Map_resources/Teacher's office 5.txt" || file_path == "/workspaces/Initial/Map_Objects/Map_resources/Teacher's office 6.txt") {
+            teachercount++;
+        } else if (file_path == "/workspaces/Initial/Map_Objects/Map_resources/Music Room 1.txt" || file_path == "/workspaces/Initial/Map_Objects/Map_resources/Music Room 2.txt" || file_path == "/workspaces/Initial/Map_Objects/Map_resources/Music Room 3.txt" || file_path == "/workspaces/Initial/Map_Objects/Map_resources/Music Room 4.txt" || file_path == "/workspaces/Initial/Map_Objects/Map_resources/Music Room 5.txt" || file_path == "/workspaces/Initial/Map_Objects/Map_resources/Music Room 6.txt") {
+            musiccount++;
+        } else if (file_path == "/workspaces/Initial/Map_Objects/Map_resources/Dining Room 1.txt" || file_path == "/workspaces/Initial/Map_Objects/Map_resources/Dining Room 2.txt" || file_path == "/workspaces/Initial/Map_Objects/Map_resources/Dining Room 3.txt" || file_path == "/workspaces/Initial/Map_Objects/Map_resources/Dining Room 4.txt" || file_path == "/workspaces/Initial/Map_Objects/Map_resources/Dining Room 5.txt" || file_path == "/workspaces/Initial/Map_Objects/Map_resources/Dining Room 6.txt") {
+            diningcount++;
+        } else if (file_path == "/workspaces/Initial/Map_Objects/Map_resources/Club Room 1.txt" || file_path == "/workspaces/Initial/Map_Objects/Map_resources/Club Room 2.txt" || file_path == "/workspaces/Initial/Map_Objects/Map_resources/Club Room 3.txt" || file_path == "/workspaces/Initial/Map_Objects/Map_resources/Club Room 4.txt" || file_path == "/workspaces/Initial/Map_Objects/Map_resources/Club Room 5.txt" || file_path == "/workspaces/Initial/Map_Objects/Map_resources/Club Room 6.txt") {
+            clubcount++;
+        }
+
+        if (restflag == 1 && restcount > 0) {
+            file_path = "/workspaces/Initial/Map_Objects/Map_resources/Restroom.txt";
+        }
+        if (teacherflag == 1 && teachercount > 0) {
+            file_path = "/workspaces/Initial/Map_Objects/Map_resources/Teacher's office.txt";
+        }
+        if (musicflag == 1 && musiccount > 0) {
+            file_path = "/workspaces/Initial/Map_Objects/Map_resources/Music Room.txt";
+        }
+        if (diningcount == 1 && diningcount > 0) {
+            file_path = "/workspaces/Initial/Map_Objects/Map_resources/Diningroom.txt";
+        }
+        if (clubcount == 1 && clubcount > 0) {
+            file_path = "/workspaces/Initial/Map_Objects/Map_resources/Club Room.txt";
+        }
+        
         int y4 = y+4;
         int x4 = x+4;
 
