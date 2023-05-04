@@ -211,8 +211,8 @@ int main_engine(string file_path, int&x, int& y) {
                             clear();
                             return 4;
                         } else if (x4 >= 99 && x4 <= 112) {
+                          
                             delwin(game_window);
-                            VISION_RADIUS_INCREASE += 100;
                             clear();
                             return 8;
                         }
@@ -244,6 +244,7 @@ int main_engine(string file_path, int&x, int& y) {
                 } else if (file_path == "/workspaces/Initial/Map_Objects/Map_resources/Rooftop stairs.txt") {
                     if (y4 == 12 || y4 == 11) {
                         if (x4>=44 && x4<=53) {
+                            VISION_RADIUS_INCREASE += 100;
                             delwin(game_window);
                             clear();
                             return 7;
