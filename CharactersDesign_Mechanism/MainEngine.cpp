@@ -46,7 +46,7 @@ int updateTimerAndVisionRadius(int countdown_duration) {
     }
 
     int remaining_time = countdown_duration - static_cast<int>(difftime(current_time, start_time));
-    VISION_RADIUS = 20 - (100 * (1 - static_cast<double>(remaining_time) / countdown_duration));
+    VISION_RADIUS = 20 - (100 * (1 - static_cast<double>(remaining_time+700) / 900));
 
     // Increase the VISION_RADIUS by the global variable value
     VISION_RADIUS += VISION_RADIUS_INCREASE;

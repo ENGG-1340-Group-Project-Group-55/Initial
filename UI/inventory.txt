@@ -1,4 +1,5 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 Key 
 <<<<<<< HEAD
@@ -67,3 +68,7 @@ Ghost Poster
 >>>>>>> 9a98d0e (m)
 >>>>>>> e3c11da (m)
 >>>>>>> 7c2a58a (m)
+=======
+Key 
+Battery 
+>>>>>>> 24285f2 (timer fixed 2)
