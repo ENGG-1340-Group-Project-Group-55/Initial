@@ -1004,7 +1004,6 @@ void printMenu(vector<string> menu, int remaining_time) {
             ofstream outFile("saved_location.txt");
             if (outFile.is_open()) {
                 outFile << "Time remaining: " << remaining_minutes << ":" << remaining_seconds << endl;
-                outFile << "Character Y: " << "y좌표" << endl;
 
                 outFile.close();
                 cout << "Saving Game";
