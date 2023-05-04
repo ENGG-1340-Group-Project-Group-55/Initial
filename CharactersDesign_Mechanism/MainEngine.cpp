@@ -62,7 +62,42 @@ int updateTimerAndVisionRadius(int countdown_duration) {
     VISION_RADIUS += VISION_RADIUS_INCREASE;
 
     if (VISION_RADIUS < 3) {
-        cout << "YOU'VE GOT EATEN BY DARKNESS." << endl;
+        //ending page
+        delwin(game_window);
+        int death_height = 24;
+        int death_width = 92;
+        string object;
+
+        initscr();
+        raw();
+        noecho();
+        curs_set(0);
+        keypad(stdscr, TRUE);
+
+        string filePath = "/workspaces/Initial/UI/deathpage.txt";
+        ifstream inputFile(filePath);
+        string line;
+
+        WINDOW* deathWin = CreateWindow(death_height, death_width); // create window for each file
+        box(deathWin, 0, 0);
+
+        int row = 1; // start at row 1
+        while (getline(inputFile, line)) {
+            mvwprintw(deathWin, row, 1, "%s", line.c_str());
+            row++; // increment row after printing the line
+        }
+        wrefresh(deathWin);
+
+        while (true) {
+            int ch = getch();
+            if (ch == 10) {
+                break;
+            }
+        }
+        werase(deathWin); // clear the window
+        wrefresh(deathWin); // redraw the window
+        delwin(deathWin); // delete window after displaying the file
+        inputFile.close();
         endwin();
         exit(0);
     }

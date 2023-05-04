@@ -250,8 +250,8 @@ int main()
     }
 
     //ending page
-    int heli_height = 25;
-    int heli_width = 64;
+    int ending_height = 25;
+    int ending_width = 64;
     string object;
 
     initscr();
@@ -264,15 +264,15 @@ int main()
     ifstream inputFile(filePath);
     string line;
 
-    WINDOW* heliWin = CreateWindow(heli_height, heli_width); // create window for each file
-    box(heliWin, 0, 0);
+    WINDOW* endingWin = CreateWindow(ending_height, ending_width); // create window for each file
+    box(endingWin, 0, 0);
 
     int row = 1; // start at row 1
     while (getline(inputFile, line)) {
-        mvwprintw(heliWin, row, 1, "%s", line.c_str());
+        mvwprintw(endingWin, row, 1, "%s", line.c_str());
         row++; // increment row after printing the line
     }
-    wrefresh(heliWin);
+    wrefresh(endingWin);
 
     while (true) {
         int ch = getch();
@@ -281,10 +281,10 @@ int main()
         }
     }
 
-    werase(heliWin); // clear the window
-    wrefresh(heliWin); // redraw the window
+    werase(endingWin); // clear the window
+    wrefresh(endingWin); // redraw the window
 
-    delwin(heliWin); // delete window after displaying the file
+    delwin(endingWin); // delete window after displaying the file
     inputFile.close();
 
     endwin();
