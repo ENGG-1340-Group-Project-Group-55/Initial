@@ -41,6 +41,16 @@ void reset_roomflag() {
     }
 }
 
+// Function to create a centered window with a box border
+WINDOW* CreateWindow(int screen_height, int screen_width) {
+    int startY = (LINES - screen_height) / 2;
+    int startX = (COLS - screen_width) / 2;
+    WINDOW* win = newwin(screen_height, screen_width, startY, startX);
+    refresh();
+    wrefresh(win);
+    return win;
+}
+
 // Function to update the timer and VISION_RADIUS
 int updateTimerAndVisionRadius(int countdown_duration) {
     time_t current_time = time(NULL);
@@ -63,7 +73,7 @@ int updateTimerAndVisionRadius(int countdown_duration) {
 
     if (VISION_RADIUS < 3) {
         //ending page
-        delwin(game_window);
+        //delwin(game_window);
         int death_height = 24;
         int death_width = 92;
         string object;
@@ -102,16 +112,6 @@ int updateTimerAndVisionRadius(int countdown_duration) {
         exit(0);
     }
     return remaining_time;
-}
-
-// Function to create a centered window with a box border
-WINDOW* CreateWindow(int screen_height, int screen_width) {
-    int startY = (LINES - screen_height) / 2;
-    int startX = (COLS - screen_width) / 2;
-    WINDOW* win = newwin(screen_height, screen_width, startY, startX);
-    refresh();
-    wrefresh(win);
-    return win;
 }
 
 void printInventory(vector<string> inventory);
@@ -562,28 +562,30 @@ int main_engine(string file_path, int&x, int& y) {
                 break;
 
             case 'f':
-                for (int i = 0; i < charsize+2; i++) {
-                    for (int j = 0; j < current_character[i].length()+2; j++) {
-                        if (mapData.TDVEC[i+y][j+x] == '*') {
-                            flag3 = true;
-                            ofstream outroomflag("/workspaces/Initial/Map_Objects/Map_resources/RoomFlags.txt", ios_base::app);
-                            if (!outroomflag.is_open()) {
-                                cout << "Error opening file for writing: " << "/workspaces/Initial/Map_Objects/Map_resources/RoomFlags.txt" << endl;
-                                exit(1);
+                if (y4 + 2 < screen_height) {
+                    for (int i = 0; i < charsize+2; i++) {
+                        for (int j = 0; j < current_character[i].length()+2; j++) {
+                            if (mapData.TDVEC[i+y][j+x] == '*') {
+                                flag3 = true;
+                                ofstream outroomflag("/workspaces/Initial/Map_Objects/Map_resources/RoomFlags.txt", ios_base::app);
+                                if (!outroomflag.is_open()) {
+                                    cout << "Error opening file for writing: " << "/workspaces/Initial/Map_Objects/Map_resources/RoomFlags.txt" << endl;
+                                    exit(1);
+                                }
+                                if (restcount > 0) {
+                                    outroomflag << "restroom" << endl;
+                                } else if (teachercount > 0) {
+                                    outroomflag << "teacheroffice" << endl;
+                                } else if (musiccount > 0) {
+                                    outroomflag << "musicroom" << endl;
+                                } else if (diningcount > 0) {
+                                    outroomflag << "diningroom" << endl;
+                                } else if (clubcount > 0) {
+                                    outroomflag << "clubroom" << endl;
+                                }
+                                outroomflag.close();
+                                break;
                             }
-                            if (restcount > 0) {
-                                outroomflag << "restroom" << endl;
-                            } else if (teachercount > 0) {
-                                outroomflag << "teacheroffice" << endl;
-                            } else if (musiccount > 0) {
-                                outroomflag << "musicroom" << endl;
-                            } else if (diningcount > 0) {
-                                outroomflag << "diningroom" << endl;
-                            } else if (clubcount > 0) {
-                                outroomflag << "clubroom" << endl;
-                            }
-                            outroomflag.close();
-                            break;
                         }
                     }
                 }
@@ -721,18 +723,21 @@ int main_engine(string file_path, int&x, int& y) {
                 box(ghostWin, 0, 0);
 
                 int row = 1;
+
                 while (getline(inputFile, line)) {
+                    attron(COLOR_PAIR(1));
                     mvwprintw(ghostWin, row, 1, "%s", line.c_str());
                     row++;
                 }
+                attroff(COLOR_PAIR(1));
                 wrefresh(ghostWin);
-
                 while (true) {
                     int ch = getch();
                     if (ch == 10) { // Enter key
                         break;
                     }
                 }
+
 
                 werase(ghostWin);
                 wrefresh(ghostWin);
