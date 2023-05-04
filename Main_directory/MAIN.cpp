@@ -81,6 +81,11 @@ int main()
     string entered;
     bool flag = true;
 
+
+    Maps mp(28, 104);
+    string filep = "/workspaces/Initial/CharactersDesign_Mechanism/startpage.txt";
+    VectorWrapper start = mp.Map_Loader(filep);
+
     // Write start_time to the text file
     time_t start_time = time(NULL);
     std::ofstream out_file("start_time.txt");
@@ -88,11 +93,6 @@ int main()
         out_file << start_time;
         out_file.close();
     }
-
-    Maps mp(28, 104);
-    string filep = "/workspaces/Initial/CharactersDesign_Mechanism/startpage.txt";
-    VectorWrapper start = mp.Map_Loader(filep);
-
 
     while (intro_flag)
     {
