@@ -175,12 +175,6 @@ int main_engine(string file_path, int&x, int& y) {
         bool flag2 = false;
         bool flag3 = false;
 
-        // int restcount = 0;
-        // int teachercount = 0;
-        // int musiccount = 0;
-        // int diningcount = 0;
-        // int clubcount = 0;
-
         bool restflag = false;
         bool teacherflag = false;
         bool musicflag = false;
