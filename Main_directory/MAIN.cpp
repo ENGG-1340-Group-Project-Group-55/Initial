@@ -243,6 +243,7 @@ int main()
         }
     }
 
+
 }
 //coordinates inside each room (point on feet)
 void rooms::ClassRoom()
