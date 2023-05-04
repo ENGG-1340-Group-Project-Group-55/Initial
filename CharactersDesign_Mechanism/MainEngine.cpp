@@ -15,6 +15,12 @@ int VISION_RADIUS;
 int point;
 int VISION_RADIUS_INCREASE = 0;
 
+int restflag = 0;
+int teacherflag = 0;
+int musicflag = 0;
+int diningflag = 0;
+int clubflag = 0;
+
 // Function to update the timer and VISION_RADIUS
 int updateTimerAndVisionRadius(int countdown_duration) {
     time_t current_time = time(NULL);
@@ -151,7 +157,7 @@ int main_engine(string file_path, int&x, int& y) {
 
     
 
-// Main loop ///////////////////////////////////////////////////////////////////////////////////////////////////
+// Main loop ...............................................................................
     
     int key_input;
     while ((key_input = wgetch(game_window)) != 'q') { // Exit on 'q' key press
@@ -160,6 +166,12 @@ int main_engine(string file_path, int&x, int& y) {
         bool flag1 = false;
         bool flag2 = false;
         bool flag3 = false;
+
+        int restcount = 0;
+        int teachercount = 0;
+        int musiccount = 0;
+        int diningcount = 0;
+        int clubcount = 0;
         
         int y4 = y+4;
         int x4 = x+4;

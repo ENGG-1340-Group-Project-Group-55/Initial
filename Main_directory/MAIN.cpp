@@ -61,12 +61,6 @@ uniform_int_distribution<int> valueDist(1, 6);
 int randnum = valueDist(gen);
 std::string str_randnum = std::to_string(randnum);
 
-int roomflag1 = 0;
-int roomflag2 = 0;
-int roomflag3 = 0;
-int roomflag4 = 0;
-int roomflag5 = 0;
-
 int main()
 {
     initialize();
@@ -251,7 +245,7 @@ void rooms::ClassRoom()
 {
     string file_path = "/workspaces/Initial/Map_Objects/Map_resources/Classroom.txt";
     int x_door = 87;
-    int y_door = 28;
+    int y_door = 26;
     main_engine(file_path,x_door,y_door);
 }
 void rooms::ClubRoom()
@@ -308,7 +302,7 @@ void rooms::ClubRoom()
     }
     
     int x_door = 86;
-    int y_door = 28;
+    int y_door = 26;
     main_engine(file_path,x_door,y_door);
  }
 
@@ -325,7 +319,7 @@ void rooms::ClubRoom()
     }
     
     int x_door = 86;
-    int y_door = 28;
+    int y_door = 26;
     main_engine(file_path,x_door,y_door);
 
  }
