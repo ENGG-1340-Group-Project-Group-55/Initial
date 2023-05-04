@@ -212,6 +212,7 @@ int main_engine(string file_path, int&x, int& y) {
                             return 4;
                         } else if (x4 >= 99 && x4 <= 112) {
                             delwin(game_window);
+                            VISION_RADIUS_INCREASE += 100;
                             clear();
                             return 8;
                         }
