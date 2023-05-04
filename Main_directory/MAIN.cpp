@@ -18,6 +18,7 @@ VectorWrapper StartData = Start.Map_Loader(startpath);
 bool display_instructions(VectorWrapper StartData);
 
 
+
 class rooms
 {
 public:
@@ -27,7 +28,7 @@ public:
     void DiningRoom();
     void RestRoom();
     void TeachersOffice();
-    void RoofTop();
+    int RoofTop();
     string SchoolMap(int,int);
     string RoofTopStairs(int,int);
     string roomchooser(int);
@@ -60,6 +61,8 @@ uniform_int_distribution<int> valueDist(1, 6);
 // generate a random number
 int randnum = valueDist(gen);
 std::string str_randnum = std::to_string(randnum);
+
+
 
 int main()
 {
@@ -208,10 +211,14 @@ int main()
         }
         else if (entered == "RoofTop")
         {
-            RM.RoofTop();
+            int u = RM.RoofTop();
             exitfrom = "RoofTop";
             previous = "ToRoofTop";
             entered = "RoofTopStairs";
+            if (u==99)
+            {
+                break;
+            }
         }
         else if (entered == "RoofTopStairs")
         {
@@ -238,6 +245,7 @@ int main()
             entered = RM.SchoolMap(*x,*y);
         }
     }
+
 
 }
 //coordinates inside each room (point on feet)
@@ -281,12 +289,13 @@ void rooms::ClubRoom()
     main_engine(file_path,x_door,y_door);
  }
 
- void rooms::RoofTop()
+ int rooms::RoofTop()
  {
     string file_path = "/workspaces/Initial/Map_Objects/Map_resources/Rooftop6.txt";
     int x_door = 44;
     int y_door = 20;
-    main_engine(file_path,x_door,y_door);
+    int a = main_engine(file_path,x_door,y_door);
+    return a;
  }
 
  void rooms::TeachersOffice()
@@ -414,7 +423,7 @@ bool display_instructions(VectorWrapper StartData) {
     printw("\n");
     printw("4. You can move your character by using W, A, S, D in your keyboard to move to another place. (W = up, S = down, A = left, D = right)\n");
     printw("\n");
-    printw("5. You can press I to open your inventory and esc to open the menu.\n");
+    printw("5. You can press I to open your inventory and M to open the menu.\n");
     printw("\n");
     printw("*Please keep going forward, when entered another room.*\n");
     printw("\n");
