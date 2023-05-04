@@ -452,7 +452,7 @@ int main_engine(string file_path, int&x, int& y) {
                 flag1 = true;
                 break;
 
-            case 27:
+            case 'm':
                 flag2 = true;
                 break;
 
@@ -872,7 +872,7 @@ void printInventory(vector<string> inventory) {
     //screen displayed until 'q' is pressed
     while (true) {              // consider while ((key_input = getch()) != 27) {
         int ch = getch();
-        if (ch == 27) {
+        if (ch == 27 || 'i') {
             break;
         }
     }
@@ -942,7 +942,7 @@ void printMenu(vector<string> menu, int remaining_time) {
             clear();
 
         }
-        else if (ch == 'q') {
+        else if (ch == 'm') {
             break;
         }
 
