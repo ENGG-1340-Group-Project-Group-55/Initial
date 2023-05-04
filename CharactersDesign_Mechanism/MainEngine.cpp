@@ -17,11 +17,11 @@ int VISION_RADIUS;
 int point;
 int VISION_RADIUS_INCREASE = 0;
 
-int restflag;
-int teacherflag;
-int musicflag;
-int diningflag;
-int clubflag;
+// int restflag;
+// int teacherflag;
+// int musicflag;
+// int diningflag;
+// int clubflag;
 
 void reset_inventory() {
     string filepath = "/workspaces/Initial/UI/inventory.txt";
@@ -160,10 +160,7 @@ int main_engine(string file_path, int&x, int& y) {
     charline.close();
 
     string *current_character = char_up;
-    
-    // Draw the map
-    Maps gameMap(screen_height, screen_width);
-    VectorWrapper mapData = gameMap.Map_Loader(file_path);
+
     //gameMap.Map_printer(mapData, 0, 0, screen_height, screen_width, game_window);
 
     
@@ -178,11 +175,49 @@ int main_engine(string file_path, int&x, int& y) {
         bool flag2 = false;
         bool flag3 = false;
 
+        // int restcount = 0;
+        // int teachercount = 0;
+        // int musiccount = 0;
+        // int diningcount = 0;
+        // int clubcount = 0;
+
+        bool restflag = false;
+        bool teacherflag = false;
+        bool musicflag = false;
+        bool diningflag = false;
+        bool clubflag = false;
+
         int restcount = 0;
         int teachercount = 0;
         int musiccount = 0;
         int diningcount = 0;
         int clubcount = 0;
+
+        //read roomflags.txt
+        ifstream rfline("/workspaces/Initial/Map_Objects/Map_resources/RoomFlags.txt");
+        if (!rfline.is_open()) {
+            cout << "Error opening RoomFlags.txt" << endl;
+            exit(1);
+        } else {
+            while (getline(rfline, line)) {
+                if (line.find("restroom") != string::npos) {
+                    restflag = true;
+                }
+                if (line.find("teacheroffice") != string::npos) {
+                    teacherflag = true;
+                }
+                if (line.find("musicroom") != string::npos) {
+                    musicflag = true;
+                }
+                if (line.find("diningroom") != string::npos) {
+                    diningflag = true;
+                }
+                if (line.find("clubroom") != string::npos) {
+                    clubflag = true;
+                }
+            }
+        }
+        rfline.close();
         
         if (file_path == "/workspaces/Initial/Map_Objects/Map_resources/Restroom 1.txt" || file_path == "/workspaces/Initial/Map_Objects/Map_resources/Restroom 2.txt" || file_path == "/workspaces/Initial/Map_Objects/Map_resources/Restroom 3.txt" || file_path == "/workspaces/Initial/Map_Objects/Map_resources/Restroom 4.txt" || file_path == "/workspaces/Initial/Map_Objects/Map_resources/Restroom 5.txt" || file_path == "/workspaces/Initial/Map_Objects/Map_resources/Restroom 6.txt") {
             restcount++;
@@ -196,24 +231,28 @@ int main_engine(string file_path, int&x, int& y) {
             clubcount++;
         }
 
-        if (restflag == 1 && restcount > 0) {
+        if (restflag == true && restcount > 0) {
             file_path = "/workspaces/Initial/Map_Objects/Map_resources/Restroom.txt";
         }
-        if (teacherflag == 1 && teachercount > 0) {
+        if (teacherflag == true && teachercount > 0) {
             file_path = "/workspaces/Initial/Map_Objects/Map_resources/Teacher's office.txt";
         }
-        if (musicflag == 1 && musiccount > 0) {
+        if (musicflag == true && musiccount > 0) {
             file_path = "/workspaces/Initial/Map_Objects/Map_resources/Music Room.txt";
         }
-        if (diningcount == 1 && diningcount > 0) {
+        if (diningflag == true && diningcount > 0) {
             file_path = "/workspaces/Initial/Map_Objects/Map_resources/Diningroom.txt";
         }
-        if (clubcount == 1 && clubcount > 0) {
+        if (clubflag == true && clubcount > 0) {
             file_path = "/workspaces/Initial/Map_Objects/Map_resources/Club Room.txt";
         }
         
         int y4 = y+4;
         int x4 = x+4;
+
+        // Draw the map
+        Maps gameMap(screen_height, screen_width);
+        VectorWrapper mapData = gameMap.Map_Loader(file_path);
 
         // Darken the entire screen
         wattron(game_window, COLOR_PAIR(4)); // Set color pair 4 (yellow on black)
@@ -270,7 +309,7 @@ int main_engine(string file_path, int&x, int& y) {
                             return 8;
                         }
                     }
-                } else if (file_path == "/workspaces/Initial/Map_Objects/Map_resources/Music Room.txt" || file_path == "/workspaces/Initial/Map_Objects/Map_resources/Music Room 1.txt" || file_path == "/workspaces/Initial/Map_Objects/Map_resources/Music Room 2.txt" || file_path == "/workspaces/Initial/Map_Objects/Map_resources/Music Room 3.txt" || file_path == "/workspaces/Initial/Map_Objects/Map_resources/Music Room 4.txt" || file_path == "/workspaces/Initial/Map_Objects/Map_resources/Music Room 5.txt" || file_path == "/workspaces/Initial/Map_Objects/Map_resources/Music Room 6.txt") {
+                } else if (file_path == "/workspaces/Initial/Map_Objects/Map_resources/Music Room.txt" || musiccount > 0) {
                     if (y4 == 10) {
                         if (x4>=80 && x4<=85) {
                             delwin(game_window);
@@ -278,7 +317,7 @@ int main_engine(string file_path, int&x, int& y) {
                             return 0;
                         }
                     }
-                } else if (file_path == "/workspaces/Initial/Map_Objects/Map_resources/Diningroom.txt" || file_path == "/workspaces/Initial/Map_Objects/Map_resources/Dining Room 1.txt" || file_path == "/workspaces/Initial/Map_Objects/Map_resources/Dining Room 2.txt" || file_path == "/workspaces/Initial/Map_Objects/Map_resources/Dining Room 3.txt" || file_path == "/workspaces/Initial/Map_Objects/Map_resources/Dining Room 4.txt" || file_path == "/workspaces/Initial/Map_Objects/Map_resources/Dining Room 5.txt" || file_path == "/workspaces/Initial/Map_Objects/Map_resources/Dining Room 6.txt") {
+                } else if (file_path == "/workspaces/Initial/Map_Objects/Map_resources/Diningroom.txt" || diningcount > 0) {
                     if (y4 == 10) {
                         if (x4>=65 && x4<=70) {
                             delwin(game_window);
@@ -286,7 +325,7 @@ int main_engine(string file_path, int&x, int& y) {
                             return 0;
                         }
                     }
-                } else if (file_path == "/workspaces/Initial/Map_Objects/Map_resources/Club Room.txt" || file_path == "/workspaces/Initial/Map_Objects/Map_resources/Club Room 1.txt" || file_path == "/workspaces/Initial/Map_Objects/Map_resources/Club Room 2.txt" || file_path == "/workspaces/Initial/Map_Objects/Map_resources/Club Room 3.txt" || file_path == "/workspaces/Initial/Map_Objects/Map_resources/Club Room 4.txt" || file_path == "/workspaces/Initial/Map_Objects/Map_resources/Club Room 5.txt" || file_path == "/workspaces/Initial/Map_Objects/Map_resources/Club Room 6.txt") {
+                } else if (file_path == "/workspaces/Initial/Map_Objects/Map_resources/Club Room.txt" || clubcount > 0) {
                     if (y4 == 10) {
                         if (x4>=21 && x4<=26) {
                             delwin(game_window);
@@ -385,7 +424,7 @@ int main_engine(string file_path, int&x, int& y) {
                             return 0;
                         }
                     }
-                } else if (file_path == "/workspaces/Initial/Map_Objects/Map_resources/Restroom.txt" || file_path == "/workspaces/Initial/Map_Objects/Map_resources/Restroom 1.txt" || file_path == "/workspaces/Initial/Map_Objects/Map_resources/Restroom 2.txt" || file_path == "/workspaces/Initial/Map_Objects/Map_resources/Restroom 3.txt" || file_path == "/workspaces/Initial/Map_Objects/Map_resources/Restroom 4.txt" || file_path == "/workspaces/Initial/Map_Objects/Map_resources/Restroom 5.txt" || file_path == "/workspaces/Initial/Map_Objects/Map_resources/Restroom 6.txt" ) {
+                } else if (file_path == "/workspaces/Initial/Map_Objects/Map_resources/Restroom.txt" || restcount > 0) {
                     if (y4 == 28) {
                         if (x4>=87 && x4<=92) {
                             delwin(game_window);
@@ -393,7 +432,7 @@ int main_engine(string file_path, int&x, int& y) {
                             return 0;
                         }
                     }
-                 } else if (file_path == "/workspaces/Initial/Map_Objects/Map_resources/Teacher's office.txt" || file_path == "/workspaces/Initial/Map_Objects/Map_resources/Teacher's office 1.txt" || file_path == "/workspaces/Initial/Map_Objects/Map_resources/Teacher's office 2.txt" || file_path == "/workspaces/Initial/Map_Objects/Map_resources/Teacher's office 3.txt" || file_path == "/workspaces/Initial/Map_Objects/Map_resources/Teacher's office 4.txt" || file_path == "/workspaces/Initial/Map_Objects/Map_resources/Teacher's office 5.txt" || file_path == "/workspaces/Initial/Map_Objects/Map_resources/Teacher's office 6.txt") {
+                 } else if (file_path == "/workspaces/Initial/Map_Objects/Map_resources/Teacher's office.txt" || teachercount > 0) {
                     if (y4 == 28) {
                         if (x4>=87 && x4<=92) {
                             delwin(game_window);
@@ -406,7 +445,7 @@ int main_engine(string file_path, int&x, int& y) {
                         if (x4>=40 && x4<=60) {
                             delwin(game_window);
                             clear();
-                            return 0;
+                            return 99;
                         }
                     }
                 } 
@@ -462,20 +501,37 @@ int main_engine(string file_path, int&x, int& y) {
                 for (int i = 0; i < charsize+2; i++) {
                     for (int j = 0; j < current_character[i].length()+2; j++) {
                         if (mapData.TDVEC[i+y][j+x] == '*') {
-
                             flag3 = true;
-
-                            if (restcount > 0) {
-                                restflag = 1;
-                            } else if (teachercount > 0) {
-                                teacherflag = 1;
-                            } else if (musiccount > 0) {
-                                musicflag = 1;
-                            } else if (diningcount > 0) {
-                                diningflag = 1;
-                            } else if (clubcount > 0) {
-                                clubflag = 1;
+                            ofstream outroomflag("/workspaces/Initial/Map_Objects/Map_resources/RoomFlags.txt", ios_base::app);
+                            if (!outroomflag.is_open()) {
+                                cout << "Error opening file for writing: " << "/workspaces/Initial/Map_Objects/Map_resources/RoomFlags.txt" << endl;
+                                exit(1);
                             }
+                            if (restcount > 0) {
+                                outroomflag << "restroom" << endl;
+                            } else if (teachercount > 0) {
+                                outroomflag << "teacheroffice" << endl;
+                            } else if (musiccount > 0) {
+                                outroomflag << "musicroom" << endl;
+                            } else if (diningcount > 0) {
+                                outroomflag << "diningroom" << endl;
+                            } else if (clubcount > 0) {
+                                outroomflag << "clubroom" << endl;
+                            }
+                            outroomflag.close();
+
+
+                            // if (restcount > 0) {
+                            //     restflag = 1;
+                            // } else if (teachercount > 0) {
+                            //     teacherflag = 1;
+                            // } else if (musiccount > 0) {
+                            //     musicflag = 1;
+                            // } else if (diningcount > 0) {
+                            //     diningflag = 1;
+                            // } else if (clubcount > 0) {
+                            //     clubflag = 1;
+                            // }
                             break;
                         }
                     }
@@ -691,7 +747,7 @@ int main_engine(string file_path, int&x, int& y) {
             wrefresh(game_window);
         }
     }
-    //main loop end ////////////////////////////////////////////////////////////////////////////////////////////
+    //main loop end .......................................................................................
 
 // End ncurses mode
     delwin(game_window);
