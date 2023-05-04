@@ -12,7 +12,7 @@
 //compile using: g++ -pedantic-errors -std=c++11 CharactersDesign_Mechanism/MainEngine.cpp Map_Objects/Map_loading.cpp -o game -lncurses
 
 int VISION_RADIUS;
-
+int point;
 
 // Function to update the timer and VISION_RADIUS
 int updateTimerAndVisionRadius(int countdown_duration) {
@@ -52,6 +52,11 @@ vector<string> loadInventoryFromFile();
 void printChatboxIntro(vector<string> chatboxintro);
 vector<string> loadChatboxIntroFromFile();
 
+void printHelicopter(vector<string> helicopter);
+vector<string> loadHelicopterFromFile();
+
+void ToInventory(string object);
+
 void printMenu(vector<string> menu, int remaining_time);
 
 int intro = 1;
@@ -75,6 +80,11 @@ int main_engine(string file_path, int&x, int& y) {
         printChatboxIntro(chatboxintro);
         intro = 0;
     }
+<<<<<<< HEAD
+=======
+
+
+>>>>>>> a66646a (,.)
     // Initialize the timer
     int countdown_duration = 900; // Set this to the desired countdown duration (15 minutes)
 
@@ -344,16 +354,16 @@ int main_engine(string file_path, int&x, int& y) {
                 }
                 break;
             
-            case 'f':
-                for (int i = 0; i < charsize+2; i++) {
-                    for (int j = 0; j < current_character[i].length()+2; j++) {
-                        if (mapData.TDVEC[i+y][j+x] == '*') {
-                            flag1 = true;
-                            break;
-                        }
-                    }
-                }
-                break;
+            // case 'f':
+            //     for (int i = 0; i < charsize+2; i++) {
+            //         for (int j = 0; j < current_character[i].length()+2; j++) {
+            //             if (mapData.TDVEC[i+y][j+x] == '*') {
+            //                 flag1 = true;
+            //                 break;
+            //             }
+            //         }
+            //     }
+            //     break;
 
             case 'i':
                 flag1 = true;
@@ -365,6 +375,160 @@ int main_engine(string file_path, int&x, int& y) {
 
             case '0':
                 flag3 = true;
+                break;
+
+            case 'f':
+                for (int i = 0; i < charsize+2; i++) {
+                    for (int j = 0; j < current_character[i].length()+2; j++) {
+                        if (mapData.TDVEC[i+y][j+x] == '*') {
+                            point += 1;
+                            if (point == 1) {
+                                int chatbox_height = 7;
+                                int chatbox_width = 80;
+                                string object;
+
+
+                                initscr();
+                                raw();
+                                noecho();
+                                curs_set(0);
+                                keypad(stdscr, TRUE);
+
+                                WINDOW* chatboxWin = CreateWindow(chatbox_height, chatbox_width); // create window for each file
+                                box(chatboxWin, 0, 0);
+                                wrefresh(chatboxWin);
+
+                                string filePath = "/workspaces/Initial/UI/chatboxintro/chatboxfound1.txt";
+                                ifstream inputFile(filePath);
+                                string line;
+
+                                while (getline(inputFile, line)) {
+                                    mvwprintw(chatboxWin, 3, 6, "%s", line.c_str());
+                                    wrefresh(chatboxWin);
+                                    int ch = getch();
+                                    if (ch == 10) { // Enter key
+                                        break;
+                                    }
+                                }
+
+                                delwin(chatboxWin); // delete window after displaying the file
+                                inputFile.close();
+
+                                object = "Key \n";
+                                ToInventory(object);}
+
+                            if (point == 2) {
+                                VISION_RADIUS += 20;
+                                int chatbox_height = 7;
+                                int chatbox_width = 80;
+                                string object;
+
+
+                                initscr();
+                                raw();
+                                noecho();
+                                curs_set(0);
+                                keypad(stdscr, TRUE);
+
+                                WINDOW* chatboxWin = CreateWindow(chatbox_height, chatbox_width); // create window for each file
+                                box(chatboxWin, 0, 0);
+                                wrefresh(chatboxWin);
+
+                                string filePath = "/workspaces/Initial/UI/chatboxintro/chatboxfound2.txt";
+                                ifstream inputFile(filePath);
+                                string line;
+
+                                while (getline(inputFile, line)) {
+                                    mvwprintw(chatboxWin, 3, 6, "%s", line.c_str());
+                                    wrefresh(chatboxWin);
+                                    int ch = getch();
+                                    if (ch == 10) { // Enter key
+                                        break;
+                                    }
+                                }
+
+                                delwin(chatboxWin); // delete window after displaying the file
+                                inputFile.close();
+                                
+
+
+                                object = "Battery \n";
+                                ToInventory(object); }
+
+                            if (point == 3) {
+                                int chatbox_height = 7;
+                                int chatbox_width = 80;
+                                string object;
+
+
+                                initscr();
+                                raw();
+                                noecho();
+                                curs_set(0);
+                                keypad(stdscr, TRUE);
+
+                                WINDOW* chatboxWin = CreateWindow(chatbox_height, chatbox_width); // create window for each file
+                                box(chatboxWin, 0, 0);
+                                wrefresh(chatboxWin);
+
+                                string filePath = "/workspaces/Initial/UI/chatboxintro/chatboxfound3.txt";
+                                ifstream inputFile(filePath);
+                                string line;
+
+                                while (getline(inputFile, line)) {
+                                    mvwprintw(chatboxWin, 3, 6, "%s", line.c_str());
+                                    wrefresh(chatboxWin);
+                                    int ch = getch();
+                                    if (ch == 10) { // Enter key
+                                        break;
+                                    }
+                                }
+
+                                delwin(chatboxWin); // delete window after displaying the file
+                                inputFile.close();
+
+                                object = "Ghost Poster \n";
+                                ToInventory(object); }
+
+                            if (point == 4) {
+                                int chatbox_height = 7;
+                                int chatbox_width = 80;
+                                string object;
+
+
+                                initscr();
+                                raw();
+                                noecho();
+                                curs_set(0);
+                                keypad(stdscr, TRUE);
+
+                                WINDOW* chatboxWin = CreateWindow(chatbox_height, chatbox_width); // create window for each file
+                                box(chatboxWin, 0, 0);
+                                wrefresh(chatboxWin);
+
+                                string filePath = "/workspaces/Initial/UI/chatboxintro/chatboxfound1.txt";
+                                ifstream inputFile(filePath);
+                                string line;
+
+                                while (getline(inputFile, line)) {
+                                    mvwprintw(chatboxWin, 3, 6, "%s", line.c_str());
+                                    wrefresh(chatboxWin);
+                                    int ch = getch();
+                                    if (ch == 10) { // Enter key
+                                        break;
+                                    }
+                                }
+
+                                delwin(chatboxWin); // delete window after displaying the file
+                                inputFile.close();
+
+                                object = "Key \n";
+                                ToInventory(object); }
+                            
+                            break;
+                        }
+                    }
+                }
                 break;
 
         }
@@ -440,7 +604,10 @@ vector<string> loadChatboxIntroFromFile() {
     return chatboxintro;
 }
 
+<<<<<<< HEAD
 
+=======
+>>>>>>> a66646a (,.)
 void printChatboxIntro(vector<string> chatboxintro) {
     int chatbox_height = 7;
     int chatbox_width = 80;
@@ -484,6 +651,67 @@ void printChatboxIntro(vector<string> chatboxintro) {
             }
         }
     }
+    endwin();
+}
+
+vector<string> loadHelicopterFromFile() {
+    vector<string> helicopter;
+    string folderPath = "/workspaces/Initial/Map_Objects/Map_resources/";
+
+    for (string fileName : {"Rooftop2.txt", "Rooftop3.txt", "Rooftop4.txt", "Rooftop5.txt", "Rooftop6.txt"}) {
+        string filePath = folderPath + fileName;
+        ifstream inputFile(filePath); // Open the file for reading
+        string line;
+
+        if (inputFile.is_open()) {
+            while (getline(inputFile, line)) {
+                helicopter.push_back(line); // Read and store the lines from the file
+            }
+            inputFile.close(); // Close the file
+        } else {
+            cout << "No " << fileName << " file." << endl;
+        }
+    }
+
+    return helicopter;
+}
+
+void printHelicopter() {
+    vector<string> fileNames = {"Rooftop2.txt", "Rooftop3.txt", "Rooftop4.txt", "Rooftop5.txt", "Rooftop6.txt"};
+    int currentFileIndex = 0;
+
+    Maps mp(25, 95);
+
+    initscr();
+    clear();
+    refresh();
+    curs_set(0);
+    noecho();
+
+    int screen_rows, screen_cols;
+    getmaxyx(stdscr, screen_rows, screen_cols);
+
+    int row_offset = (screen_rows - 25) / 2;
+    int col_offset = (screen_cols - 95) / 2;
+
+    while (currentFileIndex < fileNames.size()) {
+        string fileName = fileNames[currentFileIndex];
+        string filep = "/workspaces/Initial/Map_Objects/Map_resources/" + fileName;
+        VectorWrapper start = mp.Map_Loader(filep);
+
+        for (int i = 0; i < 25; i++) {
+            for (int j = 0; j < 95; j++) {
+                mvprintw(row_offset + i, col_offset + j, "%c", start.TDVEC[i][j]);
+            }
+        }
+
+        refresh();
+        getch(); // Wait for user input
+        currentFileIndex++;
+        clear();
+        refresh();
+    }
+
     endwin();
 }
 
@@ -603,6 +831,106 @@ void printMenu(vector<string> menu, int remaining_time) {
     delwin(menuWin);
 }
 
+<<<<<<< HEAD
+=======
+void printStartpage(VectorWrapper StartData) {
+    clear();
+
+    int start_height = 28;
+    int start_width = 104;
+
+    raw();
+    noecho();
+    curs_set(0);
+    keypad(stdscr, TRUE);
+
+    WINDOW* startWin = CreateWindow(start_height, start_width);
+
+    // Draw the start page with colors
+    for (int i = 0; i < StartData.TDVEC.size(); i++) {
+        for (int j = 0; j < StartData.TDVEC[i].size(); j++) {
+            if (StartData.TDVEC[i][j] == '.') {
+                continue; // Skip '.' characters
+            }
+            if (i < 17) {
+                wattron(startWin, COLOR_PAIR(1));
+                mvwaddch(startWin, i, j, StartData.TDVEC[i][j]);
+                wattroff(startWin, COLOR_PAIR(1));
+            } else if (i < 19) {
+                wattron(startWin, COLOR_PAIR(3));
+                mvwaddch(startWin, i, j, StartData.TDVEC[i][j]);
+                wattroff(startWin, COLOR_PAIR(3));
+            } else {
+                wattron(startWin, COLOR_PAIR(2));
+                mvwaddch(startWin, i, j, StartData.TDVEC[i][j]);
+                wattroff(startWin, COLOR_PAIR(2));
+            }
+        }
+    }
+
+    wrefresh(startWin);
+
+    // Screen displayed until 'esc' is pressed
+    while (true) {
+        int ch = getch();
+        if (ch == '1') {
+            clear();
+            int x = 87, y = 24;
+            string file_path = "/workspaces/Initial/Map_Objects/Map_resources/Classroom.txt";
+            delwin(startWin);
+            vector<string> helicopter = loadHelicopterFromFile();
+            printHelicopter();
+            main_engine(file_path,x,y);
+            
+        }
+        else if (ch == '2') {
+            display_instructions(StartData);
+        }
+        if (ch == 'q') {
+            break;
+        }
+    }
+
+    delwin(startWin);
+}
+
+void display_instructions(VectorWrapper StartData) {
+    clear();
+
+    attron(COLOR_PAIR(1));
+    printw("\n");
+    printw("  ___ _  _ ___ _____ ___ _   _  ___ _____ ___ ___  _  _ \n");
+    printw(" |_ _| \\| / __|_   _| _ \\ | | |/ __|_   _|_ _/ _ \\| \\| |\n");
+    printw("  | || .` \\__ \\ | | |   / |_| | (__  | |  | | (_) | .` |\n");
+    printw(" |___|_|\\_|___/ |_| |_|_\\\\___/ \\___| |_| |___\\___/|_|\\_|\n");
+    printw("                                                        ");
+    printw("\n");
+    attroff(COLOR_PAIR(1));
+    attron(COLOR_PAIR(4));
+    printw("1. Welcome to horror school escape game!\n");
+    printw("\n");
+    printw("2. While playing the game, you will be guided to choose an action from several options while playing the game. To make a choice, enter the corresponding number and press Enter.\n");
+    printw("\n");
+    printw("3. Please choose wisely, as you cannot change your choice and the storyline changes by your decisions.\n");
+    printw("\n");
+    printw("4. You can move your character by using W, A, S, D in your keyboard to move to another place. (W = up, S = down, A = left, D = right)\n");
+    printw("\n");
+    printw("5. You can press E to open your inventory and press F to grab items while playing the game.\n");
+    printw("\n");
+    printw("\nPress Enter to return to the start page.");
+    attroff(COLOR_PAIR(4));
+
+    refresh();
+
+    // Wait for the user to press Enter
+    int ch;
+    do {
+        ch = getch();
+    } while (ch != '\n' && ch != '\r');
+
+    printStartpage(StartData);
+}
+>>>>>>> a66646a (,.)
 
 // int main(){
 //     int x = 64, y = 20;
