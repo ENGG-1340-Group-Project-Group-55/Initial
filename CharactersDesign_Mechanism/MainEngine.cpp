@@ -17,11 +17,11 @@ int VISION_RADIUS;
 int point;
 int VISION_RADIUS_INCREASE = 0;
 
-int restflag = 0;
-int teacherflag = 0;
-int musicflag = 0;
-int diningflag = 0;
-int clubflag = 0;
+int restflag;
+int teacherflag;
+int musicflag;
+int diningflag;
+int clubflag;
 
 
 // Function to update the timer and VISION_RADIUS
@@ -443,17 +443,6 @@ int main_engine(string file_path, int&x, int& y) {
                 }
                 break;
             
-            // case 'f':
-            //     for (int i = 0; i < charsize+2; i++) {
-            //         for (int j = 0; j < current_character[i].length()+2; j++) {
-            //             if (mapData.TDVEC[i+y][j+x] == '*') {
-            //                 flag1 = true;
-            //                 break;
-            //             }
-            //         }
-            //     }
-            //     break;
-
             case 'i':
                 flag1 = true;
                 break;
@@ -468,6 +457,7 @@ int main_engine(string file_path, int&x, int& y) {
                         if (mapData.TDVEC[i+y][j+x] == '*') {
 <<<<<<< HEAD
                             flag3 = true;
+<<<<<<< HEAD
                           
 =======
                             point += 1;
@@ -650,6 +640,19 @@ int main_engine(string file_path, int&x, int& y) {
 
                                 
                             
+=======
+                            if (restcount > 0) {
+                                restflag = 1;
+                            } else if (teachercount > 0) {
+                                teacherflag = 1;
+                            } else if (musiccount > 0) {
+                                musicflag = 1;
+                            } else if (diningcount > 0) {
+                                diningflag = 1;
+                            } else if (clubcount > 0) {
+                                clubflag = 1;
+                            }
+>>>>>>> 6b7e5bc (.)
                             break;
                         }
                     }

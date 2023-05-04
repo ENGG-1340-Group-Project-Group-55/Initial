@@ -1,6 +1,13 @@
 Key 
+<<<<<<< HEAD
 Battery 
 Ghost Poster 
 Key 
 Battery 
 Ghost Poster 
+=======
+Key 
+Battery 
+Key 
+Key 
+>>>>>>> 6b7e5bc (.)
