@@ -86,13 +86,6 @@ int main()
     string filep = "/workspaces/Initial/CharactersDesign_Mechanism/startpage.txt";
     VectorWrapper start = mp.Map_Loader(filep);
 
-    // Write start_time to the text file
-    time_t start_time = time(NULL);
-    std::ofstream out_file("start_time.txt");
-    if (out_file) {
-        out_file << start_time;
-        out_file.close();
-    }
 
     while (intro_flag)
     {
@@ -131,6 +124,14 @@ int main()
                     mvprintw(row_offset + i, col_offset + j, "%c", start.TDVEC[i][j]);
                     attroff(COLOR_PAIR(2));
                 }
+            }
+
+            // Write start_time to the text file
+            time_t start_time = time(NULL);
+            std::ofstream out_file("start_time.txt");
+            if (out_file) {
+                out_file << start_time;
+                out_file.close();
             }
         }
 
@@ -466,7 +467,7 @@ bool display_instructions(VectorWrapper StartData) {
     printw("\n");
     printw("4. You can move your character by using W, A, S, D in your keyboard to move to another place. (W = up, S = down, A = left, D = right)\n");
     printw("\n");
-    printw("5. You can press i to open your inventory and M to open the menu.\n");
+    printw("5. You can press i to open your inventory and m to open the menu.\n");
     printw("\n");
     printw("6. The surroundings of the character will become darker and darker, so find a battery to brighten up the surroundings!\n");
     printw("\n");
