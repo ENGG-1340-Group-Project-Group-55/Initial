@@ -28,7 +28,7 @@ void reset_inventory() {
     ofstream outputFile(filepath, ios::trunc);
     if (outputFile.is_open()) {
         outputFile.close();
-    } 
+    }
 }
 
 // Function to update the timer and VISION_RADIUS
@@ -163,12 +163,12 @@ int main_engine(string file_path, int&x, int& y) {
 
     //gameMap.Map_printer(mapData, 0, 0, screen_height, screen_width, game_window);
 
-    
+
 
 // Main loop ...............................................................................
-    
+
     int key_input;
-    while ((key_input = wgetch(game_window)) != 'q') { // Exit on 'q' key press
+    while ((key_input = wgetch(game_window)) != 'Q') { // Exit on 'q' key press
         // Clear window
         //werase(game_window);
         bool flag1 = false;
@@ -212,7 +212,7 @@ int main_engine(string file_path, int&x, int& y) {
             }
         }
         rfline.close();
-        
+
         if (file_path == "/workspaces/Initial/Map_Objects/Map_resources/Restroom 1.txt" || file_path == "/workspaces/Initial/Map_Objects/Map_resources/Restroom 2.txt" || file_path == "/workspaces/Initial/Map_Objects/Map_resources/Restroom 3.txt" || file_path == "/workspaces/Initial/Map_Objects/Map_resources/Restroom 4.txt" || file_path == "/workspaces/Initial/Map_Objects/Map_resources/Restroom 5.txt" || file_path == "/workspaces/Initial/Map_Objects/Map_resources/Restroom 6.txt") {
             restcount++;
         } else if (file_path == "/workspaces/Initial/Map_Objects/Map_resources/Teacher's office 1.txt" || file_path == "/workspaces/Initial/Map_Objects/Map_resources/Teacher's office 2.txt" || file_path == "/workspaces/Initial/Map_Objects/Map_resources/Teacher's office 3.txt" || file_path == "/workspaces/Initial/Map_Objects/Map_resources/Teacher's office 4.txt" || file_path == "/workspaces/Initial/Map_Objects/Map_resources/Teacher's office 5.txt" || file_path == "/workspaces/Initial/Map_Objects/Map_resources/Teacher's office 6.txt") {
@@ -240,7 +240,7 @@ int main_engine(string file_path, int&x, int& y) {
         if (clubflag == true && clubcount > 0) {
             file_path = "/workspaces/Initial/Map_Objects/Map_resources/Club Room.txt";
         }
-        
+
         int y4 = y+4;
         int x4 = x+4;
 
@@ -274,10 +274,10 @@ int main_engine(string file_path, int&x, int& y) {
             printChatboxIntro(chatboxintro);
             intro = 0;
         }
-    
-        if (file_path == "/workspaces/Initial/Map_Objects/Map_resources/Rooftop6.txt") {
-            
-        }
+
+        // if (file_path == "/workspaces/Initial/Map_Objects/Map_resources/Rooftop6.txt") {
+        //     return 9;
+        // }
 
         switch(key_input) {
             case 'w':
@@ -358,26 +358,29 @@ int main_engine(string file_path, int&x, int& y) {
                                 }
 
                                 delwin(chatboxWin); // delete window after displaying the file
-                                inputFile.close();}
+                                inputFile.close();
+                            }
 
                             else if (point == 4) {
-                                    VISION_RADIUS_INCREASE += 100;
-                            delwin(game_window);
-                            clear();
-                            vector<string> helicopter = loadHelicopterFromFile();
-                            printHelicopter();
-                            ofstream outfile;
-                            outfile.open("/workspaces/Initial/UI/inventory.txt", ios::out | ios::trunc);
-                            outfile.close();
+                                VISION_RADIUS_INCREASE += 100;
+                                delwin(game_window);
+                                clear();
+                                vector<string> helicopter = loadHelicopterFromFile();
+                                printHelicopter();
+                                ofstream outfile;
+                                outfile.open("/workspaces/Initial/UI/inventory.txt", ios::out | ios::trunc);
+                                outfile.close();
 
-                            return 7;
-                                }
+                                return 7;
+                            }
                         }
                     }
                 } else if (file_path == "/workspaces/Initial/Map_Objects/Map_resources/Rooftop6.txt") {
                     if (y4 == 16) {
                         if (x4>=27 && x4<=35) {
 
+                        }
+                    }
                 }
 
                 for (int i=1; i<5; i++) {
@@ -430,7 +433,7 @@ int main_engine(string file_path, int&x, int& y) {
                             return 0;
                         }
                     }
-                 } else if (file_path == "/workspaces/Initial/Map_Objects/Map_resources/Teacher's office.txt" || teachercount > 0) {
+                } else if (file_path == "/workspaces/Initial/Map_Objects/Map_resources/Teacher's office.txt" || teachercount > 0) {
                     if (y4 == 28) {
                         if (x4>=87 && x4<=92) {
                             delwin(game_window);
@@ -477,7 +480,7 @@ int main_engine(string file_path, int&x, int& y) {
                     x-=2;
                 }
                 break;
-            
+
             case 'i':
                 flag1 = true;
                 break;
@@ -618,15 +621,15 @@ int main_engine(string file_path, int&x, int& y) {
 
                 delwin(chatboxWin); // delete window after displaying the file
                 inputFile.close();
-                
+
 
 
                 object = "Battery \n";
-                ToInventory(object); 
+                ToInventory(object);
             }
 
             if (point == 3) {
-            //printing out ghosts
+                //printing out ghosts
                 int ghost_height = 40;
                 int ghost_width = 140;
                 string object;
@@ -658,7 +661,7 @@ int main_engine(string file_path, int&x, int& y) {
                         break;
                     }
                 }
-                                
+
                 werase(ghostWin);
                 wrefresh(ghostWin);
 
@@ -666,7 +669,7 @@ int main_engine(string file_path, int&x, int& y) {
                 inputFile.close();
 
                 endwin();
-                                
+
                 int chatbox_height = 7;
                 int chatbox_width = 80;
 
@@ -700,7 +703,7 @@ int main_engine(string file_path, int&x, int& y) {
                 string object;
                 object = "Key \n";
                 ToInventory(object);
-            
+
 
                 initscr();
                 raw();
@@ -727,7 +730,7 @@ int main_engine(string file_path, int&x, int& y) {
 
                 delwin(chatboxWin); // delete window after displaying the file
                 inputFile.close();
-            }   
+            }
         } else {
             wrefresh(game_window);
         }
@@ -895,7 +898,7 @@ vector<string> loadInventoryFromFile() {
             inventory.push_back(line); // Read and store the items from the file
         }
         inputFile.close(); // Close the file
-    } 
+    }
     else {
         cout << "No inventory file." << endl;
     }
@@ -957,11 +960,12 @@ void printMenu(vector<string> menu, int remaining_time) {
     mvwprintw(menuWin, 11, 1, "            | |_  \\__ \\/ _` \\ V / -_)");
     mvwprintw(menuWin, 12, 1, "            |_(_) |___/\\__,_|\\_/\\___|");
     mvwprintw(menuWin, 13, 1, "    ");
-    mvwprintw(menuWin, 14, 1, "       ___     ___        _            _  ");
-    mvwprintw(menuWin, 15, 1, "      |_  )   | _ \\___ __| |_ __ _ _ _| |");
-    mvwprintw(menuWin, 16, 1, "       / / _  |   / -_|_-<  _/ _` | '_|  _|");
-    mvwprintw(menuWin, 17, 1, "      /___(_) |_|_\\___/__/\\__\\__,_|_|  \\__|");
+    mvwprintw(menuWin, 14, 1, "             ___      ___       _ _   ");
+    mvwprintw(menuWin, 15, 1, "            |_  )    / _ \\_  _(_) |_ ");
+    mvwprintw(menuWin, 16, 1, "             / / _  | (_)| || | |  _|");
+    mvwprintw(menuWin, 17, 1, "            /___(_)  \\__\\_\\_,_|_|\\__|");
 
+    \
 
 
     nodelay(menuWin, TRUE);
@@ -979,9 +983,9 @@ void printMenu(vector<string> menu, int remaining_time) {
             //Save character's current location to a file
             ofstream outFile("saved_location.txt");
             if (outFile.is_open()) {
-                outFile << "Character X: " << "x좌표" << endl;
+                outFile << "Time remaining: " << remaining_minutes << ":" << remaining_seconds << endl;
                 outFile << "Character Y: " << "y좌표" << endl;
-                
+
                 outFile.close();
                 cout << "Saving Game";
             } else {
@@ -991,6 +995,9 @@ void printMenu(vector<string> menu, int remaining_time) {
         else if (ch == '2') {
             delwin(menuWin);
             clear();
+            endwin();
+            exit(0);
+            break;
 
         }
         else if (ch == 'm') {
