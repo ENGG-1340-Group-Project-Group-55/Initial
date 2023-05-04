@@ -532,8 +532,6 @@ int main_engine(string file_path, int&x, int& y) {
                             // } else if (clubcount > 0) {
                             //     clubflag = 1;
                             // }
-
-                            flag3 = true;
                             break;
                         }
                     }
