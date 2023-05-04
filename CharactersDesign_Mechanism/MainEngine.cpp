@@ -23,6 +23,7 @@ int musicflag = 0;
 int diningflag = 0;
 int clubflag = 0;
 
+
 // Function to update the timer and VISION_RADIUS
 int updateTimerAndVisionRadius(int countdown_duration) {
     time_t current_time = time(NULL);
@@ -73,6 +74,7 @@ void ToInventory(string object);
 void printMenu(vector<string> menu, int remaining_time);
 
 int intro = 1;
+
 int main_engine(string file_path, int&x, int& y) {
 // Initialize ncurses
     initscr();
@@ -324,6 +326,10 @@ int main_engine(string file_path, int&x, int& y) {
                             clear();
                             vector<string> helicopter = loadHelicopterFromFile();
                             printHelicopter();
+                            ofstream outfile;
+                            outfile.open("/workspaces/Initial/UI/inventory.txt", ios::out | ios::trunc);
+                            outfile.close();
+
                             return 7;
                                 }
                         }
@@ -460,8 +466,187 @@ int main_engine(string file_path, int&x, int& y) {
                 for (int i = 0; i < charsize+2; i++) {
                     for (int j = 0; j < current_character[i].length()+2; j++) {
                         if (mapData.TDVEC[i+y][j+x] == '*') {
+<<<<<<< HEAD
                             flag3 = true;
                           
+=======
+                            point += 1;
+                            if (point == 1) {
+                                int chatbox_height = 7;
+                                int chatbox_width = 80;
+                                string object;
+
+
+                                initscr();
+                                raw();
+                                noecho();
+                                curs_set(0);
+                                keypad(stdscr, TRUE);
+
+                                WINDOW* chatboxWin = CreateWindow(chatbox_height, chatbox_width); // create window for each file
+                                box(chatboxWin, 0, 0);
+                                wrefresh(chatboxWin);
+
+                                string filePath = "/workspaces/Initial/UI/chatboxintro/chatboxfound1.txt";
+                                ifstream inputFile(filePath);
+                                string line;
+
+                                while (getline(inputFile, line)) {
+                                    mvwprintw(chatboxWin, 3, 6, "%s", line.c_str());
+                                    wrefresh(chatboxWin);
+                                    int ch = getch();
+                                    if (ch == 10) { // Enter key
+                                        break;
+                                    }
+                                }
+
+                                delwin(chatboxWin); // delete window after displaying the file
+                                inputFile.close();
+
+                                object = "Key \n";
+                                ToInventory(object);}
+
+                            if (point == 2) {
+                                VISION_RADIUS_INCREASE += 10;
+                                int chatbox_height = 7;
+                                int chatbox_width = 80;
+                                string object;
+
+
+                                initscr();
+                                raw();
+                                noecho();
+                                curs_set(0);
+                                keypad(stdscr, TRUE);
+
+                                WINDOW* chatboxWin = CreateWindow(chatbox_height, chatbox_width); // create window for each file
+                                box(chatboxWin, 0, 0);
+                                wrefresh(chatboxWin);
+
+                                string filePath = "/workspaces/Initial/UI/chatboxintro/chatboxfound2.txt";
+                                ifstream inputFile(filePath);
+                                string line;
+
+                                while (getline(inputFile, line)) {
+                                    mvwprintw(chatboxWin, 3, 6, "%s", line.c_str());
+                                    wrefresh(chatboxWin);
+                                    int ch = getch();
+                                    if (ch == 10) { // Enter key
+                                        break;
+                                    }
+                                }
+
+                                delwin(chatboxWin); // delete window after displaying the file
+                                inputFile.close();
+                                
+
+
+                                object = "Battery \n";
+                                ToInventory(object); }
+
+                            if (point == 3) {
+                                //printing out ghosts
+                                int ghost_height = 40;
+                                int ghost_width = 140;
+                                string object;
+
+
+                                initscr();
+                                raw();
+                                noecho();
+                                curs_set(0);
+                                keypad(stdscr, TRUE);
+
+                                string filePath = "/workspaces/Initial/CharactersDesign_Mechanism/Character_Ghosts.resources/ghostfinal.txt";
+                                ifstream inputFile(filePath);
+                                string line;
+
+                                WINDOW* ghostWin = CreateWindow(ghost_height, ghost_width); // create window for each file
+                                box(ghostWin, 0, 0);
+
+                                int row = 1;
+                                while (getline(inputFile, line)) {
+                                    mvwprintw(ghostWin, row, 1, "%s", line.c_str());
+                                    row++;
+                                }
+                                wrefresh(ghostWin);
+
+                                while (true) {
+                                    int ch = getch();
+                                    if (ch == 10) { // Enter key
+                                        break;
+                                    }
+                                }
+                                
+                                werase(ghostWin);
+                                wrefresh(ghostWin);
+
+                                delwin(ghostWin); // delete window after displaying the file
+                                inputFile.close();
+
+                                endwin();
+                                
+                                int chatbox_height = 7;
+                                int chatbox_width = 80;
+
+                                WINDOW* chatboxWin2 = CreateWindow(chatbox_height, chatbox_width); // create new window for the second chatbox
+                                box(chatboxWin2, 0, 0);
+                                wrefresh(chatboxWin2);
+
+                                filePath = "/workspaces/Initial/UI/chatboxintro/chatboxfound3.txt";
+                                ifstream inputFile2(filePath);
+                                line;
+
+                                while (getline(inputFile2, line)) {
+                                    mvwprintw(chatboxWin2, 3, 6, "%s", line.c_str());
+                                    wrefresh(chatboxWin2);
+                                    int ch = getch();
+                                    if (ch == 10) { // Enter key
+                                        break;
+                                    }
+                                }
+
+                                delwin(chatboxWin2); // delete window after displaying the file
+                                inputFile2.close();
+
+                                object = "Ghost Poster \n";
+                                ToInventory(object); }
+
+                            if (point == 4) {
+                                int chatbox_height = 7;
+                                int chatbox_width = 80;
+                                string object;
+                                object = "Key \n";
+                                ToInventory(object);
+                                // std::ofstream outfile("/workspaces/Initial/UI/inventory.txt", std::ios::out | std::ios::trunc);
+                                // outfile.close();
+
+                                initscr();
+                                raw();
+                                noecho();
+                                curs_set(0);
+                                keypad(stdscr, TRUE);
+
+                                WINDOW* chatboxWin = CreateWindow(chatbox_height, chatbox_width); // create window for each file
+                                box(chatboxWin, 0, 0);
+                                wrefresh(chatboxWin);
+
+                                string filePath = "/workspaces/Initial/UI/chatboxintro/chatboxfound1.txt";
+                                ifstream inputFile(filePath);
+                                string line;
+
+                                while (getline(inputFile, line)) {
+                                    mvwprintw(chatboxWin, 3, 6, "%s", line.c_str());
+                                    wrefresh(chatboxWin);
+                                    int ch = getch();
+                                    if (ch == 10) { // Enter key
+                                        break;
+                                    }
+                                }
+
+                                delwin(chatboxWin); // delete window after displaying the file
+                                inputFile.close();}                             
+>>>>>>> 5b9de31 (.)
 
                                 
                             
