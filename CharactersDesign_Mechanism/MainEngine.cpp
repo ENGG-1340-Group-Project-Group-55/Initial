@@ -374,6 +374,10 @@ int main_engine(string file_path, int&x, int& y) {
                                 }
                         }
                     }
+                } else if (file_path == "/workspaces/Initial/Map_Objects/Map_resources/Rooftop6.txt") {
+                    if (y4 == 16) {
+                        if (x4>=27 && x4<=35) {
+
                 }
 
                 for (int i=1; i<5; i++) {
@@ -442,16 +446,7 @@ int main_engine(string file_path, int&x, int& y) {
                             return 99;
                         }
                     }
-                } 
-                // else if (file_path == "/workspaces/Initial/Map_Objects/Map_resources/Rooftop.txt") {
-                //     if (y4 == 23) {
-                //         if (x4>=45 && x4<=50) {
-                //             delwin(game_window);
-                //             clear();
-                //             return 8;
-                //         }
-                //     }
-                // }
+                }
                 for (int i=1; i<5; i++) {
                     if (mapData.TDVEC[y+4][x+i] != ' '){
                         y--;
@@ -514,6 +509,7 @@ int main_engine(string file_path, int&x, int& y) {
                                 outroomflag << "clubroom" << endl;
                             }
                             outroomflag.close();
+<<<<<<< HEAD
 
 
                             // if (restcount > 0) {
@@ -674,6 +670,8 @@ int main_engine(string file_path, int&x, int& y) {
                                 ToInventory(object); }
                             
 >>>>>>> 7c2a58a (m)
+=======
+>>>>>>> 261831e (.)
                             break;
                         }
                     }
