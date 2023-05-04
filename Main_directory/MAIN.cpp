@@ -27,7 +27,7 @@ public:
     void DiningRoom();
     void RestRoom();
     void TeachersOffice();
-    void RoofTop();
+    int RoofTop();
     string SchoolMap(int,int);
     string RoofTopStairs(int,int);
     string roomchooser(int);
@@ -208,10 +208,14 @@ int main()
         }
         else if (entered == "RoofTop")
         {
-            RM.RoofTop();
+            int u = RM.RoofTop();
             exitfrom = "RoofTop";
             previous = "ToRoofTop";
             entered = "RoofTopStairs";
+            if (u==99)
+            {
+                break;
+            }
         }
         else if (entered == "RoofTopStairs")
         {
@@ -281,12 +285,13 @@ void rooms::ClubRoom()
     main_engine(file_path,x_door,y_door);
  }
 
- void rooms::RoofTop()
+ int rooms::RoofTop()
  {
     string file_path = "/workspaces/Initial/Map_Objects/Map_resources/Rooftop6.txt";
     int x_door = 44;
     int y_door = 20;
-    main_engine(file_path,x_door,y_door);
+    int a = main_engine(file_path,x_door,y_door);
+    return a;
  }
 
  void rooms::TeachersOffice()
