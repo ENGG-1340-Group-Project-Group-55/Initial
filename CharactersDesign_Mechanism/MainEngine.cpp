@@ -8,6 +8,7 @@
 #include <fstream>
 #include <cmath>
 #include <chrono>
+#include <map>
 #include <thread>
 #include "/workspaces/Initial/CharactersDesign_Mechanism/MapLoader.h"
 
@@ -25,6 +26,14 @@ int VISION_RADIUS_INCREASE = 0;
 
 void reset_inventory() {
     string filepath = "/workspaces/Initial/UI/inventory.txt";
+    ofstream outputFile(filepath, ios::trunc);
+    if (outputFile.is_open()) {
+        outputFile.close();
+    }
+}
+
+void reset_roomflag() {
+    string filepath = "/workspaces/Initial/Map_Objects/Map_resources/RoomFlags.txt";
     ofstream outputFile(filepath, ios::trunc);
     if (outputFile.is_open()) {
         outputFile.close();
@@ -370,7 +379,6 @@ int main_engine(string file_path, int&x, int& y) {
                                 ofstream outfile;
                                 outfile.open("/workspaces/Initial/UI/inventory.txt", ios::out | ios::trunc);
                                 outfile.close();
-
                                 return 7;
                             }
                         }
@@ -378,7 +386,9 @@ int main_engine(string file_path, int&x, int& y) {
                 } else if (file_path == "/workspaces/Initial/Map_Objects/Map_resources/Rooftop6.txt") {
                     if (y4 == 16) {
                         if (x4>=27 && x4<=35) {
-
+                            delwin(game_window);
+                            clear();
+                            return 99;
                         }
                     }
                 }
@@ -905,6 +915,7 @@ vector<string> loadInventoryFromFile() {
     return inventory;
 }
 
+
 void printInventory(vector<string> inventory) {
     int inv_height = 15;
     int inv_width = 30;
@@ -915,22 +926,31 @@ void printInventory(vector<string> inventory) {
     curs_set(0);
     keypad(stdscr, TRUE);
 
+    // Create a map to store the count of each item
+    map<string, int> itemCount;
+    for (const string& item : inventory) {
+        itemCount[item]++;
+    }
+
     WINDOW* inventoryWin = CreateWindow(inv_height, inv_width);
     box(inventoryWin, 0, 0);
     mvwprintw(inventoryWin, 1, 1, "Inventory:");
-    for (int i = 0; i < inventory.size(); i++) {
-        mvwprintw(inventoryWin, i + 2, 1, "%d. %s", i + 1, inventory[i].c_str());
+    int i = 0;
+    for (const auto& item : itemCount) {
+        mvwprintw(inventoryWin, i + 2, 1, "%d. %s x%d", i + 1, item.first.c_str(), item.second);
+        i++;
     }
     wrefresh(inventoryWin);
 
-    //screen displayed until 'q' is pressed
-    while (true) {              // consider while ((key_input = getch()) != 27) {
+    // Screen displayed until 'q' is pressed
+    while (true) {
         int ch = getch();
-        if (ch == 27 || 'i') {
+        if (ch == 27 || ch == 'i') {
             break;
         }
     }
     delwin(inventoryWin);
+    endwin();
 }
 
 void printMenu(vector<string> menu, int remaining_time) {
