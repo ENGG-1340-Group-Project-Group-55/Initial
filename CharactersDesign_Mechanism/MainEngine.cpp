@@ -14,7 +14,7 @@
 //compile using: g++ -pedantic-errors -std=c++11 CharactersDesign_Mechanism/MainEngine.cpp Map_Objects/Map_loading.cpp -o game -lncurses
 
 int VISION_RADIUS;
-int point;
+int point = 4;
 int VISION_RADIUS_INCREASE = 0;
 
 // int restflag;
@@ -359,17 +359,40 @@ int main_engine(string file_path, int&x, int& y) {
                             }
 
                             else if (point == 4) {
+                                int chatbox_height = 7;
+                                int chatbox_width = 80;
+
+                                initscr();
+                                raw();
+                                noecho();
+                                curs_set(0);
+                                keypad(stdscr, TRUE);
+
+                                WINDOW* chatboxWin = CreateWindow(chatbox_height, chatbox_width); // create window for each file
+                                box(chatboxWin, 0, 0);
+                                wrefresh(chatboxWin);
+
+                                string filePath = "/workspaces/Initial/UI/chatboxintro/chatboxclick.txt";
+                                ifstream inputFile(filePath);
+                                string line;
+
+                                while (getline(inputFile, line)) {
+                                    mvwprintw(chatboxWin, 3, 6, "%s", line.c_str());
+                                    wrefresh(chatboxWin);
+                                    std::this_thread::sleep_for(std::chrono::seconds(2)); // Wait for 1 second
+                                }
+
+                                delwin(chatboxWin); // delete window after displaying the file
+                                inputFile.close();
+
+
                                 VISION_RADIUS_INCREASE += 100;
                                 delwin(game_window);
                                 clear();
                                 vector<string> helicopter = loadHelicopterFromFile();
                                 printHelicopter();
-                                ofstream outfile;
-                                outfile.open("/workspaces/Initial/UI/inventory.txt", ios::out | ios::trunc);
-                                outfile.close();
-
                                 return 7;
-                                }
+                            }
                         }
                     }
                 } else if (file_path == "/workspaces/Initial/Map_Objects/Map_resources/Rooftop6.txt") {
@@ -834,6 +857,45 @@ vector<string> loadHelicopterFromFile() {
     return helicopter;
 }
 
+// void printHelicopter() {
+//     vector<string> fileNames = {"Rooftop2.txt", "Rooftop3.txt", "Rooftop4.txt", "Rooftop5.txt", "Rooftop6.txt"};
+//     int currentFileIndex = 0;
+
+//     Maps mp(25, 95);
+
+//     initscr();
+//     clear();
+//     refresh();
+//     curs_set(0);
+//     noecho();
+
+//     int screen_rows, screen_cols;
+//     getmaxyx(stdscr, screen_rows, screen_cols);
+
+//     int row_offset = (screen_rows - 25) / 2;
+//     int col_offset = (screen_cols - 95) / 2;
+
+//     while (currentFileIndex < fileNames.size()) {
+//         string fileName = fileNames[currentFileIndex];
+//         string filep = "/workspaces/Initial/Map_Objects/Map_resources/" + fileName;
+//         VectorWrapper start = mp.Map_Loader(filep);
+
+//         for (int i = 0; i < 25; i++) {
+//             for (int j = 0; j < 95; j++) {
+//                 mvprintw(row_offset + i, col_offset + j, "%c", start.TDVEC[i][j]);
+//             }
+//         }
+
+//         refresh();
+//         getch(); // Wait for user input
+//         currentFileIndex++;
+//         clear();
+//         refresh();
+//     }
+
+//     endwin();
+// }
+
 void printHelicopter() {
     vector<string> fileNames = {"Rooftop2.txt", "Rooftop3.txt", "Rooftop4.txt", "Rooftop5.txt", "Rooftop6.txt"};
     int currentFileIndex = 0;
@@ -864,14 +926,46 @@ void printHelicopter() {
         }
 
         refresh();
-        getch(); // Wait for user input
+        std::this_thread::sleep_for(std::chrono::milliseconds(500)); // Pause for 0.5 second
         currentFileIndex++;
         clear();
         refresh();
     }
 
+    int chatbox_height = 7;
+    int chatbox_width = 80;
+
+    initscr();
+    raw();
+    noecho();
+    curs_set(0);
+    keypad(stdscr, TRUE);
+
+    WINDOW* chatboxWin = CreateWindow(chatbox_height, chatbox_width); // create window for each file
+    box(chatboxWin, 0, 0);
+    wrefresh(chatboxWin);
+
+    string filePath = "/workspaces/Initial/UI/chatboxintro/chatboxout.txt";
+    ifstream inputFile(filePath);
+    string line;
+
+    while (getline(inputFile, line)) {
+        mvwprintw(chatboxWin, 3, 6, "%s", line.c_str());
+        wrefresh(chatboxWin);
+        int ch = getch();
+        if (ch == 10) { // Enter key
+            break;
+        }
+    }
+
+    delwin(chatboxWin); // delete window after displaying the file
+    inputFile.close();
+
     endwin();
 }
+
+
+
 
 
 void ToInventory(string object) {

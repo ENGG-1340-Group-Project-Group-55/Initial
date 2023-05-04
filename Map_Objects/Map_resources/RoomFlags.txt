@@ -1,4 +1,11 @@
+<<<<<<< HEAD
 teacheroffice
 restroom
 clubroom
 diningroom
+=======
+musicroom
+restroom
+diningroom
+clubroom
+>>>>>>> 3b7a1d9 (.)
