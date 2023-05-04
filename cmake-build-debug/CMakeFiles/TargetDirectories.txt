@@ -1,0 +1,4 @@
+/Users/M1/Documents/GitHub/Initial/cmake-build-debug/CMakeFiles/MAIN.dir
+/Users/M1/Documents/GitHub/Initial/cmake-build-debug/CMakeFiles/MainEngine.dir
+/Users/M1/Documents/GitHub/Initial/cmake-build-debug/CMakeFiles/edit_cache.dir
+/Users/M1/Documents/GitHub/Initial/cmake-build-debug/CMakeFiles/rebuild_cache.dir

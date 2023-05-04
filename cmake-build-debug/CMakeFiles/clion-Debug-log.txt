@@ -1,23 +1,16 @@
-/Applications/CLion.app/Contents/bin/cmake/mac/bin/cmake -DCMAKE_BUILD_TYPE=Debug -DCMAKE_MAKE_PROGRAM=/Applications/CLion.app/Contents/bin/ninja/mac/ninja -G Ninja -S /Users/minchankim/Documents/GitHub/Initial -B /Users/minchankim/Documents/GitHub/Initial/cmake-build-debug
+/Applications/CLion.app/Contents/bin/cmake/mac/bin/cmake -DCMAKE_BUILD_TYPE=Debug -G "CodeBlocks - Unix Makefiles" -S /Users/M1/Documents/GitHub/Initial -B /Users/M1/Documents/GitHub/Initial/cmake-build-debug
+-- The C compiler identification is AppleClang 14.0.3.14030022
+-- The CXX compiler identification is AppleClang 14.0.3.14030022
+-- Detecting C compiler ABI info
+-- Detecting C compiler ABI info - done
+-- Check for working C compiler: /Library/Developer/CommandLineTools/usr/bin/cc - skipped
+-- Detecting C compile features
+-- Detecting C compile features - done
+-- Detecting CXX compiler ABI info
+-- Detecting CXX compiler ABI info - done
+-- Check for working CXX compiler: /Library/Developer/CommandLineTools/usr/bin/c++ - skipped
+-- Detecting CXX compile features
+-- Detecting CXX compile features - done
 -- Configuring done
-CMake Error at CMakeLists.txt:7 (add_executable):
-  Cannot find source file:
-
-    /workspaces/Initial/CharactersDesign_Mechanism/doorcoordinate.h
-
-
-CMake Error at CMakeLists.txt:8 (add_executable):
-  Cannot find source file:
-
-    /workspaces/Initial/CharactersDesign_Mechanism/MainEngine.cpp
-
-
-CMake Error at CMakeLists.txt:7 (add_executable):
-  No SOURCES given to target: MAIN
-
-
-CMake Error at CMakeLists.txt:8 (add_executable):
-  No SOURCES given to target: MainEngine
-
-
-CMake Generate step failed.  Build files cannot be regenerated correctly.
+-- Generating done
+-- Build files have been written to: /Users/M1/Documents/GitHub/Initial/cmake-build-debug

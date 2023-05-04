@@ -117,134 +117,17 @@ depend:
 .PHONY : depend
 
 #=============================================================================
-# Target rules for targets named Map_loading_save
+# Target rules for targets named MAIN
 
 # Build rule for target.
-Map_loading_save: cmake_check_build_system
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 Map_loading_save
-.PHONY : Map_loading_save
+MAIN: cmake_check_build_system
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 MAIN
+.PHONY : MAIN
 
 # fast build rule for target.
-Map_loading_save/fast:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/Map_loading_save.dir/build.make CMakeFiles/Map_loading_save.dir/build
-.PHONY : Map_loading_save/fast
-
-#=============================================================================
-# Target rules for targets named inventory
-
-# Build rule for target.
-inventory: cmake_check_build_system
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 inventory
-.PHONY : inventory
-
-# fast build rule for target.
-inventory/fast:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/inventory.dir/build.make CMakeFiles/inventory.dir/build
-.PHONY : inventory/fast
-
-#=============================================================================
-# Target rules for targets named inventory2
-
-# Build rule for target.
-inventory2: cmake_check_build_system
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 inventory2
-.PHONY : inventory2
-
-# fast build rule for target.
-inventory2/fast:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/inventory2.dir/build.make CMakeFiles/inventory2.dir/build
-.PHONY : inventory2/fast
-
-#=============================================================================
-# Target rules for targets named base
-
-# Build rule for target.
-base: cmake_check_build_system
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 base
-.PHONY : base
-
-# fast build rule for target.
-base/fast:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/base.dir/build.make CMakeFiles/base.dir/build
-.PHONY : base/fast
-
-#=============================================================================
-# Target rules for targets named inventory3
-
-# Build rule for target.
-inventory3: cmake_check_build_system
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 inventory3
-.PHONY : inventory3
-
-# fast build rule for target.
-inventory3/fast:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/inventory3.dir/build.make CMakeFiles/inventory3.dir/build
-.PHONY : inventory3/fast
-
-#=============================================================================
-# Target rules for targets named startpage
-
-# Build rule for target.
-startpage: cmake_check_build_system
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 startpage
-.PHONY : startpage
-
-# fast build rule for target.
-startpage/fast:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/startpage.dir/build.make CMakeFiles/startpage.dir/build
-.PHONY : startpage/fast
-
-#=============================================================================
-# Target rules for targets named startpage2
-
-# Build rule for target.
-startpage2: cmake_check_build_system
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 startpage2
-.PHONY : startpage2
-
-# fast build rule for target.
-startpage2/fast:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/startpage2.dir/build.make CMakeFiles/startpage2.dir/build
-.PHONY : startpage2/fast
-
-#=============================================================================
-# Target rules for targets named base2
-
-# Build rule for target.
-base2: cmake_check_build_system
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 base2
-.PHONY : base2
-
-# fast build rule for target.
-base2/fast:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/base2.dir/build.make CMakeFiles/base2.dir/build
-.PHONY : base2/fast
-
-#=============================================================================
-# Target rules for targets named Enginev1
-
-# Build rule for target.
-Enginev1: cmake_check_build_system
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 Enginev1
-.PHONY : Enginev1
-
-# fast build rule for target.
-Enginev1/fast:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/Enginev1.dir/build.make CMakeFiles/Enginev1.dir/build
-.PHONY : Enginev1/fast
-
-#=============================================================================
-# Target rules for targets named Enginev2
-
-# Build rule for target.
-Enginev2: cmake_check_build_system
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 Enginev2
-.PHONY : Enginev2
-
-# fast build rule for target.
-Enginev2/fast:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/Enginev2.dir/build.make CMakeFiles/Enginev2.dir/build
-.PHONY : Enginev2/fast
+MAIN/fast:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/MAIN.dir/build.make CMakeFiles/MAIN.dir/build
+.PHONY : MAIN/fast
 
 #=============================================================================
 # Target rules for targets named MainEngine
@@ -259,59 +142,12 @@ MainEngine/fast:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/MainEngine.dir/build.make CMakeFiles/MainEngine.dir/build
 .PHONY : MainEngine/fast
 
-CharactersDesign_Mechanism/Enginev1.o: CharactersDesign_Mechanism/Enginev1.cpp.o
-.PHONY : CharactersDesign_Mechanism/Enginev1.o
-
-# target to build an object file
-CharactersDesign_Mechanism/Enginev1.cpp.o:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/Enginev1.dir/build.make CMakeFiles/Enginev1.dir/CharactersDesign_Mechanism/Enginev1.cpp.o
-.PHONY : CharactersDesign_Mechanism/Enginev1.cpp.o
-
-CharactersDesign_Mechanism/Enginev1.i: CharactersDesign_Mechanism/Enginev1.cpp.i
-.PHONY : CharactersDesign_Mechanism/Enginev1.i
-
-# target to preprocess a source file
-CharactersDesign_Mechanism/Enginev1.cpp.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/Enginev1.dir/build.make CMakeFiles/Enginev1.dir/CharactersDesign_Mechanism/Enginev1.cpp.i
-.PHONY : CharactersDesign_Mechanism/Enginev1.cpp.i
-
-CharactersDesign_Mechanism/Enginev1.s: CharactersDesign_Mechanism/Enginev1.cpp.s
-.PHONY : CharactersDesign_Mechanism/Enginev1.s
-
-# target to generate assembly for a file
-CharactersDesign_Mechanism/Enginev1.cpp.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/Enginev1.dir/build.make CMakeFiles/Enginev1.dir/CharactersDesign_Mechanism/Enginev1.cpp.s
-.PHONY : CharactersDesign_Mechanism/Enginev1.cpp.s
-
-CharactersDesign_Mechanism/Enginev2.o: CharactersDesign_Mechanism/Enginev2.cpp.o
-.PHONY : CharactersDesign_Mechanism/Enginev2.o
-
-# target to build an object file
-CharactersDesign_Mechanism/Enginev2.cpp.o:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/Enginev2.dir/build.make CMakeFiles/Enginev2.dir/CharactersDesign_Mechanism/Enginev2.cpp.o
-.PHONY : CharactersDesign_Mechanism/Enginev2.cpp.o
-
-CharactersDesign_Mechanism/Enginev2.i: CharactersDesign_Mechanism/Enginev2.cpp.i
-.PHONY : CharactersDesign_Mechanism/Enginev2.i
-
-# target to preprocess a source file
-CharactersDesign_Mechanism/Enginev2.cpp.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/Enginev2.dir/build.make CMakeFiles/Enginev2.dir/CharactersDesign_Mechanism/Enginev2.cpp.i
-.PHONY : CharactersDesign_Mechanism/Enginev2.cpp.i
-
-CharactersDesign_Mechanism/Enginev2.s: CharactersDesign_Mechanism/Enginev2.cpp.s
-.PHONY : CharactersDesign_Mechanism/Enginev2.s
-
-# target to generate assembly for a file
-CharactersDesign_Mechanism/Enginev2.cpp.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/Enginev2.dir/build.make CMakeFiles/Enginev2.dir/CharactersDesign_Mechanism/Enginev2.cpp.s
-.PHONY : CharactersDesign_Mechanism/Enginev2.cpp.s
-
 CharactersDesign_Mechanism/MainEngine.o: CharactersDesign_Mechanism/MainEngine.cpp.o
 .PHONY : CharactersDesign_Mechanism/MainEngine.o
 
 # target to build an object file
 CharactersDesign_Mechanism/MainEngine.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/MAIN.dir/build.make CMakeFiles/MAIN.dir/CharactersDesign_Mechanism/MainEngine.cpp.o
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/MainEngine.dir/build.make CMakeFiles/MainEngine.dir/CharactersDesign_Mechanism/MainEngine.cpp.o
 .PHONY : CharactersDesign_Mechanism/MainEngine.cpp.o
 
@@ -320,6 +156,7 @@ CharactersDesign_Mechanism/MainEngine.i: CharactersDesign_Mechanism/MainEngine.c
 
 # target to preprocess a source file
 CharactersDesign_Mechanism/MainEngine.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/MAIN.dir/build.make CMakeFiles/MAIN.dir/CharactersDesign_Mechanism/MainEngine.cpp.i
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/MainEngine.dir/build.make CMakeFiles/MainEngine.dir/CharactersDesign_Mechanism/MainEngine.cpp.i
 .PHONY : CharactersDesign_Mechanism/MainEngine.cpp.i
 
@@ -328,14 +165,70 @@ CharactersDesign_Mechanism/MainEngine.s: CharactersDesign_Mechanism/MainEngine.c
 
 # target to generate assembly for a file
 CharactersDesign_Mechanism/MainEngine.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/MAIN.dir/build.make CMakeFiles/MAIN.dir/CharactersDesign_Mechanism/MainEngine.cpp.s
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/MainEngine.dir/build.make CMakeFiles/MainEngine.dir/CharactersDesign_Mechanism/MainEngine.cpp.s
 .PHONY : CharactersDesign_Mechanism/MainEngine.cpp.s
+
+CharactersDesign_Mechanism/doorcoordinate.o: CharactersDesign_Mechanism/doorcoordinate.cpp.o
+.PHONY : CharactersDesign_Mechanism/doorcoordinate.o
+
+# target to build an object file
+CharactersDesign_Mechanism/doorcoordinate.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/MAIN.dir/build.make CMakeFiles/MAIN.dir/CharactersDesign_Mechanism/doorcoordinate.cpp.o
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/MainEngine.dir/build.make CMakeFiles/MainEngine.dir/CharactersDesign_Mechanism/doorcoordinate.cpp.o
+.PHONY : CharactersDesign_Mechanism/doorcoordinate.cpp.o
+
+CharactersDesign_Mechanism/doorcoordinate.i: CharactersDesign_Mechanism/doorcoordinate.cpp.i
+.PHONY : CharactersDesign_Mechanism/doorcoordinate.i
+
+# target to preprocess a source file
+CharactersDesign_Mechanism/doorcoordinate.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/MAIN.dir/build.make CMakeFiles/MAIN.dir/CharactersDesign_Mechanism/doorcoordinate.cpp.i
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/MainEngine.dir/build.make CMakeFiles/MainEngine.dir/CharactersDesign_Mechanism/doorcoordinate.cpp.i
+.PHONY : CharactersDesign_Mechanism/doorcoordinate.cpp.i
+
+CharactersDesign_Mechanism/doorcoordinate.s: CharactersDesign_Mechanism/doorcoordinate.cpp.s
+.PHONY : CharactersDesign_Mechanism/doorcoordinate.s
+
+# target to generate assembly for a file
+CharactersDesign_Mechanism/doorcoordinate.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/MAIN.dir/build.make CMakeFiles/MAIN.dir/CharactersDesign_Mechanism/doorcoordinate.cpp.s
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/MainEngine.dir/build.make CMakeFiles/MainEngine.dir/CharactersDesign_Mechanism/doorcoordinate.cpp.s
+.PHONY : CharactersDesign_Mechanism/doorcoordinate.cpp.s
+
+Main_directory/MAIN.o: Main_directory/MAIN.cpp.o
+.PHONY : Main_directory/MAIN.o
+
+# target to build an object file
+Main_directory/MAIN.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/MAIN.dir/build.make CMakeFiles/MAIN.dir/Main_directory/MAIN.cpp.o
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/MainEngine.dir/build.make CMakeFiles/MainEngine.dir/Main_directory/MAIN.cpp.o
+.PHONY : Main_directory/MAIN.cpp.o
+
+Main_directory/MAIN.i: Main_directory/MAIN.cpp.i
+.PHONY : Main_directory/MAIN.i
+
+# target to preprocess a source file
+Main_directory/MAIN.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/MAIN.dir/build.make CMakeFiles/MAIN.dir/Main_directory/MAIN.cpp.i
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/MainEngine.dir/build.make CMakeFiles/MainEngine.dir/Main_directory/MAIN.cpp.i
+.PHONY : Main_directory/MAIN.cpp.i
+
+Main_directory/MAIN.s: Main_directory/MAIN.cpp.s
+.PHONY : Main_directory/MAIN.s
+
+# target to generate assembly for a file
+Main_directory/MAIN.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/MAIN.dir/build.make CMakeFiles/MAIN.dir/Main_directory/MAIN.cpp.s
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/MainEngine.dir/build.make CMakeFiles/MainEngine.dir/Main_directory/MAIN.cpp.s
+.PHONY : Main_directory/MAIN.cpp.s
 
 Map_Objects/Map_loading.o: Map_Objects/Map_loading.cpp.o
 .PHONY : Map_Objects/Map_loading.o
 
 # target to build an object file
 Map_Objects/Map_loading.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/MAIN.dir/build.make CMakeFiles/MAIN.dir/Map_Objects/Map_loading.cpp.o
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/MainEngine.dir/build.make CMakeFiles/MainEngine.dir/Map_Objects/Map_loading.cpp.o
 .PHONY : Map_Objects/Map_loading.cpp.o
 
@@ -344,6 +237,7 @@ Map_Objects/Map_loading.i: Map_Objects/Map_loading.cpp.i
 
 # target to preprocess a source file
 Map_Objects/Map_loading.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/MAIN.dir/build.make CMakeFiles/MAIN.dir/Map_Objects/Map_loading.cpp.i
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/MainEngine.dir/build.make CMakeFiles/MainEngine.dir/Map_Objects/Map_loading.cpp.i
 .PHONY : Map_Objects/Map_loading.cpp.i
 
@@ -352,203 +246,9 @@ Map_Objects/Map_loading.s: Map_Objects/Map_loading.cpp.s
 
 # target to generate assembly for a file
 Map_Objects/Map_loading.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/MAIN.dir/build.make CMakeFiles/MAIN.dir/Map_Objects/Map_loading.cpp.s
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/MainEngine.dir/build.make CMakeFiles/MainEngine.dir/Map_Objects/Map_loading.cpp.s
 .PHONY : Map_Objects/Map_loading.cpp.s
-
-Map_Objects/Map_loading_save.o: Map_Objects/Map_loading_save.cpp.o
-.PHONY : Map_Objects/Map_loading_save.o
-
-# target to build an object file
-Map_Objects/Map_loading_save.cpp.o:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/Map_loading_save.dir/build.make CMakeFiles/Map_loading_save.dir/Map_Objects/Map_loading_save.cpp.o
-.PHONY : Map_Objects/Map_loading_save.cpp.o
-
-Map_Objects/Map_loading_save.i: Map_Objects/Map_loading_save.cpp.i
-.PHONY : Map_Objects/Map_loading_save.i
-
-# target to preprocess a source file
-Map_Objects/Map_loading_save.cpp.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/Map_loading_save.dir/build.make CMakeFiles/Map_loading_save.dir/Map_Objects/Map_loading_save.cpp.i
-.PHONY : Map_Objects/Map_loading_save.cpp.i
-
-Map_Objects/Map_loading_save.s: Map_Objects/Map_loading_save.cpp.s
-.PHONY : Map_Objects/Map_loading_save.s
-
-# target to generate assembly for a file
-Map_Objects/Map_loading_save.cpp.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/Map_loading_save.dir/build.make CMakeFiles/Map_loading_save.dir/Map_Objects/Map_loading_save.cpp.s
-.PHONY : Map_Objects/Map_loading_save.cpp.s
-
-UI/base.o: UI/base.cpp.o
-.PHONY : UI/base.o
-
-# target to build an object file
-UI/base.cpp.o:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/base.dir/build.make CMakeFiles/base.dir/UI/base.cpp.o
-.PHONY : UI/base.cpp.o
-
-UI/base.i: UI/base.cpp.i
-.PHONY : UI/base.i
-
-# target to preprocess a source file
-UI/base.cpp.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/base.dir/build.make CMakeFiles/base.dir/UI/base.cpp.i
-.PHONY : UI/base.cpp.i
-
-UI/base.s: UI/base.cpp.s
-.PHONY : UI/base.s
-
-# target to generate assembly for a file
-UI/base.cpp.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/base.dir/build.make CMakeFiles/base.dir/UI/base.cpp.s
-.PHONY : UI/base.cpp.s
-
-UI/base2.o: UI/base2.cpp.o
-.PHONY : UI/base2.o
-
-# target to build an object file
-UI/base2.cpp.o:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/base2.dir/build.make CMakeFiles/base2.dir/UI/base2.cpp.o
-.PHONY : UI/base2.cpp.o
-
-UI/base2.i: UI/base2.cpp.i
-.PHONY : UI/base2.i
-
-# target to preprocess a source file
-UI/base2.cpp.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/base2.dir/build.make CMakeFiles/base2.dir/UI/base2.cpp.i
-.PHONY : UI/base2.cpp.i
-
-UI/base2.s: UI/base2.cpp.s
-.PHONY : UI/base2.s
-
-# target to generate assembly for a file
-UI/base2.cpp.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/base2.dir/build.make CMakeFiles/base2.dir/UI/base2.cpp.s
-.PHONY : UI/base2.cpp.s
-
-UI/inventory.o: UI/inventory.cpp.o
-.PHONY : UI/inventory.o
-
-# target to build an object file
-UI/inventory.cpp.o:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/inventory.dir/build.make CMakeFiles/inventory.dir/UI/inventory.cpp.o
-.PHONY : UI/inventory.cpp.o
-
-UI/inventory.i: UI/inventory.cpp.i
-.PHONY : UI/inventory.i
-
-# target to preprocess a source file
-UI/inventory.cpp.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/inventory.dir/build.make CMakeFiles/inventory.dir/UI/inventory.cpp.i
-.PHONY : UI/inventory.cpp.i
-
-UI/inventory.s: UI/inventory.cpp.s
-.PHONY : UI/inventory.s
-
-# target to generate assembly for a file
-UI/inventory.cpp.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/inventory.dir/build.make CMakeFiles/inventory.dir/UI/inventory.cpp.s
-.PHONY : UI/inventory.cpp.s
-
-UI/inventory2.o: UI/inventory2.cpp.o
-.PHONY : UI/inventory2.o
-
-# target to build an object file
-UI/inventory2.cpp.o:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/inventory2.dir/build.make CMakeFiles/inventory2.dir/UI/inventory2.cpp.o
-.PHONY : UI/inventory2.cpp.o
-
-UI/inventory2.i: UI/inventory2.cpp.i
-.PHONY : UI/inventory2.i
-
-# target to preprocess a source file
-UI/inventory2.cpp.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/inventory2.dir/build.make CMakeFiles/inventory2.dir/UI/inventory2.cpp.i
-.PHONY : UI/inventory2.cpp.i
-
-UI/inventory2.s: UI/inventory2.cpp.s
-.PHONY : UI/inventory2.s
-
-# target to generate assembly for a file
-UI/inventory2.cpp.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/inventory2.dir/build.make CMakeFiles/inventory2.dir/UI/inventory2.cpp.s
-.PHONY : UI/inventory2.cpp.s
-
-UI/inventory3.o: UI/inventory3.cpp.o
-.PHONY : UI/inventory3.o
-
-# target to build an object file
-UI/inventory3.cpp.o:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/inventory3.dir/build.make CMakeFiles/inventory3.dir/UI/inventory3.cpp.o
-.PHONY : UI/inventory3.cpp.o
-
-UI/inventory3.i: UI/inventory3.cpp.i
-.PHONY : UI/inventory3.i
-
-# target to preprocess a source file
-UI/inventory3.cpp.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/inventory3.dir/build.make CMakeFiles/inventory3.dir/UI/inventory3.cpp.i
-.PHONY : UI/inventory3.cpp.i
-
-UI/inventory3.s: UI/inventory3.cpp.s
-.PHONY : UI/inventory3.s
-
-# target to generate assembly for a file
-UI/inventory3.cpp.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/inventory3.dir/build.make CMakeFiles/inventory3.dir/UI/inventory3.cpp.s
-.PHONY : UI/inventory3.cpp.s
-
-UI/startpage.o: UI/startpage.cpp.o
-.PHONY : UI/startpage.o
-
-# target to build an object file
-UI/startpage.cpp.o:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/base.dir/build.make CMakeFiles/base.dir/UI/startpage.cpp.o
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/startpage.dir/build.make CMakeFiles/startpage.dir/UI/startpage.cpp.o
-.PHONY : UI/startpage.cpp.o
-
-UI/startpage.i: UI/startpage.cpp.i
-.PHONY : UI/startpage.i
-
-# target to preprocess a source file
-UI/startpage.cpp.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/base.dir/build.make CMakeFiles/base.dir/UI/startpage.cpp.i
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/startpage.dir/build.make CMakeFiles/startpage.dir/UI/startpage.cpp.i
-.PHONY : UI/startpage.cpp.i
-
-UI/startpage.s: UI/startpage.cpp.s
-.PHONY : UI/startpage.s
-
-# target to generate assembly for a file
-UI/startpage.cpp.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/base.dir/build.make CMakeFiles/base.dir/UI/startpage.cpp.s
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/startpage.dir/build.make CMakeFiles/startpage.dir/UI/startpage.cpp.s
-.PHONY : UI/startpage.cpp.s
-
-UI/startpage2.o: UI/startpage2.cpp.o
-.PHONY : UI/startpage2.o
-
-# target to build an object file
-UI/startpage2.cpp.o:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/startpage2.dir/build.make CMakeFiles/startpage2.dir/UI/startpage2.cpp.o
-.PHONY : UI/startpage2.cpp.o
-
-UI/startpage2.i: UI/startpage2.cpp.i
-.PHONY : UI/startpage2.i
-
-# target to preprocess a source file
-UI/startpage2.cpp.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/startpage2.dir/build.make CMakeFiles/startpage2.dir/UI/startpage2.cpp.i
-.PHONY : UI/startpage2.cpp.i
-
-UI/startpage2.s: UI/startpage2.cpp.s
-.PHONY : UI/startpage2.s
-
-# target to generate assembly for a file
-UI/startpage2.cpp.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/startpage2.dir/build.make CMakeFiles/startpage2.dir/UI/startpage2.cpp.s
-.PHONY : UI/startpage2.cpp.s
 
 # Help Target
 help:
@@ -558,53 +258,20 @@ help:
 	@echo "... depend"
 	@echo "... edit_cache"
 	@echo "... rebuild_cache"
-	@echo "... Enginev1"
-	@echo "... Enginev2"
+	@echo "... MAIN"
 	@echo "... MainEngine"
-	@echo "... Map_loading_save"
-	@echo "... base"
-	@echo "... base2"
-	@echo "... inventory"
-	@echo "... inventory2"
-	@echo "... inventory3"
-	@echo "... startpage"
-	@echo "... startpage2"
-	@echo "... CharactersDesign_Mechanism/Enginev1.o"
-	@echo "... CharactersDesign_Mechanism/Enginev1.i"
-	@echo "... CharactersDesign_Mechanism/Enginev1.s"
-	@echo "... CharactersDesign_Mechanism/Enginev2.o"
-	@echo "... CharactersDesign_Mechanism/Enginev2.i"
-	@echo "... CharactersDesign_Mechanism/Enginev2.s"
 	@echo "... CharactersDesign_Mechanism/MainEngine.o"
 	@echo "... CharactersDesign_Mechanism/MainEngine.i"
 	@echo "... CharactersDesign_Mechanism/MainEngine.s"
+	@echo "... CharactersDesign_Mechanism/doorcoordinate.o"
+	@echo "... CharactersDesign_Mechanism/doorcoordinate.i"
+	@echo "... CharactersDesign_Mechanism/doorcoordinate.s"
+	@echo "... Main_directory/MAIN.o"
+	@echo "... Main_directory/MAIN.i"
+	@echo "... Main_directory/MAIN.s"
 	@echo "... Map_Objects/Map_loading.o"
 	@echo "... Map_Objects/Map_loading.i"
 	@echo "... Map_Objects/Map_loading.s"
-	@echo "... Map_Objects/Map_loading_save.o"
-	@echo "... Map_Objects/Map_loading_save.i"
-	@echo "... Map_Objects/Map_loading_save.s"
-	@echo "... UI/base.o"
-	@echo "... UI/base.i"
-	@echo "... UI/base.s"
-	@echo "... UI/base2.o"
-	@echo "... UI/base2.i"
-	@echo "... UI/base2.s"
-	@echo "... UI/inventory.o"
-	@echo "... UI/inventory.i"
-	@echo "... UI/inventory.s"
-	@echo "... UI/inventory2.o"
-	@echo "... UI/inventory2.i"
-	@echo "... UI/inventory2.s"
-	@echo "... UI/inventory3.o"
-	@echo "... UI/inventory3.i"
-	@echo "... UI/inventory3.s"
-	@echo "... UI/startpage.o"
-	@echo "... UI/startpage.i"
-	@echo "... UI/startpage.s"
-	@echo "... UI/startpage2.o"
-	@echo "... UI/startpage2.i"
-	@echo "... UI/startpage2.s"
 .PHONY : help
 
 
