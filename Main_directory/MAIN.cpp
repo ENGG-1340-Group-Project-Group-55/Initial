@@ -15,7 +15,6 @@ string startpath = "/workspaces/Initial/CharactersDesign_Mechanism/startpage.txt
 Maps Start(28, 104);
 VectorWrapper StartData = Start.Map_Loader(startpath);
 
-void printStartpage(VectorWrapper StartData);
 void display_instructions(VectorWrapper StartData);
 void startGame();
 
@@ -95,6 +94,11 @@ int main()
     VectorWrapper start = mp.Map_Loader(filep);
 
     initscr();
+    start_color();
+    init_pair(1, COLOR_RED, COLOR_BLACK); // Pair 1: Red text on a black background
+    init_pair(2, COLOR_GREEN, COLOR_BLACK); // Pair 2: Green text on a black background
+    init_pair(3, COLOR_BLUE, COLOR_BLACK); // Pair 3: Blue text on a black background
+    init_pair(4, COLOR_YELLOW, COLOR_BLACK); // Pair 4: Yellow text on a black background
     clear();
     refresh();
     curs_set(0);
@@ -106,9 +110,24 @@ int main()
     int row_offset = (screen_rows - 28) / 2;
     int col_offset = (screen_cols - 104) / 2;
 
-    for (int i = 0; i < 28; i++) {
-        for (int j = 0; j < 104; j++) {
-            mvprintw(row_offset + i, col_offset + j, "%c", start.TDVEC[i][j]);
+        for (int i = 0; i < start.TDVEC.size(); i++) {
+        for (int j = 0; j < start.TDVEC[i].size(); j++) {
+            if (StartData.TDVEC[i][j] == '.') {
+                continue; // Skip '.' characters
+            }
+            if (i < 17) {
+                attron(COLOR_PAIR(1));
+                mvprintw(row_offset + i, col_offset + j, "%c", start.TDVEC[i][j]);
+                attroff(COLOR_PAIR(1));
+            } else if (i < 19) {
+                attron(COLOR_PAIR(3));
+                mvprintw(row_offset + i, col_offset + j, "%c", start.TDVEC[i][j]);
+                attroff(COLOR_PAIR(3));
+            } else {
+                attron(COLOR_PAIR(2));
+                mvprintw(row_offset + i, col_offset + j, "%c", start.TDVEC[i][j]);
+                attroff(COLOR_PAIR(2));
+            }
         }
     }
 
@@ -372,41 +391,6 @@ void rooms::DiningRoom()
         return "NONE";
         break;
     }
-}
-void printStartpage(VectorWrapper StartData) {
-    int start_height = 28;
-    int start_width = 104;
-
-    raw();
-    noecho();
-    curs_set(0);
-    keypad(stdscr, TRUE);
-
-    WINDOW* startWin = CreateWindow(start_height, start_width);
-
-    // Draw the start page with colors
-    for (int i = 0; i < StartData.TDVEC.size(); i++) {
-        for (int j = 0; j < StartData.TDVEC[i].size(); j++) {
-            if (StartData.TDVEC[i][j] == '.') {
-                continue; // Skip '.' characters
-            }
-            if (i < 17) {
-                wattron(startWin, COLOR_PAIR(1));
-                mvwaddch(startWin, i, j, StartData.TDVEC[i][j]);
-                wattroff(startWin, COLOR_PAIR(1));
-            } else if (i < 19) {
-                wattron(startWin, COLOR_PAIR(3));
-                mvwaddch(startWin, i, j, StartData.TDVEC[i][j]);
-                wattroff(startWin, COLOR_PAIR(3));
-            } else {
-                wattron(startWin, COLOR_PAIR(2));
-                mvwaddch(startWin, i, j, StartData.TDVEC[i][j]);
-                wattroff(startWin, COLOR_PAIR(2));
-            }
-        }
-    }
-
-    delwin(startWin);
 }
 
 void display_instructions(VectorWrapper StartData) {
