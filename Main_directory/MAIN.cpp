@@ -427,14 +427,11 @@ bool display_instructions(VectorWrapper StartData) {
 
     // Wait for the user to press Enter
     int ch;
-    while (flag)
+    while (getch()!='\n')
     {
-        if (getch()=='\n')
-    {
-        return true;
+
     }
-    }
-   
+     return true;
 
     
 }
