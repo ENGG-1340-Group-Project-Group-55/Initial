@@ -73,57 +73,57 @@ CMakeFiles/MainEngine.dir/CharactersDesign_Mechanism/MainEngine.cpp.o: CMakeFile
 CMakeFiles/MainEngine.dir/CharactersDesign_Mechanism/MainEngine.cpp.o: /workspaces/Initial/CharactersDesign_Mechanism/MainEngine.cpp
 CMakeFiles/MainEngine.dir/CharactersDesign_Mechanism/MainEngine.cpp.o: CMakeFiles/MainEngine.dir/compiler_depend.ts
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/workspaces/Initial/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Building CXX object CMakeFiles/MainEngine.dir/CharactersDesign_Mechanism/MainEngine.cpp.o"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/MainEngine.dir/CharactersDesign_Mechanism/MainEngine.cpp.o -MF CMakeFiles/MainEngine.dir/CharactersDesign_Mechanism/MainEngine.cpp.o.d -o CMakeFiles/MainEngine.dir/CharactersDesign_Mechanism/MainEngine.cpp.o -c /workspaces/Initial/CharactersDesign_Mechanism/MainEngine.cpp
+	/usr/bin/g++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/MainEngine.dir/CharactersDesign_Mechanism/MainEngine.cpp.o -MF CMakeFiles/MainEngine.dir/CharactersDesign_Mechanism/MainEngine.cpp.o.d -o CMakeFiles/MainEngine.dir/CharactersDesign_Mechanism/MainEngine.cpp.o -c /workspaces/Initial/CharactersDesign_Mechanism/MainEngine.cpp
 
 CMakeFiles/MainEngine.dir/CharactersDesign_Mechanism/MainEngine.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/MainEngine.dir/CharactersDesign_Mechanism/MainEngine.cpp.i"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /workspaces/Initial/CharactersDesign_Mechanism/MainEngine.cpp > CMakeFiles/MainEngine.dir/CharactersDesign_Mechanism/MainEngine.cpp.i
+	/usr/bin/g++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /workspaces/Initial/CharactersDesign_Mechanism/MainEngine.cpp > CMakeFiles/MainEngine.dir/CharactersDesign_Mechanism/MainEngine.cpp.i
 
 CMakeFiles/MainEngine.dir/CharactersDesign_Mechanism/MainEngine.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/MainEngine.dir/CharactersDesign_Mechanism/MainEngine.cpp.s"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /workspaces/Initial/CharactersDesign_Mechanism/MainEngine.cpp -o CMakeFiles/MainEngine.dir/CharactersDesign_Mechanism/MainEngine.cpp.s
+	/usr/bin/g++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /workspaces/Initial/CharactersDesign_Mechanism/MainEngine.cpp -o CMakeFiles/MainEngine.dir/CharactersDesign_Mechanism/MainEngine.cpp.s
 
 CMakeFiles/MainEngine.dir/Map_Objects/Map_loading.cpp.o: CMakeFiles/MainEngine.dir/flags.make
 CMakeFiles/MainEngine.dir/Map_Objects/Map_loading.cpp.o: /workspaces/Initial/Map_Objects/Map_loading.cpp
 CMakeFiles/MainEngine.dir/Map_Objects/Map_loading.cpp.o: CMakeFiles/MainEngine.dir/compiler_depend.ts
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/workspaces/Initial/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Building CXX object CMakeFiles/MainEngine.dir/Map_Objects/Map_loading.cpp.o"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/MainEngine.dir/Map_Objects/Map_loading.cpp.o -MF CMakeFiles/MainEngine.dir/Map_Objects/Map_loading.cpp.o.d -o CMakeFiles/MainEngine.dir/Map_Objects/Map_loading.cpp.o -c /workspaces/Initial/Map_Objects/Map_loading.cpp
+	/usr/bin/g++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/MainEngine.dir/Map_Objects/Map_loading.cpp.o -MF CMakeFiles/MainEngine.dir/Map_Objects/Map_loading.cpp.o.d -o CMakeFiles/MainEngine.dir/Map_Objects/Map_loading.cpp.o -c /workspaces/Initial/Map_Objects/Map_loading.cpp
 
 CMakeFiles/MainEngine.dir/Map_Objects/Map_loading.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/MainEngine.dir/Map_Objects/Map_loading.cpp.i"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /workspaces/Initial/Map_Objects/Map_loading.cpp > CMakeFiles/MainEngine.dir/Map_Objects/Map_loading.cpp.i
+	/usr/bin/g++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /workspaces/Initial/Map_Objects/Map_loading.cpp > CMakeFiles/MainEngine.dir/Map_Objects/Map_loading.cpp.i
 
 CMakeFiles/MainEngine.dir/Map_Objects/Map_loading.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/MainEngine.dir/Map_Objects/Map_loading.cpp.s"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /workspaces/Initial/Map_Objects/Map_loading.cpp -o CMakeFiles/MainEngine.dir/Map_Objects/Map_loading.cpp.s
+	/usr/bin/g++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /workspaces/Initial/Map_Objects/Map_loading.cpp -o CMakeFiles/MainEngine.dir/Map_Objects/Map_loading.cpp.s
 
 CMakeFiles/MainEngine.dir/Main_directory/MAIN.cpp.o: CMakeFiles/MainEngine.dir/flags.make
 CMakeFiles/MainEngine.dir/Main_directory/MAIN.cpp.o: /workspaces/Initial/Main_directory/MAIN.cpp
 CMakeFiles/MainEngine.dir/Main_directory/MAIN.cpp.o: CMakeFiles/MainEngine.dir/compiler_depend.ts
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/workspaces/Initial/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_3) "Building CXX object CMakeFiles/MainEngine.dir/Main_directory/MAIN.cpp.o"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/MainEngine.dir/Main_directory/MAIN.cpp.o -MF CMakeFiles/MainEngine.dir/Main_directory/MAIN.cpp.o.d -o CMakeFiles/MainEngine.dir/Main_directory/MAIN.cpp.o -c /workspaces/Initial/Main_directory/MAIN.cpp
+	/usr/bin/g++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/MainEngine.dir/Main_directory/MAIN.cpp.o -MF CMakeFiles/MainEngine.dir/Main_directory/MAIN.cpp.o.d -o CMakeFiles/MainEngine.dir/Main_directory/MAIN.cpp.o -c /workspaces/Initial/Main_directory/MAIN.cpp
 
 CMakeFiles/MainEngine.dir/Main_directory/MAIN.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/MainEngine.dir/Main_directory/MAIN.cpp.i"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /workspaces/Initial/Main_directory/MAIN.cpp > CMakeFiles/MainEngine.dir/Main_directory/MAIN.cpp.i
+	/usr/bin/g++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /workspaces/Initial/Main_directory/MAIN.cpp > CMakeFiles/MainEngine.dir/Main_directory/MAIN.cpp.i
 
 CMakeFiles/MainEngine.dir/Main_directory/MAIN.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/MainEngine.dir/Main_directory/MAIN.cpp.s"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /workspaces/Initial/Main_directory/MAIN.cpp -o CMakeFiles/MainEngine.dir/Main_directory/MAIN.cpp.s
+	/usr/bin/g++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /workspaces/Initial/Main_directory/MAIN.cpp -o CMakeFiles/MainEngine.dir/Main_directory/MAIN.cpp.s
 
 CMakeFiles/MainEngine.dir/CharactersDesign_Mechanism/doorcoordinate.cpp.o: CMakeFiles/MainEngine.dir/flags.make
 CMakeFiles/MainEngine.dir/CharactersDesign_Mechanism/doorcoordinate.cpp.o: /workspaces/Initial/CharactersDesign_Mechanism/doorcoordinate.cpp
 CMakeFiles/MainEngine.dir/CharactersDesign_Mechanism/doorcoordinate.cpp.o: CMakeFiles/MainEngine.dir/compiler_depend.ts
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/workspaces/Initial/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_4) "Building CXX object CMakeFiles/MainEngine.dir/CharactersDesign_Mechanism/doorcoordinate.cpp.o"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/MainEngine.dir/CharactersDesign_Mechanism/doorcoordinate.cpp.o -MF CMakeFiles/MainEngine.dir/CharactersDesign_Mechanism/doorcoordinate.cpp.o.d -o CMakeFiles/MainEngine.dir/CharactersDesign_Mechanism/doorcoordinate.cpp.o -c /workspaces/Initial/CharactersDesign_Mechanism/doorcoordinate.cpp
+	/usr/bin/g++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/MainEngine.dir/CharactersDesign_Mechanism/doorcoordinate.cpp.o -MF CMakeFiles/MainEngine.dir/CharactersDesign_Mechanism/doorcoordinate.cpp.o.d -o CMakeFiles/MainEngine.dir/CharactersDesign_Mechanism/doorcoordinate.cpp.o -c /workspaces/Initial/CharactersDesign_Mechanism/doorcoordinate.cpp
 
 CMakeFiles/MainEngine.dir/CharactersDesign_Mechanism/doorcoordinate.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/MainEngine.dir/CharactersDesign_Mechanism/doorcoordinate.cpp.i"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /workspaces/Initial/CharactersDesign_Mechanism/doorcoordinate.cpp > CMakeFiles/MainEngine.dir/CharactersDesign_Mechanism/doorcoordinate.cpp.i
+	/usr/bin/g++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /workspaces/Initial/CharactersDesign_Mechanism/doorcoordinate.cpp > CMakeFiles/MainEngine.dir/CharactersDesign_Mechanism/doorcoordinate.cpp.i
 
 CMakeFiles/MainEngine.dir/CharactersDesign_Mechanism/doorcoordinate.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/MainEngine.dir/CharactersDesign_Mechanism/doorcoordinate.cpp.s"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /workspaces/Initial/CharactersDesign_Mechanism/doorcoordinate.cpp -o CMakeFiles/MainEngine.dir/CharactersDesign_Mechanism/doorcoordinate.cpp.s
+	/usr/bin/g++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /workspaces/Initial/CharactersDesign_Mechanism/doorcoordinate.cpp -o CMakeFiles/MainEngine.dir/CharactersDesign_Mechanism/doorcoordinate.cpp.s
 
 # Object files for target MainEngine
 MainEngine_OBJECTS = \

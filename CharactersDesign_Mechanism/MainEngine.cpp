@@ -723,13 +723,12 @@ int main_engine(string file_path, int&x, int& y) {
                 box(ghostWin, 0, 0);
 
                 int row = 1;
-
+                wattron(ghostWin, COLOR_PAIR(1));
                 while (getline(inputFile, line)) {
-                    attron(COLOR_PAIR(1));
                     mvwprintw(ghostWin, row, 1, "%s", line.c_str());
-                    row++;
+                    row ++;
                 }
-                attroff(COLOR_PAIR(1));
+                wattroff(ghostWin, COLOR_PAIR(1));
                 wrefresh(ghostWin);
                 while (true) {
                     int ch = getch();
