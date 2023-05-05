@@ -737,8 +737,6 @@ int main_engine(string file_path, int&x, int& y) {
                 delwin(ghostWin); // delete window after displaying the file
                 inputFile.close();
 
-                endwin();
-
                 int chatbox_height = 7;
                 int chatbox_width = 80;
 
