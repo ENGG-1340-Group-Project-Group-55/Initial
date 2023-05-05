@@ -11,7 +11,7 @@
 
 using namespace std;
 
-string startpath = "/workspaces/Initial/CharactersDesign_Mechanism/startpage.txt";
+string startpath = "CharactersDesign_Mechanism/startpage.txt";
 Maps Start(28, 104);
 VectorWrapper StartData = Start.Map_Loader(startpath);
 
@@ -83,7 +83,7 @@ int main()
 
 
     Maps mp(28, 104);
-    string filep = "/workspaces/Initial/CharactersDesign_Mechanism/startpage.txt";
+    string filep = "CharactersDesign_Mechanism/startpage.txt";
     VectorWrapper start = mp.Map_Loader(filep);
 
 
@@ -156,7 +156,7 @@ int main()
         if (counter == 0)
         {
             *x = 43, *y = 14;
-            string file_path = "/workspaces/Initial/Map_Objects/Map_resources/Classroom.txt";
+            string file_path = "Map_Objects/Map_resources/Classroom.txt";
             main_engine(file_path,*x,*y);
             entered="SchoolMap";
             *x = Corridor["ClassRoom"].x_coordinates;
@@ -260,7 +260,7 @@ int main()
     curs_set(0);
     keypad(stdscr, TRUE);
 
-    string filePath = "/workspaces/Initial/UI/endingpage.txt";
+    string filePath = "UI/endingpage.txt";
     ifstream inputFile(filePath);
     string line;
 
@@ -297,7 +297,7 @@ int main()
 //coordinates inside each room (point on feet)
 void rooms::ClassRoom()
 {
-    string file_path = "/workspaces/Initial/Map_Objects/Map_resources/Classroom.txt";
+    string file_path = "Map_Objects/Map_resources/Classroom.txt";
     int x_door = 87;
     int y_door = 26;
     main_engine(file_path,x_door,y_door);
@@ -306,12 +306,12 @@ void rooms::ClubRoom()
 {
     string file_path;
     if (randroom != 'C') {
-        file_path = "/workspaces/Initial/Map_Objects/Map_resources/Club Room .txt";
+        file_path = "Map_Objects/Map_resources/Club Room .txt";
         int file_length = file_path.length();
         file_path.insert(file_length - 4, str_randnum);
     }
     else {
-        file_path = "/workspaces/Initial/Map_Objects/Map_resources/Club Room.txt";
+        file_path = "Map_Objects/Map_resources/Club Room.txt";
     }
 
     int x_door = 20;
@@ -323,12 +323,12 @@ void rooms::MusicRoom()
 {
     string file_path;
     if (randroom != 'M') {
-        file_path = "/workspaces/Initial/Map_Objects/Map_resources/Music Room .txt";
+        file_path = "Map_Objects/Map_resources/Music Room .txt";
         int file_length = file_path.length();
         file_path.insert(file_length - 4, str_randnum);
     }
     else {
-        file_path = "/workspaces/Initial/Map_Objects/Map_resources/Music Room.txt";
+        file_path = "Map_Objects/Map_resources/Music Room.txt";
     }
     int x_door = 79;
     int y_door = 5;
@@ -337,7 +337,7 @@ void rooms::MusicRoom()
 
 int rooms::RoofTop()
 {
-    string file_path = "/workspaces/Initial/Map_Objects/Map_resources/Rooftop6.txt";
+    string file_path = "Map_Objects/Map_resources/Rooftop6.txt";
     int x_door = 44;
     int y_door = 20;
     int a = main_engine(file_path,x_door,y_door);
@@ -348,12 +348,12 @@ void rooms::TeachersOffice()
 {
     string file_path;
     if (randroom != 'T') {
-        file_path = "/workspaces/Initial/Map_Objects/Map_resources/Teacher's office .txt";
+        file_path = "Map_Objects/Map_resources/Teacher's office .txt";
         int file_length = file_path.length();
         file_path.insert(file_length - 4, str_randnum);
     }
     else {
-        file_path = "/workspaces/Initial/Map_Objects/Map_resources/Teacher's office.txt";
+        file_path = "Map_Objects/Map_resources/Teacher's office.txt";
     }
 
     int x_door = 86;
@@ -365,12 +365,12 @@ void rooms::RestRoom()
 {
     string file_path;
     if (randroom != 'R') {
-        file_path = "/workspaces/Initial/Map_Objects/Map_resources/Restroom .txt";
+        file_path = "Map_Objects/Map_resources/Restroom .txt";
         int file_length = file_path.length();
         file_path.insert(file_length - 4, str_randnum);
     }
     else {
-        file_path = "/workspaces/Initial/Map_Objects/Map_resources/Restroom.txt";
+        file_path = "Map_Objects/Map_resources/Restroom.txt";
     }
 
     int x_door = 86;
@@ -384,12 +384,12 @@ void rooms::DiningRoom()
     str_randnum = "5";
     string file_path;
     if (randroom != 'D') {
-        file_path = "/workspaces/Initial/Map_Objects/Map_resources/Dining Room .txt";
+        file_path = "Map_Objects/Map_resources/Dining Room .txt";
         int file_length = file_path.length();
         file_path.insert(file_length - 4, str_randnum);
     }
     else {
-        file_path = "/workspaces/Initial/Map_Objects/Map_resources/Diningroom.txt";
+        file_path = "Map_Objects/Map_resources/Diningroom.txt";
     }
     int x_door = 64;
     int y_door = 5;
@@ -398,7 +398,7 @@ void rooms::DiningRoom()
 
 string rooms::RoofTopStairs(int a,int b)
 {
-    string file_path = "/workspaces/Initial/Map_Objects/Map_resources/Rooftop stairs.txt";
+    string file_path = "Map_Objects/Map_resources/Rooftop stairs.txt";
     int x_door = a;
     int y_door = b;
     int C_Or_R = main_engine(file_path,x_door,y_door);
@@ -407,7 +407,7 @@ string rooms::RoofTopStairs(int a,int b)
 
 string rooms::SchoolMap(int a,int b)
 {
-    string file_path = "/workspaces/Initial/Map_Objects/Map_resources/schoolmap.txt";
+    string file_path = "Map_Objects/Map_resources/schoolmap.txt";
     int x_door = a;
     int y_door = b;
     int roomdecider = main_engine(file_path,x_door,y_door);
