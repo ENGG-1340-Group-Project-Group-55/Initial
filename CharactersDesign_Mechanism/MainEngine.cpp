@@ -10,7 +10,7 @@
 #include <chrono>
 #include <map>
 #include <thread>
-#include "/workspaces/Initial/CharactersDesign_Mechanism/MapLoader.h"
+#include "MapLoader.h"
 using namespace std;
 
 //compile using: g++ -pedantic-errors -std=c++11 CharactersDesign_Mechanism/MainEngine.cpp Map_Objects/Map_loading.cpp -o game -lncurses

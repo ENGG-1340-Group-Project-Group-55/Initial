@@ -5,9 +5,9 @@
 #include <fstream>
 #include <iomanip>
 #include <random>
-#include "/workspaces/Initial/CharactersDesign_Mechanism/doorcoordinate.h"
-#include "/workspaces/Initial/CharactersDesign_Mechanism/MainEngine.h"
-#include "/workspaces/Initial/CharactersDesign_Mechanism/MapLoader.h"
+#include "../CharactersDesign_Mechanism/doorcoordinate.h"
+#include "../CharactersDesign_Mechanism/MainEngine.h"
+#include "../CharactersDesign_Mechanism/MapLoader.h"
 
 using namespace std;
 
