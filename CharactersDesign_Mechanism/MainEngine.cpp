@@ -746,7 +746,6 @@ int main_engine(string file_path, int&x, int& y) {
 
                 filePath = "UI/chatboxintro/chatboxfound3.txt";
                 ifstream inputFile2(filePath);
-                line;
 
                 while (getline(inputFile2, line)) {
                     mvwprintw(chatboxWin2, 3, 6, "%s", line.c_str());
