@@ -877,7 +877,7 @@ void printChatboxIntro(vector<string> chatboxintro) {
             }
         }
     }
-    endwin();
+    clear();
 }
 
 
