@@ -1,20 +1,4 @@
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-<<<<<<< HEAD
-teacheroffice
-restroom
-clubroom
-diningroom
-=======
->>>>>>> 50f4823 (ver)
 musicroom
 diningroom
+teacheroffice
 clubroom
-<<<<<<< HEAD
-restroom
-=======
->>>>>>> 3b7a1d9 (.)
-=======
->>>>>>> 9342251 (ver)
->>>>>>> 50f4823 (ver)
