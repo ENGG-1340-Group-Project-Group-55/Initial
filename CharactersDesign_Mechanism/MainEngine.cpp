@@ -966,8 +966,6 @@ void printHelicopter() {
 
     delwin(chatboxWin); // delete window after displaying the file
     inputFile.close();
-
-    endwin();
 }
 
 
@@ -1034,7 +1032,6 @@ void printInventory(vector<string> inventory) {
         }
     }
     delwin(inventoryWin);
-    endwin();
 }
 
 void printMenu(vector<string> menu, int remaining_time) {

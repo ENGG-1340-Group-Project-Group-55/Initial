@@ -148,7 +148,6 @@ int main()
         }
         clear(); // Clear the screen
         refresh(); // Refresh the screen after clearing
-        endwin();
     }
     rooms RM;
     while (flag)
@@ -290,8 +289,6 @@ int main()
     inputFile.close();
 
     endwin();
-
-
 
 }
 //coordinates inside each room (point on feet)
