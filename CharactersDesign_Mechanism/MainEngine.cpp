@@ -15,7 +15,7 @@ using namespace std;
 
 int VISION_RADIUS;
 int remaining_time;
-int point;
+int point; // to track number of items picked
 int VISION_RADIUS_INCREASE = 0;
 
 
@@ -79,8 +79,7 @@ int updateTimerAndVisionRadius(int countdown_duration) {
     VISION_RADIUS += VISION_RADIUS_INCREASE;
 
     if (VISION_RADIUS < 3) {
-        //ending page
-        //delwin(game_window);
+        // Ending page
         int death_height = 24;
         int death_width = 92;
         string object;
@@ -117,7 +116,7 @@ int updateTimerAndVisionRadius(int countdown_duration) {
         wrefresh(deathWin); // redraw the window
         delwin(deathWin); // delete window after displaying the file
         inputFile.close();
-        endwin();
+        endwin(); // end ncurses
         exit(0);
     }
     return remaining_time;
@@ -163,7 +162,7 @@ int main_engine(string file_path, int&x, int& y) {
     }
 
 
-    // Initialize the timer
+    //Initialize the timer
     int countdown_duration = 180; // Set this to the desired countdown duration (15 minutes)
 
 
@@ -221,7 +220,7 @@ int main_engine(string file_path, int&x, int& y) {
     string *current_character = char_up;
 
 
-// Main loop ...............................................................................
+    // Main loop
 
     int key_input;
     while ((key_input = wgetch(game_window)) != 'Q') { // Exit on 'q' key press
