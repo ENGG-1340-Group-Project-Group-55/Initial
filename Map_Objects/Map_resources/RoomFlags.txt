@@ -1,8 +1,0 @@
-<<<<<<< HEAD
-musicroom
-=======
-restroom
->>>>>>> c077cc0 (.)
-diningroom
-teacheroffice
-clubroom
