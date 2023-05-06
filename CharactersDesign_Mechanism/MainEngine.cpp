@@ -242,7 +242,7 @@ int main_engine(string file_path, int&x, int& y) {
         int diningcount = 0;
         int clubcount = 0;
 
-        //read roomflags.txt
+        // read roomflags.txt for marking maps without keys
         ifstream rfline("Map_Objects/Map_resources/RoomFlags.txt");
         if (!rfline.is_open()) {
             cout << "Error opening RoomFlags.txt" << endl;
@@ -268,6 +268,7 @@ int main_engine(string file_path, int&x, int& y) {
         }
         rfline.close();
 
+        // to determine whether a room has a key or not
         if (file_path == "Map_Objects/Map_resources/Restroom 1.txt" || file_path == "Map_Objects/Map_resources/Restroom 2.txt" || file_path == "Map_Objects/Map_resources/Restroom 3.txt" || file_path == "Map_Objects/Map_resources/Restroom 4.txt" || file_path == "Map_Objects/Map_resources/Restroom 5.txt" || file_path == "Map_Objects/Map_resources/Restroom 6.txt") {
             restcount++;
         } else if (file_path == "Map_Objects/Map_resources/Teacher's office 1.txt" || file_path == "Map_Objects/Map_resources/Teacher's office 2.txt" || file_path == "Map_Objects/Map_resources/Teacher's office 3.txt" || file_path == "Map_Objects/Map_resources/Teacher's office 4.txt" || file_path == "Map_Objects/Map_resources/Teacher's office 5.txt" || file_path == "Map_Objects/Map_resources/Teacher's office 6.txt") {
@@ -330,6 +331,7 @@ int main_engine(string file_path, int&x, int& y) {
             intro = 0;
         }
 
+        // determining user key input
         switch(key_input) {
             case 'w':
                 y--;
@@ -617,20 +619,21 @@ int main_engine(string file_path, int&x, int& y) {
                 }
             }
         }
-        //mvwaddch(game_window, y, x, 'O');
 
         int remaining_time = updateTimerAndVisionRadius(countdown_duration);
-
+        // inventory
         if (flag1 == true) {
             vector<string> inventory = loadInventoryFromFile();
             printInventory(inventory);
             wrefresh(game_window);
         }
+        // menu
         if (flag2 == true) {
             vector<string> menu;
             printMenu(menu, remaining_time);
             wrefresh(game_window);
         }
+        // item pick up
         if (flag3 == true) {
             point += 1;
             if (point == 1) {
@@ -813,9 +816,9 @@ int main_engine(string file_path, int&x, int& y) {
             wrefresh(game_window);
         }
     }
-    //main loop end .......................................................................................
+    //main loop end
 
-// End ncurses mode
+// End ncurses mode and finsh game
     delwin(game_window);
     clear();
     endwin();
