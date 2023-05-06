@@ -1,5 +1,4 @@
-# Initial
-ENGG1340-Group 55 
+# ENGG1340-Group55 
 1. Jeong Seungheon (3035980106)
 2. Kim Dowon (3035986928)
 3. Kim Minchan (3035986617)
