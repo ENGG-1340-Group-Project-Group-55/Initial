@@ -71,8 +71,8 @@ int main()
     reset_roomflag();
     int a;
     int b;
-    int *x = &a;
-    int *y = &b;
+    int *x = new int;
+    int *y = new int;
     bool intro_flag = true;
     int counter = 0;
     string exitto;
@@ -290,6 +290,10 @@ int main()
 
     endwin();
 
+
+    delete x;
+    delete y;
+
 }
 //coordinates inside each room (point on feet)
 void rooms::ClassRoom()
@@ -486,6 +490,4 @@ bool display_instructions(VectorWrapper StartData) {
 
     }
     return true;
-
-
 }
