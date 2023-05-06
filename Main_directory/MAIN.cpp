@@ -17,7 +17,7 @@ VectorWrapper StartData = Start.Map_Loader(startpath);
 
 bool display_instructions(VectorWrapper StartData);
 
-
+string get_username();
 
 class rooms
 {
@@ -33,7 +33,6 @@ public:
     string RoofTopStairs(int,int);
     string roomchooser(int);
 };
-
 
 // Seed the random number generator with the current time
 mt19937 rng(time(nullptr));
@@ -62,13 +61,12 @@ uniform_int_distribution<int> valueDist(1, 6);
 int randnum = valueDist(gen);
 std::string str_randnum = std::to_string(randnum);
 
-
-
 int main()
 {
     initialize();
     reset_inventory();
     reset_roomflag();
+    reset_username();
     int a;
     int b;
     int *x = new int;
@@ -81,11 +79,9 @@ int main()
     string entered;
     bool flag = true;
 
-
     Maps mp(28, 104);
     string filep = "CharactersDesign_Mechanism/startpage.txt";
     VectorWrapper start = mp.Map_Loader(filep);
-
 
     while (intro_flag)
     {
@@ -125,7 +121,6 @@ int main()
                     attroff(COLOR_PAIR(2));
                 }
             }
-
             // Write start_time to the text file
             time_t start_time = time(NULL);
             std::ofstream out_file("start_time.txt");
@@ -148,6 +143,13 @@ int main()
         }
         clear(); // Clear the screen
         refresh(); // Refresh the screen after clearing
+    }
+    string username = get_username();
+    // Create a text file with the username
+    std::ofstream username_file("username.txt");
+    if (username_file) {
+        username_file << username;
+        username_file.close();
     }
     rooms RM;
     while (flag)
@@ -293,7 +295,6 @@ int main()
 
     delete x;
     delete y;
-
 }
 //coordinates inside each room (point on feet)
 void rooms::ClassRoom()
@@ -490,4 +491,27 @@ bool display_instructions(VectorWrapper StartData) {
 
     }
     return true;
+}
+
+string get_username() {
+    char user_input[50]; // Create a char array to store the user input
+    echo(); // Enable echo to display typed characters
+    curs_set(1); // Show the cursor
+
+    int screen_rows, screen_cols;
+    getmaxyx(stdscr, screen_rows, screen_cols);
+
+    int username_row = screen_rows / 2;
+    int username_col = (screen_cols - 20) / 2;
+
+    clear();
+    mvprintw(username_row, username_col, "Enter your username: ");
+    refresh();
+    getstr(user_input); // Read the input into the char array
+
+    noecho(); // Disable echo
+    curs_set(0); // Hide the cursor
+
+    string username(user_input); // Convert char array to string
+    return username;
 }

@@ -13,10 +13,19 @@
 #include "MapLoader.h"
 using namespace std;
 
-
 int VISION_RADIUS;
+int remaining_time;
 int point;
 int VISION_RADIUS_INCREASE = 0;
+
+
+void reset_username() {
+    string filepath = "UI/username.txt";
+    ofstream outputFile(filepath, ios::trunc);
+    if (outputFile.is_open()) {
+        outputFile.close();
+    }
+}
 
 //reseting the inventory textfile
 void reset_inventory() {
@@ -126,6 +135,9 @@ vector<string> loadHelicopterFromFile();
 void ToInventory(string object);
 
 void printMenu(vector<string> menu, int remaining_time);
+
+//Saving username and remaining time
+void Save_Game(int remaining_time);
 
 int intro = 1;
 
@@ -319,8 +331,6 @@ int main_engine(string file_path, int&x, int& y) {
             intro = 0;
         }
 
-
-
         switch(key_input) {
             case 'w':
                 y--;
@@ -445,6 +455,7 @@ int main_engine(string file_path, int&x, int& y) {
                         if (x4>=27 && x4<=35) {
                             delwin(game_window);
                             clear();
+                            Save_Game(remaining_time);
                             return 99;
                         }
                     }
@@ -1046,7 +1057,6 @@ void printMenu(vector<string> menu, int remaining_time) {
     int menu_height = 20;
     int menu_width = 50;
 
-
     initscr();
     raw();
     noecho();
@@ -1073,9 +1083,6 @@ void printMenu(vector<string> menu, int remaining_time) {
     mvwprintw(menuWin, 16, 1, "             / / _  | (_)| || | |  _|");
     mvwprintw(menuWin, 17, 1, "            /___(_)  \\__\\_\\_,_|_|\\__|");
 
-    \
-
-
     nodelay(menuWin, TRUE);
     // Display the remaining time
     time_t current_time = time(NULL);
@@ -1088,16 +1095,7 @@ void printMenu(vector<string> menu, int remaining_time) {
     while (true) {              // consider while ((key_input = getch()) != 27) {
         int ch = getch();
         if (ch == '1') {
-            //Save character's current location to a file
-            ofstream outFile("saved_location.txt");
-            if (outFile.is_open()) {
-                outFile << "Time remaining: " << remaining_minutes << ":" << remaining_seconds << endl;
-
-                outFile.close();
-                cout << "Saving Game";
-            } else {
-                cout << "Unable to save";
-            }
+            Save_Game(remaining_time);
         }
         else if (ch == '2') {
             delwin(menuWin);
@@ -1114,4 +1112,26 @@ void printMenu(vector<string> menu, int remaining_time) {
     }
 
     delwin(menuWin);
+}
+
+    //Save username and remaining time to a file
+void Save_Game(int remaining_time) {
+    int remaining_minutes = remaining_time / 60;
+    int remaining_seconds = remaining_time % 60;
+    ifstream input_file("username.txt");
+    string username;
+    if (input_file) {
+        getline(input_file, username);
+        input_file.close();
+        username = username;
+    }
+    ofstream outFile("saved_game.txt");
+    if (outFile.is_open()) {
+        outFile << "Username: " << username << endl << "Time remaining: " << remaining_minutes << ":" << remaining_seconds << endl;
+
+        outFile.close();
+        cout << "Saving Game";
+    } else {
+        cout << "Unable to save";
+    }
 }

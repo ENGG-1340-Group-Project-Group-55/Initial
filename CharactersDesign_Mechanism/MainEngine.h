@@ -14,6 +14,7 @@ std::vector<std::string> loadInventoryFromFile();
 int main_engine(std::string file_path, int& x, int& y);
 void reset_inventory();
 void reset_roomflag();
+void reset_username();
 
 
 #endif // MAIN_ENGINE_H
