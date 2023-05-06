@@ -224,8 +224,6 @@ int main_engine(string file_path, int&x, int& y) {
 
     int key_input;
     while ((key_input = wgetch(game_window)) != 'Q') { // Exit on 'q' key press
-        // Clear window
-        //werase(game_window);
         bool flag1 = false;
         bool flag2 = false;
         bool flag3 = false;
