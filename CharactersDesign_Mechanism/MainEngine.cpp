@@ -18,6 +18,7 @@ int VISION_RADIUS;
 int point;
 int VISION_RADIUS_INCREASE = 0;
 
+//reseting the inventory textfile
 void reset_inventory() {
     string filepath = "UI/inventory.txt";
     ofstream outputFile(filepath, ios::trunc);
@@ -26,6 +27,7 @@ void reset_inventory() {
     }
 }
 
+//reseting the roomflags textfile
 void reset_roomflag() {
     string filepath = "Map_Objects/Map_resources/RoomFlags.txt";
     ofstream outputFile(filepath, ios::trunc);
@@ -810,6 +812,7 @@ int main_engine(string file_path, int&x, int& y) {
     return 0;
 }
 
+// Loading chatbox from textfiles
 vector<string> loadChatboxIntroFromFile() {
     vector<string> chatboxintro;
     string folderPath = "UI/chatboxintro/";
@@ -832,6 +835,7 @@ vector<string> loadChatboxIntroFromFile() {
     return chatboxintro;
 }
 
+// Printing the chatbox in the begining of the game, with a type writer effect
 void printChatboxIntro(vector<string> chatboxintro) {
     int chatbox_height = 7;
     int chatbox_width = 80;
@@ -880,7 +884,7 @@ void printChatboxIntro(vector<string> chatboxintro) {
     clear();
 }
 
-
+// Loading helicopter from textfiles
 vector<string> loadHelicopterFromFile() {
     vector<string> helicopter;
     string folderPath = "Map_Objects/Map_resources/";
@@ -903,6 +907,7 @@ vector<string> loadHelicopterFromFile() {
     return helicopter;
 }
 
+// Printing helicopters at the end, with certain delays
 void printHelicopter() {
     vector<string> fileNames = {"Rooftop2.txt", "Rooftop3.txt", "Rooftop4.txt", "Rooftop5.txt", "Rooftop6.txt"};
     int currentFileIndex = 0;
@@ -968,7 +973,7 @@ void printHelicopter() {
     inputFile.close();
 }
 
-
+// Opening inventory textfiles
 void ToInventory(string object) {
     string fp = "UI/inventory.txt";
     ofstream outputFile(fp, ios::app);
@@ -980,6 +985,7 @@ void ToInventory(string object) {
     }
 }
 
+// Loading inventory from textfiles
 vector<string> loadInventoryFromFile() {
     vector<string> inventory;
     ifstream inputFile("UI/inventory.txt"); // Open the file for reading
@@ -997,7 +1003,7 @@ vector<string> loadInventoryFromFile() {
     return inventory;
 }
 
-
+// Printing inventory
 void printInventory(vector<string> inventory) {
     int inv_height = 15;
     int inv_width = 30;
@@ -1034,6 +1040,7 @@ void printInventory(vector<string> inventory) {
     delwin(inventoryWin);
 }
 
+// Printing menu
 void printMenu(vector<string> menu, int remaining_time) {
     // ...
     int menu_height = 20;
