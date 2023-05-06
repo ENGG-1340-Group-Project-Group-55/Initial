@@ -1120,14 +1120,16 @@ void Save_Game(int remaining_time) {
     int remaining_seconds = remaining_time % 60;
     ifstream input_file("username.txt");
     string username;
+
     if (input_file) {
         getline(input_file, username);
         input_file.close();
         username = username;
     }
-    ofstream outFile("saved_game.txt");
+
+    ofstream outFile("saved_game.txt", std::ios_base::app);
     if (outFile.is_open()) {
-        outFile << "Username: " << username << endl << "Time remaining: " << remaining_minutes << ":" << remaining_seconds << endl;
+        outFile << "Username: " << username << endl << "Time remaining: " << remaining_minutes << ":" << remaining_seconds << endl << " " << endl;
 
         outFile.close();
         cout << "Saving Game";

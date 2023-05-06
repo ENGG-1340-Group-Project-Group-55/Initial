@@ -1,4 +1,0 @@
-musicroom
-diningroom
-teacheroffice
-clubroom
